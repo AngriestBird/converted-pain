@@ -19,51 +19,96 @@ focus_tree = {
 	shared_focus = political_effort
 
 	focus = {
-		id = The_third_wayX29
+		id = X29_the_rise_of_byzantium
 		icon = GFX_goal_support_fascism
-		text = The_third_way
-		x = 32
+		x = 34
 		y = 0
 		cost = 10
 		completion_reward = {
-			add_named_threat = { threat = 2 name = The_third_way }
+			add_named_threat = { threat = 2 name = "The Rise of Byzantium" }
 			add_ideas = fascist_influence
+			if = {
+				limit = { NOT = { has_idea = X29_rise_of_the_byzantines } }
+				add_timed_idea = {
+					idea = X29_rise_of_the_byzantines
+					days = 180
+				}
+			}
+			else = {
+				modify_timed_idea = {
+					idea = X29_rise_of_the_byzantines
+					days = 120
+				}
+			}
 		}
 		ai_will_do = {
-		factor = 5
+			factor = 5
+			modifier = {
+				factor = 10000
+				is_ai = yes
+			}
 		}
 	}
 
 	focus = {
-		id = mil_marchX29
+		id = X29_the_military_march
 		icon = GFX_goal_generic_allies_build_infantry
-		text = mil_march
-		prerequisite = { focus = The_third_wayX29 }
+		prerequisite = { focus = X29_the_rise_of_byzantium }
 		x = 0
 		y = 1
-		relative_position_id = The_third_wayX29
+		relative_position_id = X29_the_rise_of_byzantium
 		cost = 10
 		completion_reward = {
-			army_experience = 20
+			army_experience = 25
 			add_tech_bonus = {
 				bonus = 0.5
 				uses = 2
 				category = land_doctrine
 				name = land_doctrine
 			}
+			if = {
+				limit = { NOT = { has_idea = X29_rise_of_the_byzantines } }
+				add_timed_idea = {
+					idea = X29_rise_of_the_byzantines
+					days = 180
+				}
+			}
+			else = {
+				random_list = {
+					15 = {
+						modify_timed_idea = {
+							idea = X29_rise_of_the_byzantines
+							days = 120
+						}
+					}
+					40 = { 
+						modify_timed_idea = {
+							idea = X29_rise_of_the_byzantines
+							days = 80
+						}
+					}
+					45 = {
+						modify_timed_idea = {
+							idea = X29_rise_of_the_byzantines
+							days = 40
+						}
+					}
+				}
+			}
 		}
 		ai_will_do = {
-		factor = 5
+			factor = 5
 		}
 	}
 
 	focus = {
-		id = X29_anschluss_CRO
+		id = X29_croatian_abomination
 		icon = GFX_goal_anschluss
 		text = _anschluss_CRO
-		prerequisite = { focus = mil_marchX29 }
-		x = 28
+		prerequisite = { focus = X29_the_military_march }
+		x = -1
 		y = 2
+		relative_position_id = X29_the_military_march
 		cost = 10
 		available = {
 			CRO = {
@@ -73,7 +118,7 @@ focus_tree = {
 			date > 1937.7.8
 		}
 		completion_reward = {
-			add_named_threat = { threat = 2 name = "Union with Croatia" }
+			add_named_threat = { threat = 2 name = "Byzantium Threatens Croatia" }
 			army_experience = 10
 			if = {
 				limit = {
@@ -85,21 +130,22 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-		factor = 10
-		modifier = {
-			factor = 0
-			date < 1937.6.6
+			factor = 10
+			modifier = {
+				factor = 0
+				date < 1937.6.6
+			}
 		}
-	}
 	}
 
 	focus = {
-		id = X29_anschluss_TUR
+		id = X29_the_turkish_question
 		icon = GFX_goal_anschluss
 		text = _anschluss_TUR
-		prerequisite = { focus = mil_marchX29 }
-		x = 30
-		y = 2
+		prerequisite = { focus = X29_the_military_march }
+		x = 2
+		y = 1
+		relative_position_id = X29_the_military_march
 		cost = 10
 		available = {
 			TUR = {
@@ -109,7 +155,7 @@ focus_tree = {
 			date > 1937.10.6
 		}
 		completion_reward = {
-			add_named_threat = { threat = 2 name = "Union with The Ottoman Empire" }
+			add_named_threat = { threat = 0.50 name = "Union with The Ottoman Empire" }
 			army_experience = 10
 			if = {
 				limit = {
@@ -132,8 +178,7 @@ focus_tree = {
 	focus = {
 		id = X29_anschluss_V00
 		icon = GFX_goal_anschluss
-		text = _anschluss_V00
-		prerequisite = { focus = mil_marchX29 }
+		prerequisite = { focus = X29_the_military_march }
 		x = 32
 		y = 2
 		cost = 10
@@ -145,7 +190,7 @@ focus_tree = {
 			date > 1937.10.10
 		}
 		completion_reward = {
-			add_named_threat = { threat = 2 name = "Union with Tabaristan" }
+			add_named_threat = { threat = 0.50 name = "Byzantine Pressures Tabaristan" }
 			army_experience = 10
 			if = {
 				limit = {
@@ -169,7 +214,7 @@ focus_tree = {
 		id = X29_anschluss_V57
 		icon = GFX_goal_anschluss
 		text = _anschluss_V57
-		prerequisite = { focus = mil_marchX29 }
+		prerequisite = { focus = X29_the_military_march }
 		x = 34
 		y = 2
 		cost = 10
@@ -181,7 +226,7 @@ focus_tree = {
 			date > 1937.9.9
 		}
 		completion_reward = {
-			add_named_threat = { threat = 2 name = "Union with Mosul" }
+			add_named_threat = { threat = 0.50 name = "Union with Mosul" }
 			army_experience = 10
 			if = {
 				limit = {
@@ -205,9 +250,10 @@ focus_tree = {
 		id = X29_anschluss_YEM
 		icon = GFX_goal_anschluss
 		text = _anschluss_YEM
-		prerequisite = { focus = mil_marchX29 }
-		x = 36
+		prerequisite = { focus = X29_the_military_march }
+		x = 1
 		y = 2
+		relative_position_id = X29_the_military_march
 		cost = 10
 		available = {
 			YEM = {
@@ -238,104 +284,23 @@ focus_tree = {
 	}
 
 	focus = {
-		id = expand_the_reichX29
-		icon = GFX_goal_generic_political_pressure
-		text = expand_the_reich
-		x = 39
-		y = 0
-		cost = 10
-		completion_reward = {
-			add_named_threat = { threat = 3 name = expand_the_reich }
-			add_political_power = 150
-		}
-		ai_will_do = {
-		factor = 5
-		}
-	}
-
-	focus = {
-		id = X29_sudeten_GER
-		icon = GFX_goal_anschluss
-		text = _sudeten_GER
-		prerequisite = { focus = expand_the_reichX29 }
-		bypass = {
-  has_war_with = GER
-}
-		x = 38
-		y = 1
-		cost = 10
-		available = {
-			is_puppet = no
-			date > 1938.2.2
-		}
-		completion_reward = {
-			add_named_threat = { threat = 2 name = "Demand Territory from Germany" }
-			army_experience = 10
-			if = {
-				limit = {
-					country_exists = GER
-				}
-				GER = {
-					country_event = NFEvents.18
-				}
-			}
-		}
-		ai_will_do = {
-		factor = 10
-		modifier = {
-			factor = 0
-			date < 1937.6.6
-		}
-	}
-	}
-
-	focus = {
-		id = X29_finish_GER
-		icon = GFX_goal_generic_territory_or_war
-		text = _finish_GER
-		prerequisite = { focus =  X29_sudeten_GER }
-		bypass = {
-		has_war_with = GER
-	}
-		x = 38
-		y = 2
-		cost = 10
-		available = {
-	GER = { is_in_faction = no }
-		}
-		completion_reward = {
-			add_named_threat = { threat = 3 name = "Fate of Germany" }
-			create_wargoal = {
-				type = annex_everything
-				target = GER
-			}
-		}
-		ai_will_do = {
-		factor = 10
-		modifier = {
-			factor = 0
-			date < 1937.6.6
-		}
-	}
-	}
-
-	focus = {
 		id = X29_sudeten_HRE
 		icon = GFX_goal_anschluss
 		text = _sudeten_HRE
-		prerequisite = { focus = expand_the_reichX29 }
+		prerequisite = { focus = X29_croatian_abomination }
+		prerequisite = { focus = X29_anschluss_YEM }
 		bypass = {
-  has_war_with = HRE
-}
-		x = 40
-		y = 1
+			has_war_with = HRE
+		}
+		x = 0
+		y = 3
+		relative_position_id = X29_the_military_march
 		cost = 10
 		available = {
 			is_puppet = no
 			date > 1938.2.4
 		}
 		completion_reward = {
-			add_named_threat = { threat = 2 name = "Demand Territory from The Holy Roman Empire" }
 			army_experience = 10
 			if = {
 				limit = {
@@ -361,13 +326,15 @@ focus_tree = {
 		text = _finish_HRE
 		prerequisite = { focus =  X29_sudeten_HRE }
 		bypass = {
-		has_war_with = HRE
-	}
-		x = 40
-		y = 2
+			has_war_with = HRE
+		}
+		
+		x = 0
+		y = 1
+		relative_position_id = X29_sudeten_HRE
 		cost = 10
 		available = {
-	HRE = { is_in_faction = no }
+			HRE = { is_in_faction = no }
 		}
 		completion_reward = {
 			add_named_threat = { threat = 3 name = "Fate of The Holy Roman Empire" }
@@ -386,14 +353,83 @@ focus_tree = {
 	}
 
 	focus = {
-		id = Fas_SummitX29
+		id = expand_the_reichX29
+		icon = GFX_goal_generic_political_pressure
+		x = 4
+		y = 2
+		cost = 10
+		relative_position_id = X29_the_rise_of_byzantium
+		prerequisite = {
+			focus = X29_the_military_march
+		}
+		completion_reward = {
+			add_political_power = 150
+		}
+		ai_will_do = {
+		factor = 5
+		}
+	}
+
+	focus = {
+		id = X29_the_internal
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = expand_the_reichX29 }
+
+		x = 0
+		y = 1
+		relative_position_id = expand_the_reichX29
+		cost = 10
+		available = {
+			is_puppet = no
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = X29_shadow_of_beuracracy
+				add_idea = X29_revitalized_beuracracy
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = X29_the_internal_2
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus =  X29_the_internal }
+		x = 0
+		y = 2
+		relative_position_id = expand_the_reichX29
+		cost = 10
+
+		completion_reward = {
+			remove_ideas = X29_revitalized_beuracracy_1
+		}
+		ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			date < 1937.6.6
+		}
+	}
+	}
+
+	focus = {
+		id = X29_the_axis_summit
 		icon = GFX_goal_generic_allies_build_infantry
-		text = Fascist_Summit
-		x = 43
-		y = 0
+		x = -4
+		y = 1
+		relative_position_id = X29_the_military_march
+		prerequisite = {
+			focus = X29_the_military_march
+		}
 		cost = 10
 		completion_reward = {
-			add_named_threat = { threat = 3 name = "Call for the Fascist Summit" }
+			add_named_threat = { threat = 3 name = "The Declaration of the Axis" }
+			create_faction = "The Axis"
+			hidden_effect = { ##Adds Byzantium to the faction
+				add_to_faction = X29
+			}
 			add_political_power = 150
 		}
 		ai_will_do = {
@@ -409,7 +445,7 @@ focus_tree = {
 		id = Alliance_ESTX29
 		icon = GFX_goal_generic_allies_build_infantry
 		text = Alliance_EST
-		prerequisite = { focus = Fas_SummitX29 }
+		prerequisite = { focus = X29_the_axis_summit }
 		bypass = {
 			OR = {
 				X29 = { is_in_faction_with = EST}
@@ -419,7 +455,7 @@ focus_tree = {
 		}
 		x = -1
 		y = 1
-		relative_position_id = Fas_SummitX29
+		relative_position_id = X29_the_axis_summit
 		cost = 10
 		available = {
 			OR = {
@@ -441,18 +477,17 @@ focus_tree = {
 	focus = {
 		id = Alliance_ICEX29
 		icon = GFX_goal_generic_allies_build_infantry
-		text = Alliance_ICE
-		prerequisite = { focus = Fas_SummitX29 }
+		prerequisite = { focus = X29_the_axis_summit }
 		bypass = {
 			OR = {
-				X29 = { is_in_faction_with = ICE}
-				has_war_with = ICE
-				NOT = { country_exists = ICE }
+				X29 = { is_in_faction_with = W75}
+				has_war_with = W75
+				NOT = { country_exists = W75 }
 			}
 		}
 		x = 1
 		y = 1
-		relative_position_id = Fas_SummitX29
+		relative_position_id = X29_the_axis_summit
 		cost = 10
 		available = {
 			OR = {
@@ -461,7 +496,7 @@ focus_tree = {
 			}
 	}
 		completion_reward = {
-			ICE = {
+			W75 = {
 				country_event = { hours = 6 id = NFEvents.25 }
 				add_opinion_modifier = { target = X29 modifier = positive_50 }
 			}
@@ -482,7 +517,7 @@ focus_tree = {
 		}
 		x = 0
 		y = 2
-		relative_position_id = Fas_SummitX29
+		relative_position_id = X29_the_axis_summit
 		cost = 10
 		available = {
 			has_war = no

@@ -1,0 +1,35 @@
+
+state={
+	id=826
+	name="STATE_826"
+	resources={
+		aluminium=3.000
+		rubber=1.000
+	}
+
+	history={
+		owner = YEM
+		victory_points = {
+			5155 1 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			12935 = {
+				naval_base = 2
+			}
+			air_base = 0
+
+		}
+		add_core_of = MZB
+		add_core_of = W82
+	}
+
+	provinces={
+		2120 5155 12935 12950 12971 
+	}
+	manpower=965188
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

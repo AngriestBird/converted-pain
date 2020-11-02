@@ -1,0 +1,33 @@
+
+state={
+	id=101
+	name="STATE_101"
+
+	history={
+		owner = X29
+		victory_points = {
+			12473 5 
+		}
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 1
+			arms_factory = 3
+			dockyard = 1
+			12029 = {
+				naval_base = 8
+			}
+			air_base = 2
+
+		}
+		add_core_of = V57
+		add_core_of = X29
+		add_core_of = YEM
+	}
+
+	provinces={
+		901 1056 1072 1088 1549 1578 1606 1634 2013 3942 6883 7140 7671 10087 10882 12029 12473 
+	}
+	manpower=2286972
+	buildings_max_level_factor=1.000
+	state_category=city
+}

@@ -1,0 +1,3 @@
+graphical_culture = ITA
+graphical_culture_2d = ITA
+color = { 218 215 56 }

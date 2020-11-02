@@ -1,0 +1,35 @@
+
+state={
+	id=215
+	name="STATE_215"
+	resources={
+		aluminium=103.000
+		steel=116.000
+	}
+
+	history={
+		owner = GER
+		victory_points = {
+			6613 4 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = FRA
+		add_core_of = GER
+		add_core_of = HRE
+		add_core_of = SWI
+		add_core_of = W60
+	}
+
+	provinces={
+		762 764 780 3589 3594 3762 3764 3768 3770 6613 6639 6784 6786 6975 9590 9736 11593 11716 
+	}
+	manpower=2186568
+	buildings_max_level_factor=1.000
+	state_category=town
+}

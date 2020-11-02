@@ -1,0 +1,29 @@
+
+state={
+	id=159
+	name="STATE_159"
+
+	history={
+		owner = DEN
+		victory_points = {
+			6258 4 
+		}
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 2
+			arms_factory = 0
+			dockyard = 1
+			air_base = 1
+
+		}
+		add_core_of = SCA
+		add_core_of = SWE
+	}
+
+	provinces={
+		408 6258 
+	}
+	manpower=96192
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

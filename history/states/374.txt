@@ -1,0 +1,36 @@
+
+state={
+	id=374
+	name="STATE_374"
+	resources={
+		chromium=4.000
+		steel=4.000
+		tungsten=14.000
+	}
+
+	history={
+		owner = W14
+		victory_points = {
+			4075 8 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+
+		}
+		add_core_of = CHI
+		add_core_of = LAO
+		add_core_of = VIN
+		add_core_of = W14
+		add_core_of = X86
+	}
+
+	provinces={
+		1073 4075 4529 7015 7518 10075 10103 10129 12008 12048 12065 12075 12319 
+	}
+	manpower=1212344
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

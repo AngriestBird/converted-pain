@@ -1,0 +1,31 @@
+
+state={
+	id=618
+	name="STATE_618"
+
+	history={
+		owner = V30
+		victory_points = {
+			7979 6 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			arms_factory = 0
+			8111 = {
+				naval_base = 6
+			}
+			air_base = 6
+
+		}
+		add_core_of = MOR
+		add_core_of = WES
+	}
+
+	provinces={
+		4920 7979 8038 8111 
+	}
+	manpower=154428
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

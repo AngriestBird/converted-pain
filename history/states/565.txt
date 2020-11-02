@@ -1,0 +1,31 @@
+
+state={
+	id=565
+	name="STATE_565"
+	resources={
+		steel=0.000
+	}
+
+	history={
+		owner = TIB
+		victory_points = {
+			4318 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = TIB
+		add_core_of = X76
+	}
+
+	provinces={
+		1197 1934 4318 4996 
+	}
+	manpower=647796
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

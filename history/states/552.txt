@@ -1,0 +1,37 @@
+
+state={
+	id=552
+	name="STATE_552"
+	resources={
+		chromium=13.000
+	}
+
+	history={
+		owner = V00
+		victory_points = {
+			1599 4 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 3
+			arms_factory = 0
+			772 = {
+				naval_base = 6
+			}
+			air_base = 0
+
+		}
+		add_core_of = V00
+		add_core_of = V57
+		add_core_of = X29
+		add_core_of = X46
+		add_core_of = X53
+	}
+
+	provinces={
+		654 772 1455 1530 1599 3656 3658 3667 4534 4605 6436 6669 6671 6674 9626 9632 9702 11609 12309 
+	}
+	manpower=1385244
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

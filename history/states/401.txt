@@ -1,0 +1,35 @@
+
+state={
+	id=401
+	name="STATE_401"
+	resources={
+		rubber=29.000
+		steel=2.000
+		tungsten=2.000
+	}
+
+	history={
+		owner = MAN
+		victory_points = {
+			4496 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = MAN
+		add_core_of = SIA
+		add_core_of = W05
+		add_core_of = X86
+	}
+
+	provinces={
+		1990 4496 4566 7312 7338 7353 7492 7531 7544 7559 7572 8045 10371 10398 10411 12173 12345 
+	}
+	manpower=2573928
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

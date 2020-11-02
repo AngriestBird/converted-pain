@@ -1,0 +1,36 @@
+
+state={
+	id=177
+	name="STATE_177"
+	resources={
+		steel=19.000
+	}
+
+	history={
+		owner = U73
+		victory_points = {
+			11535 3 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 0
+			arms_factory = 1
+			11535 = {
+				naval_base = 4
+			}
+			air_base = 0
+
+		}
+		add_core_of = FRA
+		add_core_of = GER
+		add_core_of = U73
+		add_core_of = W43
+	}
+
+	provinces={
+		539 553 3579 6449 6599 9550 11521 11535 
+	}
+	manpower=2221152
+	buildings_max_level_factor=1.000
+	state_category=town
+}

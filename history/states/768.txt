@@ -1,0 +1,31 @@
+
+state={
+	id=768
+	name="STATE_768"
+	resources={
+		steel=36.000
+	}
+
+	history={
+		owner = V19
+		victory_points = {
+			12357 5 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 3
+			arms_factory = 2
+			air_base = 2
+
+		}
+		add_core_of = USA
+		add_core_of = V19
+	}
+
+	provinces={
+		1849 3699 4029 7776 9657 9678 10526 12357 
+	}
+	manpower=2200580
+	buildings_max_level_factor=1.000
+	state_category=city
+}

@@ -1,0 +1,28 @@
+
+state={
+	id=787
+	name="STATE_787"
+
+	history={
+		owner = V67
+		victory_points = {
+			1815 4 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			arms_factory = 1
+			air_base = 0
+
+		}
+		add_core_of = V67
+		add_core_of = W11
+	}
+
+	provinces={
+		1815 7688 7888 12633 12651 
+	}
+	manpower=2760264
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

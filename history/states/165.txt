@@ -1,0 +1,32 @@
+
+state={
+	id=165
+	name="STATE_165"
+	resources={
+		aluminium=44.000
+		steel=136.000
+		tungsten=161.000
+	}
+
+	history={
+		owner = X55
+		victory_points = {
+			4607 10 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 5
+			arms_factory = 0
+			air_base = 6
+
+		}
+		add_core_of = X55
+	}
+
+	provinces={
+		1663 1740 1756 1862 4521 4607 4668 4736 4742 4799 4816 4865 7756 7764 7818 7827 7879 10422 10582 10591 10651 10662 12134 12399 12425 12573 12699 
+	}
+	manpower=13706432
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+}

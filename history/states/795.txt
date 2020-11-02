@@ -1,0 +1,35 @@
+
+state={
+	id=795
+	name="STATE_795"
+	resources={
+		oil=12.000
+	}
+
+	history={
+		owner = YEM
+		victory_points = {
+			8085 8 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+			arms_factory = 0
+			2089 = {
+				naval_base = 4
+			}
+			air_base = 5
+
+		}
+		add_core_of = KUW
+		add_core_of = TUR
+		add_core_of = YEM
+	}
+
+	provinces={
+		78 2004 2089 7977 8085 12726 12855 
+	}
+	manpower=688000
+	buildings_max_level_factor=1.000
+	state_category=town
+}

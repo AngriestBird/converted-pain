@@ -1,0 +1,31 @@
+
+state={
+	id=808
+	name="STATE_808"
+
+	history={
+		owner = YEM
+		victory_points = {
+			4228 1 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 0
+			arms_factory = 0
+			4228 = {
+				naval_base = 2
+			}
+			air_base = 0
+
+		}
+		add_core_of = PHI
+		add_core_of = W97
+	}
+
+	provinces={
+		1372 4228 4377 10306 12279 
+	}
+	manpower=696892
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

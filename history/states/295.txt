@@ -1,0 +1,30 @@
+
+state={
+	id=295
+	name="STATE_295"
+	resources={
+		steel=0.000
+	}
+
+	history={
+		owner = ITA
+		victory_points = {
+			11145 1 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = KEN
+	}
+
+	provinces={
+		5160 10860 11145 
+	}
+	manpower=757156
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

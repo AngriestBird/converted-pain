@@ -1,0 +1,32 @@
+
+state={
+	id=767
+	name="STATE_767"
+	resources={
+		aluminium=13.000
+		steel=2.000
+	}
+
+	history={
+		owner = V66
+		victory_points = {
+			3775 9 
+		}
+		buildings = {
+			infrastructure = 8
+			industrial_complex = 10
+			arms_factory = 2
+			air_base = 4
+
+		}
+		add_core_of = CAN
+		add_core_of = V66
+	}
+
+	provinces={
+		605 722 749 774 3605 3608 3635 3640 3661 3763 3775 3778 4270 6510 6625 6630 6662 6676 6797 9467 9580 9583 9634 9667 9711 11567 11569 11585 11602 11695 11725 11728 
+	}
+	manpower=6162944
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+}

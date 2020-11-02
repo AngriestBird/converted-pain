@@ -1,0 +1,28 @@
+
+state={
+	id=770
+	name="STATE_770"
+
+	history={
+		owner = V19
+		victory_points = {
+			9654 4 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = USA
+		add_core_of = V19
+	}
+
+	provinces={
+		4437 4531 6713 7551 9653 9654 
+	}
+	manpower=1461508
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

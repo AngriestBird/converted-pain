@@ -1,0 +1,33 @@
+
+state={
+	id=322
+	name="STATE_322"
+	resources={
+		steel=0.000
+	}
+
+	history={
+		owner = LIT
+		victory_points = {
+			8248 6 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			arms_factory = 0
+			8248 = {
+				naval_base = 8
+			}
+			air_base = 6
+
+		}
+		add_core_of = ANG
+	}
+
+	provinces={
+		8248 
+	}
+	manpower=342824
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,27 @@
+
+state={
+	id=629
+	name="STATE_629"
+
+	history={
+		owner = V30
+		victory_points = {
+			1473 1 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 1
+
+		}
+		add_core_of = CHA
+	}
+
+	provinces={
+		1473 3123 4897 4978 
+	}
+	manpower=148612
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

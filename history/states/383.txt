@@ -1,0 +1,32 @@
+
+state={
+	id=383
+	name="STATE_383"
+
+	history={
+		owner = W19
+		victory_points = {
+			11301 2 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 0
+			arms_factory = 1
+			air_base = 1
+
+		}
+		add_core_of = BLR
+		add_core_of = GER
+		add_core_of = HRE
+		add_core_of = SOV
+		add_core_of = UKR
+		add_core_of = V38
+	}
+
+	provinces={
+		277 290 318 347 560 3256 3281 3309 3366 3392 3393 3556 6280 6306 6340 6359 6413 6415 6546 6579 9236 9304 9359 9554 11247 11285 11301 11341 11528 13206 
+	}
+	manpower=2871304
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

@@ -1,0 +1,34 @@
+
+state={
+	id=312
+	name="STATE_312"
+	resources={
+		aluminium=21.000
+	}
+
+	history={
+		owner = LIT
+		victory_points = {
+			9622 18 
+		}
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 11
+			arms_factory = 2
+			air_base = 10
+
+		}
+		add_core_of = HRE
+		add_core_of = LIT
+		add_core_of = SWI
+		add_core_of = V14
+		add_core_of = W38
+	}
+
+	provinces={
+		3612 6666 6683 9587 9618 9620 9622 9638 11590 
+	}
+	manpower=5021872
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+}

@@ -1,0 +1,28 @@
+
+state={
+	id=635
+	name="STATE_635"
+
+	history={
+		owner = V30
+		victory_points = {
+			7194 1 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 1
+
+		}
+		add_core_of = LBA
+		add_core_of = X50
+	}
+
+	provinces={
+		4133 4200 7076 7136 7194 8069 9977 13073 
+	}
+	manpower=26887
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

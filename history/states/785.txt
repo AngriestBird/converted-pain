@@ -1,0 +1,32 @@
+
+state={
+	id=785
+	name="STATE_785"
+
+	history={
+		owner = V67
+		victory_points = {
+			3513 10 
+		}
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 5
+			arms_factory = 1
+			12281 = {
+				naval_base = 10
+			}
+			air_base = 7
+
+		}
+		add_core_of = V23
+		add_core_of = V67
+		add_core_of = W11
+	}
+
+	provinces={
+		505 528 3471 3513 4274 4328 4380 7398 10151 10183 11495 11733 12211 12281 
+	}
+	manpower=4565140
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

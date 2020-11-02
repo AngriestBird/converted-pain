@@ -1,0 +1,35 @@
+
+state={
+	id=315
+	name="STATE_315"
+	resources={
+		aluminium=3.000
+		rubber=1.000
+		steel=1.000
+	}
+
+	history={
+		owner = LIT
+		victory_points = {
+			12858 6 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			arms_factory = 0
+			12858 = {
+				naval_base = 8
+			}
+			air_base = 6
+
+		}
+		add_core_of = GNA
+	}
+
+	provinces={
+		1909 12858 
+	}
+	manpower=180672
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

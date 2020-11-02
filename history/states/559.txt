@@ -1,0 +1,30 @@
+
+state={
+	id=559
+	name="STATE_559"
+	resources={
+		chromium=2.000
+	}
+
+	history={
+		owner = V00
+		victory_points = {
+			1479 1 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 1
+
+		}
+		add_core_of = RAJ
+	}
+
+	provinces={
+		1479 1532 1554 1576 1614 1623 4499 4618 7541 9605 10348 10395 10420 10435 10470 12161 12233 12454 12465 12474 13207 
+	}
+	manpower=2103512
+	buildings_max_level_factor=1.000
+	state_category=town
+}

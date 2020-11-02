@@ -1,0 +1,35 @@
+
+state={
+	id=644
+	name="STATE_644"
+	resources={
+		aluminium=22.000
+	}
+
+	history={
+		owner = V32
+		victory_points = {
+			9630 10 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 3
+			arms_factory = 2
+			air_base = 6
+
+		}
+		add_core_of = GER
+		add_core_of = HRE
+		add_core_of = ITA
+		add_core_of = V13
+		add_core_of = V32
+		add_core_of = W07
+	}
+
+	provinces={
+		656 6631 6675 9598 9630 11598 11615 
+	}
+	manpower=1401508
+	buildings_max_level_factor=1.000
+	state_category=city
+}

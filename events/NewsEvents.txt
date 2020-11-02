@@ -1,0 +1,121 @@
+﻿add_namespace = news
+
+news_event = {
+	id = news.500
+	title = "Australia formalizes alliance with Mexico"
+	desc = "The leaders of both countries have announced their intent of military cooperation."
+	picture = news_event_generic_sign_treaty1
+	
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Interesting"
+	}
+}
+
+news_event = {
+	id = news.501
+	title = "Australia refuses the alliance offer of Mexico"
+	desc = "The alliance negotiations ended in disagreement."
+	picture = news_event_generic_sign_treaty1
+	
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Interesting"
+	}
+}
+
+news_event = {
+	id = news.502
+	title = "Peru formalizes alliance with Mexico"
+	desc = "The leaders of both countries have announced their intent of military cooperation."
+	picture = news_event_generic_sign_treaty1
+	
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Interesting"
+	}
+}
+
+news_event = {
+	id = news.503
+	title = "Peru refuses the alliance offer of Mexico"
+	desc = "The alliance negotiations ended in disagreement."
+	picture = news_event_generic_sign_treaty1
+	
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Interesting"
+	}
+}
+
+news_event = {
+	id = news.504
+	title = "Estonia formalizes alliance with Byzantine Empire"
+	desc = "The leaders of both countries have announced their intent of military cooperation."
+	picture = news_event_generic_sign_treaty1
+	
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Interesting"
+	}
+}
+
+news_event = {
+	id = news.505
+	title = "Estonia refuses the alliance offer of Byzantine Empire"
+	desc = "The alliance negotiations ended in disagreement."
+	picture = news_event_generic_sign_treaty1
+	
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Interesting"
+	}
+}
+
+news_event = {
+	id = news.506
+	title = "Iceland formalizes alliance with Byzantine Empire"
+	desc = "The leaders of both countries have announced their intent of military cooperation."
+	picture = news_event_generic_sign_treaty1
+	
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Interesting"
+	}
+}
+
+news_event = {
+	id = news.507
+	title = "Iceland refuses the alliance offer of Byzantine Empire"
+	desc = "The alliance negotiations ended in disagreement."
+	picture = news_event_generic_sign_treaty1
+	
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Interesting"
+	}
+}

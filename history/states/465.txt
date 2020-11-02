@@ -1,0 +1,33 @@
+
+state={
+	id=465
+	name="STATE_465"
+	resources={
+		chromium=3.000
+		steel=0.000
+		tungsten=0.000
+	}
+
+	history={
+		owner = MLW
+		victory_points = {
+			12986 8 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+
+		}
+		add_core_of = MLW
+		add_core_of = ZAM
+	}
+
+	provinces={
+		12986 13209 
+	}
+	manpower=150596
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

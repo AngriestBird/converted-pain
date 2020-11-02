@@ -1,0 +1,33 @@
+
+state={
+	id=643
+	name="STATE_643"
+	resources={
+		aluminium=3.000
+		steel=4.000
+	}
+
+	history={
+		owner = V32
+		victory_points = {
+			773 5 
+		}
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 3
+			arms_factory = 2
+			air_base = 2
+
+		}
+		add_core_of = GER
+		add_core_of = V32
+		add_core_of = W07
+	}
+
+	provinces={
+		603 773 3776 11568 
+	}
+	manpower=2521896
+	buildings_max_level_factor=1.000
+	state_category=city
+}

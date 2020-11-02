@@ -1,0 +1,161 @@
+focus_tree = {
+	id = MEX_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = MEX
+		}
+	}
+	
+	default = no
+	
+	shared_focus = army_effort
+	shared_focus = aviation_effort
+	shared_focus = naval_effort
+	shared_focus = industrial_effort
+	shared_focus = political_effort
+
+	focus = {
+		id = The_third_wayMEX
+		icon = GFX_goal_support_fascism
+		text = The_third_way
+		x = 28
+		y = 0
+		cost = 10
+		completion_reward = {
+			add_named_threat = { threat = 2 name = The_third_way }
+			add_ideas = fascist_influence
+		}
+		ai_will_do = {
+		factor = 5
+		}
+	}
+
+	focus = {
+		id = mil_marchMEX
+		icon = GFX_goal_generic_allies_build_infantry
+		text = mil_march
+		prerequisite = { focus = The_third_wayMEX }
+		x = 0
+		y = 1
+		relative_position_id = The_third_wayMEX
+		cost = 10
+		completion_reward = {
+		army_experience = 20
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 2
+			category = land_doctrine
+		}
+	}
+		ai_will_do = {
+		factor = 5
+		}
+	}
+
+	focus = {
+		id = expand_the_reichMEX
+		icon = GFX_goal_generic_political_pressure
+		text = expand_the_reich
+		x = 30
+		y = 0
+		cost = 10
+		completion_reward = {
+			add_named_threat = { threat = 3 name = expand_the_reich }
+			add_political_power = 150
+		}
+		ai_will_do = {
+		factor = 5
+		}
+	}
+
+	focus = {
+		id = Fas_SummitMEX
+		icon = GFX_goal_generic_allies_build_infantry
+		text = Fascist_Summit
+		x = 31
+		y = 0
+		cost = 10
+		completion_reward = {
+			add_named_threat = { threat = 3 name = "Call for the Fascist Summit" }
+			add_political_power = 150
+		}
+		ai_will_do = {
+		factor = 2
+		modifier = {
+			factor = 10
+			date > 1938.1.1
+		}
+	}
+	}
+
+	focus = {
+		id = Alliance_ASTMEX
+		icon = GFX_goal_generic_allies_build_infantry
+		text = Alliance_AST
+		prerequisite = { focus = Fas_SummitMEX }
+		bypass = {
+			OR = {
+				MEX = { is_in_faction_with = AST}
+				has_war_with = AST
+				NOT = { country_exists = AST }
+			}
+		}
+		x = -1
+		y = 1
+		relative_position_id = Fas_SummitMEX
+		cost = 10
+		available = {
+			OR = {
+				is_faction_leader = yes
+				is_in_faction = no
+			}
+	}
+		completion_reward = {
+			AST = {
+				country_event = { hours = 6 id = NFEvents.1 }
+				add_opinion_modifier = { target = MEX modifier = positive_50 }
+			}
+		}
+		ai_will_do = {
+			factor = 10
+	}
+	}
+
+	focus = {
+		id = Alliance_PRUMEX
+		icon = GFX_goal_generic_allies_build_infantry
+		text = Alliance_PRU
+		prerequisite = { focus = Fas_SummitMEX }
+		bypass = {
+			OR = {
+				MEX = { is_in_faction_with = PRU}
+				has_war_with = PRU
+				NOT = { country_exists = PRU }
+			}
+		}
+		x = 1
+		y = 1
+		relative_position_id = Fas_SummitMEX
+		cost = 10
+		available = {
+			OR = {
+				is_faction_leader = yes
+				is_in_faction = no
+			}
+	}
+		completion_reward = {
+			PRU = {
+				country_event = { hours = 6 id = NFEvents.2 }
+				add_opinion_modifier = { target = MEX modifier = positive_50 }
+			}
+		}
+		ai_will_do = {
+			factor = 10
+	}
+	}
+
+}

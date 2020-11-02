@@ -1,0 +1,33 @@
+
+state={
+	id=347
+	name="STATE_347"
+	resources={
+		steel=4.000
+	}
+
+	history={
+		owner = LIT
+		victory_points = {
+			3544 2 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 1
+
+		}
+		add_core_of = HRE
+		add_core_of = POL
+		add_core_of = V54
+		add_core_of = W55
+	}
+
+	provinces={
+		467 3544 9400 11492 
+	}
+	manpower=1418868
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

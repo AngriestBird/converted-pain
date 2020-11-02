@@ -1,0 +1,38 @@
+
+state={
+	id=96
+	name="STATE_96"
+	resources={
+		aluminium=11.000
+		chromium=19.000
+		steel=5.000
+	}
+
+	history={
+		owner = X29
+		victory_points = {
+			12016 9 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 3
+			arms_factory = 0
+			1005 = {
+				naval_base = 10
+			}
+			air_base = 5
+
+		}
+		add_core_of = V42
+		add_core_of = V57
+		add_core_of = X29
+		add_core_of = YEM
+	}
+
+	provinces={
+		784 869 940 1005 1122 3788 3876 4008 4124 4127 6807 6894 7026 7143 9755 9763 9811 10056 11792 11810 11860 11907 12016 
+	}
+	manpower=1195964
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

@@ -1,0 +1,32 @@
+
+state={
+	id=235
+	name="STATE_235"
+	resources={
+		steel=1.000
+	}
+
+	history={
+		owner = HRE
+		victory_points = {
+			9668 1 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = HRE
+		add_core_of = ROM
+		add_core_of = V36
+	}
+
+	provinces={
+		711 3689 9668 9670 9685 11639 
+	}
+	manpower=403144
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

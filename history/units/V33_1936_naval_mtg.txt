@@ -1,0 +1,65 @@
+units = {
+	fleet = {
+		name = "2nd Fleet"
+		naval_base = 6973
+		task_force = {
+			name = "2nd Fleet"
+			location = 6973
+			ship = { name = "3rd Massa Dreadnought" definition = battleship start_experience_factor = 0.3 equipment = { ship_hull_heavy_2 = { amount = 1 owner = V33 version_name = "1936 Battleship" } } }
+			ship = { name = "1st Massa Dreadnought" definition = battleship start_experience_factor = 0.3 equipment = { ship_hull_heavy_2 = { amount = 1 owner = V33 version_name = "1936 Battleship" } } }
+			ship = { name = "2nd Ferrara Dreadnought" definition = battleship start_experience_factor = 0.3 equipment = { ship_hull_heavy_2 = { amount = 1 owner = V33 version_name = "1936 Battleship" } } }
+			ship = { name = "1st Ferrara Dreadnought" definition = battleship start_experience_factor = 0.3 equipment = { ship_hull_heavy_2 = { amount = 1 owner = V33 version_name = "1936 Battleship" } } }
+			ship = { name = "2nd Massa Dreadnought" definition = battleship start_experience_factor = 0.3 equipment = { ship_hull_heavy_2 = { amount = 1 owner = V33 version_name = "1936 Battleship" } } }
+			ship = { name = "6th Massa Battleship" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = V33 version_name = "1936 Heavy Cruiser" } } }
+			ship = { name = "5th Ferrara Cruiser" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = V33 version_name = "1936 Light Cruiser" } } }
+			ship = { name = "6th Ferrara Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = V33 version_name = "1936 Light Cruiser" } } }
+			ship = { name = "7th Ferrara Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = V33 version_name = "1936 Light Cruiser" } } }
+			ship = { name = "5th Massa Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = V33 version_name = "1936 Light Cruiser" } } }
+			ship = { name = "8th Ferrara Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = V33 version_name = "1936 Light Cruiser" } } }
+			ship = { name = "2nd Massa Cruiser" definition = light_cruiser start_experience_factor = 0.18921 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = V33 version_name = "1936 Light Cruiser" } } }
+		}
+	}
+	fleet = {
+		name = "1st Fleet"
+		naval_base = 6973
+		task_force = {
+			name = "1st Fleet"
+			location = 6973
+			ship = { name = "5th Massa Battleship" definition = heavy_cruiser start_experience_factor = 0.2325 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = V33 version_name = "1936 Heavy Cruiser" } } }
+			ship = { name = "2nd Ferrara Battleship" definition = heavy_cruiser start_experience_factor = 0.20904 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = V33 version_name = "1936 Heavy Cruiser" } } }
+			ship = { name = "2nd Massa Battleship" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = V33 version_name = "1936 Heavy Cruiser" } } }
+			ship = { name = "1st Massa Battleship" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = V33 version_name = "1936 Heavy Cruiser" } } }
+			ship = { name = "1st Ferrara Battleship" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = V33 version_name = "1936 Heavy Cruiser" } } }
+			ship = { name = "3rd Massa Battleship" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = V33 version_name = "1936 Heavy Cruiser" } } }
+			ship = { name = "4th Massa Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = V33 version_name = "1936 Light Cruiser" } } }
+			ship = { name = "1st Ferrara Cruiser" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = V33 version_name = "1936 Light Cruiser" } } }
+			ship = { name = "3rd Massa Cruiser" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = V33 version_name = "1936 Light Cruiser" } } }
+			ship = { name = "2nd Ferrara Cruiser" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = V33 version_name = "1936 Light Cruiser" } } }
+			ship = { name = "4th Ferrara Cruiser" definition = light_cruiser start_experience_factor = 0.23809 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = V33 version_name = "1936 Light Cruiser" } } }
+			ship = { name = "1st Massa Cruiser" definition = light_cruiser start_experience_factor = 0.24429 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = V33 version_name = "1936 Light Cruiser" } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "V33"
+			version_name = "1936 Destroyer"
+		}
+		requested_factories = 3
+		progress = 0.25
+		amount = 10
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_heavy_2
+			creator = "V33"
+			version_name = "1936 Battleship"
+		}
+		requested_factories = 8
+		progress = 0.25
+		amount = 3
+	}
+}

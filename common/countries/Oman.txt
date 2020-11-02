@@ -1,0 +1,3 @@
+graphical_culture = RAJ
+graphical_culture_2d = RAJ
+color = { 98 134 153 }

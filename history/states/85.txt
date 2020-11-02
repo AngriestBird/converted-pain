@@ -1,0 +1,38 @@
+
+state={
+	id=85
+	name="STATE_85"
+	resources={
+		aluminium=1.000
+		oil=3.000
+		steel=4.000
+	}
+
+	history={
+		owner = X29
+		victory_points = {
+			9771 5 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+			arms_factory = 2
+			9783 = {
+				naval_base = 10
+			}
+			air_base = 1
+
+		}
+		add_core_of = V27
+		add_core_of = V57
+		add_core_of = W75
+		add_core_of = X29
+	}
+
+	provinces={
+		649 793 3796 3819 3952 6842 9610 9612 9769 9771 9783 11754 
+	}
+	manpower=2405968
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

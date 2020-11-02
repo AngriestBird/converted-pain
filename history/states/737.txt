@@ -1,0 +1,31 @@
+
+state={
+	id=737
+	name="STATE_737"
+	resources={
+		rubber=1.000
+	}
+
+	history={
+		owner = V50
+		victory_points = {
+			7912 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 1
+			air_base = 0
+
+		}
+		add_core_of = ETH
+		add_core_of = V50
+	}
+
+	provinces={
+		2009 7912 12856 
+	}
+	manpower=854260
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

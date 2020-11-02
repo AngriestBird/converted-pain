@@ -1,0 +1,35 @@
+
+state={
+	id=799
+	name="STATE_799"
+	resources={
+		oil=35.000
+		steel=8.000
+	}
+
+	history={
+		owner = YEM
+		victory_points = {
+			12832 3 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 0
+			arms_factory = 0
+			5005 = {
+				naval_base = 4
+			}
+			air_base = 0
+
+		}
+		add_core_of = TUR
+		add_core_of = YEM
+	}
+
+	provinces={
+		1922 5005 5089 10797 12832 
+	}
+	manpower=464784
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

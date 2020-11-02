@@ -1,0 +1,33 @@
+
+state={
+	id=703
+	name="STATE_703"
+	resources={
+		aluminium=4.000
+		chromium=5.000
+		steel=4.000
+	}
+
+	history={
+		owner = V48
+		victory_points = {
+			4883 4 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			arms_factory = 1
+			air_base = 1
+
+		}
+		add_core_of = V48
+		add_core_of = W70
+	}
+
+	provinces={
+		1510 4557 4883 7430 7619 8120 10030 10171 12781 
+	}
+	manpower=2985284
+	buildings_max_level_factor=1.000
+	state_category=city
+}

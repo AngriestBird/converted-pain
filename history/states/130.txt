@@ -1,0 +1,31 @@
+
+state={
+	id=130
+	name="STATE_130"
+	resources={
+		aluminium=3.000
+		rubber=1.000
+	}
+
+	history={
+		owner = CMR
+		victory_points = {
+			2080 8 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+
+		}
+		add_core_of = CMR
+	}
+
+	provinces={
+		2080 5036 5054 
+	}
+	manpower=496736
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

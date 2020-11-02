@@ -1,0 +1,32 @@
+
+state={
+	id=611
+	name="STATE_611"
+
+	history={
+		owner = V30
+		victory_points = {
+			6906 4 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			arms_factory = 1
+			6906 = {
+				naval_base = 6
+			}
+			air_base = 0
+
+		}
+		add_core_of = ADU
+		add_core_of = SPR
+		add_core_of = V30
+	}
+
+	provinces={
+		832 942 1093 3799 3873 4195 6817 6906 7111 9896 9903 10024 10109 11807 11812 11884 
+	}
+	manpower=1493860
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

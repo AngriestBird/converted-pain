@@ -1,0 +1,31 @@
+
+state={
+	id=341
+	name="STATE_341"
+
+	history={
+		owner = LIT
+		victory_points = {
+			9548 10 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 5
+			arms_factory = 0
+			air_base = 7
+
+		}
+		add_core_of = HRE
+		add_core_of = LIT
+		add_core_of = UKR
+		add_core_of = W55
+		add_core_of = X22
+	}
+
+	provinces={
+		723 744 3741 6584 6747 6761 9548 9716 11534 11689 
+	}
+	manpower=1943352
+	buildings_max_level_factor=1.000
+	state_category=city
+}

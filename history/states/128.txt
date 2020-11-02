@@ -1,0 +1,39 @@
+
+state={
+	id=128
+	name="STATE_128"
+	resources={
+		aluminium=2.000
+		rubber=1.000
+	}
+
+	history={
+		owner = RCG
+		victory_points = {
+			8193 8 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			arms_factory = 0
+			dockyard = 1
+			12975 = {
+				naval_base = 8
+			}
+			air_base = 5
+
+		}
+		add_core_of = RCG
+		ITA = {
+			set_province_controller = 2192
+			set_province_controller = 12975
+		}
+	}
+
+	provinces={
+		2192 3109 6008 8193 12975 
+	}
+	manpower=808072
+	buildings_max_level_factor=1.000
+	state_category=town
+}

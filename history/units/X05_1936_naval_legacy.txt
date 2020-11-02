@@ -1,0 +1,41 @@
+units = {
+	fleet = {
+		name = "1st Fleet"
+		naval_base = 3962
+		task_force = {
+			name = "1st Fleet"
+			location = 3962
+			ship = { name = "2nd Sendai Commerce Raider" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = X05 } } }
+			ship = { name = "1st Nagoya Commerce Raider" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = X05 } } }
+			ship = { name = "4th Nagoya Commerce Raider" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = X05 } } }
+			ship = { name = "3rd Sendai Commerce Raider" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = X05 } } }
+			ship = { name = "5th Nagoya Commerce Raider" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = X05 } } }
+			ship = { name = "4th Sendai Commerce Raider" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = X05 } } }
+			ship = { name = "1st Sendai Commerce Raider" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = X05 } } }
+			ship = { name = "3rd Nagoya Commerce Raider" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = X05 } } }
+			ship = { name = "Mequachake" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = X05 } } }
+			ship = { name = "Chillicothe" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = X05 } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_1
+			creator = "X05"
+		}
+		requested_factories = 3
+		progress = 0.25
+		amount = 10
+	}
+	add_equipment_production = {
+		equipment = {
+			type = battleship_1
+			creator = "X05"
+		}
+		requested_factories = 8
+		progress = 0.25
+		amount = 3
+	}
+}

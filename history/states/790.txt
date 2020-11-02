@@ -1,0 +1,30 @@
+
+state={
+	id=790
+	name="STATE_790"
+
+	history={
+		owner = W11
+		victory_points = {
+			7315 3 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 0
+			arms_factory = 0
+			7315 = {
+				naval_base = 8
+			}
+			air_base = 0
+
+		}
+		add_core_of = W11
+	}
+
+	provinces={
+		4296 4398 7315 7386 7414 7442 10157 10242 10271 12214 
+	}
+	manpower=327436
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

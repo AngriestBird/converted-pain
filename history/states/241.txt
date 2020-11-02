@@ -1,0 +1,32 @@
+
+state={
+	id=241
+	name="STATE_241"
+	resources={
+		oil=6.000
+		tungsten=12.000
+	}
+
+	history={
+		owner = GER
+		victory_points = {
+			12508 1 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = CAN
+		add_core_of = X41
+	}
+
+	provinces={
+		1872 4678 12508 12571 
+	}
+	manpower=291220
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

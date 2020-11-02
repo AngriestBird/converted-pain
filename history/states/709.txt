@@ -1,0 +1,36 @@
+
+state={
+	id=709
+	name="STATE_709"
+	resources={
+		aluminium=2.000
+		chromium=2.000
+		steel=1.000
+		tungsten=2.000
+	}
+
+	history={
+		owner = V48
+		victory_points = {
+			12743 12 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 3
+			arms_factory = 0
+			air_base = 10
+
+		}
+		add_core_of = W70
+		add_core_of = X18
+		add_core_of = X72
+		add_core_of = X88
+	}
+
+	provinces={
+		1949 2036 2105 4106 4410 4950 4953 5040 5096 7080 7938 8076 10332 10801 10807 10816 10872 11995 12080 12743 12799 12854 
+	}
+	manpower=4152688
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

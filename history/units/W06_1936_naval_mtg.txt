@@ -1,0 +1,36 @@
+units = {
+	fleet = {
+		name = "1st Fleet"
+		naval_base = 4031
+		task_force = {
+			name = "1st Fleet"
+			location = 4031
+			ship = { name = "1st Huaian Commerce Raider" definition = destroyer start_experience_factor = 0.15 equipment = { ship_hull_light_1 = { amount = 1 owner = W06 version_name = "Early Destroyer" } } }
+			ship = { name = "1st Laizhou Commerce Raider" definition = destroyer start_experience_factor = 0.15 equipment = { ship_hull_light_1 = { amount = 1 owner = W06 version_name = "Early Destroyer" } } }
+			ship = { name = "1st Tianjin Commerce Raider" definition = destroyer start_experience_factor = 0.15 equipment = { ship_hull_light_1 = { amount = 1 owner = W06 version_name = "Early Destroyer" } } }
+			ship = { name = "2nd Laizhou Commerce Raider" definition = destroyer start_experience_factor = 0.15 equipment = { ship_hull_light_1 = { amount = 1 owner = W06 version_name = "Early Destroyer" } } }
+			ship = { name = "2nd Huaian Commerce Raider" definition = destroyer start_experience_factor = 0.15 equipment = { ship_hull_light_1 = { amount = 1 owner = W06 version_name = "Early Destroyer" } } }
+			ship = { name = "1st Wuding Commerce Raider" definition = destroyer start_experience_factor = 0.15 equipment = { ship_hull_light_1 = { amount = 1 owner = W06 version_name = "Early Destroyer" } } }
+			ship = { name = "3rd Huaian Commerce Raider" definition = destroyer start_experience_factor = 0.15 equipment = { ship_hull_light_1 = { amount = 1 owner = W06 version_name = "Early Destroyer" } } }
+			ship = { name = "2nd Tianjin Commerce Raider" definition = destroyer start_experience_factor = 0.15 equipment = { ship_hull_light_1 = { amount = 1 owner = W06 version_name = "Early Destroyer" } } }
+			ship = { name = "2nd Wuding Commerce Raider" definition = destroyer start_experience_factor = 0.15 equipment = { ship_hull_light_1 = { amount = 1 owner = W06 version_name = "Early Destroyer" } } }
+			ship = { name = "3rd Laizhou Commerce Raider" definition = destroyer start_experience_factor = 0.15 equipment = { ship_hull_light_1 = { amount = 1 owner = W06 version_name = "Early Destroyer" } } }
+			ship = { name = "4th Huaian Commerce Raider" definition = destroyer start_experience_factor = 0.15 equipment = { ship_hull_light_1 = { amount = 1 owner = W06 version_name = "Early Destroyer" } } }
+			ship = { name = "3rd Tianjin Commerce Raider" definition = destroyer start_experience_factor = 0.15 equipment = { ship_hull_light_1 = { amount = 1 owner = W06 version_name = "Early Destroyer" } } }
+			ship = { name = "5th Huaian Commerce Raider" definition = destroyer start_experience_factor = 0.15 equipment = { ship_hull_light_1 = { amount = 1 owner = W06 version_name = "Early Destroyer" } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "W06"
+			version_name = "Early Destroyer"
+		}
+		requested_factories = 3
+		progress = 0.25
+		amount = 10
+	}
+}

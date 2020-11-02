@@ -1,0 +1,34 @@
+
+state={
+	id=527
+	name="STATE_527"
+	resources={
+		aluminium=24.000
+		steel=8.000
+	}
+
+	history={
+		owner = SAX
+		victory_points = {
+			6521 10 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+			arms_factory = 3
+			air_base = 7
+
+		}
+		add_core_of = GER
+		add_core_of = HRE
+		add_core_of = SAX
+		add_core_of = V31
+	}
+
+	provinces={
+		444 478 537 3473 3499 3572 6236 6441 6521 9387 9428 9496 11415 11444 11478 11505 
+	}
+	manpower=1642648
+	buildings_max_level_factor=1.000
+	state_category=city
+}

@@ -1,0 +1,21 @@
+
+state={
+	id=482
+	name="STATE_482"
+	resources={
+		steel=1.000
+	}
+	impassable = yes
+
+	history={
+		owner = MOR
+		add_core_of = MLI
+	}
+
+	provinces={
+		1115 10725 
+	}
+	manpower=174828
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

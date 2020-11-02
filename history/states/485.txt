@@ -1,0 +1,36 @@
+
+state={
+	id=485
+	name="STATE_485"
+	resources={
+		steel=6.000
+	}
+
+	history={
+		owner = W34
+		victory_points = {
+			495 14 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 3
+			arms_factory = 1
+			air_base = 10
+
+		}
+		add_core_of = GER
+		add_core_of = HRE
+		add_core_of = W04
+		add_core_of = W15
+		add_core_of = W34
+		add_core_of = X81
+		add_core_of = X98
+	}
+
+	provinces={
+		405 495 3355 3398 3512 6535 6622 9443 9509 9547 11346 11431 11533 
+	}
+	manpower=3695292
+	buildings_max_level_factor=1.000
+	state_category=city
+}

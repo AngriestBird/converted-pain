@@ -1,0 +1,33 @@
+
+state={
+	id=435
+	name="STATE_435"
+	resources={
+		chromium=88.000
+	}
+
+	history={
+		owner = MAN
+		victory_points = {
+			7110 2 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			7110 = {
+				naval_base = 6
+			}
+			air_base = 0
+
+		}
+		add_core_of = JAP
+	}
+
+	provinces={
+		1020 1025 1158 1183 4027 4102 4164 4198 7110 7178 9950 10011 10020 10092 11925 11949 12006 12032 
+	}
+	manpower=5882240
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+}

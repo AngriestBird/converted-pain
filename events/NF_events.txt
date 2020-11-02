@@ -1,0 +1,1084 @@
+﻿add_namespace = NFEvents
+
+country_event = {
+	id = NFEvents.1
+	title = "Alliance Offer"
+	desc = "We have been invited to an alliance with Mexico. Should we accept the invitation?"
+	picture = news_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Yes"
+		AST = {
+			add_ai_strategy = {
+				type = alliance
+				id = "MEX"
+				value = 200
+			}
+			dismantle_faction = yes
+		}
+		if = {
+			limit = {
+				MEX = {
+					is_in_faction = no
+				}
+			}
+			MEX = {
+				create_faction = "Mexico"
+			}
+		}
+		MEX = {
+			add_to_faction = AST
+		}
+		hidden_effect = {
+			news_event = { id = news.500 }
+		}
+	}
+
+	option = {
+		name = "No"
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+			news_event = { id = news.501 }
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.2
+	title = "Alliance Offer"
+	desc = "We have been invited to an alliance with Mexico. Should we accept the invitation?"
+	picture = news_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Yes"
+		PRU = {
+			add_ai_strategy = {
+				type = alliance
+				id = "MEX"
+				value = 200
+			}
+			dismantle_faction = yes
+		}
+		if = {
+			limit = {
+				MEX = {
+					is_in_faction = no
+				}
+			}
+			MEX = {
+				create_faction = "Mexico"
+			}
+		}
+		MEX = {
+			add_to_faction = PRU
+		}
+		hidden_effect = {
+			news_event = { id = news.502 }
+		}
+	}
+
+	option = {
+		name = "No"
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+			news_event = { id = news.503 }
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.3
+	title = "Byzantine Empire Demands Croatia!"
+	desc = "Today Byzantine Empire sent an envoy to us with a proposition of an union. We are alone and in this world, and a union with Byzantine Empire might prove to be fruitful. Our people would be safe with the mighty army of Byzantine Empire and we could possibly flourish with their established economy. Or we could refuse the union which would surely lead to war, but maybe we can hold them off!"
+	picture = GFX_report_event_hitler_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We accept the Union"
+		ai_chance = {
+			base = 30
+			modifier = {
+				add = -15
+				CRO = { has_army_size = { size < 40 } }
+			}
+			modifier = {
+				add = 45
+				CRO = { has_army_size = { size > 39 } }
+			}
+		}
+		CRO = {
+			country_event = { hours = 2 id = NFEvents.4 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+
+	option = {
+		name = "We Refuse!"
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				CRO = { has_army_size = { size > 39 } }
+			}
+			modifier = {
+				add = 20
+				CRO = { has_army_size = { size < 30 } }
+			}
+		}
+		CRO = {
+			country_event = { hours = 2 id = NFEvents.5 }
+			if = {
+				limit = { is_in_faction_with = CRO }
+				remove_from_faction = CRO
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.5
+	title = "Croatia Refuses!"
+	desc = "Croatia Refused our proposed union! This is an insult to us that cannot go unanswered!"
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = "It's time for war"
+		create_wargoal = {
+			type = annex_everything
+			target = CRO
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.4
+	title = "Croatia accepts!"
+	desc = "Croatia accepted our proposed union, their added strength will push us to greatness!"
+	picture = GFX_report_event_german_speech
+
+	is_triggered_only = yes
+
+	option = {
+		name = "A stronger Union!"
+		144 = {
+			if = {
+				limit = { is_owned_by = CRO }
+				add_core_of = CRO
+			}
+		}
+		X29 = {
+			annex_country = { target = CRO transfer_troops = yes }
+		}
+		add_political_power = 50
+		add_named_threat = { threat = 2 name = "Byzantine Empire annexed Croatia" }
+		set_country_flag = CRO_annexed
+	}
+}
+
+country_event = {
+	id = NFEvents.6
+	title = "Byzantine Empire Demands The Ottoman Empire!"
+	desc = "Today Byzantine Empire sent an envoy to us with a proposition of an union. We are alone and in this world, and a union with Byzantine Empire might prove to be fruitful. Our people would be safe with the mighty army of Byzantine Empire and we could possibly flourish with their established economy. Or we could refuse the union which would surely lead to war, but maybe we can hold them off!"
+	picture = GFX_report_event_hitler_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We accept the Union"
+		ai_chance = {
+			base = 30
+			modifier = {
+				add = -15
+				TUR = { has_army_size = { size < 40 } }
+			}
+			modifier = {
+				add = 45
+				TUR = { has_army_size = { size > 39 } }
+			}
+		}
+		TUR = {
+			country_event = { hours = 2 id = NFEvents.7 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+
+	option = {
+		name = "We Refuse!"
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				TUR = { has_army_size = { size > 39 } }
+			}
+			modifier = {
+				add = 20
+				TUR = { has_army_size = { size < 30 } }
+			}
+		}
+		TUR = {
+			country_event = { hours = 2 id = NFEvents.8 }
+			if = {
+				limit = { is_in_faction_with = TUR }
+				remove_from_faction = TUR
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.8
+	title = "The Ottoman Empire Refuses!"
+	desc = "The Ottoman Empire Refused our proposed union! This is an insult to us that cannot go unanswered!"
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = "It's time for war"
+		create_wargoal = {
+			type = annex_everything
+			target = TUR
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.7
+	title = "The Ottoman Empire accepts!"
+	desc = "The Ottoman Empire accepted our proposed union, their added strength will push us to greatness!"
+	picture = GFX_report_event_german_speech
+
+	is_triggered_only = yes
+
+	option = {
+		name = "A stronger Union!"
+		577 = {
+			if = {
+				limit = { is_owned_by = TUR }
+				add_core_of = TUR
+			}
+		}
+		X29 = {
+			annex_country = { target = TUR transfer_troops = yes }
+		}
+		add_political_power = 50
+		add_named_threat = { threat = 2 name = "Byzantine Empire annexed The Ottoman Empire" }
+		set_country_flag = TUR_annexed
+	}
+}
+
+country_event = {
+	id = NFEvents.9
+	title = "Byzantine Empire Demands Tabaristan!"
+	desc = "Today Byzantine Empire sent an envoy to us with a proposition of an union. We are alone and in this world, and a union with Byzantine Empire might prove to be fruitful. Our people would be safe with the mighty army of Byzantine Empire and we could possibly flourish with their established economy. Or we could refuse the union which would surely lead to war, but maybe we can hold them off!"
+	picture = GFX_report_event_hitler_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We accept the Union"
+		ai_chance = {
+			base = 30
+			modifier = {
+				add = -15
+				V00 = { has_army_size = { size < 40 } }
+			}
+			modifier = {
+				add = 45
+				V00 = { has_army_size = { size > 39 } }
+			}
+		}
+		V00 = {
+			country_event = { hours = 2 id = NFEvents.10 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+
+	option = {
+		name = "We Refuse!"
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				V00 = { has_army_size = { size > 39 } }
+			}
+			modifier = {
+				add = 20
+				V00 = { has_army_size = { size < 30 } }
+			}
+		}
+		V00 = {
+			country_event = { hours = 2 id = NFEvents.11 }
+			if = {
+				limit = { is_in_faction_with = V00 }
+				remove_from_faction = V00
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.11
+	title = "Tabaristan Refuses!"
+	desc = "Tabaristan Refused our proposed union! This is an insult to us that cannot go unanswered!"
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = "It's time for war"
+		create_wargoal = {
+			type = annex_everything
+			target = V00
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.10
+	title = "Tabaristan accepts!"
+	desc = "Tabaristan accepted our proposed union, their added strength will push us to greatness!"
+	picture = GFX_report_event_german_speech
+
+	is_triggered_only = yes
+
+	option = {
+		name = "A stronger Union!"
+		551 = {
+			if = {
+				limit = { is_owned_by = V00 }
+				add_core_of = V00
+			}
+		}
+		552 = {
+			if = {
+				limit = { is_owned_by = V00 }
+				add_core_of = V00
+			}
+		}
+		553 = {
+			if = {
+				limit = { is_owned_by = V00 }
+				add_core_of = V00
+			}
+		}
+		554 = {
+			if = {
+				limit = { is_owned_by = V00 }
+				add_core_of = V00
+			}
+		}
+		555 = {
+			if = {
+				limit = { is_owned_by = V00 }
+				add_core_of = V00
+			}
+		}
+		556 = {
+			if = {
+				limit = { is_owned_by = V00 }
+				add_core_of = V00
+			}
+		}
+		557 = {
+			if = {
+				limit = { is_owned_by = V00 }
+				add_core_of = V00
+			}
+		}
+		558 = {
+			if = {
+				limit = { is_owned_by = V00 }
+				add_core_of = V00
+			}
+		}
+		559 = {
+			if = {
+				limit = { is_owned_by = V00 }
+				add_core_of = V00
+			}
+		}
+		560 = {
+			if = {
+				limit = { is_owned_by = V00 }
+				add_core_of = V00
+			}
+		}
+		561 = {
+			if = {
+				limit = { is_owned_by = V00 }
+				add_core_of = V00
+			}
+		}
+		562 = {
+			if = {
+				limit = { is_owned_by = V00 }
+				add_core_of = V00
+			}
+		}
+		X29 = {
+			transfer_state = 552
+			transfer_state = 554
+			transfer_state = 555
+			transfer_state = 556
+			transfer_state = 557
+			puppet = V00
+		}
+		#annex_country = { target = V00 transfer_troops = yes }
+		add_political_power = 50
+		add_named_threat = { threat = 2 name = "Byzantine Empire annexed Tabaristan" }
+		set_country_flag = V00_annexed
+	}
+}
+
+country_event = {
+	id = NFEvents.12
+	title = "Byzantine Empire Demands Mosul!"
+	desc = "Today Byzantine Empire sent an envoy to us with a proposition of an union. We are alone and in this world, and a union with Byzantine Empire might prove to be fruitful. Our people would be safe with the mighty army of Byzantine Empire and we could possibly flourish with their established economy. Or we could refuse the union which would surely lead to war, but maybe we can hold them off!"
+	picture = GFX_report_event_hitler_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We accept the Union"
+		ai_chance = {
+			base = 30
+			modifier = {
+				add = -15
+				V57 = { has_army_size = { size < 40 } }
+			}
+			modifier = {
+				add = 45
+				V57 = { has_army_size = { size > 39 } }
+			}
+		}
+		V57 = {
+			country_event = { hours = 2 id = NFEvents.13 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+
+	option = {
+		name = "We Refuse!"
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				V57 = { has_army_size = { size > 39 } }
+			}
+			modifier = {
+				add = 20
+				V57 = { has_army_size = { size < 30 } }
+			}
+		}
+		V57 = {
+			country_event = { hours = 2 id = NFEvents.14 }
+			if = {
+				limit = { is_in_faction_with = V57 }
+				remove_from_faction = V57
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.14
+	title = "Mosul Refuses!"
+	desc = "Mosul Refused our proposed union! This is an insult to us that cannot go unanswered!"
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = "It's time for war"
+		create_wargoal = {
+			type = annex_everything
+			target = V57
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.13
+	title = "Mosul accepts!"
+	desc = "Mosul accepted our proposed union, their added strength will push us to greatness!"
+	picture = GFX_report_event_german_speech
+
+	is_triggered_only = yes
+
+	option = {
+		name = "A stronger Union!"
+		745 = {
+			if = {
+				limit = { is_owned_by = V57 }
+				add_core_of = V57
+			}
+		}
+		746 = {
+			if = {
+				limit = { is_owned_by = V57 }
+				add_core_of = V57
+			}
+		}
+		X29 = {
+			annex_country = { target = V57 transfer_troops = yes }
+		}
+		add_political_power = 50
+		add_named_threat = { threat = 2 name = "Byzantine Empire annexed Mosul" }
+		set_country_flag = V57_annexed
+	}
+}
+
+country_event = {
+	id = NFEvents.15
+	title = "Byzantine Empire Demands Yemen!"
+	desc = "Today Byzantine Empire sent an envoy to us with a proposition of an union. We are alone and in this world, and a union with Byzantine Empire might prove to be fruitful. Our people would be safe with the mighty army of Byzantine Empire and we could possibly flourish with their established economy. Or we could refuse the union which would surely lead to war, but maybe we can hold them off!"
+	picture = GFX_report_event_hitler_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We accept the Union"
+		ai_chance = {
+			base = 30
+			modifier = {
+				add = -15
+				YEM = { has_army_size = { size < 40 } }
+			}
+			modifier = {
+				add = 45
+				YEM = { has_army_size = { size > 39 } }
+			}
+		}
+		YEM = {
+			country_event = { hours = 2 id = NFEvents.16 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+
+	option = {
+		name = "We Refuse!"
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				YEM = { has_army_size = { size > 39 } }
+			}
+			modifier = {
+				add = 20
+				YEM = { has_army_size = { size < 30 } }
+			}
+		}
+		YEM = {
+			country_event = { hours = 2 id = NFEvents.17 }
+			if = {
+				limit = { is_in_faction_with = YEM }
+				remove_from_faction = YEM
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.17
+	title = "Yemen Refuses!"
+	desc = "Yemen Refused our proposed union! This is an insult to us that cannot go unanswered!"
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = "It's time for war"
+		create_wargoal = {
+			type = annex_everything
+			target = YEM
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.16
+	title = "Yemen accepts!"
+	desc = "Yemen accepted our proposed union, their added strength will push us to greatness!"
+	picture = GFX_report_event_german_speech
+
+	is_triggered_only = yes
+
+	option = {
+		name = "A stronger Union!"
+		794 = {
+			if = {
+				limit = { is_owned_by = YEM }
+				add_core_of = YEM
+			}
+		}
+		795 = {
+			if = {
+				limit = { is_owned_by = YEM }
+				add_core_of = YEM
+			}
+		}
+		796 = {
+			if = {
+				limit = { is_owned_by = YEM }
+				add_core_of = YEM
+			}
+		}
+		797 = {
+			if = {
+				limit = { is_owned_by = YEM }
+				add_core_of = YEM
+			}
+		}
+		798 = {
+			if = {
+				limit = { is_owned_by = YEM }
+				add_core_of = YEM
+			}
+		}
+		799 = {
+			if = {
+				limit = { is_owned_by = YEM }
+				add_core_of = YEM
+			}
+		}
+		800 = {
+			if = {
+				limit = { is_owned_by = YEM }
+				add_core_of = YEM
+			}
+		}
+		801 = {
+			if = {
+				limit = { is_owned_by = YEM }
+				add_core_of = YEM
+			}
+		}
+		802 = {
+			if = {
+				limit = { is_owned_by = YEM }
+				add_core_of = YEM
+			}
+		}
+		803 = {
+			if = {
+				limit = { is_owned_by = YEM }
+				add_core_of = YEM
+			}
+		}
+		804 = {
+			if = {
+				limit = { is_owned_by = YEM }
+				add_core_of = YEM
+			}
+		}
+		805 = {
+			if = {
+				limit = { is_owned_by = YEM }
+				add_core_of = YEM
+			}
+		}
+		806 = {
+			if = {
+				limit = { is_owned_by = YEM }
+				add_core_of = YEM
+			}
+		}
+		807 = {
+			if = {
+				limit = { is_owned_by = YEM }
+				add_core_of = YEM
+			}
+		}
+		808 = {
+			if = {
+				limit = { is_owned_by = YEM }
+				add_core_of = YEM
+			}
+		}
+		809 = {
+			if = {
+				limit = { is_owned_by = YEM }
+				add_core_of = YEM
+			}
+		}
+		810 = {
+			if = {
+				limit = { is_owned_by = YEM }
+				add_core_of = YEM
+			}
+		}
+		811 = {
+			if = {
+				limit = { is_owned_by = YEM }
+				add_core_of = YEM
+			}
+		}
+		812 = {
+			if = {
+				limit = { is_owned_by = YEM }
+				add_core_of = YEM
+			}
+		}
+		813 = {
+			if = {
+				limit = { is_owned_by = YEM }
+				add_core_of = YEM
+			}
+		}
+		814 = {
+			if = {
+				limit = { is_owned_by = YEM }
+				add_core_of = YEM
+			}
+		}
+		815 = {
+			if = {
+				limit = { is_owned_by = YEM }
+				add_core_of = YEM
+			}
+		}
+		816 = {
+			if = {
+				limit = { is_owned_by = YEM }
+				add_core_of = YEM
+			}
+		}
+		817 = {
+			if = {
+				limit = { is_owned_by = YEM }
+				add_core_of = YEM
+			}
+		}
+		818 = {
+			if = {
+				limit = { is_owned_by = YEM }
+				add_core_of = YEM
+			}
+		}
+		819 = {
+			if = {
+				limit = { is_owned_by = YEM }
+				add_core_of = YEM
+			}
+		}
+		820 = {
+			if = {
+				limit = { is_owned_by = YEM }
+				add_core_of = YEM
+			}
+		}
+		821 = {
+			if = {
+				limit = { is_owned_by = YEM }
+				add_core_of = YEM
+			}
+		}
+		822 = {
+			if = {
+				limit = { is_owned_by = YEM }
+				add_core_of = YEM
+			}
+		}
+		823 = {
+			if = {
+				limit = { is_owned_by = YEM }
+				add_core_of = YEM
+			}
+		}
+		824 = {
+			if = {
+				limit = { is_owned_by = YEM }
+				add_core_of = YEM
+			}
+		}
+		825 = {
+			if = {
+				limit = { is_owned_by = YEM }
+				add_core_of = YEM
+			}
+		}
+		826 = {
+			if = {
+				limit = { is_owned_by = YEM }
+				add_core_of = YEM
+			}
+		}
+		X29 = {
+			transfer_state = 803
+			transfer_state = 797
+			transfer_state = 798
+			transfer_state = 800
+			puppet = YEM
+		}
+		#annex_country = { target = YEM transfer_troops = yes }
+		add_political_power = 50
+		add_named_threat = { threat = 2 name = "Byzantine Empire annexed Yemen" }
+		set_country_flag = YEM_annexed
+	}
+}
+
+country_event = {
+	id = NFEvents.18
+	title = "Byzantine Empire Demands Germany!"
+	desc = "Byzantine Empire has recently been making claims to our bordering states, saying that these states are full of Byzantine Empire people and that the territory should be given to them. Although it is true that recently our neighboring states have had an influx of Byzantine Empire people in the recent years, we cannot give up our lands because a few Byzantine Empire settled down in our land. In response Byzantine Empire has called for a conference, demanding their territory in exchange for peace. How do we respond? Our people would be safe with the mighty army of Byzantine Empire and we could possibly flourish with their established economy. Or we could refuse the union which would surely lead to war, but maybe we can hold them off!"
+	picture = GFX_report_event_hitler_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We Accept"
+		ai_chance = {
+			base = 30
+			modifier = {
+				add = -15
+				X29 = { has_army_size = { size < 40 } }
+			}
+			modifier = {
+				add = 45
+				X29 = { has_army_size = { size > 39 } }
+			}
+		}
+		X29 = {
+			country_event = { hours = 2 id = NFEvents.19 }
+		}
+	}
+
+	option = {
+		name = "We Refuse!"
+		ai_chance  = {
+			base = 10
+			modifier = {
+				factor = 0
+				X29 = { has_army_size = { size > 39 } }
+			}
+			modifier = {
+				add = 20
+				X29 = { has_army_size = { size < 30 } }
+			}
+		}
+		X29 = {
+			country_event = { hours = 2 id = NFEvents.20 }
+			if = {
+				limit = { is_in_faction_with = GER }
+				remove_from_faction = GER
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.20
+	title = "Germany Refuses!"
+	desc = "Germany Refused our proposed proposition! This is an insult to us that cannot go unanswered!"
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = "It's time for war"
+		create_wargoal = {
+			type = annex_everything
+			target = GER
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.19
+	title = "Germany accepts!"
+	desc = "Germany accepted our proposed demands, the added lands will push us to greatness!"
+	picture = GFX_report_event_german_speech
+
+	is_triggered_only = yes
+
+	option = {
+		name = "A stronger Union!"
+		235 = { add_core_of = X29 }
+		X29 = { transfer_state = 235 }
+		234 = { add_core_of = X29 }
+		X29 = { transfer_state = 234 }
+		set_country_flag = GER_demanded
+	}
+}
+
+country_event = {
+	id = NFEvents.21
+	title = "Byzantine Empire Demands The Holy Roman Empire!"
+	desc = "Byzantine Empire has recently been making claims to our bordering states, saying that these states are full of Byzantine Empire people and that the territory should be given to them. Although it is true that recently our neighboring states have had an influx of Byzantine Empire people in the recent years, we cannot give up our lands because a few Byzantine Empire settled down in our land. In response Byzantine Empire has called for a conference, demanding their territory in exchange for peace. How do we respond? Our people would be safe with the mighty army of Byzantine Empire and we could possibly flourish with their established economy. Or we could refuse the union which would surely lead to war, but maybe we can hold them off!"
+	picture = GFX_report_event_hitler_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We Accept"
+		ai_chance = {
+			base = 30
+			modifier = {
+				add = -15
+				X29 = { has_army_size = { size < 40 } }
+			}
+			modifier = {
+				add = 45
+				X29 = { has_army_size = { size > 39 } }
+			}
+		}
+		X29 = {
+			country_event = { hours = 2 id = NFEvents.22 }
+		}
+	}
+
+	option = {
+		name = "We Refuse!"
+		ai_chance  = {
+			base = 10
+			modifier = {
+				factor = 0
+				X29 = { has_army_size = { size > 39 } }
+			}
+			modifier = {
+				add = 20
+				X29 = { has_army_size = { size < 30 } }
+			}
+		}
+		X29 = {
+			country_event = { hours = 2 id = NFEvents.23 }
+			if = {
+				limit = { is_in_faction_with = HRE }
+				remove_from_faction = HRE
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.23
+	title = "The Holy Roman Empire Refuses!"
+	desc = "The Holy Roman Empire Refused our proposed proposition! This is an insult to us that cannot go unanswered!"
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = "It's time for war"
+		create_wargoal = {
+			type = annex_everything
+			target = HRE
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.22
+	title = "The Holy Roman Empire accepts!"
+	desc = "The Holy Roman Empire accepted our proposed demands, the added lands will push us to greatness!"
+	picture = GFX_report_event_german_speech
+
+	is_triggered_only = yes
+
+	option = {
+		name = "A stronger Union!"
+		267 = { add_core_of = X29 }
+		X29 = { transfer_state = 267 }
+		269 = { add_core_of = X29 }
+		X29 = { transfer_state = 269 }
+		set_country_flag = HRE_demanded
+	}
+}
+
+country_event = {
+	id = NFEvents.24
+	title = "Alliance Offer"
+	desc = "We have been invited to an alliance with Byzantine Empire. Should we accept the invitation?"
+	picture = news_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Yes"
+		EST = {
+			add_ai_strategy = {
+				type = alliance
+				id = "X29"
+				value = 200
+			}
+			dismantle_faction = yes
+		}
+		if = {
+			limit = {
+				X29 = {
+					is_in_faction = no
+				}
+			}
+			X29 = {
+				create_faction = "Byzantine Empire"
+			}
+		}
+		X29 = {
+			add_to_faction = EST
+		}
+		hidden_effect = {
+			news_event = { id = news.504 }
+		}
+	}
+
+	option = {
+		name = "No"
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+			news_event = { id = news.505 }
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.25
+	title = "Alliance Offer"
+	desc = "We have been invited to an alliance with Byzantine Empire. Should we accept the invitation?"
+	picture = news_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Yes"
+		ICE = {
+			add_ai_strategy = {
+				type = alliance
+				id = "X29"
+				value = 200
+			}
+			dismantle_faction = yes
+		}
+		if = {
+			limit = {
+				X29 = {
+					is_in_faction = no
+				}
+			}
+			X29 = {
+				create_faction = "Byzantine Empire"
+			}
+		}
+		X29 = {
+			add_to_faction = ICE
+		}
+		hidden_effect = {
+			news_event = { id = news.506 }
+		}
+	}
+
+	option = {
+		name = "No"
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+			news_event = { id = news.507 }
+		}
+	}
+}

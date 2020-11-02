@@ -1,0 +1,30 @@
+
+state={
+	id=560
+	name="STATE_560"
+
+	history={
+		owner = V00
+		victory_points = {
+			10275 6 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 6
+
+		}
+		add_core_of = MON
+		add_core_of = V35
+		add_core_of = V44
+		add_core_of = X94
+	}
+
+	provinces={
+		4488 4578 4581 4638 7243 7392 7486 7600 7657 10220 10275 10277 10353 10452 12121 12177 12329 12471 
+	}
+	manpower=1008376
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

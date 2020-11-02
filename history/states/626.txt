@@ -1,0 +1,27 @@
+
+state={
+	id=626
+	name="STATE_626"
+
+	history={
+		owner = V30
+		victory_points = {
+			2094 1 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 1
+
+		}
+		add_core_of = SIE
+	}
+
+	provinces={
+		2094 
+	}
+	manpower=312052
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

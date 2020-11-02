@@ -1,0 +1,33 @@
+
+state={
+	id=531
+	name="STATE_531"
+	resources={
+		aluminium=4.000
+		steel=6.000
+	}
+
+	history={
+		owner = W75
+		victory_points = {
+			12582 1 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = CAN
+		add_core_of = V64
+		add_core_of = W31
+	}
+
+	provinces={
+		779 1299 4869 6607 6610 7366 9480 9585 9743 12278 12582 
+	}
+	manpower=532888
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

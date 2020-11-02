@@ -1,0 +1,30 @@
+
+state={
+	id=243
+	name="STATE_243"
+
+	history={
+		owner = GER
+		victory_points = {
+			12941 1 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 0
+			arms_factory = 0
+			12941 = {
+				naval_base = 8
+			}
+			air_base = 0
+
+		}
+		add_core_of = SOM
+	}
+
+	provinces={
+		11014 12941 
+	}
+	manpower=175272
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

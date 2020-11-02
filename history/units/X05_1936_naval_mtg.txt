@@ -1,0 +1,33 @@
+units = {
+	fleet = {
+		name = "1st Fleet"
+		naval_base = 3962
+		task_force = {
+			name = "1st Fleet"
+			location = 3962
+			ship = { name = "2nd Sendai Commerce Raider" definition = destroyer start_experience_factor = 0.05 equipment = { ship_hull_light_1 = { amount = 1 owner = X05 version_name = "Early Destroyer" } } }
+			ship = { name = "1st Nagoya Commerce Raider" definition = destroyer start_experience_factor = 0.05 equipment = { ship_hull_light_1 = { amount = 1 owner = X05 version_name = "Early Destroyer" } } }
+			ship = { name = "4th Nagoya Commerce Raider" definition = destroyer start_experience_factor = 0.05 equipment = { ship_hull_light_1 = { amount = 1 owner = X05 version_name = "Early Destroyer" } } }
+			ship = { name = "3rd Sendai Commerce Raider" definition = destroyer start_experience_factor = 0.1 equipment = { ship_hull_light_1 = { amount = 1 owner = X05 version_name = "Early Destroyer" } } }
+			ship = { name = "5th Nagoya Commerce Raider" definition = destroyer start_experience_factor = 0.1 equipment = { ship_hull_light_1 = { amount = 1 owner = X05 version_name = "Early Destroyer" } } }
+			ship = { name = "4th Sendai Commerce Raider" definition = destroyer start_experience_factor = 0.1 equipment = { ship_hull_light_1 = { amount = 1 owner = X05 version_name = "Early Destroyer" } } }
+			ship = { name = "1st Sendai Commerce Raider" definition = destroyer start_experience_factor = 0.05 equipment = { ship_hull_light_1 = { amount = 1 owner = X05 version_name = "Early Destroyer" } } }
+			ship = { name = "3rd Nagoya Commerce Raider" definition = destroyer start_experience_factor = 0.05 equipment = { ship_hull_light_1 = { amount = 1 owner = X05 version_name = "Early Destroyer" } } }
+			ship = { name = "Mequachake" definition = destroyer start_experience_factor = 0.05 equipment = { ship_hull_light_1 = { amount = 1 owner = X05 version_name = "Early Destroyer" } } }
+			ship = { name = "Chillicothe" definition = destroyer start_experience_factor = 0.05 equipment = { ship_hull_light_1 = { amount = 1 owner = X05 version_name = "Early Destroyer" } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "X05"
+			version_name = "Early Destroyer"
+		}
+		requested_factories = 3
+		progress = 0.25
+		amount = 10
+	}
+}

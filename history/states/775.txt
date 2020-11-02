@@ -1,0 +1,28 @@
+
+state={
+	id=775
+	name="STATE_775"
+
+	history={
+		owner = V66
+		victory_points = {
+			12384 1 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = CSA
+		add_core_of = USA
+	}
+
+	provinces={
+		968 5090 9949 9996 12384 
+	}
+	manpower=911672
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

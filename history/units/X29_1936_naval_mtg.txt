@@ -1,0 +1,75 @@
+units = {
+	fleet = {
+		name = "1st Fleet"
+		naval_base = 922
+		task_force = {
+			name = "1st Fleet"
+			location = 922
+			ship = { name = "1st Burgas Battleship" definition = heavy_cruiser start_experience_factor = 0.2066 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "7th Ulcinj Battleship" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "7th Varna Battleship" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "5th Constanta Battleship" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "9th Ulcinj Battleship" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "6th Varna Battleship" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "3rd Constanta Battleship" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "4th Constanta Battleship" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "8th Ulcinj Battleship" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "1st Edessa Battleship" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "2nd Missolonghi Battleship" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "3rd Burgas Battleship" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "3rd Varna Battleship" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "4th Ulcinj Battleship" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "4th Burgas Battleship" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "4th Varna Battleship" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "5th Burgas Battleship" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "1st Ulcinj Battleship" definition = heavy_cruiser start_experience_factor = 0.2066 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "1st Varna Battleship" definition = heavy_cruiser start_experience_factor = 0.2066 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "5th Varna Battleship" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "6th Constanta Battleship" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "3rd Varna Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Light Cruiser" } } }
+			ship = { name = "Navarhos Miaoulis" definition = light_cruiser start_experience_factor = 0.17073 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Light Cruiser" } } }
+			ship = { name = "2nd Constanta Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Light Cruiser" } } }
+			ship = { name = "1st Ulcinj Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Light Cruiser" } } }
+			ship = { name = "4th Constanta Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Light Cruiser" } } }
+			ship = { name = "Tilemachos" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Light Cruiser" } } }
+			ship = { name = "Delfoí" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Light Cruiser" } } }
+			ship = { name = "Georgios Averof" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Light Cruiser" } } }
+			ship = { name = "1st Attalia Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Light Cruiser" } } }
+			ship = { name = "4th Varna Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Light Cruiser" } } }
+			ship = { name = "Elli" definition = light_cruiser start_experience_factor = 0.24703 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Light Cruiser" } } }
+			ship = { name = "Antinaurkos Condoriotis" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Light Cruiser" } } }
+			ship = { name = "Lambros Katsonis" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Light Cruiser" } } }
+			ship = { name = "Árgos" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Light Cruiser" } } }
+			ship = { name = "Agamemnon" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Light Cruiser" } } }
+			ship = { name = "Gyáros" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Light Cruiser" } } }
+			ship = { name = "1st Constanta Cruiser" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Light Cruiser" } } }
+			ship = { name = "1st Burgas Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Light Cruiser" } } }
+			ship = { name = "1st Varna Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Light Cruiser" } } }
+			ship = { name = "3rd Constanta Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Light Cruiser" } } }
+			ship = { name = "5th Constanta Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = X29 version_name = "Early Light Cruiser" } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "X29"
+			version_name = "Early Destroyer"
+		}
+		requested_factories = 3
+		progress = 0.25
+		amount = 10
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_heavy_1
+			creator = "X29"
+			version_name = "Early Battleship"
+		}
+		requested_factories = 8
+		progress = 0.25
+		amount = 3
+	}
+}

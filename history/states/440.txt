@@ -1,0 +1,28 @@
+
+state={
+	id=440
+	name="STATE_440"
+
+	history={
+		owner = MAN
+		victory_points = {
+			8461 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = MAN
+		add_core_of = TRA
+	}
+
+	provinces={
+		96 8461 
+	}
+	manpower=592804
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

@@ -1,0 +1,35 @@
+
+state={
+	id=173
+	name="STATE_173"
+	resources={
+		steel=68.000
+	}
+
+	history={
+		owner = U73
+		victory_points = {
+			9297 9 
+		}
+		buildings = {
+			infrastructure = 8
+			industrial_complex = 9
+			arms_factory = 3
+			3353 = {
+				naval_base = 4
+			}
+			air_base = 4
+
+		}
+		add_core_of = ENG
+		add_core_of = U73
+		add_core_of = X03
+	}
+
+	provinces={
+		364 3241 3301 3353 6237 6270 6301 7239 9250 9268 9297 9322 11279 11345 
+	}
+	manpower=6302120
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+}

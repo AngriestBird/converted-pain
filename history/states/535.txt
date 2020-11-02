@@ -1,0 +1,31 @@
+
+state={
+	id=535
+	name="STATE_535"
+
+	history={
+		owner = W75
+		victory_points = {
+			4159 4 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			arms_factory = 1
+			4159 = {
+				naval_base = 10
+			}
+			air_base = 0
+
+		}
+		add_core_of = W75
+		add_core_of = X29
+	}
+
+	provinces={
+		1156 4159 
+	}
+	manpower=1436248
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

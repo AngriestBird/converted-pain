@@ -1,0 +1,37 @@
+
+state={
+	id=147
+	name="STATE_147"
+	resources={
+		chromium=3.000
+		steel=3.000
+		tungsten=7.000
+	}
+
+	history={
+		owner = VIN
+		victory_points = {
+			1185 8 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			1185 = {
+				naval_base = 4
+			}
+			air_base = 5
+
+		}
+		add_core_of = VIN
+		add_core_of = W14
+		add_core_of = X86
+	}
+
+	provinces={
+		1157 1185 4119 7093 9948 
+	}
+	manpower=743080
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

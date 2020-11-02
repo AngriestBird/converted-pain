@@ -1,0 +1,18 @@
+
+state={
+	id=638
+	name="STATE_638"
+	impassable = yes
+
+	history={
+		owner = V30
+		add_core_of = ALG
+	}
+
+	provinces={
+		2049 10731 12711 12842 
+	}
+	manpower=66020
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

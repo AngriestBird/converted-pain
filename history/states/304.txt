@@ -1,0 +1,39 @@
+
+state={
+	id=304
+	name="STATE_304"
+	resources={
+		steel=14.000
+	}
+
+	history={
+		owner = LIT
+		victory_points = {
+			3516 17 
+		}
+		buildings = {
+			infrastructure = 8
+			industrial_complex = 9
+			arms_factory = 1
+			air_base = 10
+
+		}
+		add_core_of = BEL
+		add_core_of = FLA
+		add_core_of = FRA
+		add_core_of = GER
+		add_core_of = HRE
+		add_core_of = LIT
+		add_core_of = LUX
+		add_core_of = W08
+		add_core_of = W55
+		add_core_of = WLL
+	}
+
+	provinces={
+		3488 3516 3576 6537 6583 9418 9444 9536 11407 11519 13081 
+	}
+	manpower=4971992
+	buildings_max_level_factor=1.000
+	state_category=metropolis
+}

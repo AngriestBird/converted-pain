@@ -1,0 +1,29 @@
+
+state={
+	id=573
+	name="STATE_573"
+
+	history={
+		owner = V09
+		victory_points = {
+			1900 13 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 0
+			air_base = 10
+
+		}
+		add_core_of = MEX
+		add_core_of = V09
+		add_core_of = X34
+	}
+
+	provinces={
+		1900 
+	}
+	manpower=31196
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

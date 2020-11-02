@@ -1,0 +1,33 @@
+
+state={
+	id=195
+	name="STATE_195"
+	resources={
+		steel=1.000
+	}
+
+	history={
+		owner = EST
+		victory_points = {
+			3174 8 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+
+		}
+		add_core_of = EST
+		add_core_of = HRE
+		add_core_of = V17
+		add_core_of = V38
+	}
+
+	provinces={
+		308 3174 6178 6381 11291 
+	}
+	manpower=71324
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

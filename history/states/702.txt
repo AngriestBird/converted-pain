@@ -1,0 +1,30 @@
+
+state={
+	id=702
+	name="STATE_702"
+	resources={
+		chromium=119.000
+	}
+
+	history={
+		owner = V48
+		victory_points = {
+			4268 1 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 1
+
+		}
+		add_core_of = W64
+	}
+
+	provinces={
+		1263 4231 4268 7264 10160 12132 
+	}
+	manpower=415748
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

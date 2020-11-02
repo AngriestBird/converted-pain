@@ -1,0 +1,32 @@
+
+state={
+	id=163
+	name="STATE_163"
+
+	history={
+		owner = DEN
+		victory_points = {
+			9347 6 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			arms_factory = 0
+			9347 = {
+				naval_base = 6
+			}
+			air_base = 6
+
+		}
+		add_core_of = GER
+		add_core_of = W58
+		add_core_of = X79
+	}
+
+	provinces={
+		3368 9347 
+	}
+	manpower=230284
+	buildings_max_level_factor=1.000
+	state_category=town
+}

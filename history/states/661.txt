@@ -1,0 +1,30 @@
+
+state={
+	id=661
+	name="STATE_661"
+	resources={
+		steel=1.000
+	}
+
+	history={
+		owner = V37
+		victory_points = {
+			382 4 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			arms_factory = 1
+			air_base = 1
+
+		}
+		add_core_of = V37
+	}
+
+	provinces={
+		274 382 3263 3308 3377 6348 11300 11369 
+	}
+	manpower=777624
+	buildings_max_level_factor=1.000
+	state_category=town
+}

@@ -1,0 +1,35 @@
+
+state={
+	id=320
+	name="STATE_320"
+	resources={
+		aluminium=2.000
+		rubber=1.000
+		steel=1.000
+	}
+
+	history={
+		owner = LIT
+		victory_points = {
+			1951 6 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			arms_factory = 0
+			1951 = {
+				naval_base = 6
+			}
+			air_base = 6
+
+		}
+		add_core_of = TOG
+	}
+
+	provinces={
+		1951 
+	}
+	manpower=371360
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

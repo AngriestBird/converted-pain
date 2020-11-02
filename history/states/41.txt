@@ -1,0 +1,35 @@
+
+state={
+	id=41
+	name="STATE_41"
+	resources={
+		aluminium=0.000
+	}
+
+	history={
+		owner = X23
+		victory_points = {
+			4891 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			4891 = {
+				naval_base = 2
+			}
+			air_base = 0
+
+		}
+		add_core_of = RAJ
+		add_core_of = TUR
+		add_core_of = X23
+	}
+
+	provinces={
+		2070 4891 10782 12895 13082 
+	}
+	manpower=310468
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

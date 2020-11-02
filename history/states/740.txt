@@ -1,0 +1,30 @@
+
+state={
+	id=740
+	name="STATE_740"
+
+	history={
+		owner = V54
+		victory_points = {
+			493 8 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+			arms_factory = 0
+			air_base = 6
+
+		}
+		add_core_of = HRE
+		add_core_of = POL
+		add_core_of = V54
+		add_core_of = W55
+	}
+
+	provinces={
+		493 548 6401 11515 
+	}
+	manpower=539344
+	buildings_max_level_factor=1.000
+	state_category=town
+}

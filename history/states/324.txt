@@ -1,0 +1,30 @@
+
+state={
+	id=324
+	name="STATE_324"
+
+	history={
+		owner = LIT
+		victory_points = {
+			4989 6 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			arms_factory = 0
+			4989 = {
+				naval_base = 6
+			}
+			air_base = 6
+
+		}
+		add_core_of = GAM
+	}
+
+	provinces={
+		4989 13213 
+	}
+	manpower=191936
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

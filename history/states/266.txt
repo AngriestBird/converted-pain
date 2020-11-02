@@ -1,0 +1,35 @@
+
+state={
+	id=266
+	name="STATE_266"
+	resources={
+		oil=1.000
+	}
+
+	history={
+		owner = HRE
+		victory_points = {
+			686 15 
+		}
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 5
+			arms_factory = 2
+			air_base = 7
+
+		}
+		add_core_of = AUS
+		add_core_of = GER
+		add_core_of = HRE
+		add_core_of = HUN
+		add_core_of = V59
+		add_core_of = X77
+	}
+
+	provinces={
+		682 686 701 3670 3680 3683 6685 6703 6720 9624 9643 9676 11610 11627 11663 
+	}
+	manpower=2433880
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

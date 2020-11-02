@@ -1,0 +1,30 @@
+
+state={
+	id=524
+	name="STATE_524"
+	resources={
+		steel=4.000
+	}
+
+	history={
+		owner = SAF
+		victory_points = {
+			12419 3 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 1
+
+		}
+		add_core_of = SAF
+	}
+
+	provinces={
+		12419 
+	}
+	manpower=41464
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

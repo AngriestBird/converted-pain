@@ -1,0 +1,31 @@
+
+state={
+	id=491
+	name="STATE_491"
+
+	history={
+		owner = W45
+		victory_points = {
+			11544 11 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 3
+			arms_factory = 2
+			air_base = 7
+
+		}
+		add_core_of = GER
+		add_core_of = HRE
+		add_core_of = V51
+		add_core_of = W45
+		add_core_of = X09
+	}
+
+	provinces={
+		586 3474 6421 6594 9416 9557 9572 11404 11417 11529 11544 13116 
+	}
+	manpower=2508008
+	buildings_max_level_factor=1.000
+	state_category=city
+}

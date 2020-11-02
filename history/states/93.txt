@@ -1,0 +1,40 @@
+
+state={
+	id=93
+	name="STATE_93"
+	resources={
+		aluminium=39.000
+		chromium=19.000
+		steel=15.000
+		tungsten=13.000
+	}
+
+	history={
+		owner = X29
+		victory_points = {
+			4109 10 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 3
+			arms_factory = 1
+			dockyard = 1
+			1205 = {
+				naval_base = 10
+			}
+			air_base = 6
+
+		}
+		add_core_of = V27
+		add_core_of = X13
+		add_core_of = X29
+		add_core_of = X46
+	}
+
+	provinces={
+		976 1109 1205 3864 3988 4109 7127 11895 12001 
+	}
+	manpower=1984464
+	buildings_max_level_factor=1.000
+	state_category=city
+}

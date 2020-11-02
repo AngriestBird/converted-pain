@@ -1,0 +1,28 @@
+
+state={
+	id=151
+	name="STATE_151"
+
+	history={
+		owner = X54
+		victory_points = {
+			10595 8 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+
+		}
+		add_core_of = USA
+		add_core_of = X54
+	}
+
+	provinces={
+		3750 4839 4880 7862 10569 10595 12620 12667 
+	}
+	manpower=83544
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

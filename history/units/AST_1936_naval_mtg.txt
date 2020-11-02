@@ -1,0 +1,26 @@
+units = {
+	fleet = {
+		name = "1st Fleet"
+		naval_base = 13053
+		task_force = {
+			name = "1st Fleet"
+			location = 13053
+			ship = { name = "Charlotte" definition = destroyer start_experience_factor = 0.04361 equipment = { ship_hull_light_1 = { amount = 1 owner = AST version_name = "Early Destroyer" } } }
+			ship = { name = "Lady Penrhyn" definition = destroyer start_experience_factor = 0.04459 equipment = { ship_hull_light_1 = { amount = 1 owner = AST version_name = "Early Destroyer" } } }
+			ship = { name = "Alexander" definition = destroyer start_experience_factor = 0.04732 equipment = { ship_hull_light_1 = { amount = 1 owner = AST version_name = "Early Destroyer" } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "AST"
+			version_name = "Early Destroyer"
+		}
+		requested_factories = 3
+		progress = 0.25
+		amount = 10
+	}
+}

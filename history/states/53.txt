@@ -1,0 +1,27 @@
+
+state={
+	id=53
+	name="STATE_53"
+
+	history={
+		owner = BRD
+		victory_points = {
+			2220 8 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+
+		}
+		add_core_of = BRD
+	}
+
+	provinces={
+		2220 
+	}
+	manpower=359060
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

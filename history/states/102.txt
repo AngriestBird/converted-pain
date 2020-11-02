@@ -1,0 +1,38 @@
+
+state={
+	id=102
+	name="STATE_102"
+	resources={
+		steel=7.000
+	}
+
+	history={
+		owner = X29
+		victory_points = {
+			9932 15 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 5
+			arms_factory = 1
+			dockyard = 1
+			975 = {
+				naval_base = 8
+			}
+			air_base = 10
+
+		}
+		add_core_of = HRE
+		add_core_of = V03
+		add_core_of = V57
+		add_core_of = W57
+		add_core_of = X29
+	}
+
+	provinces={
+		652 960 975 3714 3903 3935 3950 3965 3979 6919 6950 6976 6991 9777 9868 9886 9932 9954 11797 11853 11894 
+	}
+	manpower=2339500
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

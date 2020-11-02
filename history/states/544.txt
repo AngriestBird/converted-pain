@@ -1,0 +1,34 @@
+
+state={
+	id=544
+	name="STATE_544"
+	resources={
+		aluminium=0.000
+		steel=4.000
+		tungsten=4.000
+	}
+
+	history={
+		owner = W87
+		victory_points = {
+			3673 8 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+
+		}
+		add_core_of = GER
+		add_core_of = HRE
+		add_core_of = W87
+	}
+
+	provinces={
+		668 3673 3674 6673 11612 
+	}
+	manpower=207304
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,30 @@
+
+state={
+	id=613
+	name="STATE_613"
+	resources={
+		steel=4.000
+	}
+
+	history={
+		owner = V30
+		victory_points = {
+			4095 3 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 1
+
+		}
+		add_core_of = V30
+	}
+
+	provinces={
+		950 1090 1192 4095 7196 10111 12083 
+	}
+	manpower=469692
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

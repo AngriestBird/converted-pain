@@ -1,0 +1,35 @@
+
+state={
+	id=607
+	name="STATE_607"
+	resources={
+		aluminium=21.000
+		steel=2.000
+		tungsten=24.000
+	}
+
+	history={
+		owner = V30
+		victory_points = {
+			11756 13 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 4
+			arms_factory = 0
+			air_base = 6
+
+		}
+		add_core_of = ADU
+		add_core_of = GER
+		add_core_of = SPR
+		add_core_of = V30
+	}
+
+	provinces={
+		726 738 794 874 885 903 918 920 939 3725 3727 3820 3845 3874 3918 3920 4024 6746 6867 6907 6936 9700 9770 9800 9827 9846 9872 11684 11756 11825 11843 11852 11854 13219 13220 13221 13227 13232 
+	}
+	manpower=1878248
+	buildings_max_level_factor=1.000
+	state_category=city
+}

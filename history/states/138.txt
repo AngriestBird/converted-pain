@@ -1,0 +1,38 @@
+
+state={
+	id=138
+	name="STATE_138"
+
+	history={
+		owner = BAS
+		victory_points = {
+			4450 47 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 8
+			arms_factory = 2
+			dockyard = 1
+			13084 = {
+				naval_base = 8
+			}
+			air_base = 10
+
+		}
+		add_core_of = BAS
+		add_core_of = GDL
+		add_core_of = HAI
+		add_core_of = PUE
+		add_core_of = W28
+		add_core_of = W85
+		add_core_of = X04
+		add_core_of = X12
+	}
+
+	provinces={
+		1440 4155 4450 9377 13084 
+	}
+	manpower=2304976
+	buildings_max_level_factor=1.000
+	state_category=city
+}

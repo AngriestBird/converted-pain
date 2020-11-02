@@ -1,0 +1,31 @@
+
+state={
+	id=389
+	name="STATE_389"
+	resources={
+		steel=1.000
+	}
+
+	history={
+		owner = W19
+		victory_points = {
+			11254 2 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 1
+
+		}
+		add_core_of = HRE
+		add_core_of = HUN
+	}
+
+	provinces={
+		246 300 335 352 3279 3345 6243 6303 6365 9253 9261 9272 9318 9382 11235 11254 11284 11384 
+	}
+	manpower=1893448
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

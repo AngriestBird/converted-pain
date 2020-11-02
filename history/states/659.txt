@@ -1,0 +1,32 @@
+
+state={
+	id=659
+	name="STATE_659"
+	resources={
+		steel=5.000
+	}
+
+	history={
+		owner = V37
+		victory_points = {
+			7330 4 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+			arms_factory = 0
+			air_base = 1
+
+		}
+		add_core_of = RAJ
+		add_core_of = V37
+		add_core_of = W48
+	}
+
+	provinces={
+		99 108 3081 3135 3155 6113 6158 6180 7330 9136 9200 11027 11061 11075 11200 
+	}
+	manpower=1195004
+	buildings_max_level_factor=1.000
+	state_category=town
+}

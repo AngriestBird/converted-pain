@@ -1,0 +1,33 @@
+
+state={
+	id=788
+	name="STATE_788"
+	resources={
+		tungsten=1.000
+	}
+
+	history={
+		owner = BRA
+		victory_points = {
+			8175 8 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+
+		}
+		add_core_of = BRA
+		add_core_of = PRU
+		add_core_of = V68
+		add_core_of = W67
+	}
+
+	provinces={
+		2111 2142 2147 2181 2204 5148 5200 8175 8189 8224 10959 12951 
+	}
+	manpower=237476
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

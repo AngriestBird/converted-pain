@@ -1,0 +1,30 @@
+
+state={
+	id=577
+	name="STATE_577"
+	resources={
+		oil=6.000
+	}
+
+	history={
+		owner = TUR
+		victory_points = {
+			2097 8 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			arms_factory = 1
+			air_base = 6
+
+		}
+		add_core_of = TUR
+	}
+
+	provinces={
+		1631 2097 4951 12046 12413 12839 
+	}
+	manpower=1148680
+	buildings_max_level_factor=1.000
+	state_category=town
+}

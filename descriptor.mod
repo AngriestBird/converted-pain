@@ -1,0 +1,6 @@
+name="Converted - pain"
+replace_path="common/ideologies"
+replace_path="history/countries"
+replace_path="history/states"
+supported_version="1.10.1"
+remote_file_id="2274473338"

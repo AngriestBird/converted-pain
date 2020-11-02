@@ -1,0 +1,32 @@
+
+state={
+	id=553
+	name="STATE_553"
+
+	history={
+		owner = V00
+		victory_points = {
+			3653 3 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 0
+			arms_factory = 0
+			3653 = {
+				naval_base = 10
+			}
+			air_base = 0
+
+		}
+		add_core_of = V00
+		add_core_of = X29
+		add_core_of = X46
+	}
+
+	provinces={
+		3653 
+	}
+	manpower=259820
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

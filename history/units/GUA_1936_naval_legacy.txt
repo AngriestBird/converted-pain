@@ -1,0 +1,69 @@
+units = {
+	fleet = {
+		name = "1st Fleet"
+		naval_base = 13085
+		task_force = {
+			name = "1st Fleet"
+			location = 13085
+			ship = { name = "Constitución" definition = battleship equipment = { battleship_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "Guatemala" definition = battleship equipment = { battleship_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "José Carrera Turcios" definition = battleship equipment = { battleship_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "José María Reina" definition = battleship equipment = { battleship_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "Justo Barrios" definition = battleship equipment = { battleship_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "Manuel Estrada" definition = battleship equipment = { battleship_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "Mariano Rivera" definition = battleship equipment = { battleship_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "Pedro Molina" definition = battleship equipment = { battleship_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "1st Collataro Battleship" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "1st Minatitlán Battleship" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "1st Campeche Battleship" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "2nd Minatitlán Battleship" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "2nd Campeche Battleship" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "2nd Collataro Battleship" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "3rd Campeche Battleship" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "3rd Collataro Battleship" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "3rd Minatitlán Battleship" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "4th Minatitlán Battleship" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "4th Collataro Battleship" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "Barrigones" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "Cakchiquel" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "Bartolomé de las Casas" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "Itzá" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "Kiche" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "Nueva Sevilla" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "Olmeca" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "Pedro de Alvarado" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "Qeqchi" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "Zapotitlán" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "1st Puerto Barrios Cruiser" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "1st Collataro Cruiser" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "1st Minatitlán Cruiser" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "2nd Minatitlán Cruiser" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "2nd Puerto Barrios Cruiser" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "1st Campeche Cruiser" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "3rd Puerto Barrios Cruiser" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "2nd Collataro Cruiser" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GUA } } }
+			ship = { name = "3rd Collataro Cruiser" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GUA } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_1
+			creator = "GUA"
+		}
+		requested_factories = 3
+		progress = 0.25
+		amount = 10
+	}
+	add_equipment_production = {
+		equipment = {
+			type = battleship_1
+			creator = "GUA"
+		}
+		requested_factories = 8
+		progress = 0.25
+		amount = 3
+	}
+}

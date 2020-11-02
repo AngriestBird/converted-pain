@@ -1,0 +1,36 @@
+
+state={
+	id=265
+	name="STATE_265"
+	resources={
+		chromium=32.000
+		steel=1.000
+	}
+
+	history={
+		owner = HON
+		victory_points = {
+			7622 8 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			arms_factory = 0
+			7622 = {
+				naval_base = 10
+			}
+			air_base = 5
+
+		}
+		add_core_of = CUB
+		add_core_of = HAI
+		add_core_of = HON
+	}
+
+	provinces={
+		4600 7622 
+	}
+	manpower=972008
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

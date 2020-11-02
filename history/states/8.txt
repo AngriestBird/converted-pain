@@ -1,0 +1,32 @@
+
+state={
+	id=8
+	name="STATE_8"
+	resources={
+		aluminium=1.000
+	}
+
+	history={
+		owner = X09
+		victory_points = {
+			6555 8 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			arms_factory = 1
+			air_base = 6
+
+		}
+		add_core_of = GER
+		add_core_of = HRE
+		add_core_of = X09
+	}
+
+	provinces={
+		6555 9545 
+	}
+	manpower=693224
+	buildings_max_level_factor=1.000
+	state_category=town
+}

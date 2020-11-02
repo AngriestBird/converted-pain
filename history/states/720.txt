@@ -1,0 +1,29 @@
+
+state={
+	id=720
+	name="STATE_720"
+
+	history={
+		owner = V49
+		victory_points = {
+			4967 3 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = RAJ
+		add_core_of = V49
+		add_core_of = W20
+	}
+
+	provinces={
+		4967 
+	}
+	manpower=274720
+	buildings_max_level_factor=1.000
+	state_category=town
+}

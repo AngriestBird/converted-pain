@@ -1,0 +1,507 @@
+focus_tree = {
+	id = X29_focus 
+	#Byzantine Bonus Tree
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = X29
+		}
+	}
+	
+	default = no
+	
+	shared_focus = army_effort
+	shared_focus = aviation_effort
+	shared_focus = naval_effort
+	shared_focus = industrial_effort
+	shared_focus = political_effort
+
+	focus = {
+		id = The_third_wayX29
+		icon = GFX_goal_support_fascism
+		text = The_third_way
+		x = 32
+		y = 0
+		cost = 10
+		completion_reward = {
+			add_named_threat = { threat = 2 name = The_third_way }
+			add_ideas = fascist_influence
+		}
+		ai_will_do = {
+		factor = 5
+		}
+	}
+
+	focus = {
+		id = mil_marchX29
+		icon = GFX_goal_generic_allies_build_infantry
+		text = mil_march
+		prerequisite = { focus = The_third_wayX29 }
+		x = 0
+		y = 1
+		relative_position_id = The_third_wayX29
+		cost = 10
+		completion_reward = {
+			army_experience = 20
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+				name = land_doctrine
+			}
+		}
+		ai_will_do = {
+		factor = 5
+		}
+	}
+
+	focus = {
+		id = X29_anschluss_CRO
+		icon = GFX_goal_anschluss
+		text = _anschluss_CRO
+		prerequisite = { focus = mil_marchX29 }
+		x = 28
+		y = 2
+		cost = 10
+		available = {
+			CRO = {
+				is_in_faction = no
+			}
+			is_puppet = no
+			date > 1937.7.8
+		}
+		completion_reward = {
+			add_named_threat = { threat = 2 name = "Union with Croatia" }
+			army_experience = 10
+			if = {
+				limit = {
+					country_exists = CRO
+				}
+				CRO = {
+					country_event = NFEvents.3
+				}
+			}
+		}
+		ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			date < 1937.6.6
+		}
+	}
+	}
+
+	focus = {
+		id = X29_anschluss_TUR
+		icon = GFX_goal_anschluss
+		text = _anschluss_TUR
+		prerequisite = { focus = mil_marchX29 }
+		x = 30
+		y = 2
+		cost = 10
+		available = {
+			TUR = {
+				is_in_faction = no
+			}
+			is_puppet = no
+			date > 1937.10.6
+		}
+		completion_reward = {
+			add_named_threat = { threat = 2 name = "Union with The Ottoman Empire" }
+			army_experience = 10
+			if = {
+				limit = {
+					country_exists = TUR
+				}
+				TUR = {
+					country_event = NFEvents.6
+				}
+			}
+		}
+		ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			date < 1937.6.6
+		}
+	}
+	}
+
+	focus = {
+		id = X29_anschluss_V00
+		icon = GFX_goal_anschluss
+		text = _anschluss_V00
+		prerequisite = { focus = mil_marchX29 }
+		x = 32
+		y = 2
+		cost = 10
+		available = {
+			V00 = {
+				is_in_faction = no
+			}
+			is_puppet = no
+			date > 1937.10.10
+		}
+		completion_reward = {
+			add_named_threat = { threat = 2 name = "Union with Tabaristan" }
+			army_experience = 10
+			if = {
+				limit = {
+					country_exists = V00
+				}
+				V00 = {
+					country_event = NFEvents.9
+				}
+			}
+		}
+		ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			date < 1937.6.6
+		}
+	}
+	}
+
+	focus = {
+		id = X29_anschluss_V57
+		icon = GFX_goal_anschluss
+		text = _anschluss_V57
+		prerequisite = { focus = mil_marchX29 }
+		x = 34
+		y = 2
+		cost = 10
+		available = {
+			V57 = {
+				is_in_faction = no
+			}
+			is_puppet = no
+			date > 1937.9.9
+		}
+		completion_reward = {
+			add_named_threat = { threat = 2 name = "Union with Mosul" }
+			army_experience = 10
+			if = {
+				limit = {
+					country_exists = V57
+				}
+				V57 = {
+					country_event = NFEvents.12
+				}
+			}
+		}
+		ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			date < 1937.6.6
+		}
+	}
+	}
+
+	focus = {
+		id = X29_anschluss_YEM
+		icon = GFX_goal_anschluss
+		text = _anschluss_YEM
+		prerequisite = { focus = mil_marchX29 }
+		x = 36
+		y = 2
+		cost = 10
+		available = {
+			YEM = {
+				is_in_faction = no
+			}
+			is_puppet = no
+			date > 1937.8.10
+		}
+		completion_reward = {
+			add_named_threat = { threat = 2 name = "Union with Yemen" }
+			army_experience = 10
+			if = {
+				limit = {
+					country_exists = YEM
+				}
+				YEM = {
+					country_event = NFEvents.15
+				}
+			}
+		}
+		ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			date < 1937.6.6
+		}
+	}
+	}
+
+	focus = {
+		id = expand_the_reichX29
+		icon = GFX_goal_generic_political_pressure
+		text = expand_the_reich
+		x = 39
+		y = 0
+		cost = 10
+		completion_reward = {
+			add_named_threat = { threat = 3 name = expand_the_reich }
+			add_political_power = 150
+		}
+		ai_will_do = {
+		factor = 5
+		}
+	}
+
+	focus = {
+		id = X29_sudeten_GER
+		icon = GFX_goal_anschluss
+		text = _sudeten_GER
+		prerequisite = { focus = expand_the_reichX29 }
+		bypass = {
+  has_war_with = GER
+}
+		x = 38
+		y = 1
+		cost = 10
+		available = {
+			is_puppet = no
+			date > 1938.2.2
+		}
+		completion_reward = {
+			add_named_threat = { threat = 2 name = "Demand Territory from Germany" }
+			army_experience = 10
+			if = {
+				limit = {
+					country_exists = GER
+				}
+				GER = {
+					country_event = NFEvents.18
+				}
+			}
+		}
+		ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			date < 1937.6.6
+		}
+	}
+	}
+
+	focus = {
+		id = X29_finish_GER
+		icon = GFX_goal_generic_territory_or_war
+		text = _finish_GER
+		prerequisite = { focus =  X29_sudeten_GER }
+		bypass = {
+		has_war_with = GER
+	}
+		x = 38
+		y = 2
+		cost = 10
+		available = {
+	GER = { is_in_faction = no }
+		}
+		completion_reward = {
+			add_named_threat = { threat = 3 name = "Fate of Germany" }
+			create_wargoal = {
+				type = annex_everything
+				target = GER
+			}
+		}
+		ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			date < 1937.6.6
+		}
+	}
+	}
+
+	focus = {
+		id = X29_sudeten_HRE
+		icon = GFX_goal_anschluss
+		text = _sudeten_HRE
+		prerequisite = { focus = expand_the_reichX29 }
+		bypass = {
+  has_war_with = HRE
+}
+		x = 40
+		y = 1
+		cost = 10
+		available = {
+			is_puppet = no
+			date > 1938.2.4
+		}
+		completion_reward = {
+			add_named_threat = { threat = 2 name = "Demand Territory from The Holy Roman Empire" }
+			army_experience = 10
+			if = {
+				limit = {
+					country_exists = HRE
+				}
+				HRE = {
+					country_event = NFEvents.21
+				}
+			}
+		}
+		ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			date < 1937.6.6
+		}
+	}
+	}
+
+	focus = {
+		id = X29_finish_HRE
+		icon = GFX_goal_generic_territory_or_war
+		text = _finish_HRE
+		prerequisite = { focus =  X29_sudeten_HRE }
+		bypass = {
+		has_war_with = HRE
+	}
+		x = 40
+		y = 2
+		cost = 10
+		available = {
+	HRE = { is_in_faction = no }
+		}
+		completion_reward = {
+			add_named_threat = { threat = 3 name = "Fate of The Holy Roman Empire" }
+			create_wargoal = {
+				type = annex_everything
+				target = HRE
+			}
+		}
+		ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			date < 1937.6.6
+		}
+	}
+	}
+
+	focus = {
+		id = Fas_SummitX29
+		icon = GFX_goal_generic_allies_build_infantry
+		text = Fascist_Summit
+		x = 43
+		y = 0
+		cost = 10
+		completion_reward = {
+			add_named_threat = { threat = 3 name = "Call for the Fascist Summit" }
+			add_political_power = 150
+		}
+		ai_will_do = {
+		factor = 2
+		modifier = {
+			factor = 10
+			date > 1938.1.1
+		}
+	}
+	}
+
+	focus = {
+		id = Alliance_ESTX29
+		icon = GFX_goal_generic_allies_build_infantry
+		text = Alliance_EST
+		prerequisite = { focus = Fas_SummitX29 }
+		bypass = {
+			OR = {
+				X29 = { is_in_faction_with = EST}
+				has_war_with = EST
+				NOT = { country_exists = EST }
+			}
+		}
+		x = -1
+		y = 1
+		relative_position_id = Fas_SummitX29
+		cost = 10
+		available = {
+			OR = {
+				is_faction_leader = yes
+				is_in_faction = no
+			}
+	}
+		completion_reward = {
+			EST = {
+				country_event = { hours = 6 id = NFEvents.24 }
+				add_opinion_modifier = { target = X29 modifier = positive_50 }
+			}
+		}
+		ai_will_do = {
+			factor = 10
+	}
+	}
+
+	focus = {
+		id = Alliance_ICEX29
+		icon = GFX_goal_generic_allies_build_infantry
+		text = Alliance_ICE
+		prerequisite = { focus = Fas_SummitX29 }
+		bypass = {
+			OR = {
+				X29 = { is_in_faction_with = ICE}
+				has_war_with = ICE
+				NOT = { country_exists = ICE }
+			}
+		}
+		x = 1
+		y = 1
+		relative_position_id = Fas_SummitX29
+		cost = 10
+		available = {
+			OR = {
+				is_faction_leader = yes
+				is_in_faction = no
+			}
+	}
+		completion_reward = {
+			ICE = {
+				country_event = { hours = 6 id = NFEvents.25 }
+				add_opinion_modifier = { target = X29 modifier = positive_50 }
+			}
+		}
+		ai_will_do = {
+			factor = 10
+	}
+	}
+
+	focus = {
+		id = GP_WarMANX29
+		icon = GFX_goal_generic_major_war
+		text = GP_WarMAN
+		prerequisite = { focus = Alliance_ESTX29 }
+		prerequisite = { focus = Alliance_ICEX29 }
+		bypass = {
+		   has_war_with = MAN
+		}
+		x = 0
+		y = 2
+		relative_position_id = Fas_SummitX29
+		cost = 10
+		available = {
+			has_war = no
+			date > 1939.2.12
+		}
+		completion_reward = {
+			add_named_threat = { threat = 5 name = "War with Manchukuo" }
+			declare_war_on = {
+				type = puppet_wargoal_focus
+				target = MAN
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+					factor = 0
+					strength_ratio = { tag = MAN ratio < 1 }
+			}
+		}
+	}
+
+}

@@ -1,0 +1,42 @@
+units = {
+	fleet = {
+		name = "1st Fleet"
+		naval_base = 11670
+		task_force = {
+			name = "1st Fleet"
+			location = 11670
+			ship = { name = "6th Odessa Commerce Raider" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = W19 } } }
+			ship = { name = "7th Odessa Commerce Raider" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = W19 } } }
+			ship = { name = "Jedrzej Sniadecki" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = W19 } } }
+			ship = { name = "4th Odessa Commerce Raider" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = W19 } } }
+			ship = { name = "Krzysztof Arciszewski" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = W19 } } }
+			ship = { name = "Hugo Kollataj" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = W19 } } }
+			ship = { name = "Jan Dlugosz" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = W19 } } }
+			ship = { name = "Adam Naruszewicz" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = W19 } } }
+			ship = { name = "Samuel Linde" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = W19 } } }
+			ship = { name = "Mikolaj Rej" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = W19 } } }
+			ship = { name = "5th Odessa Commerce Raider" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = W19 } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_1
+			creator = "W19"
+		}
+		requested_factories = 3
+		progress = 0.25
+		amount = 10
+	}
+	add_equipment_production = {
+		equipment = {
+			type = battleship_1
+			creator = "W19"
+		}
+		requested_factories = 8
+		progress = 0.25
+		amount = 3
+	}
+}

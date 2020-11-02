@@ -1,0 +1,58 @@
+﻿X42 = {
+	battle_cruiser = {
+		prefix = ""
+		generic = { "Battlecruiser" }
+		unique = {
+			"Thinis" "Memphis" "Abydos" "Herakleopolis" "Thebes" "Itjtawy" "Avaris" "Bubastis" "Sais" 
+		}
+	}
+
+	battleship = {
+		prefix = ""
+		generic = { "Battleship" }
+		unique = {
+			"Thinis" "Memphis" "Abydos" "Herakleopolis" "Thebes" "Itjtawy" "Avaris" "Bubastis" "Sais" 
+		}
+	}
+
+	carrier = {
+		prefix = ""
+		generic = { "Carrier" }
+		unique = {
+			"Thinis" "Memphis" "Abydos" "Herakleopolis" "Thebes" "Itjtawy" "Avaris" "Bubastis" "Sais" 
+		}
+	}
+
+	destroyer = {
+		prefix = ""
+		generic = { "Destroyer" }
+		unique = {
+			"Thinis" "Memphis" "Abydos" "Herakleopolis" "Thebes" "Itjtawy" "Avaris" "Bubastis" "Sais" 
+		}
+	}
+
+	heavy_cruiser = {
+		prefix = ""
+		generic = { "Heavy Cruiser" }
+		unique = {
+			"Thinis" "Memphis" "Abydos" "Herakleopolis" "Thebes" "Itjtawy" "Avaris" "Bubastis" "Sais" 
+		}
+	}
+
+	light_cruiser = {
+		prefix = ""
+		generic = { "Light Cruiser" }
+		unique = {
+			"Thinis" "Memphis" "Abydos" "Herakleopolis" "Thebes" "Itjtawy" "Avaris" "Bubastis" "Sais" 
+		}
+	}
+
+	submarine = {
+		prefix = ""
+		generic = { "Submarine" }
+		unique = {
+			"Thinis" "Memphis" "Abydos" "Herakleopolis" "Thebes" "Itjtawy" "Avaris" "Bubastis" "Sais" 
+		}
+	}
+
+}

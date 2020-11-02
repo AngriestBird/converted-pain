@@ -1,0 +1,30 @@
+
+state={
+	id=2
+	name="STATE_2"
+
+	history={
+		owner = X05
+		victory_points = {
+			1399 3 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 0
+			arms_factory = 0
+			dockyard = 1
+			air_base = 0
+
+		}
+		add_core_of = JAP
+		add_core_of = X05
+		add_core_of = X62
+	}
+
+	provinces={
+		1399 1515 13037 
+	}
+	manpower=1097096
+	buildings_max_level_factor=1.000
+	state_category=city
+}

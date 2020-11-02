@@ -1,0 +1,75 @@
+units = {
+	fleet = {
+		name = "1st Fleet"
+		naval_base = 9498
+		task_force = {
+			name = "1st Fleet"
+			location = 9498
+			ship = { name = "1st Cádiz Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "2nd Cádiz Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "1st Ventspils Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "3rd Palanga Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "2nd Ventspils Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "3rd Cádiz Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "4th Palanga Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "1st Granada Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "3rd Ventspils Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "4th Cádiz Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "2nd Elbing Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "5th Palanga Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "2nd Klaipeda Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "2nd Granada Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "4th Ventspils Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "3rd Elbing Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "5th Cádiz Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "6th Palanga Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "3rd Klaipeda Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "3rd Granada Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "5th Ventspils Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "4th Elbing Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "7th Palanga Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "6th Cádiz Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "4th Klaipeda Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "4th Granada Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "6th Ventspils Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "5th Elbing Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "8th Palanga Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "5th Klaipeda Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "7th Cádiz Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "5th Granada Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "7th Ventspils Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "6th Elbing Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "9th Palanga Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "6th Klaipeda Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "8th Cádiz Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "6th Granada Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "8th Ventspils Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "7th Elbing Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "10th Palanga Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "7th Klaipeda Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "7th Granada Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+			ship = { name = "8th Elbing Commerce Raider" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LIT } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_2
+			creator = "LIT"
+		}
+		requested_factories = 3
+		progress = 0.25
+		amount = 10
+	}
+	add_equipment_production = {
+		equipment = {
+			type = battleship_2
+			creator = "LIT"
+		}
+		requested_factories = 8
+		progress = 0.25
+		amount = 3
+	}
+}

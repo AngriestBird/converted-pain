@@ -1,0 +1,35 @@
+
+state={
+	id=753
+	name="STATE_753"
+	resources={
+		steel=3.000
+	}
+
+	history={
+		owner = V58
+		victory_points = {
+			10073 6 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			arms_factory = 0
+			4076 = {
+				naval_base = 4
+			}
+			air_base = 5
+
+		}
+		add_core_of = EGY
+		add_core_of = V46
+		add_core_of = X42
+	}
+
+	provinces={
+		992 1071 3996 4055 4076 4145 7164 10073 
+	}
+	manpower=3060332
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+}

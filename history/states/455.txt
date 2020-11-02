@@ -1,0 +1,28 @@
+
+state={
+	id=455
+	name="STATE_455"
+
+	history={
+		owner = GUA
+		victory_points = {
+			1965 7 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 5
+			arms_factory = 4
+			air_base = 3
+
+		}
+		add_core_of = GUA
+		add_core_of = V09
+	}
+
+	provinces={
+		1965 
+	}
+	manpower=2797108
+	buildings_max_level_factor=1.000
+	state_category=metropolis
+}

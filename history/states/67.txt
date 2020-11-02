@@ -1,0 +1,31 @@
+
+state={
+	id=67
+	name="STATE_67"
+	resources={
+		tungsten=1.000
+	}
+
+	history={
+		owner = BRA
+		victory_points = {
+			8140 4 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			arms_factory = 2
+			air_base = 0
+
+		}
+		add_core_of = BRA
+		add_core_of = W67
+	}
+
+	provinces={
+		5115 5208 8140 12959 12987 
+	}
+	manpower=1824872
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

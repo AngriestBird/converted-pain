@@ -1,0 +1,27 @@
+
+state={
+	id=660
+	name="STATE_660"
+
+	history={
+		owner = V37
+		victory_points = {
+			121 33 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 5
+			arms_factory = 0
+			air_base = 10
+
+		}
+		add_core_of = V37
+	}
+
+	provinces={
+		2 62 121 164 231 252 3220 6056 6101 6143 6167 9122 9188 11099 11166 11205 
+	}
+	manpower=1311544
+	buildings_max_level_factor=1.000
+	state_category=city
+}

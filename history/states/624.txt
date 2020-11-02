@@ -1,0 +1,32 @@
+
+state={
+	id=624
+	name="STATE_624"
+	resources={
+		aluminium=2.000
+		rubber=0.000
+		steel=0.000
+	}
+
+	history={
+		owner = V30
+		victory_points = {
+			8122 1 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 1
+
+		}
+		add_core_of = IVO
+	}
+
+	provinces={
+		5070 8122 
+	}
+	manpower=158920
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

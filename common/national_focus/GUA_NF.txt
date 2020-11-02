@@ -1,0 +1,410 @@
+focus_tree = {
+	id = GUA_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = GUA
+		}
+	}
+	
+	default = no
+	
+	shared_focus = army_effort
+	shared_focus = aviation_effort
+	shared_focus = naval_effort
+	shared_focus = industrial_effort
+	shared_focus = political_effort
+
+	focus = {
+		id = WarPropGUA
+		icon = GFX_goal_generic_propaganda
+		text = WarProp
+		x = 30
+		y = 0
+		cost = 10
+		available = {
+			threat > 0.000050
+		}
+		completion_reward = {
+		add_stability = 0.05
+	}
+		ai_will_do = {
+		factor = 10
+	}
+	}
+
+	focus = {
+		id = PrepInterGUA
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		text = PrepInter
+		prerequisite = { focus = WarPropGUA }
+		x = 0
+		y = 1
+		relative_position_id = WarPropGUA
+		cost = 10
+		available = {
+			threat > 0.000075
+		}
+		completion_reward = {
+		add_political_power = 120
+		set_rule = { can_send_volunteers = yes }
+	}
+		ai_will_do = {
+		factor = 10
+	}
+	}
+
+	focus = {
+		id = LimGUA
+		icon = GFX_goal_generic_more_territorial_claims
+		text = Lim
+		prerequisite = { focus = PrepInterGUA }
+		x = 0
+		y = 1
+		relative_position_id = PrepInterGUA
+		cost = 10
+		available = {
+			threat > 0.000125
+		}
+		completion_reward = {
+		add_ideas = limited_interventionism
+	}
+		ai_will_do = {
+		factor = 10
+	}
+	}
+
+	focus = {
+		id = WarPlanGUAMEX
+		icon = GFX_goal_generic_position_armies
+		text = WarPlanMEX
+		prerequisite = { focus = LimGUA }
+		bypass = {
+			has_war_with = MEX
+		}
+		x = -2
+		y = 1
+		relative_position_id = LimGUA
+		cost = 10
+		available = {
+			any_other_country = {
+				original_tag = MEX
+				exists = yes
+				NOT = { has_government = democratic } 
+				NOT = { is_in_faction_with = GUA }
+				OR = {
+					has_offensive_war = yes
+					has_added_tension_amount > 30
+				}
+			}
+		}
+		completion_reward = {
+		army_experience = 20
+		add_tech_bonus = {
+			name = land_doc_bonus
+			bonus = 0.5
+			uses = 1
+			category = land_doctrine
+		}
+	}
+		ai_will_do = {
+		factor = 10
+	}
+	}
+
+	focus = {
+		id = EmbargoGUAMEX
+		icon = GFX_goal_generic_trade
+		text = EmbargoMEX
+		prerequisite = { focus =  WarPlanGUAMEX }
+		bypass = {
+			has_war_with = MEX
+		}
+		x = 0
+		y = 1
+		relative_position_id = WarPlanGUAMEX
+		cost = 10
+		available = {
+			any_other_country = {
+				original_tag = MEX
+				exists = yes
+				NOT = { has_government = democratic } 
+				NOT = { is_in_faction_with = GUA }
+				OR = {
+					has_offensive_war = yes
+					has_added_tension_amount > 30
+					threat > 0.6
+				}
+			}
+		}
+		completion_reward = {
+			MEX = {
+				add_opinion_modifier = { target = GUA modifier = embargo }
+			}
+		}
+		ai_will_do = {
+		factor = 10
+	}
+	}
+
+	focus = {
+		id = WARGUAMEX
+		icon = GFX_goal_support_democracy
+		text = WARMEX
+		prerequisite = { focus =  EmbargoGUAMEX }
+		bypass = {
+			has_war_with = MEX
+		}
+		x = 0
+		y = 1
+		relative_position_id = EmbargoGUAMEX
+		cost = 10
+		available = {
+			has_war = no
+			any_other_country = {
+				original_tag = MEX
+				exists = yes
+				NOT = { has_government = democratic } 
+				NOT = { is_in_faction_with = GUA }
+				OR = {
+					has_offensive_war = yes
+					has_added_tension_amount > 30
+					threat > 0.6
+				}
+			}
+		}
+		completion_reward = {
+			declare_war_on = {
+				type = puppet_wargoal_focus
+				target = MEX
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = WarPlanGUAX29
+		icon = GFX_goal_generic_position_armies
+		text = WarPlanX29
+		prerequisite = { focus = LimGUA }
+		bypass = {
+			has_war_with = X29
+		}
+		x = 0
+		y = 1
+		relative_position_id = LimGUA
+		cost = 10
+		available = {
+			any_other_country = {
+				original_tag = X29
+				exists = yes
+				NOT = { has_government = democratic } 
+				NOT = { is_in_faction_with = GUA }
+				OR = {
+					has_offensive_war = yes
+					has_added_tension_amount > 30
+				}
+			}
+		}
+		completion_reward = {
+		army_experience = 20
+		add_tech_bonus = {
+			name = land_doc_bonus
+			bonus = 0.5
+			uses = 1
+			category = land_doctrine
+		}
+	}
+		ai_will_do = {
+		factor = 10
+	}
+	}
+
+	focus = {
+		id = EmbargoGUAX29
+		icon = GFX_goal_generic_trade
+		text = EmbargoX29
+		prerequisite = { focus =  WarPlanGUAX29 }
+		bypass = {
+			has_war_with = X29
+		}
+		x = 0
+		y = 1
+		relative_position_id = WarPlanGUAX29
+		cost = 10
+		available = {
+			any_other_country = {
+				original_tag = X29
+				exists = yes
+				NOT = { has_government = democratic } 
+				NOT = { is_in_faction_with = GUA }
+				OR = {
+					has_offensive_war = yes
+					has_added_tension_amount > 30
+					threat > 0.6
+				}
+			}
+		}
+		completion_reward = {
+			X29 = {
+				add_opinion_modifier = { target = GUA modifier = embargo }
+			}
+		}
+		ai_will_do = {
+		factor = 10
+	}
+	}
+
+	focus = {
+		id = WARGUAX29
+		icon = GFX_goal_support_democracy
+		text = WARX29
+		prerequisite = { focus =  EmbargoGUAX29 }
+		bypass = {
+			has_war_with = X29
+		}
+		x = 0
+		y = 1
+		relative_position_id = EmbargoGUAX29
+		cost = 10
+		available = {
+			has_war = no
+			any_other_country = {
+				original_tag = X29
+				exists = yes
+				NOT = { has_government = democratic } 
+				NOT = { is_in_faction_with = GUA }
+				OR = {
+					has_offensive_war = yes
+					has_added_tension_amount > 30
+					threat > 0.6
+				}
+			}
+		}
+		completion_reward = {
+			declare_war_on = {
+				type = puppet_wargoal_focus
+				target = X29
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = WarPlanGUAMAN
+		icon = GFX_goal_generic_position_armies
+		text = WarPlanMAN
+		prerequisite = { focus = LimGUA }
+		bypass = {
+			has_war_with = MAN
+		}
+		x = 2
+		y = 1
+		relative_position_id = LimGUA
+		cost = 10
+		available = {
+			any_other_country = {
+				original_tag = MAN
+				exists = yes
+				NOT = { has_government = democratic } 
+				NOT = { is_in_faction_with = GUA }
+				OR = {
+					has_offensive_war = yes
+					has_added_tension_amount > 30
+				}
+			}
+		}
+		completion_reward = {
+		army_experience = 20
+		add_tech_bonus = {
+			name = land_doc_bonus
+			bonus = 0.5
+			uses = 1
+			category = land_doctrine
+		}
+	}
+		ai_will_do = {
+		factor = 10
+	}
+	}
+
+	focus = {
+		id = EmbargoGUAMAN
+		icon = GFX_goal_generic_trade
+		text = EmbargoMAN
+		prerequisite = { focus =  WarPlanGUAMAN }
+		bypass = {
+			has_war_with = MAN
+		}
+		x = 0
+		y = 1
+		relative_position_id = WarPlanGUAMAN
+		cost = 10
+		available = {
+			any_other_country = {
+				original_tag = MAN
+				exists = yes
+				NOT = { has_government = democratic } 
+				NOT = { is_in_faction_with = GUA }
+				OR = {
+					has_offensive_war = yes
+					has_added_tension_amount > 30
+					threat > 0.6
+				}
+			}
+		}
+		completion_reward = {
+			MAN = {
+				add_opinion_modifier = { target = GUA modifier = embargo }
+			}
+		}
+		ai_will_do = {
+		factor = 10
+	}
+	}
+
+	focus = {
+		id = WARGUAMAN
+		icon = GFX_goal_support_democracy
+		text = WARMAN
+		prerequisite = { focus =  EmbargoGUAMAN }
+		bypass = {
+			has_war_with = MAN
+		}
+		x = 0
+		y = 1
+		relative_position_id = EmbargoGUAMAN
+		cost = 10
+		available = {
+			has_war = no
+			any_other_country = {
+				original_tag = MAN
+				exists = yes
+				NOT = { has_government = democratic } 
+				NOT = { is_in_faction_with = GUA }
+				OR = {
+					has_offensive_war = yes
+					has_added_tension_amount > 30
+					threat > 0.6
+				}
+			}
+		}
+		completion_reward = {
+			declare_war_on = {
+				type = puppet_wargoal_focus
+				target = MAN
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+}

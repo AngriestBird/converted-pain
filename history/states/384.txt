@@ -1,0 +1,31 @@
+
+state={
+	id=384
+	name="STATE_384"
+	resources={
+		steel=10.000
+	}
+
+	history={
+		owner = W19
+		victory_points = {
+			306 2 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 0
+			arms_factory = 1
+			air_base = 1
+
+		}
+		add_core_of = HRE
+		add_core_of = SOV
+	}
+
+	provinces={
+		207 223 236 248 287 306 354 387 3210 3235 3247 3278 3297 3313 3344 3362 6264 6273 6293 6367 6387 6400 9242 9287 9351 9386 9399 11234 11272 11290 11336 11349 11353 
+	}
+	manpower=2225644
+	buildings_max_level_factor=1.000
+	state_category=town
+}

@@ -1,0 +1,34 @@
+
+state={
+	id=348
+	name="STATE_348"
+	resources={
+		rubber=6.000
+		steel=2.000
+		tungsten=2.000
+	}
+
+	history={
+		owner = W05
+		victory_points = {
+			1488 8 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+
+		}
+		add_core_of = SIA
+		add_core_of = W05
+		add_core_of = X86
+	}
+
+	provinces={
+		1253 1488 7675 
+	}
+	manpower=531564
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

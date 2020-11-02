@@ -1,0 +1,33 @@
+
+state={
+	id=525
+	name="STATE_525"
+	resources={
+		steel=59.000
+	}
+
+	history={
+		owner = LIT
+		victory_points = {
+			678 3 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 1
+
+		}
+		add_core_of = GER
+		add_core_of = HRE
+		add_core_of = LIT
+		add_core_of = X07
+	}
+
+	provinces={
+		678 6529 
+	}
+	manpower=603192
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

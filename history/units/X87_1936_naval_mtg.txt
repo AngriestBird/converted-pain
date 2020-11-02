@@ -1,0 +1,24 @@
+units = {
+	fleet = {
+		name = "Rikuzen Sendan"
+		naval_base = 7113
+		task_force = {
+			name = "Rikuzen Sendan"
+			location = 7113
+			ship = { name = "Baraq Khan" definition = destroyer start_experience_factor = 0.17842 equipment = { ship_hull_light_1 = { amount = 1 owner = X87 version_name = "Early Destroyer" } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "X87"
+			version_name = "Early Destroyer"
+		}
+		requested_factories = 3
+		progress = 0.25
+		amount = 10
+	}
+}

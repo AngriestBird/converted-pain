@@ -1,0 +1,31 @@
+
+state={
+	id=204
+	name="STATE_204"
+
+	history={
+		owner = FIN
+		victory_points = {
+			117 3 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = FIN
+		add_core_of = GER
+		add_core_of = HRE
+		add_core_of = SOV
+		add_core_of = X68
+	}
+
+	provinces={
+		8 70 71 110 117 320 3072 3089 6035 6086 6154 6225 9111 9164 9177 9197 9212 9234 9319 9331 11048 11059 11068 11072 11109 11191 11304 
+	}
+	manpower=1216432
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,35 @@
+
+state={
+	id=110
+	name="STATE_110"
+	resources={
+		aluminium=3.000
+		chromium=3.000
+	}
+
+	history={
+		owner = X29
+		victory_points = {
+			3649 3 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 1
+
+		}
+		add_core_of = HUN
+		add_core_of = V60
+		add_core_of = W75
+		add_core_of = X16
+		add_core_of = X29
+	}
+
+	provinces={
+		662 3649 11592 
+	}
+	manpower=325508
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

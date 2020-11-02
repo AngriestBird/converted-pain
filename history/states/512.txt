@@ -1,0 +1,27 @@
+
+state={
+	id=512
+	name="STATE_512"
+
+	history={
+		owner = W64
+		victory_points = {
+			2489 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = W64
+	}
+
+	provinces={
+		2489 13034 13035 13036 
+	}
+	manpower=308
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

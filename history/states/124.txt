@@ -1,0 +1,33 @@
+
+state={
+	id=124
+	name="STATE_124"
+	resources={
+		oil=8.000
+		steel=18.000
+	}
+
+	history={
+		owner = CAN
+		victory_points = {
+			1836 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = CAN
+		add_core_of = USA
+		add_core_of = X54
+	}
+
+	provinces={
+		1752 1836 1870 3719 4759 4772 10685 10709 12685 
+	}
+	manpower=104132
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

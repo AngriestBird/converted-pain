@@ -1,0 +1,38 @@
+
+state={
+	id=766
+	name="STATE_766"
+	resources={
+		aluminium=1.000
+		steel=6.000
+	}
+
+	history={
+		owner = V65
+		victory_points = {
+			733 5 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 3
+			arms_factory = 0
+			dockyard = 1
+			3712 = {
+				naval_base = 10
+			}
+			air_base = 1
+
+		}
+		add_core_of = USA
+		add_core_of = V64
+		add_core_of = V65
+		add_core_of = W40
+	}
+
+	provinces={
+		733 3712 3715 3732 4287 6719 10247 10481 12202 
+	}
+	manpower=3218388
+	buildings_max_level_factor=1.000
+	state_category=city
+}

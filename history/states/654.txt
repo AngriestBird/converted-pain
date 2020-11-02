@@ -1,0 +1,32 @@
+
+state={
+	id=654
+	name="STATE_654"
+	resources={
+		oil=0.000
+		steel=15.000
+	}
+
+	history={
+		owner = V37
+		victory_points = {
+			11504 5 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 4
+			arms_factory = 0
+			air_base = 2
+
+		}
+		add_core_of = HRE
+		add_core_of = V37
+	}
+
+	provinces={
+		463 501 511 559 3455 3508 3520 3531 3557 3584 6495 6507 6578 6605 9413 9437 9463 9479 9491 9519 11397 11425 11462 11504 11530 
+	}
+	manpower=1742180
+	buildings_max_level_factor=1.000
+	state_category=city
+}

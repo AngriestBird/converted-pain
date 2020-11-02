@@ -1,0 +1,36 @@
+
+state={
+	id=783
+	name="STATE_783"
+	resources={
+		aluminium=1.000
+		steel=3.000
+	}
+
+	history={
+		owner = V66
+		victory_points = {
+			6732 6 
+		}
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 3
+			arms_factory = 2
+			dockyard = 2
+			6732 = {
+				naval_base = 6
+			}
+			air_base = 2
+
+		}
+		add_core_of = USA
+		add_core_of = V66
+	}
+
+	provinces={
+		905 3906 6732 
+	}
+	manpower=3948192
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

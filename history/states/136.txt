@@ -1,0 +1,36 @@
+
+state={
+	id=136
+	name="STATE_136"
+	resources={
+		chromium=4.000
+	}
+
+	history={
+		owner = BAS
+		victory_points = {
+			7660 9 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			arms_factory = 1
+			dockyard = 1
+			4641 = {
+				naval_base = 10
+			}
+			air_base = 5
+
+		}
+		add_core_of = BAS
+		add_core_of = DOM
+		add_core_of = HAI
+	}
+
+	provinces={
+		1594 1635 4598 4641 7632 7660 10484 
+	}
+	manpower=1344344
+	buildings_max_level_factor=1.000
+	state_category=city
+}

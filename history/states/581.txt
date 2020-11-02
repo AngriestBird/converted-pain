@@ -1,0 +1,31 @@
+
+state={
+	id=581
+	name="STATE_581"
+	resources={
+		steel=48.000
+	}
+
+	history={
+		owner = V19
+		victory_points = {
+			4166 3 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 1
+
+		}
+		add_core_of = USA
+		add_core_of = V19
+	}
+
+	provinces={
+		703 926 1560 1760 4166 4738 4834 7829 10341 12456 
+	}
+	manpower=642124
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

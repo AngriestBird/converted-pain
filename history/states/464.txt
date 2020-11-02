@@ -1,0 +1,21 @@
+
+state={
+	id=464
+	name="STATE_464"
+	resources={
+		steel=0.000
+	}
+	impassable = yes
+
+	history={
+		owner = MLI
+		add_core_of = MLI
+	}
+
+	provinces={
+		2068 10868 
+	}
+	manpower=22956
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

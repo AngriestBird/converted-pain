@@ -1,0 +1,37 @@
+
+state={
+	id=402
+	name="STATE_402"
+	resources={
+		rubber=25.000
+		steel=3.000
+		tungsten=3.000
+	}
+
+	history={
+		owner = MAN
+		victory_points = {
+			12360 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = CAM
+		add_core_of = LAO
+		add_core_of = MAN
+		add_core_of = SIA
+		add_core_of = W05
+		add_core_of = X86
+	}
+
+	provinces={
+		1357 1535 1548 1592 4511 4582 7516 7601 10384 10425 10438 12195 12264 12360 12373 12388 12402 12417 12431 
+	}
+	manpower=1389976
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

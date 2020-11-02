@@ -1,0 +1,37 @@
+
+state={
+	id=250
+	name="STATE_250"
+
+	history={
+		owner = GUA
+		victory_points = {
+			10773 13 
+		}
+		buildings = {
+			infrastructure = 8
+			industrial_complex = 9
+			arms_factory = 0
+			dockyard = 3
+			10889 = {
+				naval_base = 10
+			}
+			air_base = 8
+
+		}
+		add_core_of = BLZ
+		add_core_of = GUA
+		add_core_of = MEX
+		add_core_of = V05
+		add_core_of = V72
+		add_core_of = W23
+		add_core_of = W46
+	}
+
+	provinces={
+		7913 8089 10773 10889 
+	}
+	manpower=10373768
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+}

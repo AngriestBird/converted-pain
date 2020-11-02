@@ -1,0 +1,31 @@
+
+state={
+	id=230
+	name="STATE_230"
+	resources={
+		steel=9.000
+	}
+
+	history={
+		owner = W19
+		victory_points = {
+			3335 6 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+
+		}
+		add_core_of = HUN
+		add_core_of = X68
+	}
+
+	provinces={
+		315 343 366 371 398 401 3226 3327 3335 3358 3364 3390 3391 6252 6305 9301 9302 11229 11250 11282 11298 11325 11326 
+	}
+	manpower=824456
+	buildings_max_level_factor=1.000
+	state_category=town
+}

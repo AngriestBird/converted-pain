@@ -1,0 +1,39 @@
+
+state={
+	id=220
+	name="STATE_220"
+	resources={
+		aluminium=135.000
+		steel=43.000
+	}
+
+	history={
+		owner = GER
+		victory_points = {
+			11834 8 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+			arms_factory = 0
+			11834 = {
+				naval_base = 10
+			}
+			air_base = 5
+
+		}
+		add_core_of = FRA
+		add_core_of = GER
+		add_core_of = HRE
+		add_core_of = ITA
+		add_core_of = SWI
+		add_core_of = W60
+	}
+
+	provinces={
+		911 956 958 3928 3959 3961 9728 9909 11711 11713 11834 11849 11875 11877 
+	}
+	manpower=1862828
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

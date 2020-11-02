@@ -1,0 +1,32 @@
+
+state={
+	id=616
+	name="STATE_616"
+
+	history={
+		owner = V30
+		victory_points = {
+			3846 3 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 0
+			arms_factory = 1
+			3866 = {
+				naval_base = 6
+			}
+			air_base = 0
+
+		}
+		add_core_of = GER
+		add_core_of = SPR
+		add_core_of = V30
+	}
+
+	provinces={
+		980 3790 3846 3866 3886 3926 6880 6884 6933 6986 9765 9819 9869 
+	}
+	manpower=824612
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

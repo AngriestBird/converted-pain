@@ -1,0 +1,33 @@
+
+state={
+	id=727
+	name="STATE_727"
+	resources={
+		rubber=0.000
+	}
+
+	history={
+		owner = V49
+		victory_points = {
+			12154 1 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			12154 = {
+				naval_base = 2
+			}
+			air_base = 0
+
+		}
+		add_core_of = W59
+	}
+
+	provinces={
+		1389 4393 7614 10423 12154 12240 12400 
+	}
+	manpower=652972
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

@@ -1,0 +1,56 @@
+units = {
+	fleet = {
+		name = "1st Fleet"
+		naval_base = 7968
+		task_force = {
+			name = "1st Fleet"
+			location = 7968
+			ship = { name = "1st Paramaribo Battleship" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = VEN } } }
+			ship = { name = "2nd Paramaribo Battleship" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = VEN } } }
+			ship = { name = "3rd Paramaribo Battleship" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = VEN } } }
+			ship = { name = "4th Paramaribo Battleship" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = VEN } } }
+			ship = { name = "1st Rivas Battleship" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = VEN } } }
+			ship = { name = "5th Paramaribo Battleship" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = VEN } } }
+			ship = { name = "2nd Rivas Battleship" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = VEN } } }
+			ship = { name = "3rd Rivas Battleship" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = VEN } } }
+			ship = { name = "Cumaná" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = VEN } } }
+			ship = { name = "General Salom" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = VEN } } }
+			ship = { name = "Aragua" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = VEN } } }
+			ship = { name = "Maracaibo" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = VEN } } }
+			ship = { name = "Caroní" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = VEN } } }
+			ship = { name = "Casiquiare" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = VEN } } }
+			ship = { name = "Orinoco" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = VEN } } }
+			ship = { name = "Restaurador" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = VEN } } }
+		}
+	}
+	fleet = {
+		name = "2nd Fleet"
+		naval_base = 8252
+		task_force = {
+			name = "2nd Fleet"
+			location = 2683
+			ship = { name = "Sucre" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = VEN } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_1
+			creator = "VEN"
+		}
+		requested_factories = 3
+		progress = 0.25
+		amount = 10
+	}
+	add_equipment_production = {
+		equipment = {
+			type = battleship_1
+			creator = "VEN"
+		}
+		requested_factories = 8
+		progress = 0.25
+		amount = 3
+	}
+}

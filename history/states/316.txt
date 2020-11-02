@@ -1,0 +1,30 @@
+
+state={
+	id=316
+	name="STATE_316"
+
+	history={
+		owner = LIT
+		victory_points = {
+			2038 6 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			arms_factory = 0
+			2038 = {
+				naval_base = 8
+			}
+			air_base = 6
+
+		}
+		add_core_of = SIE
+	}
+
+	provinces={
+		2038 
+	}
+	manpower=1622868
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,31 @@
+
+state={
+	id=100
+	name="STATE_100"
+	resources={
+		steel=4.000
+	}
+
+	history={
+		owner = X29
+		victory_points = {
+			693 4 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			arms_factory = 1
+			air_base = 1
+
+		}
+		add_core_of = W75
+		add_core_of = X29
+	}
+
+	provinces={
+		676 693 3665 3694 9619 11622 
+	}
+	manpower=910448
+	buildings_max_level_factor=1.000
+	state_category=town
+}

@@ -1,0 +1,33 @@
+
+state={
+	id=742
+	name="STATE_742"
+	resources={
+		steel=1.000
+		tungsten=3.000
+	}
+
+	history={
+		owner = V56
+		victory_points = {
+			8010 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = RAJ
+		add_core_of = TIB
+		add_core_of = V56
+	}
+
+	provinces={
+		4435 8010 12860 
+	}
+	manpower=160520
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

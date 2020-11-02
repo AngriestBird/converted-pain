@@ -1,0 +1,31 @@
+
+state={
+	id=211
+	name="STATE_211"
+	resources={
+		steel=7.000
+	}
+
+	history={
+		owner = GER
+		victory_points = {
+			512 4 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			arms_factory = 1
+			air_base = 0
+
+		}
+		add_core_of = FRA
+		add_core_of = GER
+	}
+
+	provinces={
+		512 669 3493 3509 3534 3655 3671 6518 6533 6688 9492 9629 11463 11596 11611 11631 
+	}
+	manpower=1376108
+	buildings_max_level_factor=1.000
+	state_category=town
+}

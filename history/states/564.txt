@@ -1,0 +1,32 @@
+
+state={
+	id=564
+	name="STATE_564"
+	resources={
+		chromium=2.000
+	}
+
+	history={
+		owner = TIB
+		victory_points = {
+			4386 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = RAJ
+		add_core_of = TIB
+		add_core_of = X76
+	}
+
+	provinces={
+		4386 4987 5310 7374 10825 10910 12892 
+	}
+	manpower=1632548
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

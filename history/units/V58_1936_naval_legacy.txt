@@ -1,0 +1,47 @@
+units = {
+	fleet = {
+		name = "3rd Fleet"
+		naval_base = 11967
+		task_force = {
+			name = "3rd Fleet"
+			location = 11967
+			ship = { name = "7th Matruh Commerce Raider" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = V58 } } }
+			ship = { name = "8th Matruh Commerce Raider" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = V58 } } }
+			ship = { name = "9th Matruh Commerce Raider" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = V58 } } }
+			ship = { name = "10th Matruh Commerce Raider" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = V58 } } }
+			ship = { name = "10th Benghazi Commerce Raider" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = V58 } } }
+			ship = { name = "1st Dumyat Commerce Raider" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = V58 } } }
+			ship = { name = "11th Matruh Commerce Raider" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = V58 } } }
+			ship = { name = "12th Matruh Commerce Raider" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = V58 } } }
+			ship = { name = "13th Matruh Commerce Raider" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = V58 } } }
+			ship = { name = "14th Matruh Commerce Raider" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = V58 } } }
+			ship = { name = "6th Benghazi Commerce Raider" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = V58 } } }
+			ship = { name = "4th Matruh Commerce Raider" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = V58 } } }
+			ship = { name = "4th Benghazi Commerce Raider" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = V58 } } }
+			ship = { name = "5th Matruh Commerce Raider" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = V58 } } }
+			ship = { name = "6th Matruh Commerce Raider" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = V58 } } }
+			ship = { name = "15th Matruh Commerce Raider" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = V58 } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_1
+			creator = "V58"
+		}
+		requested_factories = 3
+		progress = 0.25
+		amount = 10
+	}
+	add_equipment_production = {
+		equipment = {
+			type = battleship_1
+			creator = "V58"
+		}
+		requested_factories = 8
+		progress = 0.25
+		amount = 3
+	}
+}

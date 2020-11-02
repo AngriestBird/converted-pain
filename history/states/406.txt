@@ -1,0 +1,36 @@
+
+state={
+	id=406
+	name="STATE_406"
+	resources={
+		steel=10.000
+	}
+
+	history={
+		owner = MAN
+		victory_points = {
+			7222 11 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 7
+			arms_factory = 1
+			air_base = 8
+
+		}
+		add_core_of = CHI
+		add_core_of = MAN
+		add_core_of = W26
+		add_core_of = W80
+		add_core_of = W83
+		add_core_of = X49
+		add_core_of = X85
+	}
+
+	provinces={
+		1083 1099 1125 1171 4105 4173 4203 7035 7104 7222 10017 10044 10064 11937 11994 12019 12061 
+	}
+	manpower=28028288
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+}

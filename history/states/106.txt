@@ -1,0 +1,29 @@
+
+state={
+	id=106
+	name="STATE_106"
+
+	history={
+		owner = X29
+		victory_points = {
+			10106 4 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = TUR
+		add_core_of = V57
+		add_core_of = X29
+	}
+
+	provinces={
+		1600 1938 3916 5014 6826 8123 10106 10793 10804 10811 
+	}
+	manpower=1954068
+	buildings_max_level_factor=1.000
+	state_category=town
+}

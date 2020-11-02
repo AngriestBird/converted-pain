@@ -1,0 +1,37 @@
+
+state={
+	id=453
+	name="STATE_453"
+	resources={
+		steel=18.000
+		tungsten=8.000
+	}
+
+	history={
+		owner = MEX
+		victory_points = {
+			2051 35 
+		}
+		buildings = {
+			infrastructure = 8
+			industrial_complex = 10
+			arms_factory = 2
+			dockyard = 1
+			12873 = {
+				naval_base = 10
+			}
+			air_base = 10
+
+		}
+		add_core_of = MEX
+		add_core_of = V12
+		add_core_of = X38
+	}
+
+	provinces={
+		2051 5052 12746 12873 13089 
+	}
+	manpower=8758596
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+}

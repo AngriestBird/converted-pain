@@ -1,0 +1,37 @@
+
+state={
+	id=267
+	name="STATE_267"
+	resources={
+		aluminium=8.000
+		chromium=3.000
+		steel=1.000
+	}
+
+	history={
+		owner = HRE
+		victory_points = {
+			646 13 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 3
+			arms_factory = 0
+			air_base = 10
+
+		}
+		add_core_of = HRE
+		add_core_of = HUN
+		add_core_of = ROM
+		add_core_of = V36
+		add_core_of = V60
+		add_core_of = X16
+	}
+
+	provinces={
+		646 696 713 746 3696 6682 6697 9606 9640 9687 11608 
+	}
+	manpower=777116
+	buildings_max_level_factor=1.000
+	state_category=town
+}

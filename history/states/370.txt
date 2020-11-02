@@ -1,0 +1,30 @@
+
+state={
+	id=370
+	name="STATE_370"
+
+	history={
+		owner = W10
+		victory_points = {
+			2011 3 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = MEX
+		add_core_of = V05
+		add_core_of = W10
+		add_core_of = W51
+	}
+
+	provinces={
+		2008 2011 2083 4956 
+	}
+	manpower=2922836
+	buildings_max_level_factor=1.000
+	state_category=city
+}

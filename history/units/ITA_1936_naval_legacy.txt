@@ -1,0 +1,40 @@
+units = {
+	fleet = {
+		name = "1st Fleet"
+		naval_base = 9904
+		task_force = {
+			name = "1st Fleet"
+			location = 9904
+			ship = { name = "Dante Alighieri" definition = battleship equipment = { battleship_2 = { amount = 1 owner = ITA } } }
+			ship = { name = "Ruggiero di Lauria" definition = heavy_cruiser equipment = { heavy_cruiser_2 = { amount = 1 owner = ITA } } }
+			ship = { name = "Lepanto" definition = heavy_cruiser equipment = { heavy_cruiser_2 = { amount = 1 owner = ITA } } }
+			ship = { name = "Italia" definition = heavy_cruiser equipment = { heavy_cruiser_2 = { amount = 1 owner = ITA } } }
+			ship = { name = "Amalfi" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = ITA } } }
+			ship = { name = "San Marco" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = ITA } } }
+			ship = { name = "General Pueyrredon" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = ITA } } }
+			ship = { name = "San Giorgio" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = ITA } } }
+			ship = { name = "Pisa" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = ITA } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_2
+			creator = "ITA"
+		}
+		requested_factories = 3
+		progress = 0.25
+		amount = 10
+	}
+	add_equipment_production = {
+		equipment = {
+			type = battleship_2
+			creator = "ITA"
+		}
+		requested_factories = 8
+		progress = 0.25
+		amount = 3
+	}
+}

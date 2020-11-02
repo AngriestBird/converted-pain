@@ -1,0 +1,30 @@
+
+state={
+	id=202
+	name="STATE_202"
+	resources={
+		steel=23.000
+	}
+
+	history={
+		owner = FIN
+		victory_points = {
+			166 3 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = FIN
+	}
+
+	provinces={
+		89 138 166 3031 3160 6017 6034 6075 6109 9130 9187 11036 11071 11103 11178 
+	}
+	manpower=249224
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

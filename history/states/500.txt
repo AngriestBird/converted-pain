@@ -1,0 +1,35 @@
+
+state={
+	id=500
+	name="STATE_500"
+	resources={
+		aluminium=0.000
+		rubber=0.000
+		steel=0.000
+	}
+
+	history={
+		owner = W58
+		victory_points = {
+			10831 1 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 0
+			arms_factory = 0
+			10831 = {
+				naval_base = 6
+			}
+			air_base = 1
+
+		}
+		add_core_of = NGA
+	}
+
+	provinces={
+		10831 
+	}
+	manpower=598432
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

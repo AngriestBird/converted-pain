@@ -1,0 +1,35 @@
+
+state={
+	id=731
+	name="STATE_731"
+	resources={
+		chromium=2.000
+		oil=1.000
+		rubber=0.000
+	}
+
+	history={
+		owner = V50
+		victory_points = {
+			12806 8 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 0
+			air_base = 5
+
+		}
+		add_core_of = ETH
+		add_core_of = SUD
+		add_core_of = V50
+		add_core_of = W93
+	}
+
+	provinces={
+		1914 2088 4918 7925 10743 10784 10795 12800 12806 12862 12887 
+	}
+	manpower=2206736
+	buildings_max_level_factor=1.000
+	state_category=town
+}

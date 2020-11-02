@@ -1,0 +1,18 @@
+
+state={
+	id=622
+	name="STATE_622"
+	impassable = yes
+
+	history={
+		owner = V30
+		add_core_of = NGR
+	}
+
+	provinces={
+		8028 10758 10780 10805 
+	}
+	manpower=231072
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

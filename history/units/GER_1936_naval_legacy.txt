@@ -1,0 +1,62 @@
+units = {
+	fleet = {
+		name = "4th Fleet"
+		naval_base = 9737
+		task_force = {
+			name = "4th Fleet"
+			location = 9737
+			ship = { name = "Weissenburg" definition = heavy_cruiser equipment = { heavy_cruiser_2 = { amount = 1 owner = GER } } }
+			ship = { name = "Schwaben" definition = heavy_cruiser equipment = { heavy_cruiser_2 = { amount = 1 owner = GER } } }
+			ship = { name = "Brandenburg" definition = heavy_cruiser equipment = { heavy_cruiser_2 = { amount = 1 owner = GER } } }
+			ship = { name = "Kurfürst Friedrich Wilhelm" definition = heavy_cruiser equipment = { heavy_cruiser_2 = { amount = 1 owner = GER } } }
+			ship = { name = "Hannover" definition = heavy_cruiser equipment = { heavy_cruiser_2 = { amount = 1 owner = GER } } }
+			ship = { name = "Elsass" definition = heavy_cruiser equipment = { heavy_cruiser_2 = { amount = 1 owner = GER } } }
+			ship = { name = "Hessen" definition = heavy_cruiser equipment = { heavy_cruiser_2 = { amount = 1 owner = GER } } }
+			ship = { name = "Preussen" definition = heavy_cruiser equipment = { heavy_cruiser_2 = { amount = 1 owner = GER } } }
+			ship = { name = "Zähringen" definition = heavy_cruiser equipment = { heavy_cruiser_2 = { amount = 1 owner = GER } } }
+			ship = { name = "Schlesien" definition = heavy_cruiser equipment = { heavy_cruiser_2 = { amount = 1 owner = GER } } }
+			ship = { name = "Kaiser Wilhelm Der Grosse" definition = heavy_cruiser equipment = { heavy_cruiser_2 = { amount = 1 owner = GER } } }
+			ship = { name = "Kaiser Barbarossa" definition = heavy_cruiser equipment = { heavy_cruiser_2 = { amount = 1 owner = GER } } }
+			ship = { name = "Wittelsbach" definition = heavy_cruiser equipment = { heavy_cruiser_2 = { amount = 1 owner = GER } } }
+			ship = { name = "Pommern" definition = heavy_cruiser equipment = { heavy_cruiser_2 = { amount = 1 owner = GER } } }
+			ship = { name = "Deutschland" definition = heavy_cruiser equipment = { heavy_cruiser_2 = { amount = 1 owner = GER } } }
+			ship = { name = "Arcona" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER } } }
+			ship = { name = "Ariadne" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER } } }
+			ship = { name = "Berlin" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER } } }
+			ship = { name = "Blücher" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER } } }
+			ship = { name = "Frankfurt" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER } } }
+			ship = { name = "Bremen" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER } } }
+			ship = { name = "Dresden" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER } } }
+			ship = { name = "Blitz" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER } } }
+			ship = { name = "Comet" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER } } }
+			ship = { name = "Emden" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER } } }
+			ship = { name = "Condor" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER } } }
+			ship = { name = "Bremse" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER } } }
+			ship = { name = "Amazone" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER } } }
+			ship = { name = "Bussard" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER } } }
+			ship = { name = "Danzig" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER } } }
+			ship = { name = "Elbing" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = GER } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_2
+			creator = "GER"
+		}
+		requested_factories = 3
+		progress = 0.25
+		amount = 10
+	}
+	add_equipment_production = {
+		equipment = {
+			type = battleship_2
+			creator = "GER"
+		}
+		requested_factories = 8
+		progress = 0.25
+		amount = 3
+	}
+}

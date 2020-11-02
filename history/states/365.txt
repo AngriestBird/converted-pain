@@ -1,0 +1,28 @@
+
+state={
+	id=365
+	name="STATE_365"
+
+	history={
+		owner = V19
+		victory_points = {
+			12312 1 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = USA
+		add_core_of = V19
+	}
+
+	provinces={
+		6737 9450 11589 12312 12368 
+	}
+	manpower=896320
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

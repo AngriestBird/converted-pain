@@ -1,0 +1,35 @@
+
+state={
+	id=121
+	name="STATE_121"
+	resources={
+		aluminium=4.000
+	}
+
+	history={
+		owner = CAN
+		victory_points = {
+			12149 8 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 0
+			490 = {
+				naval_base = 2
+			}
+			air_base = 5
+
+		}
+		add_core_of = CAN
+		add_core_of = QUE
+		add_core_of = V64
+	}
+
+	provinces={
+		490 983 1284 3208 3911 4305 4422 6740 7291 7364 7433 9601 10174 10176 11682 12147 12149 12291 13196 
+	}
+	manpower=736653
+	buildings_max_level_factor=1.000
+	state_category=town
+}

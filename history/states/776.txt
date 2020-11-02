@@ -1,0 +1,33 @@
+
+state={
+	id=776
+	name="STATE_776"
+
+	history={
+		owner = V66
+		victory_points = {
+			7643 4 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			arms_factory = 0
+			dockyard = 1
+			4168 = {
+				naval_base = 6
+			}
+			air_base = 0
+
+		}
+		add_core_of = USA
+		add_core_of = V66
+		add_core_of = X32
+	}
+
+	provinces={
+		1077 4168 6943 7643 9876 9967 10468 10495 11783 
+	}
+	manpower=4102852
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

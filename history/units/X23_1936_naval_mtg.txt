@@ -1,0 +1,26 @@
+units = {
+	fleet = {
+		name = "1st Fleet"
+		naval_base = 1179
+		task_force = {
+			name = "1st Fleet"
+			location = 1179
+			ship = { name = "1st Chabahar Commerce Raider" definition = destroyer start_experience_factor = 0.249 equipment = { ship_hull_light_1 = { amount = 1 owner = X23 version_name = "Early Destroyer" } } }
+			ship = { name = "2nd Chabahar Commerce Raider" definition = destroyer start_experience_factor = 0.24408 equipment = { ship_hull_light_1 = { amount = 1 owner = X23 version_name = "Early Destroyer" } } }
+			ship = { name = "3rd Chabahar Commerce Raider" definition = destroyer start_experience_factor = 0.24925 equipment = { ship_hull_light_1 = { amount = 1 owner = X23 version_name = "Early Destroyer" } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "X23"
+			version_name = "Early Destroyer"
+		}
+		requested_factories = 3
+		progress = 0.25
+		amount = 10
+	}
+}

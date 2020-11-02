@@ -1,0 +1,31 @@
+
+state={
+	id=140
+	name="STATE_140"
+
+	history={
+		owner = BAS
+		victory_points = {
+			153 8 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+			arms_factory = 0
+			153 = {
+				naval_base = 10
+			}
+			air_base = 5
+
+		}
+		add_core_of = BAS
+		add_core_of = CRC
+	}
+
+	provinces={
+		153 
+	}
+	manpower=434864
+	buildings_max_level_factor=1.000
+	state_category=town
+}

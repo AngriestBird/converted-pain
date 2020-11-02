@@ -1,0 +1,33 @@
+
+state={
+	id=54
+	name="STATE_54"
+
+	history={
+		owner = X25
+		victory_points = {
+			321 4 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+			arms_factory = 0
+			dockyard = 1
+			321 = {
+				naval_base = 10
+			}
+			air_base = 1
+
+		}
+		add_core_of = GER
+		add_core_of = HRE
+		add_core_of = X25
+	}
+
+	provinces={
+		268 293 321 3258 9294 11276 11305 
+	}
+	manpower=1396912
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

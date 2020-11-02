@@ -1,0 +1,35 @@
+
+state={
+	id=425
+	name="STATE_425"
+	resources={
+		aluminium=3.000
+		rubber=0.000
+		steel=17.000
+		tungsten=0.000
+	}
+
+	history={
+		owner = MAN
+		victory_points = {
+			11865 6 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 4
+			arms_factory = 2
+			air_base = 1
+
+		}
+		add_core_of = CHI
+		add_core_of = MAN
+		add_core_of = W83
+	}
+
+	provinces={
+		1367 1893 2030 2091 4041 4141 4167 4295 4431 5048 6999 7240 7256 7418 7948 8026 10144 10304 11865 12274 12767 
+	}
+	manpower=18176728
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+}

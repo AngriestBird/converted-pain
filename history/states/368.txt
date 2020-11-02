@@ -1,0 +1,37 @@
+
+state={
+	id=368
+	name="STATE_368"
+	resources={
+		oil=10.000
+		steel=0.000
+	}
+
+	history={
+		owner = W10
+		victory_points = {
+			12835 3 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			arms_factory = 0
+			5015 = {
+				naval_base = 6
+			}
+			air_base = 0
+
+		}
+		add_core_of = MEX
+		add_core_of = W10
+		add_core_of = W51
+		add_core_of = W66
+	}
+
+	provinces={
+		5015 5021 8079 10769 12835 13088 
+	}
+	manpower=1682004
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

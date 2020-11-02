@@ -1,0 +1,35 @@
+units = {
+	fleet = {
+		name = "1st Fleet"
+		naval_base = 9417
+		task_force = {
+			name = "1st Fleet"
+			location = 9417
+			ship = { name = "1st Cherson Battleship" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = V37 } } }
+			ship = { name = "2nd Cherson Battleship" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = V37 } } }
+			ship = { name = "1st Melitopol Cruiser" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = V37 } } }
+			ship = { name = "1st Rostov Cruiser" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = V37 } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_1
+			creator = "V37"
+		}
+		requested_factories = 3
+		progress = 0.25
+		amount = 10
+	}
+	add_equipment_production = {
+		equipment = {
+			type = battleship_1
+			creator = "V37"
+		}
+		requested_factories = 8
+		progress = 0.25
+		amount = 3
+	}
+}

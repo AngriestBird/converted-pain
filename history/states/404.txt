@@ -1,0 +1,37 @@
+
+state={
+	id=404
+	name="STATE_404"
+	resources={
+		chromium=4.000
+		steel=4.000
+		tungsten=14.000
+	}
+
+	history={
+		owner = MAN
+		victory_points = {
+			11936 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			11936 = {
+				naval_base = 6
+			}
+			air_base = 0
+
+		}
+		add_core_of = MAN
+		add_core_of = VIN
+		add_core_of = X86
+	}
+
+	provinces={
+		1302 4255 4379 4397 7229 7280 9988 10016 10137 10309 11909 11936 12297 
+	}
+	manpower=7487412
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+}

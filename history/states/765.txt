@@ -1,0 +1,36 @@
+
+state={
+	id=765
+	name="STATE_765"
+	resources={
+		aluminium=2.000
+		steel=5.000
+	}
+
+	history={
+		owner = V65
+		victory_points = {
+			718 5 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+			arms_factory = 1
+			dockyard = 1
+			6909 = {
+				naval_base = 10
+			}
+			air_base = 1
+
+		}
+		add_core_of = USA
+		add_core_of = V65
+	}
+
+	provinces={
+		715 718 908 3710 6909 9832 9847 9850 11830 
+	}
+	manpower=3901772
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

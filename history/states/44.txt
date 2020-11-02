@@ -1,0 +1,35 @@
+
+state={
+	id=44
+	name="STATE_44"
+	resources={
+		oil=8.000
+	}
+
+	history={
+		owner = BOL
+		victory_points = {
+			2226 3 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 0
+			arms_factory = 0
+			12983 = {
+				naval_base = 6
+			}
+			air_base = 0
+
+		}
+		add_core_of = BOL
+		add_core_of = PRU
+		add_core_of = X33
+	}
+
+	provinces={
+		2162 2212 2226 5190 12983 
+	}
+	manpower=531204
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

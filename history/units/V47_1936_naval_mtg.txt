@@ -1,0 +1,49 @@
+units = {
+	fleet = {
+		name = "1st Fleet"
+		naval_base = 10118
+		task_force = {
+			name = "1st Fleet"
+			location = 10118
+			ship = { name = "12th Karachi Commerce Raider" definition = destroyer start_experience_factor = 0.04318 equipment = { ship_hull_light_1 = { amount = 1 owner = V47 version_name = "Early Destroyer" } } }
+			ship = { name = "5th Karachi Commerce Raider" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = V47 version_name = "Early Destroyer" } } }
+			ship = { name = "11th Karachi Commerce Raider" definition = destroyer start_experience_factor = 0.05 equipment = { ship_hull_light_1 = { amount = 1 owner = V47 version_name = "Early Destroyer" } } }
+			ship = { name = "9th Karachi Commerce Raider" definition = destroyer start_experience_factor = 0.04761 equipment = { ship_hull_light_1 = { amount = 1 owner = V47 version_name = "Early Destroyer" } } }
+			ship = { name = "10th Karachi Commerce Raider" definition = destroyer start_experience_factor = 0.04318 equipment = { ship_hull_light_1 = { amount = 1 owner = V47 version_name = "Early Destroyer" } } }
+			ship = { name = "7th Karachi Commerce Raider" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = V47 version_name = "Early Destroyer" } } }
+			ship = { name = "13th Karachi Commerce Raider" definition = destroyer start_experience_factor = 0.05 equipment = { ship_hull_light_1 = { amount = 1 owner = V47 version_name = "Early Destroyer" } } }
+			ship = { name = "1st Karachi Commerce Raider" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = V47 version_name = "Early Destroyer" } } }
+			ship = { name = "2nd Karachi Commerce Raider" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = V47 version_name = "Early Destroyer" } } }
+			ship = { name = "1st Rajkot Commerce Raider" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = V47 version_name = "Early Destroyer" } } }
+			ship = { name = "15th Karachi Commerce Raider" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = V47 version_name = "Early Destroyer" } } }
+			ship = { name = "2nd Rajkot Commerce Raider" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = V47 version_name = "Early Destroyer" } } }
+			ship = { name = "1st Kolhapur Commerce Raider" definition = destroyer start_experience_factor = 0.2 equipment = { ship_hull_light_1 = { amount = 1 owner = V47 version_name = "Early Destroyer" } } }
+			ship = { name = "3rd Karachi Commerce Raider" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = V47 version_name = "Early Destroyer" } } }
+			ship = { name = "4th Karachi Commerce Raider" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = V47 version_name = "Early Destroyer" } } }
+		}
+	}
+	fleet = {
+		name = "3rd Fleet"
+		naval_base = 10118
+		task_force = {
+			name = "3rd Fleet"
+			location = 10118
+			ship = { name = "8th Karachi Commerce Raider" definition = destroyer start_experience_factor = 0.05 equipment = { ship_hull_light_1 = { amount = 1 owner = V47 version_name = "Early Destroyer" } } }
+			ship = { name = "6th Karachi Commerce Raider" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = V47 version_name = "Early Destroyer" } } }
+			ship = { name = "14th Karachi Commerce Raider" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = V47 version_name = "Early Destroyer" } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "V47"
+			version_name = "Early Destroyer"
+		}
+		requested_factories = 3
+		progress = 0.25
+		amount = 10
+	}
+}

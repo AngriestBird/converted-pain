@@ -1,0 +1,32 @@
+
+state={
+	id=355
+	name="STATE_355"
+	resources={
+		aluminium=35.000
+		oil=14.000
+	}
+
+	history={
+		owner = W10
+		victory_points = {
+			4975 1 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = V22
+		add_core_of = W53
+	}
+
+	provinces={
+		2102 3867 3883 4975 8070 10642 10867 12684 12720 12791 
+	}
+	manpower=150700
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

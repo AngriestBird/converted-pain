@@ -1,0 +1,27 @@
+units = {
+	fleet = {
+		name = "1st Fleet"
+		naval_base = 9582
+		task_force = {
+			name = "1st Fleet"
+			location = 9582
+			ship = { name = "1st Padua Battleship" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V32 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "2nd Padua Battleship" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V32 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "1st Padua Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V32 version_name = "Early Light Cruiser" } } }
+			ship = { name = "2nd Padua Cruiser" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V32 version_name = "Early Light Cruiser" } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "V32"
+			version_name = "Early Destroyer"
+		}
+		requested_factories = 3
+		progress = 0.25
+		amount = 10
+	}
+}

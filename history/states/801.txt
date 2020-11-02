@@ -1,0 +1,36 @@
+
+state={
+	id=801
+	name="STATE_801"
+	resources={
+		oil=4.000
+		steel=2.000
+	}
+
+	history={
+		owner = YEM
+		victory_points = {
+			4959 3 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 0
+			arms_factory = 0
+			7982 = {
+				naval_base = 4
+			}
+			air_base = 0
+
+		}
+		add_core_of = RAJ
+		add_core_of = TUR
+		add_core_of = YEM
+	}
+
+	provinces={
+		1889 4959 7982 
+	}
+	manpower=439344
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

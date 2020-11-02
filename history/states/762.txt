@@ -1,0 +1,32 @@
+
+state={
+	id=762
+	name="STATE_762"
+
+	history={
+		owner = V65
+		victory_points = {
+			1132 13 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			arms_factory = 1
+			dockyard = 2
+			1132 = {
+				naval_base = 10
+			}
+			air_base = 6
+
+		}
+		add_core_of = USA
+		add_core_of = V65
+	}
+
+	provinces={
+		1019 1132 1163 7045 7083 7138 10051 10081 10096 12054 12445 
+	}
+	manpower=3553856
+	buildings_max_level_factor=1.000
+	state_category=city
+}

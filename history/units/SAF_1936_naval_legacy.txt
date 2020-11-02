@@ -1,0 +1,36 @@
+units = {
+	fleet = {
+		name = "2nd Fleet"
+		naval_base = 12589
+		task_force = {
+			name = "2nd Fleet"
+			location = 12589
+			ship = { name = "Cecil Rhodes" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SAF } } }
+			ship = { name = "South Africa" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SAF } } }
+			ship = { name = "Leander Jameson" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SAF } } }
+			ship = { name = "Leopard" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SAF } } }
+			ship = { name = "Jackal" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SAF } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_1
+			creator = "SAF"
+		}
+		requested_factories = 3
+		progress = 0.25
+		amount = 10
+	}
+	add_equipment_production = {
+		equipment = {
+			type = battleship_1
+			creator = "SAF"
+		}
+		requested_factories = 8
+		progress = 0.25
+		amount = 3
+	}
+}

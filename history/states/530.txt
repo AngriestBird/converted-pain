@@ -1,0 +1,31 @@
+
+state={
+	id=530
+	name="STATE_530"
+	resources={
+		aluminium=8.000
+	}
+
+	history={
+		owner = LIT
+		victory_points = {
+			663 1 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = HRE
+		add_core_of = SWI
+	}
+
+	provinces={
+		661 663 11623 
+	}
+	manpower=499356
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

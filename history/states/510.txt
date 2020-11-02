@@ -1,0 +1,33 @@
+
+state={
+	id=510
+	name="STATE_510"
+	resources={
+		aluminium=0.000
+		rubber=0.000
+		steel=0.000
+	}
+
+	history={
+		owner = W58
+		victory_points = {
+			9137 1 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = CMR
+		add_core_of = NGA
+	}
+
+	provinces={
+		7963 7978 9137 11194 
+	}
+	manpower=1249836
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

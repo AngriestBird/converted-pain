@@ -1,0 +1,70 @@
+units = {
+	fleet = {
+		name = "1st Fleet"
+		naval_base = 7394
+		task_force = {
+			name = "1st Fleet"
+			location = 7394
+			ship = { name = "1st Inverness Dreadnought" definition = battleship equipment = { battleship_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "2nd Inverness Dreadnought" definition = battleship equipment = { battleship_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "2nd Carlisle Dreadnought" definition = battleship equipment = { battleship_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "1st Stirling Dreadnought" definition = battleship equipment = { battleship_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "3rd Carlisle Dreadnought" definition = battleship equipment = { battleship_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "4th Carlisle Dreadnought" definition = battleship equipment = { battleship_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "5th Carlisle Dreadnought" definition = battleship equipment = { battleship_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "O’Faolain" definition = battleship equipment = { battleship_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "Caomhánach" definition = battleship equipment = { battleship_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "Mannion" definition = battleship equipment = { battleship_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "Corcaigh" definition = battleship equipment = { battleship_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "Gaillimh" definition = battleship equipment = { battleship_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "1st Carlisle Dreadnought" definition = battleship equipment = { battleship_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "1st Galway Dreadnought" definition = battleship equipment = { battleship_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "1st Cork Dreadnought" definition = battleship equipment = { battleship_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "1st Belfast Battleship" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "1st Cork Battleship" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "2nd Belfast Battleship" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "1st Galway Battleship" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "1st Inverness Battleship" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "1st Stirling Cruiser" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "2nd Carlisle Cruiser" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "1st Belfast Cruiser" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "3rd Carlisle Cruiser" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "4th Carlisle Cruiser" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "2nd Stirling Cruiser" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "3rd Stirling Cruiser" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "5th Carlisle Cruiser" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "4th Stirling Cruiser" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "5th Stirling Cruiser" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "6th Stirling Cruiser" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "Peigi" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "Michelle" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "Michelle" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "Peigi" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "Máire" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "Róisín" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "Esther" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = IRE } } }
+			ship = { name = "1st Carlisle Cruiser" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = IRE } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_1
+			creator = "IRE"
+		}
+		requested_factories = 3
+		progress = 0.25
+		amount = 10
+	}
+	add_equipment_production = {
+		equipment = {
+			type = battleship_1
+			creator = "IRE"
+		}
+		requested_factories = 8
+		progress = 0.25
+		amount = 3
+	}
+}

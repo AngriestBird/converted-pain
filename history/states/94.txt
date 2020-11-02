@@ -1,0 +1,37 @@
+
+state={
+	id=94
+	name="STATE_94"
+	resources={
+		chromium=84.000
+		steel=20.000
+	}
+
+	history={
+		owner = X29
+		victory_points = {
+			9833 33 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 3
+			arms_factory = 1
+			dockyard = 2
+			922 = {
+				naval_base = 10
+			}
+			air_base = 10
+
+		}
+		add_core_of = V27
+		add_core_of = W75
+		add_core_of = X29
+	}
+
+	provinces={
+		849 922 3879 3893 6895 9833 11829 11842 
+	}
+	manpower=2078716
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

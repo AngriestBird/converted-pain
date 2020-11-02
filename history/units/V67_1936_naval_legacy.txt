@@ -1,0 +1,50 @@
+units = {
+	fleet = {
+		name = "1st Fleet"
+		naval_base = 12281
+		task_force = {
+			name = "1st Fleet"
+			location = 12281
+			ship = { name = "1st Portland Cruiser" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = V67 } } }
+		}
+	}
+	fleet = {
+		name = "2nd Fleet"
+		naval_base = 12281
+		task_force = {
+			name = "2nd Fleet"
+			location = 12281
+			ship = { name = "2nd Portland Cruiser" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = V67 } } }
+		}
+	}
+	fleet = {
+		name = "3rd Fleet"
+		naval_base = 12281
+		task_force = {
+			name = "3rd Fleet"
+			location = 12281
+			ship = { name = "3rd Portland Cruiser" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = V67 } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_1
+			creator = "V67"
+		}
+		requested_factories = 3
+		progress = 0.25
+		amount = 10
+	}
+	add_equipment_production = {
+		equipment = {
+			type = battleship_1
+			creator = "V67"
+		}
+		requested_factories = 8
+		progress = 0.25
+		amount = 3
+	}
+}

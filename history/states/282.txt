@@ -1,0 +1,40 @@
+
+state={
+	id=282
+	name="STATE_282"
+	resources={
+		aluminium=2.000
+		chromium=1.000
+		steel=36.000
+		tungsten=4.000
+	}
+
+	history={
+		owner = IRE
+		victory_points = {
+			3273 7 
+		}
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 2
+			arms_factory = 4
+			dockyard = 2
+			9383 = {
+				naval_base = 10
+			}
+			air_base = 2
+
+		}
+		add_core_of = ENG
+		add_core_of = IRE
+		add_core_of = SCO
+		add_core_of = X03
+	}
+
+	provinces={
+		284 3273 3373 6320 6350 6385 6395 9237 9314 9350 9383 11218 11378 
+	}
+	manpower=4879004
+	buildings_max_level_factor=1.000
+	state_category=metropolis
+}

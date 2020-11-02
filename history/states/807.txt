@@ -1,0 +1,36 @@
+
+state={
+	id=807
+	name="STATE_807"
+	resources={
+		oil=1.000
+	}
+
+	history={
+		owner = YEM
+		victory_points = {
+			2029 3 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			arms_factory = 0
+			2029 = {
+				naval_base = 4
+			}
+			air_base = 0
+
+		}
+		add_core_of = SAU
+		add_core_of = TUR
+		add_core_of = X11
+		add_core_of = YEM
+	}
+
+	provinces={
+		1920 1973 2029 4924 4976 5074 8000 10752 10840 12821 12894 13079 
+	}
+	manpower=1117740
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

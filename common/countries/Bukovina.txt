@@ -1,0 +1,3 @@
+graphical_culture = POL
+graphical_culture_2d = POL
+color = { 255 72 0 }

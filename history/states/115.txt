@@ -1,0 +1,32 @@
+
+state={
+	id=115
+	name="STATE_115"
+
+	history={
+		owner = X29
+		victory_points = {
+			792 8 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			arms_factory = 0
+			792 = {
+				naval_base = 4
+			}
+			air_base = 5
+
+		}
+		add_core_of = W02
+		add_core_of = X29
+		add_core_of = YEM
+	}
+
+	provinces={
+		792 1065 1108 11919 
+	}
+	manpower=647304
+	buildings_max_level_factor=1.000
+	state_category=town
+}

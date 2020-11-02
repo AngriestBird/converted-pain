@@ -1,0 +1,31 @@
+
+state={
+	id=19
+	name="STATE_19"
+	resources={
+		oil=5.000
+	}
+
+	history={
+		owner = ARG
+		victory_points = {
+			12964 8 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 6
+
+		}
+		add_core_of = ARG
+		add_core_of = X61
+	}
+
+	provinces={
+		8187 8238 12964 
+	}
+	manpower=302488
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

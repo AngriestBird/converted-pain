@@ -1,0 +1,36 @@
+
+state={
+	id=116
+	name="STATE_116"
+
+	history={
+		owner = X29
+		victory_points = {
+			1086 13 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 3
+			arms_factory = 0
+			1201 = {
+				naval_base = 4
+			}
+			air_base = 10
+
+		}
+		add_core_of = ICE
+		add_core_of = ISR
+		add_core_of = NOR
+		add_core_of = PAL
+		add_core_of = SCA
+		add_core_of = X29
+		add_core_of = YEM
+	}
+
+	provinces={
+		1015 1086 1201 4088 4206 7107 7176 11970 
+	}
+	manpower=848740
+	buildings_max_level_factor=1.000
+	state_category=town
+}

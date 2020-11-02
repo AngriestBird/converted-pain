@@ -1,0 +1,31 @@
+
+state={
+	id=37
+	name="STATE_37"
+
+	history={
+		owner = X15
+		victory_points = {
+			3987 8 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			7005 = {
+				naval_base = 4
+			}
+			air_base = 5
+
+		}
+		add_core_of = TUN
+		add_core_of = X15
+	}
+
+	provinces={
+		1105 3987 4992 7005 9983 10082 11957 12000 
+	}
+	manpower=409521
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

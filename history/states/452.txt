@@ -1,0 +1,37 @@
+
+state={
+	id=452
+	name="STATE_452"
+	resources={
+		oil=11.000
+		rubber=2.000
+		steel=4.000
+	}
+
+	history={
+		owner = MEX
+		victory_points = {
+			12721 9 
+		}
+		buildings = {
+			infrastructure = 8
+			industrial_complex = 6
+			arms_factory = 2
+			dockyard = 4
+			10895 = {
+				naval_base = 10
+			}
+			air_base = 3
+
+		}
+		add_core_of = MEX
+		add_core_of = W66
+	}
+
+	provinces={
+		1945 1952 4946 7921 7973 8003 8057 10738 10853 10871 10895 12721 
+	}
+	manpower=9274592
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+}

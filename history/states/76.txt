@@ -1,0 +1,32 @@
+
+state={
+	id=76
+	name="STATE_76"
+
+	history={
+		owner = BRA
+		victory_points = {
+			7617 3 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 0
+			arms_factory = 1
+			7617 = {
+				naval_base = 10
+			}
+			air_base = 0
+
+		}
+		add_core_of = BRA
+		add_core_of = PAN
+		add_core_of = U78
+	}
+
+	provinces={
+		7617 
+	}
+	manpower=544640
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

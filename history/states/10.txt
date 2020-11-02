@@ -1,0 +1,31 @@
+
+state={
+	id=10
+	name="STATE_10"
+
+	history={
+		owner = ARG
+		victory_points = {
+			12994 3 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 0
+			arms_factory = 1
+			12994 = {
+				naval_base = 8
+			}
+			air_base = 0
+
+		}
+		add_core_of = ARG
+		add_core_of = BOL
+	}
+
+	provinces={
+		5131 5146 5171 8217 8231 12994 
+	}
+	manpower=551700
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

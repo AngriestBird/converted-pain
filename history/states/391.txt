@@ -1,0 +1,31 @@
+
+state={
+	id=391
+	name="STATE_391"
+	resources={
+		aluminium=8.000
+	}
+
+	history={
+		owner = MAN
+		victory_points = {
+			4724 3 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = MAN
+		add_core_of = SIB
+	}
+
+	provinces={
+		1297 1369 1685 1813 1816 1876 4665 4690 4711 4724 4734 4803 4818 4853 7713 7744 10562 10580 10639 10649 10652 10712 12515 12528 12563 12621 12628 12691 
+	}
+	manpower=1341012
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

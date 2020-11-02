@@ -1,0 +1,105 @@
+units = {
+	fleet = {
+		name = "1st Fleet"
+		naval_base = 1132
+		task_force = {
+			name = "1st Fleet"
+			location = 1132
+			ship = { name = "7th Savannah Battleship" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "1st Tallahassee Battleship" definition = heavy_cruiser start_experience_factor = 0.19392 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "1st Savannah Battleship" definition = heavy_cruiser start_experience_factor = 0.19761 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "1st Mobile Battleship" definition = heavy_cruiser start_experience_factor = 0.1992 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "1st Wilmington Battleship" definition = heavy_cruiser start_experience_factor = 0.19801 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "1st Concord Battleship" definition = heavy_cruiser start_experience_factor = 0.1996 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "2nd Wilmington Battleship" definition = heavy_cruiser start_experience_factor = 0.19841 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "2nd Tallahassee Battleship" definition = heavy_cruiser start_experience_factor = 0.19801 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "4th Tallahassee Battleship" definition = heavy_cruiser start_experience_factor = 0.1996 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "2nd Mobile Battleship" definition = heavy_cruiser start_experience_factor = 0.19841 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "3rd Tallahassee Battleship" definition = heavy_cruiser start_experience_factor = 0.19801 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "3rd Mobile Battleship" definition = heavy_cruiser start_experience_factor = 0.1996 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "3rd Wilmington Battleship" definition = heavy_cruiser start_experience_factor = 0.19841 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "4th Mobile Battleship" definition = heavy_cruiser start_experience_factor = 0.19801 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "5th Tallahassee Battleship" definition = heavy_cruiser start_experience_factor = 0.1996 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "5th Mobile Battleship" definition = heavy_cruiser start_experience_factor = 0.19841 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "2nd Savannah Battleship" definition = heavy_cruiser start_experience_factor = 0.19801 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "3rd Savannah Battleship" definition = heavy_cruiser start_experience_factor = 0.1996 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "4th Savannah Battleship" definition = heavy_cruiser start_experience_factor = 0.19841 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "4th Wilmington Battleship" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "5th Wilmington Battleship" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "5th Savannah Battleship" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "6th Savannah Battleship" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "6th Wilmington Battleship" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "7th Wilmington Battleship" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "8th Wilmington Battleship" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "6th Tallahassee Battleship" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "6th Mobile Battleship" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "7th Mobile Battleship" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "9th Wilmington Battleship" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "10th Savannah Battleship" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "8th Savannah Battleship" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "9th Savannah Battleship" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "8th Mobile Battleship" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "7th Tallahassee Battleship" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "9th Mobile Battleship" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Heavy Cruiser" } } }
+			ship = { name = "8th Wilmington Cruiser" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "7th Tallahassee Cruiser" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "3rd Wilmington Cruiser" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "3rd Mobile Cruiser" definition = light_cruiser start_experience_factor = 0.19801 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "5th Savannah Cruiser" definition = light_cruiser start_experience_factor = 0.2495 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "1st Wilmington Cruiser" definition = light_cruiser start_experience_factor = 0.19841 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "1st Tallahassee Cruiser" definition = light_cruiser start_experience_factor = 0.19801 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "2nd Wilmington Cruiser" definition = light_cruiser start_experience_factor = 0.1996 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "1st Mobile Cruiser" definition = light_cruiser start_experience_factor = 0.19841 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "2nd Tallahassee Cruiser" definition = light_cruiser start_experience_factor = 0.19801 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "2nd Mobile Cruiser" definition = light_cruiser start_experience_factor = 0.1996 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "3rd Tallahassee Cruiser" definition = light_cruiser start_experience_factor = 0.19841 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "1st Savannah Cruiser" definition = light_cruiser start_experience_factor = 0.19801 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "4th Savannah Cruiser" definition = light_cruiser start_experience_factor = 0.2495 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "2nd Savannah Cruiser" definition = light_cruiser start_experience_factor = 0.19841 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "3rd Savannah Cruiser" definition = light_cruiser start_experience_factor = 0.19801 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "4th Tallahassee Cruiser" definition = light_cruiser start_experience_factor = 0.2495 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "4th Mobile Cruiser" definition = light_cruiser start_experience_factor = 0.24801 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "5th Tallahassee Cruiser" definition = light_cruiser start_experience_factor = 0.24751 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "5th Mobile Cruiser" definition = light_cruiser start_experience_factor = 0.2495 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "6th Tallahassee Cruiser" definition = light_cruiser start_experience_factor = 0.24801 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "6th Savannah Cruiser" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "4th Wilmington Cruiser" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "5th Wilmington Cruiser" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "6th Wilmington Cruiser" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "7th Wilmington Cruiser" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "6th Mobile Cruiser" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "8th Tallahassee Cruiser" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "9th Tallahassee Cruiser" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "7th Mobile Cruiser" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "7th Savannah Cruiser" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "8th Savannah Cruiser" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "9th Savannah Cruiser" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "11th Tallahassee Cruiser" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "10th Tallahassee Cruiser" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+			ship = { name = "8th Mobile Cruiser" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = V65 version_name = "Early Light Cruiser" } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "V65"
+			version_name = "Early Destroyer"
+		}
+		requested_factories = 3
+		progress = 0.25
+		amount = 10
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_heavy_1
+			creator = "V65"
+			version_name = "Early Battleship"
+		}
+		requested_factories = 8
+		progress = 0.25
+		amount = 3
+	}
+}

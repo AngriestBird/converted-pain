@@ -1,0 +1,38 @@
+
+state={
+	id=747
+	name="STATE_747"
+	resources={
+		steel=1.000
+	}
+
+	history={
+		owner = V58
+		victory_points = {
+			11954 8 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+			arms_factory = 0
+			11954 = {
+				naval_base = 6
+			}
+			air_base = 6
+
+		}
+		add_core_of = EGY
+		add_core_of = LBA
+		add_core_of = V46
+		add_core_of = V58
+		add_core_of = X15
+		add_core_of = X50
+	}
+
+	provinces={
+		1041 1062 1118 1127 1130 1186 1198 1204 4047 4057 4060 4063 4120 4136 4151 4194 7063 7082 7139 7206 7209 9980 9992 10046 10049 10117 10120 10123 11954 12025 12079 12088 12094 13078 
+	}
+	manpower=1626164
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

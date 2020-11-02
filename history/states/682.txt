@@ -1,0 +1,30 @@
+
+state={
+	id=682
+	name="STATE_682"
+
+	history={
+		owner = V47
+		victory_points = {
+			1574 6 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			arms_factory = 0
+			10342 = {
+				naval_base = 4
+			}
+			air_base = 5
+
+		}
+		add_core_of = W16
+	}
+
+	provinces={
+		1419 1437 1574 7369 7413 7557 10141 10342 10409 
+	}
+	manpower=886696
+	buildings_max_level_factor=1.000
+	state_category=town
+}

@@ -1,0 +1,50 @@
+difficulty_settings = {
+	difficulty_setting = {
+		key = "custom_diff_strong_MAN"
+		modifier = diff_strong_ai_generic
+		countries = { MAN }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_LIT"
+		modifier = diff_strong_ai_generic
+		countries = { LIT }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_X29"
+		modifier = diff_strong_ai_generic
+		countries = { X29 }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_V37"
+		modifier = diff_strong_ai_generic
+		countries = { V37 }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_GUA"
+		modifier = diff_strong_ai_generic
+		countries = { GUA }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_BRA"
+		modifier = diff_strong_ai_generic
+		countries = { BRA }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_MEX"
+		modifier = diff_strong_ai_generic
+		countries = { MEX }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_V66"
+		modifier = diff_strong_ai_generic
+		countries = { V66 }
+		multiplier = 2.0
+	}
+}

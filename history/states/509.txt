@@ -1,0 +1,33 @@
+
+state={
+	id=509
+	name="STATE_509"
+
+	history={
+		owner = W58
+		victory_points = {
+			362 8 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			arms_factory = 0
+			362 = {
+				naval_base = 6
+			}
+			air_base = 6
+
+		}
+		add_core_of = GER
+		add_core_of = W56
+		add_core_of = W58
+		add_core_of = X60
+	}
+
+	provinces={
+		362 
+	}
+	manpower=426384
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,28 @@
+
+state={
+	id=605
+	name="STATE_605"
+
+	history={
+		owner = V29
+		victory_points = {
+			3140 3 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 0
+			arms_factory = 1
+			air_base = 1
+
+		}
+		add_core_of = SOV
+		add_core_of = V29
+	}
+
+	provinces={
+		57 152 172 194 3110 3140 3142 6095 6131 6169 9060 9107 9184 11174 
+	}
+	manpower=438632
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

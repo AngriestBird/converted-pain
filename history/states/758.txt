@@ -1,0 +1,32 @@
+
+state={
+	id=758
+	name="STATE_758"
+	resources={
+		steel=50.000
+	}
+
+	history={
+		owner = V65
+		victory_points = {
+			12501 4 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+			arms_factory = 0
+			air_base = 1
+
+		}
+		add_core_of = CSA
+		add_core_of = USA
+		add_core_of = V65
+	}
+
+	provinces={
+		1758 8083 10281 10824 10909 12501 12670 
+	}
+	manpower=2580360
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

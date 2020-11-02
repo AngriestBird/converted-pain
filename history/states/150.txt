@@ -1,0 +1,32 @@
+
+state={
+	id=150
+	name="STATE_150"
+	resources={
+		oil=2.000
+		steel=6.000
+	}
+
+	history={
+		owner = X54
+		victory_points = {
+			6722 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = USA
+		add_core_of = X54
+	}
+
+	provinces={
+		6722 7877 12566 
+	}
+	manpower=7956
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

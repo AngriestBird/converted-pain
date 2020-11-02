@@ -1,0 +1,37 @@
+
+state={
+	id=329
+	name="STATE_329"
+	resources={
+		aluminium=2.000
+		chromium=65.000
+		steel=13.000
+	}
+
+	history={
+		owner = LIT
+		victory_points = {
+			7900 20 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 7
+			arms_factory = 0
+			air_base = 10
+
+		}
+		add_core_of = LIT
+		add_core_of = SAF
+		add_core_of = V11
+		add_core_of = V76
+		add_core_of = W35
+		add_core_of = W96
+	}
+
+	provinces={
+		1688 2171 2213 5106 5217 7900 10400 10566 
+	}
+	manpower=3104740
+	buildings_max_level_factor=1.000
+	state_category=city
+}

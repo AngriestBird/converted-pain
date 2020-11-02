@@ -1,0 +1,32 @@
+
+state={
+	id=273
+	name="STATE_273"
+	resources={
+		aluminium=87.000
+		steel=6.000
+	}
+
+	history={
+		owner = HRE
+		victory_points = {
+			9660 10 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 5
+			arms_factory = 0
+			air_base = 7
+
+		}
+		add_core_of = HRE
+		add_core_of = HUN
+	}
+
+	provinces={
+		684 716 6716 9660 
+	}
+	manpower=1412104
+	buildings_max_level_factor=1.000
+	state_category=city
+}

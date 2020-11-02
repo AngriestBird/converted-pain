@@ -1,0 +1,3 @@
+graphical_culture = JAP
+graphical_culture_2d = JAP
+color = { 23 114 143 }

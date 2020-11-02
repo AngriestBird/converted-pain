@@ -1,0 +1,30 @@
+
+state={
+	id=685
+	name="STATE_685"
+	resources={
+		rubber=0.000
+	}
+
+	history={
+		owner = V47
+		victory_points = {
+			12237 1 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = W59
+	}
+
+	provinces={
+		2129 4317 4418 5135 7365 7409 10251 10954 10974 11004 11018 12193 12237 12428 12931 
+	}
+	manpower=619732
+	buildings_max_level_factor=1.000
+	state_category=town
+}

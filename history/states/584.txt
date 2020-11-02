@@ -1,0 +1,32 @@
+
+state={
+	id=584
+	name="STATE_584"
+	resources={
+		oil=3.000
+		steel=28.000
+	}
+
+	history={
+		owner = V19
+		victory_points = {
+			6710 1 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 1
+
+		}
+		add_core_of = USA
+		add_core_of = V64
+	}
+
+	provinces={
+		691 3766 6710 9724 9746 11656 11669 
+	}
+	manpower=825696
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

@@ -1,0 +1,3 @@
+﻿l_french:
+ GUA_Naval_treaty_nation:10 "@GUA [GUA.GetName]"
+ MEX_Naval_treaty_nation:10 "@MEX [MEX.GetName]"

@@ -1,0 +1,31 @@
+
+state={
+	id=608
+	name="STATE_608"
+	resources={
+		tungsten=33.000
+	}
+
+	history={
+		owner = V30
+		victory_points = {
+			11851 4 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 3
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = GER
+		add_core_of = V30
+	}
+
+	provinces={
+		809 931 985 3930 6866 6902 6948 6954 9839 9877 9917 9925 11780 11798 11851 13230 
+	}
+	manpower=1112212
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

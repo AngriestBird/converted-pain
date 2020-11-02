@@ -1,0 +1,32 @@
+
+state={
+	id=518
+	name="STATE_518"
+	resources={
+		tungsten=37.000
+	}
+
+	history={
+		owner = W65
+		victory_points = {
+			1908 13 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+			arms_factory = 0
+			air_base = 10
+
+		}
+		add_core_of = W65
+		add_core_of = W70
+		add_core_of = X90
+	}
+
+	provinces={
+		1199 1908 2054 2092 4149 4971 4984 7905 7998 10847 10866 12041 12718 12829 12844 12876 12886 
+	}
+	manpower=8108668
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+}

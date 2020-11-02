@@ -1,0 +1,35 @@
+
+state={
+	id=490
+	name="STATE_490"
+	resources={
+		steel=14.000
+	}
+
+	history={
+		owner = W43
+		victory_points = {
+			11563 8 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			arms_factory = 0
+			9434 = {
+				naval_base = 8
+			}
+			air_base = 5
+
+		}
+		add_core_of = FRA
+		add_core_of = GER
+		add_core_of = W43
+	}
+
+	provinces={
+		485 3549 6569 9434 9578 11563 
+	}
+	manpower=940544
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

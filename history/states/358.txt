@@ -1,0 +1,29 @@
+
+state={
+	id=358
+	name="STATE_358"
+
+	history={
+		owner = W10
+		victory_points = {
+			12586 8 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+			arms_factory = 0
+			air_base = 5
+
+		}
+		add_core_of = USA
+		add_core_of = V21
+		add_core_of = W10
+	}
+
+	provinces={
+		1683 3613 3708 3855 4749 4760 4830 7840 7852 10606 10676 12516 12586 
+	}
+	manpower=797808
+	buildings_max_level_factor=1.000
+	state_category=town
+}

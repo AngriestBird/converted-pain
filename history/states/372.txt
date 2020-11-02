@@ -1,0 +1,31 @@
+
+state={
+	id=372
+	name="STATE_372"
+
+	history={
+		owner = W11
+		victory_points = {
+			13202 9 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 3
+			arms_factory = 1
+			13202 = {
+				naval_base = 10
+			}
+			air_base = 7
+
+		}
+		add_core_of = W11
+		add_core_of = X41
+	}
+
+	provinces={
+		13202 13203 
+	}
+	manpower=4322776
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

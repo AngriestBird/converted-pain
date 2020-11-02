@@ -1,0 +1,31 @@
+
+state={
+	id=670
+	name="STATE_670"
+	resources={
+		steel=2.000
+	}
+
+	history={
+		owner = V37
+		victory_points = {
+			9526 3 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 1
+
+		}
+		add_core_of = V37
+		add_core_of = W42
+	}
+
+	provinces={
+		508 576 1290 1318 3467 3502 3563 4351 6551 9462 9526 11473 11510 
+	}
+	manpower=312500
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

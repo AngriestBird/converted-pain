@@ -1,0 +1,32 @@
+
+state={
+	id=394
+	name="STATE_394"
+
+	history={
+		owner = MAN
+		victory_points = {
+			7878 8 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			arms_factory = 0
+			dockyard = 1
+			10540 = {
+				naval_base = 6
+			}
+			air_base = 5
+
+		}
+		add_core_of = MAN
+		add_core_of = X93
+	}
+
+	provinces={
+		1823 1839 1863 4728 4744 7878 10540 12207 12522 
+	}
+	manpower=1458130
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

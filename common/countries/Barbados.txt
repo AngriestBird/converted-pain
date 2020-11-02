@@ -1,0 +1,3 @@
+graphical_culture = MEX
+graphical_culture_2d = MEX
+color = { 56 10 85 }

@@ -1,0 +1,31 @@
+
+state={
+	id=367
+	name="STATE_367"
+
+	history={
+		owner = W10
+		victory_points = {
+			4565 9 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+			arms_factory = 0
+			4464 = {
+				naval_base = 8
+			}
+			air_base = 5
+
+		}
+		add_core_of = CSA
+		add_core_of = USA
+	}
+
+	provinces={
+		1615 4464 4510 4565 4650 7464 7668 8110 10410 10449 10753 11717 12328 12429 
+	}
+	manpower=2005016
+	buildings_max_level_factor=1.000
+	state_category=town
+}

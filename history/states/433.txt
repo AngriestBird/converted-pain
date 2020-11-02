@@ -1,0 +1,36 @@
+
+state={
+	id=433
+	name="STATE_433"
+	resources={
+		steel=14.000
+		tungsten=6.000
+	}
+
+	history={
+		owner = MAN
+		victory_points = {
+			1117 4 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+			1117 = {
+				naval_base = 6
+			}
+			air_base = 0
+
+		}
+		add_core_of = JAP
+		add_core_of = MAN
+		add_core_of = X87
+	}
+
+	provinces={
+		998 1117 7102 9952 10032 10128 11930 11989 12007 
+	}
+	manpower=2202828
+	buildings_max_level_factor=1.000
+	state_category=town
+}

@@ -1,0 +1,34 @@
+
+state={
+	id=407
+	name="STATE_407"
+	resources={
+		aluminium=0.000
+		steel=1.000
+	}
+
+	history={
+		owner = MAN
+		victory_points = {
+			11916 4 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+			air_base = 0
+
+		}
+		add_core_of = CHI
+		add_core_of = MAN
+		add_core_of = W06
+		add_core_of = X85
+	}
+
+	provinces={
+		7094 10040 11916 11973 12036 
+	}
+	manpower=3722324
+	buildings_max_level_factor=1.000
+	state_category=city
+}

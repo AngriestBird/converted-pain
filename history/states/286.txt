@@ -1,0 +1,33 @@
+
+state={
+	id=286
+	name="STATE_286"
+
+	history={
+		owner = ITA
+		victory_points = {
+			3838 8 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			arms_factory = 0
+			3838 = {
+				naval_base = 10
+			}
+			air_base = 6
+
+		}
+		add_core_of = HRE
+		add_core_of = ITA
+		add_core_of = W84
+		add_core_of = X47
+	}
+
+	provinces={
+		3838 9851 11804 
+	}
+	manpower=570820
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

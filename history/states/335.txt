@@ -1,0 +1,39 @@
+
+state={
+	id=335
+	name="STATE_335"
+	resources={
+		steel=3.000
+	}
+
+	history={
+		owner = LIT
+		victory_points = {
+			3320 5 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			arms_factory = 0
+			dockyard = 3
+			6314 = {
+				naval_base = 8
+			}
+			air_base = 1
+
+		}
+		add_core_of = BLR
+		add_core_of = HRE
+		add_core_of = LIT
+		add_core_of = SOV
+		add_core_of = V38
+		add_core_of = W55
+	}
+
+	provinces={
+		327 530 3272 3320 3337 3354 6229 6281 6296 6314 6360 6376 6407 9246 9274 9295 9357 9374 9404 9438 9483 9499 9731 11226 11312 11342 11391 11498 
+	}
+	manpower=2989068
+	buildings_max_level_factor=1.000
+	state_category=city
+}

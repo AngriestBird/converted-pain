@@ -1,0 +1,33 @@
+
+state={
+	id=498
+	name="STATE_498"
+	resources={
+		steel=9.000
+	}
+
+	history={
+		owner = POL
+		victory_points = {
+			9508 8 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+			arms_factory = 0
+			air_base = 6
+
+		}
+		add_core_of = HRE
+		add_core_of = POL
+		add_core_of = V54
+		add_core_of = W55
+	}
+
+	provinces={
+		584 3482 3497 3586 9439 9508 9546 11428 11430 
+	}
+	manpower=735084
+	buildings_max_level_factor=1.000
+	state_category=town
+}

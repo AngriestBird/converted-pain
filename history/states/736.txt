@@ -1,0 +1,31 @@
+
+state={
+	id=736
+	name="STATE_736"
+	resources={
+		rubber=1.000
+	}
+
+	history={
+		owner = V50
+		victory_points = {
+			1984 9 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 2
+			air_base = 5
+
+		}
+		add_core_of = ETH
+		add_core_of = V50
+	}
+
+	provinces={
+		1984 2040 4954 5097 7944 
+	}
+	manpower=1941396
+	buildings_max_level_factor=1.000
+	state_category=town
+}

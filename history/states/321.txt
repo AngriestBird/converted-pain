@@ -1,0 +1,35 @@
+
+state={
+	id=321
+	name="STATE_321"
+	resources={
+		aluminium=1.000
+		rubber=0.000
+		steel=0.000
+	}
+
+	history={
+		owner = LIT
+		victory_points = {
+			10919 6 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			arms_factory = 0
+			10919 = {
+				naval_base = 6
+			}
+			air_base = 6
+
+		}
+		add_core_of = DAH
+	}
+
+	provinces={
+		10919 
+	}
+	manpower=518084
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

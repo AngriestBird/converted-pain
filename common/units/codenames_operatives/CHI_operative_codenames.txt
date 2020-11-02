@@ -1,0 +1,34 @@
+CHI_OPERATIVE_CODENAME_HISTORICAL = {
+	name = CHI_OPERATIVE_CODENAME_HISTORICAL
+
+	for_countries = { CAL CHI MAN SIK V01 W06 W26 W63 W64 W80 W83 W99 X10 X31 X39 X48 X49 X64 X71 X82 X84 X85 X92 }
+
+	type = codename
+
+	fallback_name = "Agent %d"
+	unique = {
+		"Zhou"
+		"Qin"
+		"Han"
+		"Jin"
+		"Di"
+		"Liang"
+		"Sui"
+		"Tang"
+		"Liao"
+		"Song"
+		"Yuan"
+		"Ming"
+		"Qing"
+		"Xia"
+		"Shang"
+		"Wu"
+		"Shun"
+		"Dali"
+		"Ning"
+		"Tang"
+		"Huai"
+		"Changsheng"
+		"Miao"
+	}
+}

@@ -1,0 +1,33 @@
+
+state={
+	id=349
+	name="STATE_349"
+	resources={
+		aluminium=0.000
+		steel=1.000
+	}
+
+	history={
+		owner = W06
+		victory_points = {
+			10098 17 
+		}
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 5
+			arms_factory = 2
+			air_base = 7
+
+		}
+		add_core_of = CHI
+		add_core_of = W06
+		add_core_of = X85
+	}
+
+	provinces={
+		4066 4079 7085 7126 9995 10079 10098 
+	}
+	manpower=16913780
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+}

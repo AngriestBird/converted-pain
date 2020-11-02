@@ -1,0 +1,32 @@
+units = {
+	fleet = {
+		name = "Rikuzen Sendan"
+		naval_base = 7113
+		task_force = {
+			name = "Rikuzen Sendan"
+			location = 7113
+			ship = { name = "Baraq Khan" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = X87 } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_1
+			creator = "X87"
+		}
+		requested_factories = 3
+		progress = 0.25
+		amount = 10
+	}
+	add_equipment_production = {
+		equipment = {
+			type = battleship_1
+			creator = "X87"
+		}
+		requested_factories = 8
+		progress = 0.25
+		amount = 3
+	}
+}

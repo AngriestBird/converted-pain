@@ -1,0 +1,37 @@
+
+state={
+	id=354
+	name="STATE_354"
+	resources={
+		aluminium=2.000
+		chromium=0.000
+		steel=2.000
+		tungsten=0.000
+	}
+
+	history={
+		owner = W07
+		victory_points = {
+			6788 11 
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+			arms_factory = 0
+			6788 = {
+				naval_base = 4
+			}
+			air_base = 10
+
+		}
+		add_core_of = ITA
+		add_core_of = X67
+	}
+
+	provinces={
+		6788 
+	}
+	manpower=796824
+	buildings_max_level_factor=1.000
+	state_category=town
+}

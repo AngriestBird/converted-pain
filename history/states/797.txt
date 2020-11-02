@@ -1,0 +1,31 @@
+
+state={
+	id=797
+	name="STATE_797"
+	resources={
+		chromium=3.000
+	}
+
+	history={
+		owner = YEM
+		victory_points = {
+			10837 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 0
+			arms_factory = 0
+			air_base = 0
+
+		}
+		add_core_of = X29
+		add_core_of = YEM
+	}
+
+	provinces={
+		8093 10837 10922 12704 12818 
+	}
+	manpower=704368
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

@@ -1,0 +1,31 @@
+
+state={
+	id=104
+	name="STATE_104"
+	resources={
+		steel=16.000
+	}
+
+	history={
+		owner = X29
+		victory_points = {
+			4550 4 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 0
+			arms_factory = 2
+			air_base = 1
+
+		}
+		add_core_of = V57
+		add_core_of = X29
+	}
+
+	provinces={
+		1074 4111 4486 4550 7184 7513 10383 12316 12442 
+	}
+	manpower=1044068
+	buildings_max_level_factor=1.000
+	state_category=town
+}

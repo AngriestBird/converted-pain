@@ -1,0 +1,36 @@
+
+state={
+	id=598
+	name="STATE_598"
+	resources={
+		oil=2.000
+		rubber=12.000
+	}
+
+	history={
+		owner = VEN
+		victory_points = {
+			12798 8 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			arms_factory = 0
+			8252 = {
+				naval_base = 6
+			}
+			air_base = 5
+
+		}
+		add_core_of = ECU
+		add_core_of = VEN
+		add_core_of = X33
+	}
+
+	provinces={
+		5051 5120 8047 8075 8252 10888 10942 11020 12798 
+	}
+	manpower=1371112
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

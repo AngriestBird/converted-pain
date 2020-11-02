@@ -1,0 +1,49 @@
+units = {
+	fleet = {
+		name = "2nd Fleet"
+		naval_base = 12865
+		task_force = {
+			name = "2nd Fleet"
+			location = 12865
+			ship = { name = "José María Medina" definition = battleship equipment = { battleship_2 = { amount = 1 owner = HON } } }
+			ship = { name = "Honduras" definition = battleship equipment = { battleship_2 = { amount = 1 owner = HON } } }
+			ship = { name = "Francisco Ferrera" definition = battleship equipment = { battleship_2 = { amount = 1 owner = HON } } }
+			ship = { name = "Francisco Morazán" definition = battleship equipment = { battleship_2 = { amount = 1 owner = HON } } }
+			ship = { name = "José Santos" definition = battleship equipment = { battleship_2 = { amount = 1 owner = HON } } }
+			ship = { name = "Luis Bográn" definition = battleship equipment = { battleship_2 = { amount = 1 owner = HON } } }
+			ship = { name = "Manuel Bonilla" definition = battleship equipment = { battleship_2 = { amount = 1 owner = HON } } }
+			ship = { name = "Marco Aurelio Soto" definition = battleship equipment = { battleship_2 = { amount = 1 owner = HON } } }
+			ship = { name = "1st Comayagua Battleship" definition = heavy_cruiser equipment = { heavy_cruiser_2 = { amount = 1 owner = HON } } }
+			ship = { name = "2nd Comayagua Battleship" definition = heavy_cruiser equipment = { heavy_cruiser_2 = { amount = 1 owner = HON } } }
+			ship = { name = "Cuyamel" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = HON } } }
+			ship = { name = "Cerro Palenque" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = HON } } }
+			ship = { name = "Chorti" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = HON } } }
+			ship = { name = "Copán" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = HON } } }
+			ship = { name = "Cristóbal Colón" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = HON } } }
+			ship = { name = "Despoloncal" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = HON } } }
+			ship = { name = "Maya" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = HON } } }
+			ship = { name = "Pedro de Alvarado" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = HON } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_2
+			creator = "HON"
+		}
+		requested_factories = 3
+		progress = 0.25
+		amount = 10
+	}
+	add_equipment_production = {
+		equipment = {
+			type = battleship_2
+			creator = "HON"
+		}
+		requested_factories = 8
+		progress = 0.25
+		amount = 3
+	}
+}

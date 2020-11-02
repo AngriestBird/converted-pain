@@ -1,0 +1,28 @@
+
+state={
+	id=166
+	name="STATE_166"
+
+	history={
+		owner = DJI
+		victory_points = {
+			4985 8 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+
+		}
+		add_core_of = DJI
+		add_core_of = SOM
+	}
+
+	provinces={
+		4985 8124 
+	}
+	manpower=62840
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

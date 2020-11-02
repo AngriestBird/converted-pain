@@ -1,0 +1,29 @@
+
+state={
+	id=517
+	name="STATE_517"
+
+	history={
+		owner = W64
+		victory_points = {
+			13052 8 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 0
+			air_base = 5
+
+		}
+		add_core_of = HAW
+		add_core_of = MEX
+		add_core_of = W64
+	}
+
+	provinces={
+		13052 
+	}
+	manpower=120
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

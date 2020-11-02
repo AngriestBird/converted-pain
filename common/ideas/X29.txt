@@ -46,6 +46,34 @@ ideas = {
 				army_org_factor = 0.10
 			}
 		}
+		X29_greek_militarism = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			picture = generic_manpower_bonus
+			modifier = {
+				conscription = 0.015
+				resistance_damage_to_garrison = -0.1
+			}
+		}
+		X29_greek_indoctrination_campaign = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			picture = generic_manpower_bonus
+			modifier = {
+				training_time_army_factor = -0.1
+				political_power_gain = -0.50
+			}
+		}
 	}
 	political_advisor = {
 		X29_absolutist_advisor = {

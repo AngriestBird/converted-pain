@@ -16,12 +16,11 @@ focus_tree = {
 	shared_focus = aviation_effort
 	shared_focus = naval_effort
 	shared_focus = industrial_effort
-	shared_focus = political_effort
 
 	focus = {
 		id = X29_the_rise_of_byzantium
 		icon = GFX_goal_support_fascism
-		x = 34
+		x = 21
 		y = 0
 		cost = 10
 		completion_reward = {
@@ -179,9 +178,10 @@ focus_tree = {
 		id = X29_anschluss_V00
 		icon = GFX_goal_anschluss
 		prerequisite = { focus = X29_the_military_march }
-		x = 32
-		y = 2
+		x = -2
+		y = 1
 		cost = 10
+		relative_position_id = X29_the_military_march
 		available = {
 			V00 = {
 				is_in_faction = no
@@ -215,8 +215,9 @@ focus_tree = {
 		icon = GFX_goal_anschluss
 		text = _anschluss_V57
 		prerequisite = { focus = X29_the_military_march }
-		x = 34
-		y = 2
+		x = 0
+		y = 1
+		relative_position_id = X29_the_military_march
 		cost = 10
 		available = {
 			V57 = {
@@ -375,7 +376,7 @@ focus_tree = {
 		icon = GFX_goal_anschluss
 		prerequisite = { focus = expand_the_reichX29 }
 
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = expand_the_reichX29
 		cost = 10
@@ -397,7 +398,7 @@ focus_tree = {
 		id = X29_the_internal_2
 		icon = GFX_goal_generic_territory_or_war
 		prerequisite = { focus =  X29_the_internal }
-		x = 0
+		x = -1
 		y = 2
 		relative_position_id = expand_the_reichX29
 		cost = 10
@@ -406,12 +407,101 @@ focus_tree = {
 			remove_ideas = X29_revitalized_beuracracy_1
 		}
 		ai_will_do = {
-		factor = 10
-		modifier = {
-			factor = 0
-			date < 1937.6.6
+			factor = 10
 		}
 	}
+
+	focus = {
+		id = nationalism_focus
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = expand_the_reichX29 }
+		x = 1
+		y = 1
+		relative_position_id = expand_the_reichX29
+		cost = 10
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.05
+			add_stability = 0.05
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				any_neighbor_country = {
+					is_major = yes
+					has_government = fascism
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = militarism
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = nationalism_focus }
+		x = 0
+		y = 1
+		relative_position_id = nationalism_focus
+		cost = 10
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = X29_greek_militarism
+			army_experience = 20
+			set_rule = { can_send_volunteers = yes }
+		}
+	}
+	
+	focus = {
+		id = X29_military_youth
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = militarism }
+		x = 0
+		y = 1
+		relative_position_id = militarism
+		cost = 10
+		available_if_capitulated = yes
+		completion_reward = {
+			every_neighbor_country = {
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.1
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = X29_paramilitarism
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = X29_military_youth }
+		x = 0
+		y = 1
+		relative_position_id = X29_military_youth
+		cost = 10
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = X29_greek_indoctrination_campaign
+		}
+	}
+
+	
+	focus = {
+		id = X29_ideological_fanaticism
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = {  focus = X29_paramilitarism }
+		x = 0
+		y = 4
+		relative_position_id = nationalism_focus
+		cost = 10
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = ideological_fanaticism_focus
+			hidden_effect = {
+				set_rule = { can_use_kamikaze_pilots = yes }
+			}
+			custom_effect_tooltip = kamikaze_focus_tooltip
+		}
 	}
 
 	focus = {
@@ -429,6 +519,9 @@ focus_tree = {
 			create_faction = "The Axis"
 			hidden_effect = { ##Adds Byzantium to the faction
 				add_to_faction = X29
+				set_rule = {
+					can_create_factions = yes
+				}
 			}
 			add_political_power = 150
 		}

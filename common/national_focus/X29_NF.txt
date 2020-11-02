@@ -412,7 +412,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = nationalism_focus
+		id = X29_nationalism
 		icon = GFX_goal_support_fascism
 		prerequisite = { focus = expand_the_reichX29 }
 		x = 1
@@ -437,12 +437,12 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = militarism
+		id = X29_militarism
 		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = nationalism_focus }
+		prerequisite = { focus = X29_nationalism }
 		x = 0
 		y = 1
-		relative_position_id = nationalism_focus
+		relative_position_id = X29_nationalism
 		cost = 10
 		available_if_capitulated = yes
 		completion_reward = {
@@ -455,10 +455,10 @@ focus_tree = {
 	focus = {
 		id = X29_military_youth
 		icon = GFX_goal_generic_more_territorial_claims
-		prerequisite = { focus = militarism }
+		prerequisite = { focus = X29_militarism }
 		x = 0
 		y = 1
-		relative_position_id = militarism
+		relative_position_id = X29_militarism
 		cost = 10
 		available_if_capitulated = yes
 		completion_reward = {
@@ -492,7 +492,7 @@ focus_tree = {
 		prerequisite = {  focus = X29_paramilitarism }
 		x = 0
 		y = 4
-		relative_position_id = nationalism_focus
+		relative_position_id = X29_nationalism
 		cost = 10
 		available_if_capitulated = yes
 		completion_reward = {

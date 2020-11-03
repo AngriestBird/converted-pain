@@ -1,13 +1,9 @@
 focus_tree = {
-	id = V30_focus
+	id = V30_political_power
 	
 	country = {
 		factor = 0
-		
-		modifier = {
-			add = 10
-			tag = V30
-		}
+		modifier = { add = 10 tag = V30 }
 	}
 	
 	default = no
@@ -19,480 +15,446 @@ focus_tree = {
 	shared_focus = political_effort
 
 	focus = {
-		id = border_disputesV30MOR
-		icon = GFX_goal_generic_more_territorial_claims
-		text = border_disputesMOR
-		x = 28
+		id = V30_empower_the_salamanca_clique
+		icon = GFX_goal_generic_demand_territory
+		text = "Empower the Salamanca Clique"
+		x = 32
 		y = 0
 		cost = 10
-		available = {
-			has_war = no
-			not_in_border_conflict = yes
-			has_opinion = { target = MOR value < 0 }
-			MOR = {
-				exists = yes
-				not_allies_or_subjects = yes
-				in_weak_faction = yes
-				OR = {
-					potential_take_core_target = yes
-					if = {
-						limit = { ROOT = { has_government = communism } }
-						potential_communist_puppet_target = yes
-					}
-					if = {
-						limit = { ROOT = { has_government = fascism } }
-						potential_fascist_annex_target = yes
-					}
-					potential_take_state_target = yes
-					potential_border_war_target = yes
-				}
-			}
-		}
-
+		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_manpower = 10000
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				date < 1938.8.1
+			add_political_power = 150
+			add_popularity = {
+				ideology = absolutist
+				popularity = -0.6
 			}
-			modifier = {
-				factor = 0
-				threat > 0.25
-				date > 1938.8.1
+			add_popularity = {
+				ideology = communism
+				popularity = 0.10
 			}
-			modifier = {
-				factor = 0
-				threat > 0.4
-				date > 1939.4.1
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.10
 			}
-			modifier = {
-				factor = 0
-				threat > 0.5
-				date > 1939.8.1
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.10
 			}
 		}
 	}
 
 	focus = {
-		id = prepare_for_warV30MOR
-		icon = GFX_goal_generic_position_armies
-		text = prepare_for_warMOR
-		prerequisite = { focus = border_disputesV30MOR }
-		bypass = {
-			has_war_with = MOR
-		}
-		x = 0
+		id = V30_develop_the_northwest
+		icon = GFX_goal_generic_construct_civilian
+		text = "Develop the Northwest"
+		x = -2
 		y = 1
-		relative_position_id = border_disputesV30MOR
-		cost = 4
-		available = {
-			has_war = no
-			not_in_border_conflict = yes
-			has_opinion = { target = MOR value < 0 }
-			MOR = {
-				exists = yes
-				not_in_border_conflict = yes
-			}
-		}
-		continue_if_invalid = yes
-		select_effect = {
-			random_owned_controlled_state = {
-				limit = { any_neighbor_state = { is_fully_controlled_by = MOR } }
-				set_variable = { ROOT.attacker_state = THIS.id }
-				set_state_flag = border_incident_active
-			}
-			var:attacker_state = {
-				random_neighbor_state = {
-					limit = { is_fully_controlled_by = MOR }
-					set_variable = { ROOT.defender_state = THIS.id }
-					set_state_flag = border_incident_active
-				}
-				if = {
-					limit = { var:ROOT.defender_state = { NOT = { is_fully_controlled_by = MOR } } }
-					random_state = {
-						limit = {
-							is_fully_controlled_by = MOR
-							is_coastal = yes
-						}
-						set_variable = { ROOT.defender_state = THIS.id }
-						set_state_flag = border_incident_active
-					}
-				}
-				if = {
-					limit = { var:ROOT.defender_state = { NOT = { is_fully_controlled_by = MOR } } }
-					random_state = {
-						limit = { is_fully_controlled_by = MOR }
-						set_variable = { ROOT.defender_state = THIS.id }
-						set_state_flag = border_incident_active
-					}
-				}
-			}
-		}
-		completion_reward = {
-			MOR = {
-				add_ai_strategy = { type = prepare_for_war id = ROOT value = 1000 }
-				ROOT = { add_ai_strategy = { type = prepare_for_war id = PREV value = 1000 } }
-			}
-			add_manpower = 10000
-		}
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				date < 1938.8.1
-			}
-			modifier = {
-				factor = 0
-				threat > 0.25
-				date > 1938.8.1
-			}
-			modifier = {
-				factor = 0
-				threat > 0.4
-				date > 1939.4.1
-			}
-			modifier = {
-				factor = 0
-				threat > 0.5
-				date > 1939.8.1
-			}
-		}
-	}
-
-	focus = {
-		id = neighbor_warV30MOR
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-		text = neighbor_warMOR
-		prerequisite = { focus = prepare_for_warV30MOR }
-		bypass = {
-			has_war_with = MOR
-		}
-		x = 0
-		y = 1
-		relative_position_id = prepare_for_warV30MOR
-		cost = 3
-		available = {
-			has_war = no
-			hidden_trigger = {
-				NOT = { any_owned_state = { has_border_war = yes } }
-				MOR = { NOT = { any_owned_state = { has_border_war = yes } } }
-			}
-			if = {
-				limit = { MOR = { potential_border_war_target = yes } }
-				var:attacker_state = { is_fully_controlled_by = ROOT }
-				var:defender_state = { is_fully_controlled_by = MOR }
-				divisions_in_border_state = { state = var:attacker_state border_state = var:defender_state size > 0 }
-			}
-		}
-		completion_reward = {
-			if = {
-				limit = { MOR = { potential_take_core_target = yes } }
-				declare_war_on = {
-					target = MOR
-					type = take_core_state
-					generator = core_states
-				}
-				add_named_threat = { threat = 3 name = neighbor_war_NF_threat }
-			}
-			else_if = {
-				limit = { MOR = { potential_communist_puppet_target = yes } }
-				declare_war_on = {
-					target = MOR
-					type = puppet_wargoal_focus
-				}
-				add_named_threat = { threat = 3 name = neighbor_war_NF_threat }
-			}
-			else_if = {
-				limit = { MOR = { potential_fascist_annex_target = yes } }
-				declare_war_on = {
-					target = MOR
-					type = annex_everything
-				}
-				add_named_threat = { threat = 3 name = neighbor_war_NF_threat }
-			}
-			else_if = {
-				limit = { MOR = { potential_take_state_target = yes } }
-				add_state_claim = var:defender_state
-				declare_war_on = {
-					target = MOR
-					type = take_state_focus
-					generator = claimed_states
-				}
-				add_named_threat = { threat = 3 name = neighbor_war_NF_threat }
-			}
-			else_if = {
-				limit = { MOR = { potential_border_war_target = yes } }
-				start_border_war = {
-					change_state_after_war = no
-					attacker = {
-						state = var:attacker_state
-						num_provinces = 6
-						on_win = neighbor_war.1
-						on_lose = neighbor_war.2
-						on_cancel = neighbor_war.3
-					}
-					defender = {
-						state = var:defender_state
-						num_provinces = 6
-						on_win = neighbor_war.2
-						on_lose = neighbor_war.1
-						on_cancel = neighbor_war.3
-					}
-					minimum_duration_in_days = 14
-				}
-				add_named_threat = { threat = 1 name = neighbor_war_NF_threat }
-			}
-			MOR = {
-				add_ai_strategy = { type = prepare_for_war id = ROOT value = -1000 }
-				ROOT = { add_ai_strategy = { type = prepare_for_war id = PREV value = -1000 } }
-			}
-			var:attacker_state = { clr_state_flag = border_incident_active }
-			var:defender_state = { clr_state_flag = border_incident_active }
-		}
-		ai_will_do = {
-			factor = 10
-		}
-	}
-
-	focus = {
-		id = border_disputesV30X15
-		icon = GFX_goal_generic_more_territorial_claims
-		text = border_disputesX15
-		x = 30
-		y = 0
+		relative_position_id = V30_empower_the_salamanca_clique
+		prerequisite = { focus = V30_empower_the_salamanca_clique }
 		cost = 10
+		ai_will_do = { factor = 1 }
 		available = {
-			has_war = no
-			not_in_border_conflict = yes
-			has_opinion = { target = X15 value < 0 }
-			X15 = {
-				exists = yes
-				not_allies_or_subjects = yes
-				in_weak_faction = yes
-				OR = {
-					potential_take_core_target = yes
-					if = {
-						limit = { ROOT = { has_government = communism } }
-						potential_communist_puppet_target = yes
-					}
-					if = {
-						limit = { ROOT = { has_government = fascism } }
-						potential_fascist_annex_target = yes
-					}
-					potential_take_state_target = yes
-					potential_border_war_target = yes
-				}
-			}
+			has_full_control_of_state = 606
+			has_full_control_of_state = 607
 		}
-
 		completion_reward = {
-			add_manpower = 10000
+			606 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 1 }
+				add_building_construction = { type = arms_factory level = 1 }
+			}
+			607 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 1 }
+				add_building_construction = { type = arms_factory level = 1 }
+			}
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				date < 1938.8.1
+	}
+	focus = {
+		id = V30_state_russophobia
+		icon = GFX_goal_generic_attack_allies
+		text = "State Russophobia"
+		x = 0
+		y = 1
+		relative_position_id = V30_empower_the_salamanca_clique
+		prerequisite = { focus = V30_empower_the_salamanca_clique }
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = V30_russophobia
+		}
+	}
+	focus = {
+		id = V30_portuguese_investments
+		icon = GFX_goal_generic_occupy_states_coastal
+		text = "Portuguese Investments"
+		x = 2
+		y = 1
+		relative_position_id = V30_empower_the_salamanca_clique
+		prerequisite = { focus = V30_empower_the_salamanca_clique }
+		cost = 10
+		ai_will_do = { factor = 1 }
+		available = {
+			has_full_control_of_state = 615
+			has_full_control_of_state = 616
+		}
+		completion_reward = {
+			615 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 1 }
+				add_building_construction = { type = dockyard level = 1 }
 			}
-			modifier = {
-				factor = 0
-				threat > 0.25
-				date > 1938.8.1
-			}
-			modifier = {
-				factor = 0
-				threat > 0.4
-				date > 1939.4.1
-			}
-			modifier = {
-				factor = 0
-				threat > 0.5
-				date > 1939.8.1
+			616 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 1 }
+				add_building_construction = { type = dockyard level = 1 }
 			}
 		}
 	}
 
+	#Brudermann Dynasty
 	focus = {
-		id = prepare_for_warV30X15
+		id = V30_back_the_brudermann_dynasty
+		icon = GFX_focus_ger_return_of_the_kaiser
+		text = "Back the Brudermann Dynasty"
+		x = -1
+		y = 1
+		relative_position_id = V30_state_russophobia
+		prerequisite = { focus = V30_state_russophobia }
+		mutually_exclusive = { focus = V30_embrace_restorationism }
+		available = {
+			NOT = { has_completed_focus = liberty_ethos }
+			NOT = { has_completed_focus = radical_focus }
+			NOT = { has_completed_focus = internationalism_focus }
+		}
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_popularity = { ideology = absolutist popularity = 0.1 }
+		}
+	}
+	focus = {
+		id = V30_advisorism
+		icon = GFX_focus_usa_build_the_pentagon
+		text = "Advisorism"
+		x = -2
+		y = 1
+		relative_position_id = V30_back_the_brudermann_dynasty
+		prerequisite = { focus = V30_back_the_brudermann_dynasty }
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_idea = equality_all }
+					NOT = { has_idea = equality_segregation }
+					NOT = { has_idea = equality_genocide }
+					NOT = { has_idea = equality_minority }
+				}
+				custom_effect_tooltip = "Oppress minorities."
+				hidden_effect = { add_ideas = equality_minority }
+			}
+			if = {
+				limit = {
+					NOT = { has_idea = nationalization_capital }
+					NOT = { has_idea = nationalization_full }
+					NOT = { has_idea = nationalization_partial }
+				}
+				custom_effect_tooltip = "Embrace capitalism."
+				hidden_effect = { add_ideas = nationalization_capital }
+			}
+		}
+	}
+	focus = {
+		id = V30_slayerism
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		text = "Slayerism"
+		x = 0
+		y = 1
+		relative_position_id = V30_back_the_brudermann_dynasty
+		prerequisite = { focus = V30_back_the_brudermann_dynasty }
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			custom_effect_tooltip = "Simp for Isley."
+			X29 = {
+				add_opinion_modifier = { target = ROOT modifier = cheat_opinion_modifier_good }
+				reverse_add_opinion_modifier = { target = ROOT modifier = cheat_opinion_modifier_good }
+			}
+		}
+	}
+	focus = {
+		id = V30_end_the_absolute_monarchy
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		text = "End the Absolute Monarchy"
+		x = -1
+		y = 2
+		relative_position_id = V30_back_the_brudermann_dynasty
+		available = {
+			OR = {
+				has_completed_focus = nationalism_focus
+				has_completed_focus = absolutism_focus
+			}
+		}
+		prerequisite = { focus = V30_advisorism }
+		prerequisite = { focus = V30_slayerism }
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 150
+			create_country_leader = {
+				name = "Prime Minister Slayer"
+				ideology = absolute_monarchy
+				picture = "gfx/leaders/portrait_Apocalypto_fascist.dds"
+			}
+			create_country_leader = {
+				name = "Wehraboo Slayer"
+				ideology = nazism
+				picture = "gfx/leaders/portrait_Apocalypto_fascist.dds"
+			}
+		}
+	}
+
+	#Restorationism
+	focus = {
+		id = V30_embrace_restorationism
+		icon = GFX_focus_hun_elect_a_king
+		text = "Embrace Restorationism"
+		x = 1
+		y = 1
+		relative_position_id = V30_state_russophobia
+		prerequisite = { focus = V30_state_russophobia }
+		mutually_exclusive = { focus = V30_back_the_brudermann_dynasty }
+		available = {
+			NOT = { has_completed_focus = absolutism_focus }
+			NOT = { has_completed_focus = nationalism_focus }
+		}
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = culture_german
+				add_idea = culture_spanish
+			}
+		}
+	}
+	focus = {
+		id = V30_embrace_the_haciendas
+		icon = GFX_focus_NZL_bob_semple_tank
+		text = "Embrace the Haciendas"
+		x = 0
+		y = 1
+		relative_position_id = V30_embrace_restorationism
+		prerequisite = { focus = V30_embrace_restorationism }
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			if = {
+				limit = { has_full_control_of_state = 607 }
+				607 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 } }
+			}
+			if = {
+				limit = { has_full_control_of_state = 609 }
+				609 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 } }
+			}
+			if = {
+				limit = { has_full_control_of_state = 614 }
+				614 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 } }
+			}
+			if = {
+				limit = { has_full_control_of_state = 610 }
+				610 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 } }
+			}
+			if = {
+				limit = { has_full_control_of_state = 613 }
+				613 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 } }
+			}
+			if = {
+				limit = { has_full_control_of_state = 611 }
+				611 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 } }
+			}
+		}
+	}
+	focus = {
+		id = V30_legalize_labor_unions
+		icon = GFX_goal_generic_soviet_construction
+		text = "Legalize Labor Unions"
+		x = 2
+		y = 1
+		relative_position_id = V30_embrace_restorationism
+		prerequisite = { focus = V30_embrace_restorationism }
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_popularity = { ideology = democratic popularity = 0.2 }
+			add_popularity = { ideology = communism popularity = 0.2 }
+			if = {
+				limit = {
+					NOT = { has_idea = nationalization_capital }
+					NOT = { has_idea = nationalization_full }
+					NOT = { has_idea = nationalization_partial }
+				}
+				custom_effect_tooltip = "State capitalism good."
+				hidden_effect = { add_ideas = nationalization_partial }
+			}
+		}
+	}
+	focus = {
+		id = V30_abolish_the_monarchy
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		text = "Abolish the Monarchy"
+		x = 1
+		y = 2
+		relative_position_id = V30_embrace_restorationism
+		available = {
+			OR = {
+				has_completed_focus = radical_focus
+				has_completed_focus = internationalism_focus
+				has_completed_focus = liberty_ethos
+			}
+		}
+		prerequisite = { focus = V30_embrace_the_haciendas }
+		prerequisite = { focus = V30_legalize_labor_unions }
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 150
+			create_country_leader = {
+				name = "Comrade Slayer"
+				ideology = marxism
+				picture = "gfx/leaders/portrait_Apocalypto_fascist.dds"
+			}
+			create_country_leader = {
+				name = "AnCom Slayer"
+				ideology = anarchist_communism
+				picture = "gfx/leaders/portrait_Apocalypto_fascist.dds"
+			}
+			create_country_leader = {
+				name = "Swiss Slayer"
+				ideology = conservatism_neutral
+				picture = "gfx/leaders/portrait_Apocalypto_fascist.dds"
+			}
+			create_country_leader = {
+				name = "President Slayer"
+				ideology = conservatism
+				picture = "gfx/leaders/portrait_Apocalypto_fascist.dds"
+			}
+		}
+	}
+
+	#New Monarchy extension
+	focus = {
+		id = V30_national_rejuvenation
+		icon = GFX_focus_generic_treaty
+		text = "National Rejuvenation"
+		x = -2
+		y = 1
+		relative_position_id = V30_end_the_absolute_monarchy
+		prerequisite = { focus = V30_end_the_absolute_monarchy }
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.1
+			add_war_support = 0.1
+			if = {
+				limit = {
+					NOT = { has_idea = mass_media_censorship }
+					NOT = { has_idea = mass_media_free }
+					NOT = { has_idea = mass_media_propaganda }
+				}
+				custom_effect_tooltip = "Propa Gangnam Style"
+				hidden_effect = { add_ideas = mass_media_propaganda }
+			}
+		}
+	}
+
+	#Shared focus
+	focus = {
+		id = V30_unification_struggle
+		icon = GFX_goal_generic_neutrality_focus
+		text = "Unification Struggle"
+		x = 0
+		y = 4
+		relative_position_id = V30_state_russophobia
+		prerequisite = { 
+			focus = V30_end_the_absolute_monarchy
+			focus = V30_abolish_the_monarchy
+		}
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_war_support = 0.05
+			add_state_core = 221
+			add_state_core = 222
+			add_state_core = 231
+			add_state_core = 232
+			add_state_core = 325
+			add_state_core = 326
+			add_state_core = 187
+		}
+	}
+	focus = {
+		id = V30_solve_the_iberian_question
 		icon = GFX_goal_generic_position_armies
-		text = prepare_for_warX15
-		prerequisite = { focus = border_disputesV30X15 }
-		bypass = {
-			has_war_with = X15
-		}
+		text = "Solve the Iberian Question"
 		x = 0
 		y = 1
-		relative_position_id = border_disputesV30X15
-		cost = 4
-		available = {
-			has_war = no
-			not_in_border_conflict = yes
-			has_opinion = { target = X15 value < 0 }
-			X15 = {
-				exists = yes
-				not_in_border_conflict = yes
-			}
+		relative_position_id = V30_unification_struggle
+		prerequisite = { 
+			focus = V30_unification_struggle
 		}
-		continue_if_invalid = yes
-		select_effect = {
-			random_owned_controlled_state = {
-				limit = { any_neighbor_state = { is_fully_controlled_by = X15 } }
-				set_variable = { ROOT.attacker_state = THIS.id }
-				set_state_flag = border_incident_active
-			}
-			var:attacker_state = {
-				random_neighbor_state = {
-					limit = { is_fully_controlled_by = X15 }
-					set_variable = { ROOT.defender_state = THIS.id }
-					set_state_flag = border_incident_active
-				}
-				if = {
-					limit = { var:ROOT.defender_state = { NOT = { is_fully_controlled_by = X15 } } }
-					random_state = {
-						limit = {
-							is_fully_controlled_by = X15
-							is_coastal = yes
-						}
-						set_variable = { ROOT.defender_state = THIS.id }
-						set_state_flag = border_incident_active
-					}
-				}
-				if = {
-					limit = { var:ROOT.defender_state = { NOT = { is_fully_controlled_by = X15 } } }
-					random_state = {
-						limit = { is_fully_controlled_by = X15 }
-						set_variable = { ROOT.defender_state = THIS.id }
-						set_state_flag = border_incident_active
-					}
-				}
-			}
-		}
+		cost = 10
+		ai_will_do = { factor = 1 }
 		completion_reward = {
-			X15 = {
-				add_ai_strategy = { type = prepare_for_war id = ROOT value = 1000 }
-				ROOT = { add_ai_strategy = { type = prepare_for_war id = PREV value = 1000 } }
+			random_country = {
+				limit = { owns_state = 221 }
+				ROOT = {
+					create_wargoal = {
+						target = PREV
+						type = take_state_focus
+						generator = { 221 }
+					}
+				}
 			}
-			add_manpower = 10000
-		}
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				date < 1938.8.1
-			}
-			modifier = {
-				factor = 0
-				threat > 0.25
-				date > 1938.8.1
-			}
-			modifier = {
-				factor = 0
-				threat > 0.4
-				date > 1939.4.1
-			}
-			modifier = {
-				factor = 0
-				threat > 0.5
-				date > 1939.8.1
+			random_country = {
+				limit = { owns_state = 326 }
+				ROOT = {
+					create_wargoal = {
+						target = PREV
+						type = take_state_focus
+						generator = { 326 }
+					}
+				}
 			}
 		}
 	}
 
+	#Abolition tree
 	focus = {
-		id = neighbor_warV30X15
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-		text = neighbor_warX15
-		prerequisite = { focus = prepare_for_warV30X15 }
-		bypass = {
-			has_war_with = X15
-		}
-		x = 0
+		id = V30_new_republicanism
+		icon = GFX_goal_generic_defence
+		text = "New Republicanism"
+		x = 2
 		y = 1
-		relative_position_id = prepare_for_warV30X15
-		cost = 3
-		available = {
-			has_war = no
-			hidden_trigger = {
-				NOT = { any_owned_state = { has_border_war = yes } }
-				X15 = { NOT = { any_owned_state = { has_border_war = yes } } }
-			}
-			if = {
-				limit = { X15 = { potential_border_war_target = yes } }
-				var:attacker_state = { is_fully_controlled_by = ROOT }
-				var:defender_state = { is_fully_controlled_by = X15 }
-				divisions_in_border_state = { state = var:attacker_state border_state = var:defender_state size > 0 }
-			}
-		}
+		relative_position_id = V30_abolish_the_monarchy
+		prerequisite = { focus = V30_abolish_the_monarchy }
+		cost = 10
+		ai_will_do = { factor = 1 }
 		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.1
+			add_war_support = 0.1
 			if = {
-				limit = { X15 = { potential_take_core_target = yes } }
-				declare_war_on = {
-					target = X15
-					type = take_core_state
-					generator = core_states
+				limit = {
+					NOT = { has_idea = equality_all }
+					NOT = { has_idea = equality_segregation }
+					NOT = { has_idea = equality_genocide }
+					NOT = { has_idea = equality_minority }
 				}
-				add_named_threat = { threat = 3 name = neighbor_war_NF_threat }
+				custom_effect_tooltip = "Everyone is equal and nice. Slayer won't pick this option. PepeLaugh"
+				hidden_effect = { add_ideas = equality_all }
 			}
-			else_if = {
-				limit = { X15 = { potential_communist_puppet_target = yes } }
-				declare_war_on = {
-					target = X15
-					type = puppet_wargoal_focus
-				}
-				add_named_threat = { threat = 3 name = neighbor_war_NF_threat }
-			}
-			else_if = {
-				limit = { X15 = { potential_fascist_annex_target = yes } }
-				declare_war_on = {
-					target = X15
-					type = annex_everything
-				}
-				add_named_threat = { threat = 3 name = neighbor_war_NF_threat }
-			}
-			else_if = {
-				limit = { X15 = { potential_take_state_target = yes } }
-				add_state_claim = var:defender_state
-				declare_war_on = {
-					target = X15
-					type = take_state_focus
-					generator = claimed_states
-				}
-				add_named_threat = { threat = 3 name = neighbor_war_NF_threat }
-			}
-			else_if = {
-				limit = { X15 = { potential_border_war_target = yes } }
-				start_border_war = {
-					change_state_after_war = no
-					attacker = {
-						state = var:attacker_state
-						num_provinces = 6
-						on_win = neighbor_war.1
-						on_lose = neighbor_war.2
-						on_cancel = neighbor_war.3
-					}
-					defender = {
-						state = var:defender_state
-						num_provinces = 6
-						on_win = neighbor_war.2
-						on_lose = neighbor_war.1
-						on_cancel = neighbor_war.3
-					}
-					minimum_duration_in_days = 14
-				}
-				add_named_threat = { threat = 1 name = neighbor_war_NF_threat }
-			}
-			X15 = {
-				add_ai_strategy = { type = prepare_for_war id = ROOT value = -1000 }
-				ROOT = { add_ai_strategy = { type = prepare_for_war id = PREV value = -1000 } }
-			}
-			var:attacker_state = { clr_state_flag = border_incident_active }
-			var:defender_state = { clr_state_flag = border_incident_active }
-		}
-		ai_will_do = {
-			factor = 10
 		}
 	}
 

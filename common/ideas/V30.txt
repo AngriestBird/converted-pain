@@ -1,4 +1,12 @@
 ideas = {
+	country = {
+		V30_russophobia = {
+			allowed = { always = no }
+			modifier = {
+				autonomy_gain = 0.5
+			}
+		}
+	}
 	political_advisor = {
 		V30_absolutist_advisor = {
 			allowed = {

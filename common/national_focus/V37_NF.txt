@@ -79,7 +79,7 @@ focus_tree = {
 
 	focus = {
 		id = V37_russian_dream
-		icon = Fascist_Summit
+		icon = GFX_goal_generic_propaganda
 		cost = 10
 		x = -4
 		y = 1
@@ -96,7 +96,7 @@ focus_tree = {
 
 	focus = {
 		id = V37_union_with_veps
-		icon = Fascist_Summit
+		icon = GFX_goal_generic_intelligence_exchange
 		cost = 10
 		x = -1
 		y = 1
@@ -448,6 +448,155 @@ focus_tree = {
 					category = artillery
 				}				
 			}			
+		}
+	}
+
+	focus = {
+		id = V37_around_the_timur
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = WARV37MAN
+		prerequisite = { focus = WARV37MAN }
+		completion_reward = { 
+			673 = {	add_core_of = V37 }
+			677 = {	add_core_of = V37 }
+			671 = {	add_core_of = V37 }
+			672 = {	add_core_of = V37 }
+			676 = {	add_core_of = V37 }
+			declare_war_on = {
+				type = puppet_wargoal_focus
+				target = V43
+			}
+		}
+	}
+
+	focus = {
+		id = V37_we_stan_democracy
+		icon = GFX_goal_support_democracy
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = WARV37X29
+		prerequisite = { focus = WARV37X29 }
+		completion_reward = {
+			552 = {	add_core_of = V37 }
+			554 = {	add_core_of = V37 }
+			558 = {	add_core_of = V37 }
+			559 = {	add_core_of = V37 }
+			560 = {	add_core_of = V37 }
+			562 = {	add_core_of = V37 }
+			if = {
+				limit = { NOT = { has_war_with = V00 } }
+				declare_war_on = {
+					type = puppet_wargoal_focus
+					target = V00
+				}
+			}
+			if = {
+				limit = { NOT = { has_war_with = V07 } }
+				declare_war_on = {
+					type = puppet_wargoal_focus
+					target = V07
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = V37_voidspeak
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = V37_technology_sharing
+		prerequisite = { focus = V37_technology_sharing }
+		completion_reward = {
+			add_ideas = V37_idea_voidspeak
+		}
+	}
+
+	focus = {
+		id = V37_intergrate_mazovian_hussars
+		icon = GFX_goal_generic_special_forces
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = V37_form_russia
+		prerequisite = { focus = V37_form_russia }
+		completion_reward = {
+			add_ideas = V37_idea_mazovian_hussars
+		}
+	}
+
+	focus = {
+		id = V37_horses_on_oil
+		icon = GFX_goal_generic_army_motorized
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = V37_intergrate_mazovian_hussars
+		prerequisite = { focus = V37_intergrate_mazovian_hussars }
+		prerequisite = { focus = V37_around_the_timur }
+		completion_reward = { 
+			add_ideas = V37_idea_oiled_horses
+		}
+	}
+
+	focus = {
+		id = V37_russian_manpower
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = V37_around_the_timur
+		prerequisite = { focus = V37_we_stan_democracy }
+		prerequisite = { focus = V37_around_the_timur }
+		completion_reward = { 
+			add_manpower = 200000
+		}
+	}
+
+	focus = {
+		id = V37_democratic_presents
+		icon = GFX_goal_generic_air_bomber
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = V37_we_stan_democracy
+		prerequisite = { focus = V37_we_stan_democracy }
+		prerequisite = { focus = V37_voidspeak }
+		completion_reward = { 
+			add_ideas = V37_idea_democratic_presents
+		}
+	}
+
+	focus = {
+		id = V37_horses_on_oil_and_opim
+		icon = GFX_goal_generic_build_tank
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = V37_russian_manpower
+		prerequisite = { focus = V37_horses_on_oil }
+		prerequisite = { focus = V37_russian_manpower }
+		completion_reward = { 
+			add_ideas = V37_idea_oil_and_opium
+		}
+	}
+
+	focus = {
+		id = V37_russian_winter
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = V37_russian_manpower
+		prerequisite = { focus = V37_democratic_presents }
+		prerequisite = { focus = V37_russian_manpower }
+		completion_reward = { 
+			add_ideas = V37_idea_russian_winter
 		}
 	}
 }

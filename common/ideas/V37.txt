@@ -284,4 +284,47 @@ ideas = {
 			traits = { artillery_manufacturer }
 		}
 	}
+
+	country = {
+		V37_idea_voidspeak = {
+			#picture = 
+			modifier = {
+				supply_consumption_factor = -0.20
+				out_of_supply_factor = -0.5
+				no_supply_grace = 48
+			}
+		}
+		V37_idea_mazovian_hussars = {
+			modifier = {
+				cavalry_attack_factor = 0.10
+				cavalry_defence_factor = 0.10
+			}
+		}
+		V37_idea_oiled_horses = {
+			modifier = {
+				motorized_attack_factor = 0.05
+				motorized_defence_factor = 0.05
+			}
+		}
+		V37_idea_democratic_presents = {
+			modifier = {
+				air_strategic_bomber_attack_factor = 0.05
+				air_strategic_bomber_defence_factor = 0.05
+				air_strategic_bomber_agility_factor = 0.05
+				air_strategic_bomber_bombing_factor = 0.05
+			}
+		}
+		V37_idea_oil_and_opium = {
+			modifier = {
+				mechanized_attack_factor = 0.10
+				mechanized_defence_factor = 0.10
+			}
+		}
+		V37_idea_russian_winter = {
+			modifier = {
+				winter_attrition_factor = -0.10
+				acclimatization_cold_climate_gain_factor = 0.10
+			}
+		}
+	}
 }

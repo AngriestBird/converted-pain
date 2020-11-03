@@ -1004,7 +1004,7 @@ country_event = {
 	option = {
 		name = "Yes"
 		EST = {
-			add_ai_strategy = {
+			add_ai_strategy = { 
 				type = alliance
 				id = "X29"
 				value = 200
@@ -1048,7 +1048,7 @@ country_event = {
 
 	option = {
 		name = "Yes"
-		ICE = {
+		W75 = { #Sicily
 			add_ai_strategy = {
 				type = alliance
 				id = "X29"

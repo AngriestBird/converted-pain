@@ -1,0 +1,4 @@
+RUS = {
+	color = rgb { 15 84 34 }
+	color_ui = rgb { 15 84 34 }
+}

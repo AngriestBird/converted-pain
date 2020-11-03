@@ -81,7 +81,11 @@ focus_tree = {
 		cost = 10
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_ideas = V30_russophobia
+			# Commented out because spehearlings cannot gain independence through autonomy
+			#add_ideas = V30_russophobia
+			V37 = {
+				end_puppet = V30
+			}
 		}
 	}
 	focus = {

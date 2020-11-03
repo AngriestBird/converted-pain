@@ -1232,7 +1232,4 @@ ZAM = {
 ZIM = {
 	color = rgb { 223 237 67 }
 	color_ui = rgb { 223 237 67 }}
-RUS = {
-	color = rgb { 15 84 34 }
-	color_ui = rgb { 15 84 34 }
-}
+

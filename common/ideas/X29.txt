@@ -1,4 +1,80 @@
 ideas = {
+	country = {
+		X29_shadow_of_beuracracy = {
+			allowed = { original_tag = X29 }
+			allowed_civil_war = { always = no }
+			picture = generic_manpower_bonus
+			modifier = {
+				mobilization_laws_cost_factor = 0.25
+				political_power_factor = -0.25
+				army_org_factor = -0.25
+				military_leader_cost_factor = 1.0
+			}
+		}
+		X29_rise_of_the_byzantines = {
+			allowed = { original_tag = X29 }
+			allowed_civil_war = {
+				always = no
+			}
+
+			picture = generic_manpower_bonus
+			modifier = {
+				army_org_regain = 0.15
+				planning_speed = 0.15
+				mobilization_speed = 0.15
+				army_attack_factor = 0.05
+				war_support_factor = 0.10
+			}
+		}
+		X29_revitalized_beuracracy = {
+			allowed = { original_tag = X29 }
+			allowed_civil_war = { always = no }
+			picture = generic_manpower_bonus
+			modifier = {
+				mobilization_laws_cost_factor = 0.15
+				political_power_factor = -0.15
+				army_org_factor = -0.15
+				military_leader_cost_factor = 0.50
+			}
+		}
+		X29_revitalized_beuracracy_1 = {
+			allowed = { original_tag = X29 }
+			allowed_civil_war = { always = no }
+			picture = generic_manpower_bonus
+			modifier = {
+				political_power_factor = 0.20
+				army_org_factor = 0.10
+			}
+		}
+		X29_greek_militarism = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			picture = generic_manpower_bonus
+			modifier = {
+				conscription = 0.015
+				resistance_damage_to_garrison = -0.1
+			}
+		}
+		X29_greek_indoctrination_campaign = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			picture = generic_manpower_bonus
+			modifier = {
+				training_time_army_factor = -0.1
+				political_power_gain = -0.50
+			}
+		}
+	}
 	political_advisor = {
 		X29_absolutist_advisor = {
 			allowed = {

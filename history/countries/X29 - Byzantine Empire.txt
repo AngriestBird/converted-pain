@@ -196,21 +196,23 @@ add_opinion_modifier = { target = X54 modifier = negative_15 }
 add_opinion_modifier = { target = YEM modifier = negative_63 }
 add_opinion_modifier = { target = ZIM modifier = positive_5 }
 
-create_faction = "The Axis"
-add_to_faction = X29
-
+set_rule = {
+	can_create_factions = no
+}
 give_guarantee = CRO
 
-if = {
-	limit = { has_dlc = "Man the Guns" }
-	add_ideas = MTG_naval_treaty_adherent
-}
+
 add_ideas = {
+	culture_greek
 	great_power
 	limited_conscription
 	partial_economic_mobilisation
 	limited_exports
-	culture_greek
+	X29_shadow_of_beuracracy
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	add_ideas = MTG_naval_treaty_adherent
 }
 set_stability = 0.60
 set_war_support = 0.66

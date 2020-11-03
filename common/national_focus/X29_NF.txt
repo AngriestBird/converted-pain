@@ -101,6 +101,36 @@ focus_tree = {
 	}
 
 	focus = {
+		id = X29_armories_of_justinian
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = X29_the_military_march }
+		x = 6
+		y = 1
+		relative_position_id = X29_the_military_march
+		cost = 10
+		completion_reward = {
+			add_political_power = -200
+			93 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			94 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+
+	focus = {
 		id = X29_croatian_abomination
 		icon = GFX_goal_anschluss
 		text = _anschluss_CRO
@@ -365,9 +395,70 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 150
+			if = {
+				limit = { NOT = { has_idea = X29_rise_of_the_byzantines } }
+				add_timed_idea = {
+					idea = X29_rise_of_the_byzantines
+					days = 180
+				}
+			}
+			else = {
+				random_list = {
+					15 = {
+						modify_timed_idea = {
+							idea = X29_rise_of_the_byzantines
+							days = 120
+						}
+					}
+					40 = { 
+						modify_timed_idea = {
+							idea = X29_rise_of_the_byzantines
+							days = 80
+						}
+					}
+					45 = {
+						modify_timed_idea = {
+							idea = X29_rise_of_the_byzantines
+							days = 40
+						}
+					}
+				}
+			} 
 		}
 		ai_will_do = {
 		factor = 5
+		}
+	}
+
+	focus = {
+		id = X29_annex_egypt
+		icon = GFX_goal_generic_political_pressure
+		x = 3
+		y = 1
+		cost = 10
+		relative_position_id = expand_the_reichX29
+		prerequisite = { focus = expand_the_reichX29 }
+
+		available = {
+			OR = {
+				country_exists = V58
+				V58 = { is_subject_of = X29 }
+			}
+		}
+		completion_reward = {
+			V58 = {
+				every_owned_state = {
+					add_core_of = X29
+				}
+				every_unit_leader = {
+					set_nationality = X29
+				}
+			}
+			annex_country = { target = V58 transfer_troops = yes }
+			add_timed_idea = {
+				idea = X29_integration_of_the_egyptian_army
+				days = 180
+			}
 		}
 	}
 
@@ -423,6 +514,35 @@ focus_tree = {
 		completion_reward = {
 			add_war_support = 0.05
 			add_stability = 0.05
+			if = {
+				limit = { NOT = { has_idea = X29_rise_of_the_byzantines } }
+				add_timed_idea = {
+					idea = X29_rise_of_the_byzantines
+					days = 180
+				}
+			}
+			else = {
+				random_list = {
+					15 = {
+						modify_timed_idea = {
+							idea = X29_rise_of_the_byzantines
+							days = 120
+						}
+					}
+					40 = { 
+						modify_timed_idea = {
+							idea = X29_rise_of_the_byzantines
+							days = 80
+						}
+					}
+					45 = {
+						modify_timed_idea = {
+							idea = X29_rise_of_the_byzantines
+							days = 40
+						}
+					}
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 5

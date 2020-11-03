@@ -16,14 +16,455 @@ focus_tree = {
 	shared_focus = aviation_effort
 	shared_focus = naval_effort
 	shared_focus = industrial_effort
-	shared_focus = political_effort
 
+	#New Sicilian Tree
+	focus = {
+		id = V66_the_bastion_of_the_west
+		icon = GFX_goal_generic_propaganda
+		x = 22
+		y = 0
+		cost = 10 
+		completion_reward = {
+			add_ideas = V66_bastion_of_western_democracy
+		}
+	}
+
+	focus = {
+		id = V66_bolster_the_economic_recovery
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = V66_the_bastion_of_the_west
+		prerequisite = { focus = V66_the_bastion_of_the_west }
+		cost = 10 
+		completion_reward = {
+			remove_ideas = V66_new_sicilian_economic_depression
+			capital_scope = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = V66_the_new_sicilian_constution
+		icon = GFX_goal_generic_propaganda
+		x = -1
+		y = 2
+		relative_position_id = V66_the_bastion_of_the_west
+		prerequisite = { focus = V66_bolster_the_economic_recovery }
+		cost = 10 
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			remove_country_leader_trait = the_don
+			add_country_leader_trait = the_don_2
+		}
+	}
+
+	focus = {
+		id = V66_the_arsenal_of_sicilia
+		icon = GFX_goal_generic_propaganda
+		x = 1
+		y = 2
+		relative_position_id = V66_the_bastion_of_the_west
+		prerequisite = { focus = V66_bolster_the_economic_recovery }
+		cost = 10 
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory 
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory 
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = V66_the_thirtheen_colonies
+		icon = GFX_goal_generic_propaganda
+		x = -5
+		y = 1
+		relative_position_id = V66_the_new_sicilian_constution
+		prerequisite = { focus = V66_the_new_sicilian_constution }
+		cost = 10 
+		completion_reward = {
+			add_timed_idea = { 
+				idea = V66_targeted_thirtheen_colonies_idea
+				days = 400
+			}
+		}
+
+	}
+
+	focus = {
+		id = V66_the_illinoisans
+		icon = GFX_goal_generic_propaganda
+		x = -3
+		y = 1
+		relative_position_id = V66_the_new_sicilian_constution
+		prerequisite = { focus = V66_the_new_sicilian_constution }
+		cost = 5 
+		completion_reward = {
+			add_timed_idea = { 
+				idea = V66_targeted_illinois_idea
+				days = 400
+			}
+		}
+
+	}
+	
+	focus = {
+		id = V66_arms_of_pennsylvania
+		icon = GFX_goal_generic_propaganda
+		x = -1
+		y = 1
+		relative_position_id = V66_the_new_sicilian_constution
+		prerequisite = { focus = V66_the_new_sicilian_constution }
+		cost = 10 
+		completion_reward = {
+			781 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					level = 1
+					type = dockyard
+					instant_build = yes
+				}
+				add_building_construction = {
+					level = 1
+					type = arms_factory
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = V66_collapse_the_junta
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = -3
+		y = 2
+		relative_position_id = V66_the_new_sicilian_constution
+		prerequisite = { 
+			focus = V66_the_thirtheen_colonies 
+			focus = V66_the_illinoisans 
+		}
+		prerequisite = { focus = V66_arms_of_pennsylvania }
+		cost = 10 
+		completion_reward = {
+			declare_war_on = {
+				type = annex_everything
+				target = MEX
+			}
+		}
+	}
+
+	focus = {
+		id = V66_integrate_the_coast
+		icon = GFX_goal_generic_propaganda
+		x = -4
+		y = 3
+		relative_position_id = V66_the_new_sicilian_constution
+		prerequisite = { focus = V66_collapse_the_junta }
+		cost = 10 
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+					is_core_of = V65
+				}
+				add_core_of = ROOT
+			}
+			add_ideas = V66_the_illinois_far_right
+		}
+
+	}
+
+	focus = {
+		id = V66_integrate_the_midwest
+		icon = GFX_goal_generic_propaganda
+		x = -2
+		y = 3
+		relative_position_id = V66_the_new_sicilian_constution
+		prerequisite = { focus = V66_collapse_the_junta }
+		cost = 10 
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					NOT = { is_core_of = ROOT }
+					is_core_of = V19
+				}
+				add_core_of = ROOT
+			}
+			add_ideas = V66_the_colonies_radicals
+		}
+
+	}
+
+	focus = {
+		id = V66_the_louisana_annexation
+		icon = GFX_goal_generic_propaganda
+		x = -3
+		y = 4
+		relative_position_id = V66_the_new_sicilian_constution
+		prerequisite = { focus = V66_integrate_the_coast }
+		prerequisite = { focus = V66_integrate_the_midwest }
+		cost = 10 
+		completion_reward = {
+			create_wargoal = {
+				target = W10
+				type = annex_everything
+			}
+		}
+
+	}
+
+	focus = {
+		id = V66_sights_on_dakota_country
+		icon = GFX_goal_generic_propaganda
+		x = -5
+		y = 4
+		relative_position_id = V66_the_new_sicilian_constution
+		prerequisite = { focus = V66_integrate_the_coast }
+		prerequisite = { focus = V66_integrate_the_midwest }
+		cost = 10 
+		completion_reward = {
+			create_wargoal = {
+				target = X54
+				type = annex_everything
+			}
+		}	
+
+	}
+
+	focus = {
+		id = V66_sights_on_desert
+		icon = GFX_goal_generic_propaganda
+		x = -1
+		y = 4
+		relative_position_id = V66_the_new_sicilian_constution
+		prerequisite = { focus = V66_integrate_the_coast }
+		prerequisite = { focus = V66_integrate_the_midwest }
+		cost = 10 
+		completion_reward = {
+			create_wargoal = {
+				target = X55
+				type = annex_everything
+			}
+		}
+
+	}
+
+	focus = {
+		id = V66_integrate_the_colonies
+		icon = GFX_goal_generic_more_territorial_claims
+		x = -3
+		y = 5
+		relative_position_id = V66_the_new_sicilian_constution
+		prerequisite = { focus = V66_the_louisana_annexation }
+		prerequisite = { focus = V66_sights_on_dakota_country }
+		prerequisite = { focus = V66_sights_on_desert }
+		cost = 15
+		completion_reward = {
+			create_wargoal = {
+				target = W11
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = V67
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = V70
+				type = annex_everything
+			}
+		}
+
+	}
+
+	focus = {
+		id = V66_the_united_sicilian_states_of_america
+		icon = GFX_goal_generic_propaganda
+		x = -3
+		y = 6
+		relative_position_id = V66_the_new_sicilian_constution
+		prerequisite = { focus = V66_integrate_the_colonies }
+		cost = 10
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_core_of = V67
+						is_core_of = W11
+						is_core_of = X54
+						is_core_of = X55
+						is_core_of = V70
+						is_core_of = W10
+						is_core_of = MEX
+						is_core_of = CAN
+					}
+					NOT = { is_core_of = V66 }
+				}
+				add_core_of = ROOT
+			}
+			remove_ideas = {
+				V66_the_illinois_far_right
+				V66_the_colonies_radicals
+			}
+			add_ideas = V66_the_oil_barons
+		}
+
+	}
+
+
+	focus = {
+		id = V66_day_of_my_daughters_wedding
+		icon = GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		relative_position_id = V66_the_new_sicilian_constution
+		prerequisite = { focus = V66_the_new_sicilian_constution focus = V66_the_arsenal_of_sicilia }
+		cost = 10 
+		completion_reward = {
+			add_ideas = V66_day_of_my_daughters_wedding_idea
+		} 
+
+	}
+
+	focus = {
+		id = V66_mafia_boses
+		icon = GFX_goal_generic_propaganda
+		x = 1
+		y = 2
+		relative_position_id = V66_the_new_sicilian_constution
+		prerequisite = { focus = V66_day_of_my_daughters_wedding }
+		cost = 10 
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 150
+		}
+
+	}
+
+	focus = {
+		id = V66_bulls_of_new_york
+		icon = GFX_goal_generic_propaganda
+		x = 1
+		y = 3
+		relative_position_id = V66_the_new_sicilian_constution
+		prerequisite = { focus = V66_mafia_boses }
+		cost = 10 
+		completion_reward = {
+			add_ideas = V66_the_bulls_of_new_york
+		}
+
+	}
+
+	focus = {
+		id = V66_the_industrial_might_of_sicilia
+		icon = GFX_goal_generic_propaganda
+		x = 4
+		y = 1
+		relative_position_id = V66_the_new_sicilian_constution
+		prerequisite = { focus = V66_the_arsenal_of_sicilia }
+		cost = 10 
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = V66_efficient_taxation
+		icon = GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		relative_position_id = V66_the_industrial_might_of_sicilia
+		prerequisite = { focus = V66_the_industrial_might_of_sicilia }
+		cost = 10 
+		completion_reward = {
+			add_ideas = V66_efficient_taxation
+		}
+
+	}
+
+	focus = {
+		id = V66_research_grants
+		icon = GFX_goal_generic_propaganda
+		x = -1
+		y = 1
+		relative_position_id = V66_the_industrial_might_of_sicilia
+		prerequisite = { focus = V66_the_industrial_might_of_sicilia }
+		cost = 10 
+		completion_reward = {
+			add_ideas = scientific_advances2
+		}
+
+	}
+
+	focus = {
+		id = V66_military_reorganization
+		icon = GFX_goal_generic_position_armies
+		x = 0
+		y = 2
+		relative_position_id = V66_the_industrial_might_of_sicilia
+		prerequisite = { focus = V66_the_industrial_might_of_sicilia }
+		cost = 10 
+		completion_reward = {
+			add_ideas = V66_military_reorganization_idea
+		}
+
+	}
+
+	#War Propganda
 	focus = {
 		id = WarPropV66
 		icon = GFX_goal_generic_propaganda
 		text = WarProp
-		x = 29
-		y = 0
+		x = 5
+		y = 1
+		relative_position_id = V66_the_arsenal_of_sicilia
+		prerequisite = { focus = V66_the_arsenal_of_sicilia }
 		cost = 10
 		available = {
 			threat > 0.000050
@@ -78,116 +519,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = WarPlanV66MEX
-		icon = GFX_goal_generic_position_armies
-		text = WarPlanMEX
-		prerequisite = { focus = LimV66 }
-		bypass = {
-			has_war_with = MEX
-		}
-		x = -1
-		y = 1
-		relative_position_id = LimV66
-		cost = 10
-		available = {
-			any_other_country = {
-				original_tag = MEX
-				exists = yes
-				NOT = { has_government = democratic } 
-				NOT = { is_in_faction_with = V66 }
-				OR = {
-					has_offensive_war = yes
-					has_added_tension_amount > 30
-				}
-			}
-		}
-		completion_reward = {
-		army_experience = 20
-		add_tech_bonus = {
-			name = land_doc_bonus
-			bonus = 0.5
-			uses = 1
-			category = land_doctrine
-		}
-	}
-		ai_will_do = {
-		factor = 10
-	}
-	}
-
-	focus = {
-		id = EmbargoV66MEX
-		icon = GFX_goal_generic_trade
-		text = EmbargoMEX
-		prerequisite = { focus =  WarPlanV66MEX }
-		bypass = {
-			has_war_with = MEX
-		}
-		x = 0
-		y = 1
-		relative_position_id = WarPlanV66MEX
-		cost = 10
-		available = {
-			any_other_country = {
-				original_tag = MEX
-				exists = yes
-				NOT = { has_government = democratic } 
-				NOT = { is_in_faction_with = V66 }
-				OR = {
-					has_offensive_war = yes
-					has_added_tension_amount > 30
-					threat > 0.6
-				}
-			}
-		}
-		completion_reward = {
-			MEX = {
-				add_opinion_modifier = { target = V66 modifier = embargo }
-			}
-		}
-		ai_will_do = {
-		factor = 10
-	}
-	}
-
-	focus = {
-		id = WARV66MEX
-		icon = GFX_goal_support_democracy
-		text = WARMEX
-		prerequisite = { focus =  EmbargoV66MEX }
-		bypass = {
-			has_war_with = MEX
-		}
-		x = 0
-		y = 1
-		relative_position_id = EmbargoV66MEX
-		cost = 10
-		available = {
-			has_war = no
-			any_other_country = {
-				original_tag = MEX
-				exists = yes
-				NOT = { has_government = democratic } 
-				NOT = { is_in_faction_with = V66 }
-				OR = {
-					has_offensive_war = yes
-					has_added_tension_amount > 30
-					threat > 0.6
-				}
-			}
-		}
-		completion_reward = {
-			declare_war_on = {
-				type = puppet_wargoal_focus
-				target = MEX
-			}
-		}
-		ai_will_do = {
-			factor = 10
-		}
-	}
-
-	focus = {
 		id = WarPlanV66MAN
 		icon = GFX_goal_generic_position_armies
 		text = WarPlanMAN
@@ -195,7 +526,7 @@ focus_tree = {
 		bypass = {
 			has_war_with = MAN
 		}
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = LimV66
 		cost = 10

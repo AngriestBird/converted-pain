@@ -210,21 +210,23 @@ if = {
 	add_ideas = MTG_naval_treaty_adherent
 }
 add_ideas = {
+	culture_neokosmi
 	great_power
 	volunteer_only
 	civilian_economy
 	export_focus
-	culture_neokosmi
+	V66_new_sicilian_economic_depression
 }
 set_stability = 0.60
 set_war_support = 0.60
 create_country_leader = {
-    name = "Themistoklís Níder"
-    desc = "POLITICS_THEMISTOKLíS_NíDER_DESC"
-    picture = "GFX_GRE_Panagis_Tsaldaris"
-    expire = "1965.1.1"
+    name = "Rigatoni \"The Godfather\" Stanotas"
+    picture = "godfather.dds"
+    expire = "1965.1.1" 
     ideology = conservatism
     traits = {
+		the_don
+		popular_figurehead
     }
 }
 create_corps_commander = {

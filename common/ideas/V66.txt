@@ -1,4 +1,164 @@
 ideas = {
+	country = {
+		V66_day_of_my_daughters_wedding_idea = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			picture = generic_manpower_bonus
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.20
+			}
+		}
+		V66_bastion_of_western_democracy = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				democratic_drift = 0.10
+				consumer_goods_factor = -0.02
+			}
+		}
+		V66_the_illinois_far_right = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			picture = generic_fascism_drift_bonus
+			modifier = {
+				fascism_drift = 0.10
+				stability_factor = -0.05
+			}
+		}
+		V66_targeted_illinois_idea = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			picture = generic_fascism_drift_bonus
+			targeted_modifier = {
+				target = V19 #Illionois
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.05
+			}
+		}
+		V66_targeted_thirtheen_colonies_idea = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			picture = generic_fascism_drift_bonus
+			targeted_modifier = {
+				target = V65 #Thirtheen Colonies
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.05
+			}
+		}
+		V66_the_colonies_radicals = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			picture = generic_fascism_drift_bonus
+			modifier = {
+				radical_drift = 0.10
+				stability_factor = -0.05
+			}
+		}
+		V66_new_sicilian_economic_depression = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			picture = usa_great_depression_3
+			modifier = {
+				consumer_good_factor = 0.25
+				production_factory_max_efficiency_factor = -0.25
+				production_factory_efficiency_gain_factor = -0.25
+			}
+		}
+		V66_the_bulls_of_new_york = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			picture = generic_goods_red_bonus
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.15
+				production_speed_factor = 0.10
+			}
+		}
+		V66_the_oil_barons = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			picture = generic_goods_red_bonus
+			modifier = {
+				production_oil_factor = 0.25
+				local_resources_factor = 0.25
+			}
+		}
+		V66_efficient_taxation = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			picture = generic_goods_red_bonus
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		V66_military_reorganization = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			picture = generic_manpower_bonus
+			modifier = {
+				army_defence_factor = 0.10
+				conscription = 0.03
+				army_org_factor = 0.15
+			}
+		}
+	}
 	political_advisor = {
 		V66_absolutist_advisor = {
 			allowed = {

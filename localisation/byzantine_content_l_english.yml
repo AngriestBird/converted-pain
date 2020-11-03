@@ -26,6 +26,10 @@
  X29_nationalism_desc: ""
  X29_militarism: "Militarism"
  X29_militarism_desc: ""
+ X29_annex_egypt: "Annex Egypt"
+ X29_annex_egypt_desc: "Egypt belongs to the Byzantine Empire"
+ X29_armories_of_justinian: "Armories of Justinian"
+ X29_armories_of_justinian_desc: ""
  #Ideas
  X29_shadow_of_beuracracy: "Shadow of Bureaucracy"
  X29_shadow_of_beuracracy_desc: "The Byzantine Empire is strong. However, this strength also has a weakness. The government is ineffective at many things including basic politics, and military organization. If we are to reclaim our glory and return to greatness we must address this now or forever be weakened."
@@ -39,3 +43,6 @@
  X29_greek_militarism_desc: ""
  X29_greek_indoctrination_campaign: "Greek Indoctrination Campaign"
  X29_greek_indoctrination_campaign_desc: ""
+ reincarnation_of_caesar: "Reincarnation of Caesar"
+ X29_integration_of_the_egyptian_army: "Integration of the Egyptian Army"
+ X29_egyptian_defense_forces: "Egyptian Defense Forces"

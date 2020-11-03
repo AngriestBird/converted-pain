@@ -74,6 +74,36 @@ ideas = {
 				political_power_gain = -0.50
 			}
 		}
+		X29_integration_of_the_egyptian_army = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			on_remove = { add_ideas = X29_egyptian_defense_forces }
+			picture = generic_manpower_bonus
+			modifier = {
+				army_org_factor = -0.50
+				army_attack_factor = -0.25
+				army_defence_factor = -0.25
+			}
+		}
+		X29_egyptian_defense_forces = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			picture = generic_manpower_bonus
+			modifier = {
+				cavalry_attack_factor = 0.15
+				army_org_regain = 0.15
+			}
+		}
 	}
 	political_advisor = {
 		X29_absolutist_advisor = {

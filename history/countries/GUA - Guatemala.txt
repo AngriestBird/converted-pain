@@ -215,12 +215,13 @@ add_ideas = {
 set_stability = 0.60
 set_war_support = 0.60
 create_country_leader = {
-    name = "Aurél Hauszmann"
-    desc = "POLITICS_AURéL_HAUSZMANN_DESC"
-    picture = "GFX_HUN_Arpad_Szakasits"
+    name = "Aurél \"Banana Boi\" Hauszmann"
+    picture = "mein_kampf.dds" #hah get it. Luke is a jew
     expire = "1965.1.1"
     ideology = liberalism
     traits = {
+		dictator
+		banna_baron
     }
 }
 create_corps_commander = {

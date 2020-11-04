@@ -1082,3 +1082,654 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = NFEvents.26
+	title = "Gib Normandy"
+	desc = "Gib Normandy"
+	picture = GFX_report_event_hitler_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = "yes"
+		ai_chance = {
+			base = 30
+			modifier = {
+				add = -15
+				GER = { has_army_size = { size < 40 } }
+			}
+			modifier = {
+				add = 45
+				GER = { has_army_size = { size > 39 } }
+			}
+		}
+		GER = {
+			country_event = { hours = 2 id = NFEvents.27 }
+		}
+	}
+	option = {
+		name = "no"
+		ai_chance  = {
+			base = 10
+			modifier = {
+				factor = 0
+				GER = { has_army_size = { size > 39 } }
+			}
+			modifier = {
+				add = 20
+				GER = { has_army_size = { size < 30 } }
+			}
+		}
+		GER = {
+			country_event = { hours = 2 id = NFEvents.28 }
+			if = {
+				limit = { is_in_faction_with = GER }
+				remove_from_faction = GER
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.27
+	title = "Normandy Accepts!"
+	desc = " Normandy accepted our proposed demands, the added lands will push us to greatness!"
+	picture = GFX_report_event_hitler_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = "A stronger Union!"
+		annex_country = {
+			target = W43
+			transfer_troops = yes
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.28
+	title = "Normandy Refuses!"
+	desc = "Normandy Refused our proposed proposition! This is an insult to us that cannot go unanswered!"
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = "It's time for war"
+		create_wargoal = {
+			type = annex_everything
+			target = W43
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.29
+	title = "Demand Bruges"
+	desc = "Germany demands Bruges from us"
+	picture = GFX_report_event_hitler_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = "yes"
+		ai_chance = {
+			base = 30
+			modifier = {
+				add = -15
+				GER = { has_army_size = { size < 40 } }
+			}
+			modifier = {
+				add = 45
+				GER = { has_army_size = { size > 39 } }
+			}
+		}
+		GER = {
+			country_event = { hours = 2 id = NFEvents.30 }
+		}
+	}
+	option = {
+		name = "no"
+		ai_chance  = {
+			base = 10
+			modifier = {
+				factor = 0
+				GER = { has_army_size = { size > 39 } }
+			}
+			modifier = {
+				add = 20
+				GER = { has_army_size = { size < 30 } }
+			}
+		}
+		GER = {
+			country_event = { hours = 2 id = NFEvents.31 }
+			if = {
+				limit = { is_in_faction_with = GER }
+				remove_from_faction = GER
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.30
+	title = "Flanders Accepts!"
+	desc = " Flanders accepted our proposed demands, the added lands will push us to greatness!"
+	picture = GFX_report_event_hitler_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = "A stronger Union!"
+		GER = { transfer_state = 206 }
+	}
+}
+
+country_event = {
+	id = NFEvents.31
+	title = "Normandy Refuses!"
+	desc = "Normandy Refused our proposed proposition! This is an insult to us that cannot go unanswered!"
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = "It's time for war"
+		create_wargoal = {
+			type = annex_everything
+			target = FLA
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.32
+	title = "Germany demands Brittany"
+	desc = "Germany demands Brittany from us"
+	picture = GFX_report_event_hitler_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = "yes"
+		ai_chance = {
+			base = 30
+			modifier = {
+				add = -15
+				GER = { has_army_size = { size < 40 } }
+			}
+			modifier = {
+				add = 45
+				GER = { has_army_size = { size > 39 } }
+			}
+		}
+		GER = {
+			country_event = { hours = 2 id = NFEvents.33 }
+		}
+	}
+	option = {
+		name = "no"
+		ai_chance  = {
+			base = 10
+			modifier = {
+				factor = 0
+				GER = { has_army_size = { size > 39 } }
+			}
+			modifier = {
+				add = 20
+				GER = { has_army_size = { size < 30 } }
+			}
+		}
+		GER = {
+			country_event = { hours = 2 id = NFEvents.34 }
+			if = {
+				limit = { is_in_faction_with = GER }
+				remove_from_faction = GER
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.33
+	title = "England Accepts!"
+	desc = " England accepted our proposed demands, the added lands will push us to greatness!"
+	picture = GFX_report_event_hitler_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = "A stronger Union!"
+		GER = { 
+			transfer_state = 177
+			transfer_state = 178
+			transfer_state = 191
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.34
+	title = "England Refuses!"
+	desc = "England Refused our proposed proposition! This is an insult to us that cannot go unanswered!"
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = "It's time for war"
+		create_wargoal = {
+			type = annex_everything
+			target = U73
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.35
+	title = "Germany demands Savoy Submitts"
+	desc = "Germany demands Savoy Submitts"
+	picture = GFX_report_event_hitler_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Intergrate with Germany"
+		ai_chance = {
+			base = 30
+			modifier = {
+				add = -15
+				GER = { has_army_size = { size < 40 } }
+			}
+			modifier = {
+				add = 45
+				GER = { has_army_size = { size > 39 } }
+			}
+		}
+		GER = {
+			country_event = { hours = 2 id = NFEvents.36 }
+		}
+	}
+	option = {
+		name = "Become Puppet"
+		ai_chance  = {
+			base = 10
+			modifier = {
+				factor = 0
+				GER = { has_army_size = { size > 39 } }
+			}
+			modifier = {
+				add = 20
+				GER = { has_army_size = { size < 30 } }
+			}
+		}
+		GER = {
+			country_event = { hours = 2 id = NFEvents.37 }
+			#if = {
+			#	limit = { is_in_faction_with = GER }
+			#	remove_from_faction = GER
+			#}
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.36
+	title = "Savoy Accepts!"
+	desc = " Savoy accepted our proposed demands, the added lands will push us to greatness!"
+	picture = GFX_report_event_hitler_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = "A stronger Union!"
+		annex_country = {
+			target = W98
+			transfer_troops = yes
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.37
+	title = "Savoy becomes puppet"
+	desc = "Savoy become our puppet"
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = "A stronger Union!"
+		V37 = { end_puppet = W98 }
+		puppet = W98
+	}
+}
+
+country_event = {
+	id = NFEvents.38
+	title = "Germany demands Bourgogne"
+	desc = "Germany demands Bourgogne from us"
+	picture = GFX_report_event_hitler_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = "yes"
+		ai_chance = {
+			base = 30
+			modifier = {
+				add = -15
+				GER = { has_army_size = { size < 40 } }
+			}
+			modifier = {
+				add = 45
+				GER = { has_army_size = { size > 39 } }
+			}
+		}
+		GER = {
+			country_event = { hours = 2 id = NFEvents.39 }
+		}
+	}
+	option = {
+		name = "no"
+		ai_chance  = {
+			base = 10
+			modifier = {
+				factor = 0
+				GER = { has_army_size = { size > 39 } }
+			}
+			modifier = {
+				add = 20
+				GER = { has_army_size = { size < 30 } }
+			}
+		}
+		GER = {
+			country_event = { hours = 2 id = NFEvents.40 }
+			if = {
+				limit = { is_in_faction_with = GER }
+				remove_from_faction = GER
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.39
+	title = "Lithuania Accepts!"
+	desc = " Lithuania accepted our proposed demands, the added lands will push us to greatness!"
+	picture = GFX_report_event_hitler_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = "A stronger Union!"
+		GER = { 
+			transfer_state = 308
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.40
+	title = "Lithuania Refuses!"
+	desc = "Lithuania Refused our proposed proposition! This is an insult to us that cannot go unanswered!"
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = "It's time for war"
+		create_wargoal = {
+			type = annex_everything
+			target = LIT
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.41
+	title = "Germany demands Hannover"
+	desc = "Germany demands Hannover from us"
+	picture = GFX_report_event_hitler_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = "yes"
+		ai_chance = {
+			base = 30
+			modifier = {
+				add = -15
+				GER = { has_army_size = { size < 40 } }
+			}
+			modifier = {
+				add = 45
+				GER = { has_army_size = { size > 39 } }
+			}
+		}
+		GER = {
+			country_event = { hours = 2 id = NFEvents.42 }
+		}
+	}
+	option = {
+		name = "no"
+		ai_chance  = {
+			base = 10
+			modifier = {
+				factor = 0
+				GER = { has_army_size = { size > 39 } }
+			}
+			modifier = {
+				add = 20
+				GER = { has_army_size = { size < 30 } }
+			}
+		}
+		GER = {
+			country_event = { hours = 2 id = NFEvents.43 }
+			if = {
+				limit = { is_in_faction_with = GER }
+				remove_from_faction = GER
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.42
+	title = "Hannover Accepts!"
+	desc = " Hannover accepted our proposed demands, the added lands will push us to greatness!"
+	picture = GFX_report_event_hitler_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = "A stronger Union!"
+		annex_country = {
+			target = HAN
+			transfer_troops = yes
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.43
+	title = "Hannover Refuses!"
+	desc = "Hannover Refused our proposed proposition! This is an insult to us that cannot go unanswered!"
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = "It's time for war"
+		create_wargoal = {
+			type = annex_everything
+			target = HAN
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.44
+	title = "Germany demands Munster"
+	desc = "Germany demands Munster from us"
+	picture = GFX_report_event_hitler_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = "yes"
+		ai_chance = {
+			base = 30
+			modifier = {
+				add = -15
+				GER = { has_army_size = { size < 40 } }
+			}
+			modifier = {
+				add = 45
+				GER = { has_army_size = { size > 39 } }
+			}
+		}
+		GER = {
+			country_event = { hours = 2 id = NFEvents.45 }
+		}
+	}
+	option = {
+		name = "no"
+		ai_chance  = {
+			base = 10
+			modifier = {
+				factor = 0
+				GER = { has_army_size = { size > 39 } }
+			}
+			modifier = {
+				add = 20
+				GER = { has_army_size = { size < 30 } }
+			}
+		}
+		GER = {
+			country_event = { hours = 2 id = NFEvents.46 }
+			if = {
+				limit = { is_in_faction_with = GER }
+				remove_from_faction = GER
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.45
+	title = "Munster Accepts!"
+	desc = " Munster accepted our proposed demands, the added lands will push us to greatness!"
+	picture = GFX_report_event_hitler_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = "A stronger Union!"
+		annex_country = {
+			target = W34
+			transfer_troops = yes
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.46
+	title = "Munster Refuses!"
+	desc = "Munster Refused our proposed proposition! This is an insult to us that cannot go unanswered!"
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = "It's time for war"
+		create_wargoal = {
+			type = annex_everything
+			target = W34
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.47
+	title = "Germany demands Brandenburg"
+	desc = "Germany demands Brandenburg from us"
+	picture = GFX_report_event_hitler_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = "yes"
+		ai_chance = {
+			base = 30
+			modifier = {
+				add = -15
+				GER = { has_army_size = { size < 40 } }
+			}
+			modifier = {
+				add = 45
+				GER = { has_army_size = { size > 39 } }
+			}
+		}
+		GER = {
+			country_event = { hours = 2 id = NFEvents.48 }
+		}
+	}
+	option = {
+		name = "no"
+		ai_chance  = {
+			base = 10
+			modifier = {
+				factor = 0
+				GER = { has_army_size = { size > 39 } }
+			}
+			modifier = {
+				add = 20
+				GER = { has_army_size = { size < 30 } }
+			}
+		}
+		GER = {
+			country_event = { hours = 2 id = NFEvents.49 }
+			if = {
+				limit = { is_in_faction_with = GER }
+				remove_from_faction = GER
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.48
+	title = "Brandenburg Accepts!"
+	desc = " Brandenburg accepted our proposed demands, the added lands will push us to greatness!"
+	picture = GFX_report_event_hitler_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = "A stronger Union!"
+		annex_country = {
+			target = X25
+			transfer_troops = yes
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.49
+	title = "Brandenburg Refuses!"
+	desc = "Brandenburg Refused our proposed proposition! This is an insult to us that cannot go unanswered!"
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = "It's time for war"
+		create_wargoal = {
+			type = annex_everything
+			target = X25
+		}
+	}
+}

@@ -25,7 +25,6 @@ state={
 		}
 		add_core_of = SAU
 		add_core_of = TUR
-		add_core_of = X29
 		add_core_of = X78
 		add_core_of = YEM
 	}

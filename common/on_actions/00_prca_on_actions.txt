@@ -9,8 +9,16 @@ on_actions = {
 							is_ai = yes
 						}
 						tag = GER
-						tag = SOV
-						tag = ENG
+						tag = V37
+						tag = LIT
+						tag = X29
+						tag = BRA
+						tag = U73
+						tag = GUA
+						tag = V66
+						tag = V30
+						tag = V32
+						tag = V49
 					}
 				}
 				set_country_flag = prca_enabled

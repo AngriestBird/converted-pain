@@ -130,7 +130,7 @@ country_event = {
 				CRO = { has_army_size = { size < 30 } }
 			}
 		}
-		CRO = {
+		X29 = {
 			country_event = { hours = 2 id = NFEvents.5 }
 			if = {
 				limit = { is_in_faction_with = CRO }
@@ -222,7 +222,7 @@ country_event = {
 				TUR = { has_army_size = { size < 30 } }
 			}
 		}
-		TUR = {
+		X29 = {
 			country_event = { hours = 2 id = NFEvents.8 }
 			if = {
 				limit = { is_in_faction_with = TUR }
@@ -314,7 +314,7 @@ country_event = {
 				V00 = { has_army_size = { size < 30 } }
 			}
 		}
-		V00 = {
+		X29 = {
 			country_event = { hours = 2 id = NFEvents.11 }
 			if = {
 				limit = { is_in_faction_with = V00 }
@@ -478,7 +478,7 @@ country_event = {
 				V57 = { has_army_size = { size < 30 } }
 			}
 		}
-		V57 = {
+		X29 = {
 			country_event = { hours = 2 id = NFEvents.14 }
 			if = {
 				limit = { is_in_faction_with = V57 }
@@ -576,7 +576,7 @@ country_event = {
 				YEM = { has_army_size = { size < 30 } }
 			}
 		}
-		YEM = {
+		X29 = {
 			country_event = { hours = 2 id = NFEvents.17 }
 			if = {
 				limit = { is_in_faction_with = YEM }
@@ -812,7 +812,7 @@ country_event = {
 			}
 		}
 		X29 = {
-			transfer_state = 803
+			transfer_state = 812
 			transfer_state = 797
 			transfer_state = 798
 			transfer_state = 800

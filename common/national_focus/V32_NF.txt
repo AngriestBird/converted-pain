@@ -18,4 +18,300 @@ focus_tree = {
 	shared_focus = industrial_effort
 	shared_focus = political_effort
 
+	focus = {
+		id = V30_crush_extremist_undercurrents
+		icon = GFX_goal_generic_demand_territory
+		text = "Crush Extremist Undercurrents"
+		x = 29
+		y = 0
+		cost = 10
+		ai_will_do = { factor = 1 }
+		available = { has_completed_focus = political_effort }
+		completion_reward = {
+			add_popularity = { ideology = absolutist popularity = -0.05 }
+			add_popularity = { ideology = communism popularity = -0.05 }
+			add_popularity = { ideology = fascism popularity = -0.05 }
+		}
+	}
+
+	focus = {
+		id = V30_recruit_lebanese_militias
+		icon = GFX_goal_generic_propaganda
+		text = "Recruit Lebanese Militias"
+		x = 3
+		y = 0
+		relative_position_id = V30_crush_extremist_undercurrents
+		cost = 10
+		ai_will_do = { factor = 1 }
+		available = {
+			has_completed_focus = army_effort
+			has_completed_focus = production_effort
+		}
+		completion_reward = {
+			add_manpower = 15000
+		}
+	}
+
+	focus = {
+		id = V30_form_the_government_of_national_unity
+		icon = GFX_goal_support_democracy
+		text = "Form the Government of National Unity"
+		x = 0
+		y = 1
+		relative_position_id = V30_crush_extremist_undercurrents
+		cost = 10
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = V30_crush_extremist_undercurrents }
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = V30_create_the_foreign_legion
+		icon = GFX_focus_generic_little_entente
+		text = "Create the Foreign Legion"
+		x = 2
+		y = 1
+		relative_position_id = V30_crush_extremist_undercurrents
+		cost = 10
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = V30_recruit_lebanese_militias }
+		completion_reward = {
+			add_war_support = 0.05
+			add_manpower = 10000
+		}
+	}
+
+	focus = {
+		id = V30_army_investments
+		icon = GFX_goal_generic_axis_build_infantry
+		text = "Army Investments"
+		x = 5
+		y = 1
+		relative_position_id = V30_crush_extremist_undercurrents
+		cost = 10
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = V30_recruit_lebanese_militias }
+		completion_reward = {
+			army_experience = 50
+		}
+	}
+
+	focus = {
+		id = V30_ban_communism
+		icon = GFX_goal_generic_political_pressure
+		text = "Ban Communism"
+		x = -1
+		y = 2
+		relative_position_id = V30_crush_extremist_undercurrents
+		cost = 10
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = V30_form_the_government_of_national_unity }
+		available = {
+			NOT = { has_completed_focus = internationalism_focus }
+			NOT = { has_government = communism }
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = { ideology = communism popularity = -0.1 }
+		}
+	}
+
+	focus = {
+		id = V30_state_defense_militias
+		icon = GFX_goal_generic_army_artillery
+		text = "State Defense Militias"
+		x = 1
+		y = 2
+		relative_position_id = V30_crush_extremist_undercurrents
+		cost = 10
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = V30_form_the_government_of_national_unity }
+		prerequisite = { focus = V30_create_the_foreign_legion }
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = V30_create_national_policy_committees
+		icon = GFX_goal_generic_demand_territory
+		text = "Create National Policy Committees"
+		x = 3
+		y = 2
+		relative_position_id = V30_crush_extremist_undercurrents
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = V30_ban_fascism
+		icon = GFX_focus_generic_strike_at_democracy1
+		text = "Ban Fascism"
+		x = 0
+		y = 3
+		relative_position_id = V30_crush_extremist_undercurrents
+		cost = 10
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = V30_form_the_government_of_national_unity }
+		available = {
+			NOT = { has_completed_focus = nationalism_focus }
+			NOT = { has_government = fascism }
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = { ideology = fascism popularity = -0.1 }
+		}
+	}
+
+	focus = {
+		id = V30_national_policy_control
+		icon = GFX_focus_generic_diplomatic_treaty
+		text = "National Policy Control"
+		x = 2
+		y = 3
+		relative_position_id = V30_crush_extremist_undercurrents
+		cost = 10
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = V30_state_defense_militias }
+		prerequisite = { focus = V30_create_national_policy_committees }
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = V30_create_science_councils
+		icon = GFX_focus_research
+		text = "Create Science Councils"
+		x = 4
+		y = 3
+		relative_position_id = V30_crush_extremist_undercurrents
+		cost = 10
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = V30_create_national_policy_committees }
+		available = {
+			num_of_factories > 50
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = V30_establish_an_independent_air_force
+		icon = GFX_focus_generic_air_defense
+		text = "Establish an independent Air Force"
+		x = 5
+		y = 4
+		relative_position_id = V30_crush_extremist_undercurrents
+		cost = 10
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = V30_create_national_policy_committees }
+		prerequisite = { focus = V30_army_investments }
+		available = {
+			num_of_factories > 50
+		}
+		completion_reward = {
+			air_experience = 50
+			every_owned_state = {
+				add_building_construction = { type = anti_air_building level = 1 instant_build = yes }
+				add_building_construction = { type = air_base level = 1 instant_build = yes }
+			}
+		}
+	}
+
+	focus = {
+		id = V30_crush_the_communists
+		icon = GFX_goal_anti_comintern_pact
+		text = "Crush the Communists"
+		x = -1
+		y = 4
+		relative_position_id = V30_crush_extremist_undercurrents
+		cost = 10
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = V30_ban_communism }
+		prerequisite = { focus = V30_national_policy_control }
+		available = {
+			NOT = { has_completed_focus = internationalism_focus }
+			NOT = { has_government = communism }
+		}
+		completion_reward = {
+			if = {
+				limit = { V51 = { is_neighbor_of = ROOT has_government = communism } }
+				create_wargoal = {
+					target = V51
+					type = annex_everything
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = V30_crush_the_fascists
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		text = "Crush the Fascists"
+		x = 1
+		y = 4
+		relative_position_id = V30_crush_extremist_undercurrents
+		cost = 10
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = V30_ban_fascism }
+		prerequisite = { focus = V30_national_policy_control }
+		available = {
+			NOT = { has_completed_focus = nationalism_focus }
+			NOT = { has_government = fascism }
+		}
+		completion_reward = {
+			if = {
+				limit = { AUS = { is_neighbor_of = ROOT has_government = fascism } }
+				create_wargoal = {
+					target = AUS
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = { X09 = { is_neighbor_of = ROOT has_government = fascism } }
+				create_wargoal = {
+					target = X09
+					type = annex_everything
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = V30_national_victory_rallies
+		icon = GFX_goal_generic_demand_territory
+		text = "National Victory Rallies"
+		x = 0
+		y = 5
+		relative_position_id = V30_crush_extremist_undercurrents
+		cost = 10
+		ai_will_do = { factor = 1 }
+		prerequisite = { 
+			focus = V30_crush_the_communists
+			focus = V30_crush_the_fascists
+		}
+		available = {
+			OR = {
+				has_full_control_of_state = 738
+				has_full_control_of_state = 33
+				has_full_control_of_state = 35
+				has_full_control_of_state = 8
+				has_full_control_of_state = 544
+			}
+		}
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_manpower = 25000
+		}
+	}
+
 }

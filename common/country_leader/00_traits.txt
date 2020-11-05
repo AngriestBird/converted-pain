@@ -1534,6 +1534,18 @@ leader_traits = {
 		industrial_capacity_factory = 0.15
 		global_building_slots_factor = 0.10
 	}
+
+	god_of_bananas = {
+		random = no
+		sprite = 13
+		name = "Banana Baron"
+
+		army_attack_factor = 0.05
+		army_defence_factor = -0.05
+		consumer_goods_factor = -0.05
+		industrial_capacity_factory = 0.15
+		global_building_slots_factor = 0.10
+	}
 	#New Sicily
 	the_don = {
 		random = no 

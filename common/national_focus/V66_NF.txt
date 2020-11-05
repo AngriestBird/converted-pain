@@ -329,6 +329,7 @@ focus_tree = {
 				V66_the_colonies_radicals
 			}
 			add_ideas = V66_the_oil_barons
+			set_cosmetic_tag = V66_usos
 		}
 
 	}

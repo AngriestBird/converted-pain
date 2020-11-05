@@ -16,21 +16,389 @@ focus_tree = {
 	shared_focus = aviation_effort
 	shared_focus = naval_effort
 	shared_focus = industrial_effort
-	shared_focus = political_effort
+	#shared_focus = political_effort
 
+	focus = {
+		id = GUA_rise_of_the_banana_bois
+		icon = GFX_goal_generic_propaganda
+		x = 20
+		y = 0
+		cost = 10
+		
+		completion_reward = {
+			add_political_power = 150
+			add_ideas = GUA_rise_of_the_banana_bois
+		}
+	}
+
+	focus = {
+		id = GUA_our_heritage
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = GUA_rise_of_the_banana_bois
+		cost = 10
+		prerequisite = { focus = GUA_rise_of_the_banana_bois }
+		
+		completion_reward = {
+			add_ideas = GUA_magyar_heritage
+		}
+	}
+
+	focus = {
+		id = GUA_the_banana_economy
+		icon = GFX_goal_generic_propaganda
+		x = -2
+		y = 2
+		relative_position_id = GUA_rise_of_the_banana_bois
+		cost = 10
+		prerequisite = { focus = GUA_our_heritage }
+		
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GUA_banana_based_weaponry
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 2
+		relative_position_id = GUA_rise_of_the_banana_bois
+		cost = 10
+		prerequisite = { focus = GUA_our_heritage }
+		
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = GUA_banana_weaponry
+		}
+	}
+
+	focus = {
+		id = GUA_bleed_the_money
+		icon = GFX_goal_generic_propaganda
+		x = 2
+		y = 2
+		relative_position_id = GUA_rise_of_the_banana_bois
+		cost = 10
+		prerequisite = { focus = GUA_our_heritage }
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = GUA_rise_of_the_banana_bois
+				add_idea = GUA_rise_of_the_banana_bois_2
+			}
+		}
+	}
+
+	focus = {
+		id = GUA_annex_the_minorities
+		icon = GFX_goal_generic_propaganda
+		x = -2
+		y = 3
+		relative_position_id = GUA_rise_of_the_banana_bois
+		cost = 10
+		prerequisite = { focus = GUA_bleed_the_money }
+		prerequisite = { focus = GUA_banana_based_weaponry }
+		prerequisite = { focus = GUA_the_banana_economy }
+
+		completion_reward = {
+			add_stability = -0.03
+			annex_country = { target = V72 transfer_troops = yes }
+			annex_country = { target = V09 transfer_troops = yes }
+		}
+	}
+
+	focus = {
+		id = GUA_the_black_banana_company
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 3
+		relative_position_id = GUA_rise_of_the_banana_bois
+		cost = 10
+		prerequisite = { focus = GUA_bleed_the_money }
+		prerequisite = { focus = GUA_banana_based_weaponry }
+		prerequisite = { focus = GUA_the_banana_economy }
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = GUA_magyar_heritage
+				add_idea = GUA_guatamelan_magyar_company
+			}
+		}
+	}
+
+	focus = {
+		id = GUA_mobilize_against_mex
+		icon = GFX_goal_generic_propaganda
+		x = -1
+		y = 4
+		relative_position_id = GUA_rise_of_the_banana_bois
+		cost = 10
+		prerequisite = { focus = GUA_the_black_banana_company }
+		
+		completion_reward = {
+			add_war_support = 0.05
+			army_experience = 50
+		}
+	}
+
+	focus = {
+		id = GUA_revamp_the_military
+		icon = GFX_goal_generic_propaganda
+		x = 1
+		y = 4
+		relative_position_id = GUA_rise_of_the_banana_bois
+		cost = 10
+		prerequisite = { focus = GUA_the_black_banana_company }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 2
+				bonus = 1.0
+				category = land_doctrine
+				name = land_doctrine
+			}
+			add_tech_bonus = {
+				uses = 1
+				bonus = 1.50
+				category = infantry_weapons
+				name = infantry_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = GUA_defeat_radicalism
+		icon = GFX_goal_generic_propaganda
+		x = -4
+		y = 5
+		relative_position_id = GUA_rise_of_the_banana_bois
+		cost = 10
+		prerequisite = { focus = GUA_mobilize_against_mex }
+		
+		completion_reward = {
+			every_neighbor_country = {
+				limit = {
+					radical > 0
+				}
+				add_popularity = { ideology = democratic popularity = 0.05 }
+				add_popularity = { ideology = radical popularity = -0.05 }
+				add_stability = -0.05
+			}
+			add_popularity = { ideology = radical popularity = -0.05 }
+		}
+	}
+
+	focus = {
+		id = GUA_annihilate_fascism
+		icon = GFX_goal_generic_propaganda
+		x = -4
+		y = 6
+		relative_position_id = GUA_rise_of_the_banana_bois
+		cost = 10
+		prerequisite = { focus = GUA_defeat_radicalism }
+		
+		completion_reward = {
+			every_neighbor_country = {
+				limit = {
+					fascism > 0
+				}
+				add_popularity = { ideology = democratic popularity = 0.05 }
+				add_popularity = { ideology = fascism popularity = -0.05 }
+				add_stability = -0.05
+			}
+			add_popularity = { ideology = fascism popularity = -0.05 }
+		}
+	}
+
+	focus = {
+		id = GUA_declare_honduras_guatamelan
+		icon = GFX_goal_generic_propaganda
+		x = -2
+		y = 5
+		relative_position_id = GUA_rise_of_the_banana_bois
+		cost = 10
+		prerequisite = { focus = GUA_mobilize_against_mex }
+		
+		completion_reward = {
+			262 = { add_core_of = GUA }
+			263 = { add_core_of = GUA }
+			264 = { add_core_of = GUA }
+			265 = { add_core_of = GUA }
+		}
+	}
+
+	focus = {
+		id = GUA_invade_honduras
+		icon = GFX_goal_generic_propaganda
+		x = -2
+		y = 6
+		relative_position_id = GUA_rise_of_the_banana_bois
+		cost = 10
+		prerequisite = { focus = GUA_declare_honduras_guatamelan }
+		
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = HON
+			}
+		}
+	}
+
+	focus = {
+		id = GUA_united_magyar_states
+		icon = GFX_goal_generic_propaganda
+		x = -3
+		y = 7
+		relative_position_id = GUA_rise_of_the_banana_bois
+		cost = 10
+		prerequisite = { focus = GUA_annihilate_fascism }
+		prerequisite = { focus = GUA_invade_honduras }
+		completion_reward = {
+			add_political_power = 150
+			remove_country_leader_trait = banna_baron
+			add_country_leader_trait = god_of_bananas
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_core_of = MEX
+						is_core_of = W10
+						is_core_of = HON
+						is_core_of = V70	
+					}
+					NOT = { is_core_of = GUA }
+				}
+			}
+			set_cosmetic_tag = GUA_united_magyar_states 
+		}
+	}
+
+	focus = {
+		id = GUA_carribbean_ambitions
+		icon = GFX_goal_generic_propaganda
+		x = -3
+		y = 8
+		relative_position_id = GUA_rise_of_the_banana_bois
+		cost = 10
+		prerequisite = { focus = GUA_united_magyar_states }
+		completion_reward = {
+			add_war_support = -0.05
+			every_state = {
+				limit = {
+					is_owned_by = BAS
+				}
+				add_core_of = GUA
+			}
+			create_wargoal = {
+				target = annex_everything
+				target = BAS
+			}
+		}
+	}
+
+	focus = {
+		id = GUA_state_run_banana_capitalism
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 5
+		relative_position_id = GUA_rise_of_the_banana_bois
+		cost = 10
+		prerequisite = { focus = GUA_mobilize_against_mex focus = GUA_revamp_the_military  }
+		
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GUA_export_banana_derived_opium
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 6
+		relative_position_id = GUA_rise_of_the_banana_bois
+		cost = 10
+		prerequisite = { focus = GUA_state_run_banana_capitalism }
+		
+		completion_reward = {
+			MAN = {
+				add_ideas = GUA_opium_spliced_bananas
+			}
+			add_ideas = GUA_opium_spliced_bananas
+		}
+	}
+
+	focus = {
+		id = GUA_guatemalan_dockyards
+		icon = GFX_goal_generic_propaganda
+		x = 2
+		y = 5
+		relative_position_id = GUA_rise_of_the_banana_bois
+		cost = 10
+		prerequisite = { focus = GUA_revamp_the_military }
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+
+	##Generated
 	focus = {
 		id = WarPropGUA
 		icon = GFX_goal_generic_propaganda
 		text = WarProp
-		x = 30
-		y = 0
+		x = 6
+		y = 1
+		relative_position_id = GUA_our_heritage
 		cost = 10
+		prerequisite = { focus = GUA_our_heritage }
 		available = {
 			threat > 0.000050
 		}
 		completion_reward = {
-		add_stability = 0.05
-	}
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
 		ai_will_do = {
 		factor = 10
 	}

@@ -1,4 +1,66 @@
 ideas = {
+	country = {
+		GUA_rise_of_the_banana_bois = {
+			removal_cost = -1
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.03
+				industrial_capacity_factory = 0.15
+				training_time_army_factor = -0.15
+				stability_factor = -0.05
+			}
+		}
+		GUA_rise_of_the_banana_bois_2 = {
+			removal_cost = -1
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.20
+				training_time_army_factor = -0.15
+				stability_factor = -0.10
+			}
+		}
+		GUA_magyar_heritage = {
+			removal_cost = -1
+			allowed = { always = no }
+			modifier = {
+				army_morale_factor = 0.05
+				breakthrough_factor = 0.05
+				army_attack_factor = 0.075
+				army_defence_factor = -0.10
+			}
+		}
+		GUA_guatamelan_magyar_company = {
+			removal_cost = -1
+			allowed = { always = no }
+			modifier = {
+				army_morale_factor = 0.10
+				breakthrough_factor = 0.10
+				army_attack_factor = 0.15
+				army_defence_factor = -0.20
+			}
+		}
+		GUA_banana_weaponry = {
+			removal_cost = -1
+			allowed = { always = no }
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability_factor = -0.10 instant = yes
+					build_cost_ic = -0.10 instant = yes
+				}
+			}
+		}
+
+		GUA_opium_spliced_bananas = {
+			removal_cost = -1
+			allowed =  { always = no }
+			modifier = {
+				consumer_goods_factor = -0.02
+				production_speed_buildings_factor = 0.10
+				stability_factor = -0.10
+			}
+		}
+	}
 	political_advisor = {
 		GUA_absolutist_advisor = {
 			allowed = {

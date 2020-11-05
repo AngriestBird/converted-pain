@@ -52,7 +52,7 @@ ideas = {
 			}
 			picture = generic_fascism_drift_bonus
 			targeted_modifier = {
-				target = V19 #Illionois
+				tag = V19 #Illionois
 				attack_bonus_against = 0.10
 				defense_bonus_against = 0.05
 			}
@@ -67,7 +67,7 @@ ideas = {
 			}
 			picture = generic_fascism_drift_bonus
 			targeted_modifier = {
-				target = V65 #Thirtheen Colonies
+				tag = V65 #Thirtheen Colonies
 				attack_bonus_against = 0.10
 				defense_bonus_against = 0.05
 			}
@@ -96,7 +96,7 @@ ideas = {
 			}
 			picture = usa_great_depression_3
 			modifier = {
-				consumer_good_factor = 0.25
+				consumer_goods_factor = 0.25
 				production_factory_max_efficiency_factor = -0.25
 				production_factory_efficiency_gain_factor = -0.25
 			}
@@ -113,7 +113,7 @@ ideas = {
 			modifier = {
 				production_factory_efficiency_gain_factor = 0.15
 				production_factory_max_efficiency_factor = 0.15
-				production_speed_factor = 0.10
+				production_speed_buildings_factor = 0.10
 			}
 		}
 		V66_the_oil_barons = {
@@ -143,7 +143,7 @@ ideas = {
 				consumer_goods_factor = -0.05
 			}
 		}
-		V66_military_reorganization = {
+		V66_military_reorganization_idea = {
 			removal_cost = -1
 			allowed = {
 				always = no

@@ -24,6 +24,7 @@ state={
 
 		}
 		add_core_of = W70
+		add_core_of = RAJ
 	}
 
 	provinces={

@@ -284,4 +284,71 @@ ideas = {
 			traits = { artillery_manufacturer }
 		}
 	}
+
+	country = {
+		GER_idea_the_homies_hate_britanny = {
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		GER_idea_zandarian_tactics = {
+			modifier = {
+				mobilization_laws_cost_factor = 1
+				political_advisor_cost_factor = 1
+				trade_laws_cost_factor = 1
+				economy_cost_factor = 1
+				high_command_cost_factor = 1
+				air_chief_cost_factor = 1
+				army_chief_cost_factor = 1
+				navy_chief_cost_factor = 1
+			}
+		}
+
+		GER_idea_total_war_reseach = {
+			modifier = {
+				research_speed_factor = 0.15
+			}
+		}
+		GER_idea_lessons_from_total_war = {
+			modifier = {
+				consumer_goods_factor = 0.10
+			}
+		}
+		GER_idea_all_my_homies_hate_england = {
+			modifier = {
+				army_core_attack_factor = 0.20
+				army_speed_factor = 0.08
+				army_org_factor = -0.05
+				land_reinforce_rate = -0.02
+			}
+		}
+		GER_idea_five_second_planning = {
+			modifier = {
+				political_power_gain = 0.10
+			}
+		}
+		GER_idea_lessons_from_aoe = {
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+		GER_idea_get_to_know_the_boys = {
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_org_factor = 0.05
+			}
+		}
+		GER_idea_the_homies_hate_lithuania = {
+			modifier = {
+				consumer_goods_factor = -0.07
+			}
+		}
+		GER_idea_big_boy_germany = {
+			modifier = {
+				army_core_defence_factor = 0.05
+			}
+		}
+	}
+
 }

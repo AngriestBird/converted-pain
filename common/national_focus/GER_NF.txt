@@ -16,483 +16,499 @@ focus_tree = {
 	shared_focus = aviation_effort
 	shared_focus = naval_effort
 	shared_focus = industrial_effort
-	shared_focus = political_effort
+	#shared_focus = political_effort
 
 	focus = {
-		id = border_disputesGEREST
-		icon = GFX_goal_generic_more_territorial_claims
-		text = border_disputesEST
-		x = 28
-		y = 0
+		id = GER_gather_the_boys
+		#icon = 
 		cost = 10
-		available = {
-			has_war = no
-			not_in_border_conflict = yes
-			has_opinion = { target = EST value < 0 }
-			EST = {
-				exists = yes
-				not_allies_or_subjects = yes
-				in_weak_faction = yes
-				OR = {
-					potential_take_core_target = yes
-					if = {
-						limit = { ROOT = { has_government = communism } }
-						potential_communist_puppet_target = yes
-					}
-					if = {
-						limit = { ROOT = { has_government = fascism } }
-						potential_fascist_annex_target = yes
-					}
-					potential_take_state_target = yes
-					potential_border_war_target = yes
-				}
-			}
-		}
-
-		completion_reward = {
-			add_manpower = 10000
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				date < 1938.8.1
-			}
-			modifier = {
-				factor = 0
-				threat > 0.25
-				date > 1938.8.1
-			}
-			modifier = {
-				factor = 0
-				threat > 0.4
-				date > 1939.4.1
-			}
-			modifier = {
-				factor = 0
-				threat > 0.5
-				date > 1939.8.1
-			}
-		}
-	}
-
-	focus = {
-		id = prepare_for_warGEREST
-		icon = GFX_goal_generic_position_armies
-		text = prepare_for_warEST
-		prerequisite = { focus = border_disputesGEREST }
-		bypass = {
-			has_war_with = EST
-		}
-		x = 0
-		y = 1
-		relative_position_id = border_disputesGEREST
-		cost = 4
-		available = {
-			has_war = no
-			not_in_border_conflict = yes
-			has_opinion = { target = EST value < 0 }
-			EST = {
-				exists = yes
-				not_in_border_conflict = yes
-			}
-		}
-		continue_if_invalid = yes
-		select_effect = {
-			random_owned_controlled_state = {
-				limit = { any_neighbor_state = { is_fully_controlled_by = EST } }
-				set_variable = { ROOT.attacker_state = THIS.id }
-				set_state_flag = border_incident_active
-			}
-			var:attacker_state = {
-				random_neighbor_state = {
-					limit = { is_fully_controlled_by = EST }
-					set_variable = { ROOT.defender_state = THIS.id }
-					set_state_flag = border_incident_active
-				}
-				if = {
-					limit = { var:ROOT.defender_state = { NOT = { is_fully_controlled_by = EST } } }
-					random_state = {
-						limit = {
-							is_fully_controlled_by = EST
-							is_coastal = yes
-						}
-						set_variable = { ROOT.defender_state = THIS.id }
-						set_state_flag = border_incident_active
-					}
-				}
-				if = {
-					limit = { var:ROOT.defender_state = { NOT = { is_fully_controlled_by = EST } } }
-					random_state = {
-						limit = { is_fully_controlled_by = EST }
-						set_variable = { ROOT.defender_state = THIS.id }
-						set_state_flag = border_incident_active
-					}
-				}
-			}
-		}
-		completion_reward = {
-			EST = {
-				add_ai_strategy = { type = prepare_for_war id = ROOT value = 1000 }
-				ROOT = { add_ai_strategy = { type = prepare_for_war id = PREV value = 1000 } }
-			}
-			add_manpower = 10000
-		}
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				date < 1938.8.1
-			}
-			modifier = {
-				factor = 0
-				threat > 0.25
-				date > 1938.8.1
-			}
-			modifier = {
-				factor = 0
-				threat > 0.4
-				date > 1939.4.1
-			}
-			modifier = {
-				factor = 0
-				threat > 0.5
-				date > 1939.8.1
-			}
-		}
-	}
-
-	focus = {
-		id = neighbor_warGEREST
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-		text = neighbor_warEST
-		prerequisite = { focus = prepare_for_warGEREST }
-		bypass = {
-			has_war_with = EST
-		}
-		x = 0
-		y = 1
-		relative_position_id = prepare_for_warGEREST
-		cost = 3
-		available = {
-			has_war = no
-			hidden_trigger = {
-				NOT = { any_owned_state = { has_border_war = yes } }
-				EST = { NOT = { any_owned_state = { has_border_war = yes } } }
-			}
-			if = {
-				limit = { EST = { potential_border_war_target = yes } }
-				var:attacker_state = { is_fully_controlled_by = ROOT }
-				var:defender_state = { is_fully_controlled_by = EST }
-				divisions_in_border_state = { state = var:attacker_state border_state = var:defender_state size > 0 }
-			}
-		}
-		completion_reward = {
-			if = {
-				limit = { EST = { potential_take_core_target = yes } }
-				declare_war_on = {
-					target = EST
-					type = take_core_state
-					generator = core_states
-				}
-				add_named_threat = { threat = 3 name = neighbor_war_NF_threat }
-			}
-			else_if = {
-				limit = { EST = { potential_communist_puppet_target = yes } }
-				declare_war_on = {
-					target = EST
-					type = puppet_wargoal_focus
-				}
-				add_named_threat = { threat = 3 name = neighbor_war_NF_threat }
-			}
-			else_if = {
-				limit = { EST = { potential_fascist_annex_target = yes } }
-				declare_war_on = {
-					target = EST
-					type = annex_everything
-				}
-				add_named_threat = { threat = 3 name = neighbor_war_NF_threat }
-			}
-			else_if = {
-				limit = { EST = { potential_take_state_target = yes } }
-				add_state_claim = var:defender_state
-				declare_war_on = {
-					target = EST
-					type = take_state_focus
-					generator = claimed_states
-				}
-				add_named_threat = { threat = 3 name = neighbor_war_NF_threat }
-			}
-			else_if = {
-				limit = { EST = { potential_border_war_target = yes } }
-				start_border_war = {
-					change_state_after_war = no
-					attacker = {
-						state = var:attacker_state
-						num_provinces = 6
-						on_win = neighbor_war.1
-						on_lose = neighbor_war.2
-						on_cancel = neighbor_war.3
-					}
-					defender = {
-						state = var:defender_state
-						num_provinces = 6
-						on_win = neighbor_war.2
-						on_lose = neighbor_war.1
-						on_cancel = neighbor_war.3
-					}
-					minimum_duration_in_days = 14
-				}
-				add_named_threat = { threat = 1 name = neighbor_war_NF_threat }
-			}
-			EST = {
-				add_ai_strategy = { type = prepare_for_war id = ROOT value = -1000 }
-				ROOT = { add_ai_strategy = { type = prepare_for_war id = PREV value = -1000 } }
-			}
-			var:attacker_state = { clr_state_flag = border_incident_active }
-			var:defender_state = { clr_state_flag = border_incident_active }
-		}
-		ai_will_do = {
-			factor = 10
-		}
-	}
-
-	focus = {
-		id = border_disputesGERFLA
-		icon = GFX_goal_generic_more_territorial_claims
-		text = border_disputesFLA
-		x = 30
+		x = 21
 		y = 0
+		completion_reward = { 
+			add_political_power = 100
+			add_war_support = 0.10
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = GER_the_homies_hate_britanny
+		#icon = 
 		cost = 10
-		available = {
-			has_war = no
-			not_in_border_conflict = yes
-			has_opinion = { target = FLA value < 0 }
-			FLA = {
-				exists = yes
-				not_allies_or_subjects = yes
-				in_weak_faction = yes
-				OR = {
-					potential_take_core_target = yes
-					if = {
-						limit = { ROOT = { has_government = communism } }
-						potential_communist_puppet_target = yes
-					}
-					if = {
-						limit = { ROOT = { has_government = fascism } }
-						potential_fascist_annex_target = yes
-					}
-					potential_take_state_target = yes
-					potential_border_war_target = yes
+		x = -3
+		y = 1
+		relative_position_id = GER_gather_the_boys
+		prerequisite = { focus = GER_gather_the_boys }
+		completion_reward = { 
+			add_war_support = 0.10
+			add_opinion_modifier = {
+				target = U73
+				modifier = negative_25
+			}
+			add_ideas = GER_idea_the_homies_hate_britanny
+		}
+	}
+
+	focus = {
+		id = GER_imply_zandarian_tactics
+		#icon = 
+		cost = 9
+		x = -2
+		y = 1
+		relative_position_id = GER_the_homies_hate_britanny
+		prerequisite = { focus = GER_the_homies_hate_britanny }
+		completion_reward = {
+			if = {
+				limit = { has_idea = civilian_economy }
+				swap_ideas = {
+					remove_idea = civilian_economy
+					add_idea = partial_economic_mobilisation
 				}
 			}
+			else_if = {
+				limit = { has_idea = low_economic_mobilisation }
+				swap_ideas = {
+					remove_idea = low_economic_mobilisation
+					add_idea = partial_economic_mobilisation
+				}
+			}
+			if = {
+				limit = { has_idea = free_trade }
+				swap_ideas = {
+					remove_idea = free_trade
+					add_idea = limited_exports
+				}
+			}
+			else_if = {
+				limit = { has_idea = export_focus }
+				swap_ideas = {
+					remove_idea = export_focus
+					add_idea = limited_exports
+				}
+			}
+			add_ideas = GER_idea_zandarian_tactics
 		}
+	}
 
+	focus = {
+		id = GER_lessons_from_total_war
+		#icon = 
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = GER_imply_zandarian_tactics
+		prerequisite = { focus = GER_imply_zandarian_tactics }
 		completion_reward = {
-			add_manpower = 10000
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				date < 1938.8.1
+			add_ideas = GER_idea_total_war_reseach
+			add_timed_idea = {
+				idea = GER_idea_lessons_from_total_war
+				days = 100
 			}
-			modifier = {
-				factor = 0
-				threat > 0.25
-				date > 1938.8.1
+			add_tech_bonus = {
+				name = total_war_bonus
+				bonus = 0.50
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+				category = infantry_weapons
 			}
-			modifier = {
-				factor = 0
-				threat > 0.4
-				date > 1939.4.1
-			}
-			modifier = {
-				factor = 0
-				threat > 0.5
-				date > 1939.8.1
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = GER
 			}
 		}
 	}
 
 	focus = {
-		id = prepare_for_warGERFLA
-		icon = GFX_goal_generic_position_armies
-		text = prepare_for_warFLA
-		prerequisite = { focus = border_disputesGERFLA }
-		bypass = {
-			has_war_with = FLA
-		}
+		id = GER_all_my_homies_hate_england
+		#icon = 
+		cost = 10
 		x = 0
 		y = 1
-		relative_position_id = border_disputesGERFLA
-		cost = 4
-		available = {
-			has_war = no
-			not_in_border_conflict = yes
-			has_opinion = { target = FLA value < 0 }
-			FLA = {
-				exists = yes
-				not_in_border_conflict = yes
-			}
-		}
-		continue_if_invalid = yes
-		select_effect = {
-			random_owned_controlled_state = {
-				limit = { any_neighbor_state = { is_fully_controlled_by = FLA } }
-				set_variable = { ROOT.attacker_state = THIS.id }
-				set_state_flag = border_incident_active
-			}
-			var:attacker_state = {
-				random_neighbor_state = {
-					limit = { is_fully_controlled_by = FLA }
-					set_variable = { ROOT.defender_state = THIS.id }
-					set_state_flag = border_incident_active
-				}
-				if = {
-					limit = { var:ROOT.defender_state = { NOT = { is_fully_controlled_by = FLA } } }
-					random_state = {
-						limit = {
-							is_fully_controlled_by = FLA
-							is_coastal = yes
-						}
-						set_variable = { ROOT.defender_state = THIS.id }
-						set_state_flag = border_incident_active
-					}
-				}
-				if = {
-					limit = { var:ROOT.defender_state = { NOT = { is_fully_controlled_by = FLA } } }
-					random_state = {
-						limit = { is_fully_controlled_by = FLA }
-						set_variable = { ROOT.defender_state = THIS.id }
-						set_state_flag = border_incident_active
-					}
-				}
-			}
-		}
+		relative_position_id = GER_lessons_from_total_war
+		prerequisite = { focus = GER_lessons_from_total_war }
 		completion_reward = {
-			FLA = {
-				add_ai_strategy = { type = prepare_for_war id = ROOT value = 1000 }
-				ROOT = { add_ai_strategy = { type = prepare_for_war id = PREV value = 1000 } }
-			}
-			add_manpower = 10000
-		}
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				date < 1938.8.1
-			}
-			modifier = {
-				factor = 0
-				threat > 0.25
-				date > 1938.8.1
-			}
-			modifier = {
-				factor = 0
-				threat > 0.4
-				date > 1939.4.1
-			}
-			modifier = {
-				factor = 0
-				threat > 0.5
-				date > 1939.8.1
+			add_timed_idea = {
+				idea = GER_idea_all_my_homies_hate_england
+				days = 120
 			}
 		}
 	}
 
 	focus = {
-		id = neighbor_warGERFLA
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-		text = neighbor_warFLA
-		prerequisite = { focus = prepare_for_warGERFLA }
-		bypass = {
-			has_war_with = FLA
+		id = GER_five_second_planning
+		#icon = 
+		cost = 10
+		x = 2
+		y = 1
+		relative_position_id = GER_the_homies_hate_britanny
+		prerequisite = { focus = GER_the_homies_hate_britanny }
+		completion_reward = { 
+			if = {
+				limit = { has_idea = disarmed_nation }
+				swap_ideas = {
+					remove_idea = disarmed_nation
+					add_idea = limited_conscription
+				}
+			}
+			else_if = {
+				limit = { has_idea = volunteer_only }
+				swap_ideas = {
+					remove_idea = volunteer_only
+					add_idea = limited_conscription
+				}
+			}
+			if = {
+				limit = { has_idea = civilian_economy }
+				swap_ideas = {
+					remove_idea = civilian_economy
+					add_idea = partial_economic_mobilisation
+				}
+			}
+			else_if = {
+				limit = { has_idea = low_economic_mobilisation }
+				swap_ideas = {
+					remove_idea = low_economic_mobilisation
+					add_idea = partial_economic_mobilisation
+				}
+			}
+			else_if = {
+				limit = { has_idea = war_economy }
+				swap_ideas = {
+					remove_idea = war_economy
+					add_idea = partial_economic_mobilisation
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = GER_idea_five_second_planning
 		}
+	}
+
+	focus = {
+		id = GER_gib_normandy
+		#icon = 
+		cost = 9
 		x = 0
 		y = 1
-		relative_position_id = prepare_for_warGERFLA
+		relative_position_id = GER_five_second_planning
+		prerequisite = { focus = GER_five_second_planning }
+		completion_reward = {
+			W43 = {
+				country_event = {
+					id = NFEvents.26
+					hours = 2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_lessons_from_aoe
+		#icon = 
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = GER_gib_normandy
+		prerequisite = { focus = GER_gib_normandy }
+		completion_reward = { 
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.50
+				uses = 1
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				name = total_war_bonus
+				bonus = 0.50
+				uses = 1
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+			}
+			add_ideas = GER_idea_lessons_from_aoe
+		}
+	}
+
+	focus = {
+		id = GER_send_flanders_back_to_fake_dutch_hell
+		#icon = 
 		cost = 3
-		available = {
-			has_war = no
-			hidden_trigger = {
-				NOT = { any_owned_state = { has_border_war = yes } }
-				FLA = { NOT = { any_owned_state = { has_border_war = yes } } }
-			}
-			if = {
-				limit = { FLA = { potential_border_war_target = yes } }
-				var:attacker_state = { is_fully_controlled_by = ROOT }
-				var:defender_state = { is_fully_controlled_by = FLA }
-				divisions_in_border_state = { state = var:attacker_state border_state = var:defender_state size > 0 }
-			}
-		}
-		completion_reward = {
-			if = {
-				limit = { FLA = { potential_take_core_target = yes } }
-				declare_war_on = {
-					target = FLA
-					type = take_core_state
-					generator = core_states
-				}
-				add_named_threat = { threat = 3 name = neighbor_war_NF_threat }
-			}
-			else_if = {
-				limit = { FLA = { potential_communist_puppet_target = yes } }
-				declare_war_on = {
-					target = FLA
-					type = puppet_wargoal_focus
-				}
-				add_named_threat = { threat = 3 name = neighbor_war_NF_threat }
-			}
-			else_if = {
-				limit = { FLA = { potential_fascist_annex_target = yes } }
-				declare_war_on = {
-					target = FLA
-					type = annex_everything
-				}
-				add_named_threat = { threat = 3 name = neighbor_war_NF_threat }
-			}
-			else_if = {
-				limit = { FLA = { potential_take_state_target = yes } }
-				add_state_claim = var:defender_state
-				declare_war_on = {
-					target = FLA
-					type = take_state_focus
-					generator = claimed_states
-				}
-				add_named_threat = { threat = 3 name = neighbor_war_NF_threat }
-			}
-			else_if = {
-				limit = { FLA = { potential_border_war_target = yes } }
-				start_border_war = {
-					change_state_after_war = no
-					attacker = {
-						state = var:attacker_state
-						num_provinces = 6
-						on_win = neighbor_war.1
-						on_lose = neighbor_war.2
-						on_cancel = neighbor_war.3
-					}
-					defender = {
-						state = var:defender_state
-						num_provinces = 6
-						on_win = neighbor_war.2
-						on_lose = neighbor_war.1
-						on_cancel = neighbor_war.3
-					}
-					minimum_duration_in_days = 14
-				}
-				add_named_threat = { threat = 1 name = neighbor_war_NF_threat }
-			}
+		x = 0
+		y = 1
+		relative_position_id = GER_lessons_from_aoe
+		prerequisite = { focus = GER_lessons_from_aoe }
+		prerequisite = { focus = GER_gib_savoy }
+		completion_reward = { 
 			FLA = {
-				add_ai_strategy = { type = prepare_for_war id = ROOT value = -1000 }
-				ROOT = { add_ai_strategy = { type = prepare_for_war id = PREV value = -1000 } }
+				country_event = {
+					id = NFEvents.29
+					hours = 2
+				}
 			}
-			var:attacker_state = { clr_state_flag = border_incident_active }
-			var:defender_state = { clr_state_flag = border_incident_active }
 		}
-		ai_will_do = {
-			factor = 10
+	}
+
+	focus = {
+		id = GER_get_to_know_the_boys
+		#icon = 
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = GER_send_flanders_back_to_fake_dutch_hell
+		prerequisite = { focus = GER_send_flanders_back_to_fake_dutch_hell }
+		completion_reward = { 
+			random_owned_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = GER_idea_get_to_know_the_boys
+		}
+	}
+
+	focus = {
+		id = GER_yee_neva_lose
+		#icon = 
+		cost = 10
+		x = 2
+		y = 2
+		relative_position_id = GER_all_my_homies_hate_england
+		prerequisite = { focus = GER_all_my_homies_hate_england focus = GER_lessons_from_aoe }
+		completion_reward = { 
+			U73 = {
+				country_event = {
+					id = NFEvents.32
+					hours = 2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_the_homies_hate_lithuania
+		#icon = 
+		cost = 10
+		x = 2
+		y = 2
+		relative_position_id = GER_gather_the_boys
+		prerequisite = { focus = GER_gather_the_boys }
+		completion_reward = { 
+			add_war_support = 0.15
+			add_opinion_modifier = {
+				target = LIT
+				modifier = negative_25
+			}
+			add_ideas = GER_idea_the_homies_hate_lithuania
+		}
+	}
+
+	focus = {
+		id = GER_gib_savoy
+		#icon = 
+		cost = 10
+		x = -1
+		y = 2
+		relative_position_id = GER_the_homies_hate_lithuania
+		prerequisite = { focus = GER_the_homies_hate_lithuania }
+		completion_reward = { 
+			W98 = {
+				country_event = {
+					id = NFEvents.35
+					hours = 2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_boss_battle
+		#icon = 
+		cost = 10
+		x = 1
+		y = 4
+		relative_position_id = GER_the_homies_hate_lithuania
+		prerequisite = { focus = GER_the_homies_hate_lithuania }
+		completion_reward = { 
+			LIT = {
+				country_event = {
+					id = NFEvents.38
+					hours = 2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_gateway_to_germany
+		#icon = 
+		cost = 13
+		x = 2
+		y = 2
+		relative_position_id = GER_yee_neva_lose
+		prerequisite = { focus = GER_yee_neva_lose focus = GER_boss_battle }
+		completion_reward = { 
+			HAN = {
+				country_event = {
+					id = NFEvents.41
+					hours = 2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_fuck_up_munster
+		#icon = 
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = GER_gateway_to_germany
+		prerequisite = { focus = GER_gateway_to_germany }
+		completion_reward = { 
+			W34 = {
+				country_event = {
+					id = NFEvents.44
+					hours = 2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_fuck_up_brandenburg
+		#icon = 
+		cost = 11
+		x = 1
+		y = 1
+		relative_position_id = GER_gateway_to_germany
+		prerequisite = { focus = GER_gateway_to_germany }
+		completion_reward = { 
+			X25 = {
+				country_event = {
+					id = NFEvents.47
+					hours = 2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_fuck_up_gross_sachsen
+		#icon = 
+		cost = 14
+		x = 0
+		y = 2
+		relative_position_id = GER_gateway_to_germany
+		prerequisite = { focus = GER_gateway_to_germany }
+		completion_reward = { 
+			create_wargoal = {
+				type = annex_everything
+				target = SAX
+			}
+		}
+	}
+
+	focus = {
+		id = GER_fuck_up_nuremburg
+		#icon = 
+		cost = 7
+		x = -2
+		y = 1
+		relative_position_id = GER_fuck_up_gross_sachsen
+		prerequisite = { focus = GER_fuck_up_gross_sachsen }
+		completion_reward = { 
+			create_wargoal = {
+				type = annex_everything
+				target = W45
+			}
+		}
+	}
+
+	focus = {
+		id = GER_fuck_up_bohemia
+		#icon = 
+		cost = 7
+		x = 0
+		y = 1
+		relative_position_id = GER_fuck_up_gross_sachsen
+		prerequisite = { focus = GER_fuck_up_gross_sachsen }
+		completion_reward = { 
+			create_wargoal = {
+				type = annex_everything
+				target = V51
+			}
+		}
+	}
+
+	focus = {
+		id = GER_fuck_up_the_real_romans
+		#icon = 
+		cost = 7
+		x = 2
+		y = 1
+		relative_position_id = GER_fuck_up_gross_sachsen
+		prerequisite = { focus = GER_fuck_up_gross_sachsen }
+		completion_reward = { 
+			create_wargoal = {
+				type = annex_everything
+				target = HRE
+			}
+		}
+	}
+
+	focus = {
+		id = GER_declare_bog_boy_germany
+		#icon = 
+		cost = 7
+		x = 0
+		y = 1
+		relative_position_id = GER_fuck_up_bohemia
+		prerequisite = { 
+			focus = GER_fuck_up_bohemia
+			focus = GER_fuck_up_nuremburg
+			focus = GER_fuck_up_the_real_romans
+ 		}
+		completion_reward = { 
+			add_stability = 0.10
+			add_ideas = GER_idea_big_boy_germany
 		}
 	}
 

@@ -537,8 +537,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = V37_intergrate_mazovian_hussars
-		prerequisite = { focus = V37_intergrate_mazovian_hussars }
-		prerequisite = { focus = V37_around_the_timur }
+		prerequisite = { focus = V37_intergrate_mazovian_hussars focus = V37_around_the_timur }
 		completion_reward = { 
 			add_ideas = V37_idea_oiled_horses
 		}
@@ -551,8 +550,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = V37_around_the_timur
-		prerequisite = { focus = V37_we_stan_democracy }
-		prerequisite = { focus = V37_around_the_timur }
+		prerequisite = { focus = V37_we_stan_democracy focus = V37_around_the_timur }
 		completion_reward = { 
 			add_manpower = 200000
 		}
@@ -565,8 +563,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = V37_we_stan_democracy
-		prerequisite = { focus = V37_we_stan_democracy }
-		prerequisite = { focus = V37_voidspeak }
+		prerequisite = { focus = V37_we_stan_democracy focus = V37_voidspeak }
 		completion_reward = { 
 			add_ideas = V37_idea_democratic_presents
 		}

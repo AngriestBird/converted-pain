@@ -10,7 +10,7 @@ state={
 	}
 
 	history={
-		owner = MAL
+		owner = SIA
 		victory_points = {
 			7658 3 
 		}
@@ -25,6 +25,7 @@ state={
 
 		}
 		add_core_of = MAL
+		add_core_of = SIA
 	}
 
 	provinces={

@@ -284,6 +284,7 @@ add_ideas = {
 	civilian_economy
 	export_focus
 	culture_lithuanian
+	LIT_over_extended_adminstration
 }
 set_stability = 0.60
 set_war_support = 0.60
@@ -294,7 +295,9 @@ create_country_leader = {
     expire = "1965.1.1"
     ideology = socialism
     traits = {
-    }
+		gujju_gang
+		captain_of_industry
+	}
 }
 create_corps_commander = {
 	name = "Bronislovas Širvydas"

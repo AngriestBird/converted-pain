@@ -239,6 +239,8 @@ create_country_leader = {
     expire = "1965.1.1"
     ideology = absolute_monarchy
     traits = {
+		autocratic_imperialist
+		political_dancer
     }
 }
 create_corps_commander = {

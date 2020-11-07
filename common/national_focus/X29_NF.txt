@@ -495,7 +495,10 @@ focus_tree = {
 		cost = 10
 
 		completion_reward = {
-			remove_ideas = X29_revitalized_beuracracy_1
+			swap_ideas = {
+				remove_idea = X29_revitalized_beuracracy
+				add_idea = X29_revitalized_beuracracy_1
+			}
 		}
 		ai_will_do = {
 			factor = 10

@@ -1590,6 +1590,30 @@ leader_traits = {
 
 		stability_factor = 0.10
 	}
+
+	#Brazil
+	god_of_birds = {
+		random = no
+		sprite = 10
+		political_power_factor = 0.25
+		army_speed_factor = 0.15
+		production_speed_air_base_factor = 0.10
+	}
+	many_avians = {
+		random = no
+		sprite = 10
+		conscription = 0.01
+		training_time_army_factor = -0.15	
+	}
+
+	#Lithuanian
+	gujju_gang = {
+		random = no
+		sprite = 10
+
+		political_power_factor = 0.20
+		stability_factor = 0.10
+	}
 	shadow_of_calles = {
 		random = no
 		sprite = 13

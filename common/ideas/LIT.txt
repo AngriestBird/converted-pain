@@ -1,4 +1,46 @@
 ideas = {
+	country = {
+		LIT_over_extended_adminstration = {
+			allowed = { original_tag = LIT }
+			allowed_civil_war = { always = no }
+			picture = generic_manpower_bonus
+			modifier = {
+				consumer_goods_factor = 0.50
+				industrial_capacity_factory = -0.20
+				industrial_capacity_dockyard = -0.20
+			}
+		}
+		LIT_militarized_democracy = {
+			allowed = { original_tag = LIT }
+			allowed_civil_war = { always = no }
+			picture = generic_infantry_bonus
+			modifier = {
+				army_attack_factor = 0.10
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.25
+				democratic_drift = 0.10
+			}
+		}
+		LIT_irish_defense_fund = {
+			allowed = { original_tag = LIT }
+			allowed_civil_war = { always = no }
+			picture = generic_infantry_bonus
+			modifier = {
+				army_core_defence_factor = 0.10
+				army_org_factor = 0.15
+			}
+		}
+		LIT_mobilized_lotharingii = {
+			allowed = { original_tag = LIT }
+			allowed_civil_war = { always = no }
+			picture = generic_infantry_bonus
+			modifier = {
+				conscription_factor = 0.25
+				army_speed_factor = 0.10
+				army_morale_factor = 0.25
+			}
+		}
+	}
 	political_advisor = {
 		LIT_absolutist_advisor = {
 			allowed = {

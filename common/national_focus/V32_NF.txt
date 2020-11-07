@@ -26,7 +26,7 @@ focus_tree = {
 		y = 0
 		cost = 10
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		available = { has_completed_focus = political_effort }
 		completion_reward = {
@@ -45,7 +45,7 @@ focus_tree = {
 		relative_position_id = V30_crush_extremist_undercurrents
 		cost = 10
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		available = {
 			has_completed_focus = army_effort
@@ -65,7 +65,7 @@ focus_tree = {
 		relative_position_id = V30_crush_extremist_undercurrents
 		cost = 10
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		prerequisite = { focus = V30_crush_extremist_undercurrents }
 		completion_reward = {
@@ -82,7 +82,7 @@ focus_tree = {
 		relative_position_id = V30_crush_extremist_undercurrents
 		cost = 10
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		prerequisite = { focus = V30_recruit_lebanese_militias }
 		completion_reward = {
@@ -100,7 +100,7 @@ focus_tree = {
 		relative_position_id = V30_crush_extremist_undercurrents
 		cost = 10
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		prerequisite = { focus = V30_recruit_lebanese_militias }
 		completion_reward = {
@@ -117,7 +117,7 @@ focus_tree = {
 		relative_position_id = V30_crush_extremist_undercurrents
 		cost = 10
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		prerequisite = { focus = V30_form_the_government_of_national_unity }
 		available = {
@@ -139,7 +139,7 @@ focus_tree = {
 		relative_position_id = V30_crush_extremist_undercurrents
 		cost = 10
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		prerequisite = { focus = V30_form_the_government_of_national_unity }
 		prerequisite = { focus = V30_create_the_foreign_legion }
@@ -157,7 +157,7 @@ focus_tree = {
 		relative_position_id = V30_crush_extremist_undercurrents
 		cost = 10
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		completion_reward = {
 			add_stability = 0.05
@@ -173,7 +173,7 @@ focus_tree = {
 		relative_position_id = V30_crush_extremist_undercurrents
 		cost = 10
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		prerequisite = { focus = V30_form_the_government_of_national_unity }
 		available = {
@@ -195,7 +195,7 @@ focus_tree = {
 		relative_position_id = V30_crush_extremist_undercurrents
 		cost = 10
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		prerequisite = { focus = V30_state_defense_militias }
 		prerequisite = { focus = V30_create_national_policy_committees }
@@ -213,7 +213,7 @@ focus_tree = {
 		relative_position_id = V30_crush_extremist_undercurrents
 		cost = 10
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		prerequisite = { focus = V30_create_national_policy_committees }
 		available = {
@@ -233,7 +233,7 @@ focus_tree = {
 		relative_position_id = V30_crush_extremist_undercurrents
 		cost = 10
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		prerequisite = { focus = V30_create_national_policy_committees }
 		prerequisite = { focus = V30_army_investments }
@@ -258,7 +258,7 @@ focus_tree = {
 		relative_position_id = V30_crush_extremist_undercurrents
 		cost = 10
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		prerequisite = { focus = V30_ban_communism }
 		prerequisite = { focus = V30_national_policy_control }
@@ -286,7 +286,7 @@ focus_tree = {
 		relative_position_id = V30_crush_extremist_undercurrents
 		cost = 10
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		prerequisite = { focus = V30_ban_fascism }
 		prerequisite = { focus = V30_national_policy_control }
@@ -321,7 +321,7 @@ focus_tree = {
 		relative_position_id = V30_crush_extremist_undercurrents
 		cost = 10
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		prerequisite = { 
 			focus = V30_crush_the_communists

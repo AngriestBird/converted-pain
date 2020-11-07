@@ -42,7 +42,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -72,7 +72,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 	focus = {
@@ -92,7 +92,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 	focus = {
@@ -121,7 +121,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -142,7 +142,7 @@ focus_tree = {
 		}
 		cost = 10
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		completion_reward = {
 			add_popularity = { ideology = absolutist popularity = 0.1 }
@@ -158,7 +158,7 @@ focus_tree = {
 		prerequisite = { focus = V30_back_the_brudermann_dynasty }
 		cost = 10
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		completion_reward = {
 			if = {
@@ -192,7 +192,7 @@ focus_tree = {
 		prerequisite = { focus = V30_back_the_brudermann_dynasty }
 		cost = 10
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		completion_reward = {
 			custom_effect_tooltip = "Simp for Isley."
@@ -219,7 +219,7 @@ focus_tree = {
 		prerequisite = { focus = V30_slayerism }
 		cost = 10
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		completion_reward = {
 			add_political_power = 150
@@ -252,7 +252,7 @@ focus_tree = {
 		}
 		cost = 10
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		completion_reward = {
 			swap_ideas = {
@@ -271,7 +271,7 @@ focus_tree = {
 		prerequisite = { focus = V30_embrace_restorationism }
 		cost = 10
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		completion_reward = {
 			if = {
@@ -310,7 +310,7 @@ focus_tree = {
 		prerequisite = { focus = V30_embrace_restorationism }
 		cost = 10
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		completion_reward = {
 			add_popularity = { ideology = democratic popularity = 0.2 }
@@ -344,7 +344,7 @@ focus_tree = {
 		prerequisite = { focus = V30_legalize_labor_unions }
 		cost = 10
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		completion_reward = {
 			add_political_power = 150
@@ -382,7 +382,7 @@ focus_tree = {
 		prerequisite = { focus = V30_end_the_absolute_monarchy }
 		cost = 10
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		completion_reward = {
 			add_political_power = 150
@@ -414,7 +414,7 @@ focus_tree = {
 		}
 		cost = 10
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		completion_reward = {
 			add_war_support = 0.05
@@ -439,7 +439,7 @@ focus_tree = {
 		}
 		cost = 10
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		completion_reward = {
 			random_country = {
@@ -476,7 +476,7 @@ focus_tree = {
 		prerequisite = { focus = V30_abolish_the_monarchy }
 		cost = 10
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		completion_reward = {
 			add_political_power = 150

@@ -32,7 +32,7 @@ focus_tree = {
 		add_stability = 0.05
 	}
 		ai_will_do = {
-		factor = 10
+		factor = 1
 	}
 	}
 
@@ -53,7 +53,7 @@ focus_tree = {
 		set_rule = { can_send_volunteers = yes }
 	}
 		ai_will_do = {
-		factor = 10
+		factor = 1
 	}
 	}
 
@@ -70,7 +70,7 @@ focus_tree = {
 			add_ideas = limited_interventionism
 		}
 		ai_will_do = {
-		factor = 10
+		factor = 1
 		}
 	}
 
@@ -90,7 +90,7 @@ focus_tree = {
 			add_political_power = 150
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -109,7 +109,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -144,7 +144,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -169,7 +169,7 @@ focus_tree = {
 			set_cosmetic_tag = RUS
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -207,7 +207,7 @@ focus_tree = {
 		}
 	}
 		ai_will_do = {
-		factor = 10
+		factor = 1
 	}
 	}
 
@@ -242,7 +242,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-		factor = 10
+		factor = 1
 	}
 	}
 
@@ -279,7 +279,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -317,7 +317,7 @@ focus_tree = {
 		}
 	}
 		ai_will_do = {
-		factor = 10
+		factor = 1
 	}
 	}
 
@@ -352,7 +352,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-		factor = 10
+		factor = 1
 	}
 	}
 
@@ -389,7 +389,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -406,7 +406,7 @@ focus_tree = {
 			add_ideas = foreign_expeditions_focus
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 	focus = {
@@ -462,7 +462,7 @@ focus_tree = {
 			}			
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -486,7 +486,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -521,7 +521,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -537,7 +537,7 @@ focus_tree = {
 			add_ideas = V37_idea_voidspeak
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -553,7 +553,7 @@ focus_tree = {
 			add_ideas = V37_idea_mazovian_hussars
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -569,7 +569,7 @@ focus_tree = {
 			add_ideas = V37_idea_oiled_horses
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -585,7 +585,7 @@ focus_tree = {
 			add_manpower = 200000
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -601,7 +601,7 @@ focus_tree = {
 			add_ideas = V37_idea_democratic_presents
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -618,7 +618,7 @@ focus_tree = {
 			add_ideas = V37_idea_oil_and_opium
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -635,7 +635,7 @@ focus_tree = {
 			add_ideas = V37_idea_russian_winter
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 }

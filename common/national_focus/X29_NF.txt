@@ -159,7 +159,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 			modifier = {
 				factor = 0
 				date < 1937.6.6
@@ -196,7 +196,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-		factor = 10
+		factor = 1
 		modifier = {
 			factor = 0
 			date < 1937.6.6
@@ -232,7 +232,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-		factor = 10
+		factor = 1
 		modifier = {
 			factor = 0
 			date < 1937.6.6
@@ -269,7 +269,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-		factor = 10
+		factor = 1
 		modifier = {
 			factor = 0
 			date < 1937.6.6
@@ -306,7 +306,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-		factor = 10
+		factor = 1
 		modifier = {
 			factor = 0
 			date < 1937.6.6
@@ -343,7 +343,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-		factor = 10
+		factor = 1
 		modifier = {
 			factor = 0
 			date < 1937.6.6
@@ -375,7 +375,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-		factor = 10
+		factor = 1
 		modifier = {
 			factor = 0
 			date < 1937.6.6
@@ -481,7 +481,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -501,7 +501,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -665,7 +665,7 @@ focus_tree = {
 		ai_will_do = {
 		factor = 2
 		modifier = {
-			factor = 10
+			factor = 1
 			date > 1938.1.1
 		}
 	}
@@ -700,7 +700,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 	}
 	}
 
@@ -732,7 +732,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 	}
 	}
 

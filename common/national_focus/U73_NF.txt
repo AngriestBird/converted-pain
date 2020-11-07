@@ -30,7 +30,7 @@ focus_tree = {
 			add_political_power = 100
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -57,7 +57,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -85,7 +85,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -143,7 +143,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -190,7 +190,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -245,7 +245,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -268,7 +268,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -297,7 +297,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -319,7 +319,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -342,7 +342,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -364,7 +364,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -397,7 +397,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -452,7 +452,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -471,7 +471,7 @@ focus_tree = {
 			add_ideas = U73_metallic_ship_wall
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -518,7 +518,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -542,7 +542,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -569,7 +569,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -594,7 +594,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -621,7 +621,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -641,7 +641,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -819,7 +819,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -841,7 +841,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -860,7 +860,7 @@ focus_tree = {
 			add_ideas = U73_victorian_capitalism
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -879,7 +879,7 @@ focus_tree = {
 			add_ideas = U73_her_majesties_military
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -898,7 +898,7 @@ focus_tree = {
 			add_ideas = U73_redcoat_1
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -921,7 +921,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -996,7 +996,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -1015,7 +1015,7 @@ focus_tree = {
 			add_stability = 0.05
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -1037,7 +1037,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -1061,7 +1061,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -1089,7 +1089,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -1114,7 +1114,7 @@ focus_tree = {
 			add_political_power = 100
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 
@@ -1141,7 +1141,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 	}
 }

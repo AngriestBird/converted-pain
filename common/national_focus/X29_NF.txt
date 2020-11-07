@@ -510,8 +510,8 @@ focus_tree = {
 		icon = GFX_goal_generic_position_armies
 		x = 0
 		y = 1
-		relative_position_id = X29_the_internal
-		prerequisite = { focus = X29_the_internal }
+		relative_position_id = X29_the_internal_2
+		prerequisite = { focus = X29_the_internal_2 }
 		cost = 10 
 		completion_reward = {
 			add_ideas = V66_military_reorganization_idea

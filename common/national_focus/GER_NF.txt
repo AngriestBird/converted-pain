@@ -232,6 +232,11 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_five_second_planning
 		prerequisite = { focus = GER_five_second_planning }
+		bypass = { 
+			NOT = { 
+				country_exists = W43 
+			}
+		}
 		completion_reward = {
 			W43 = {
 				country_event = {
@@ -291,6 +296,11 @@ focus_tree = {
 		relative_position_id = GER_lessons_from_aoe
 		prerequisite = { focus = GER_lessons_from_aoe }
 		prerequisite = { focus = GER_gib_savoy }
+		bypass = { 
+			NOT = { 
+				country_exists = FLA 
+			}
+		}
 		completion_reward = { 
 			FLA = {
 				country_event = {
@@ -342,6 +352,11 @@ focus_tree = {
 		y = 2
 		relative_position_id = GER_all_my_homies_hate_england
 		prerequisite = { focus = GER_all_my_homies_hate_england focus = GER_lessons_from_aoe }
+		bypass = { 
+			NOT = { 
+				country_exists = U73 
+			}
+		}
 		completion_reward = { 
 			U73 = {
 				country_event = {
@@ -384,6 +399,11 @@ focus_tree = {
 		y = 2
 		relative_position_id = GER_the_homies_hate_lithuania
 		prerequisite = { focus = GER_the_homies_hate_lithuania }
+		bypass = { 
+			NOT = { 
+				country_exists = W98 
+			}
+		}
 		completion_reward = { 
 			W98 = {
 				country_event = {
@@ -405,6 +425,11 @@ focus_tree = {
 		y = 4
 		relative_position_id = GER_the_homies_hate_lithuania
 		prerequisite = { focus = GER_the_homies_hate_lithuania }
+		bypass = { 
+			NOT = { 
+				country_exists = LIT 
+			}
+		}
 		completion_reward = { 
 			LIT = {
 				country_event = {
@@ -426,6 +451,11 @@ focus_tree = {
 		y = 2
 		relative_position_id = GER_yee_neva_lose
 		prerequisite = { focus = GER_yee_neva_lose focus = GER_boss_battle }
+		bypass = { 
+			NOT = { 
+				country_exists = HAN 
+			}
+		}
 		completion_reward = { 
 			HAN = {
 				country_event = {
@@ -447,6 +477,11 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_gateway_to_germany
 		prerequisite = { focus = GER_gateway_to_germany }
+		bypass = { 
+			NOT = { 
+				country_exists = W34 
+			}
+		}
 		completion_reward = { 
 			W34 = {
 				country_event = {
@@ -468,6 +503,11 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_gateway_to_germany
 		prerequisite = { focus = GER_gateway_to_germany }
+		bypass = { 
+			NOT = { 
+				country_exists = X25 
+			}
+		}
 		completion_reward = { 
 			X25 = {
 				country_event = {
@@ -489,6 +529,11 @@ focus_tree = {
 		y = 2
 		relative_position_id = GER_gateway_to_germany
 		prerequisite = { focus = GER_gateway_to_germany }
+		bypass = { 
+			NOT = { 
+				country_exists = SAX 
+			}
+		}
 		completion_reward = { 
 			create_wargoal = {
 				type = annex_everything
@@ -508,6 +553,11 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_fuck_up_gross_sachsen
 		prerequisite = { focus = GER_fuck_up_gross_sachsen }
+		bypass = { 
+			NOT = { 
+				country_exists = W45 
+			}
+		}
 		completion_reward = { 
 			create_wargoal = {
 				type = annex_everything
@@ -527,6 +577,11 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_fuck_up_gross_sachsen
 		prerequisite = { focus = GER_fuck_up_gross_sachsen }
+		bypass = { 
+			NOT = { 
+				country_exists = V51 
+			}
+		}
 		completion_reward = { 
 			create_wargoal = {
 				type = annex_everything
@@ -546,6 +601,11 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_fuck_up_gross_sachsen
 		prerequisite = { focus = GER_fuck_up_gross_sachsen }
+		bypass = { 
+			NOT = { 
+				country_exists = HRE 
+			}
+		}
 		completion_reward = { 
 			create_wargoal = {
 				type = annex_everything

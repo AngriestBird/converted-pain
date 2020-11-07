@@ -284,4 +284,62 @@ ideas = {
 			traits = { artillery_manufacturer }
 		}
 	}
+
+	country = {
+		BRA_idea_birdynomics = {
+			modifier = {
+				consumer_goods_factor = 1
+			}
+		}
+
+		BRA_idea_maximum_birdynomcis = {
+			modifier = {
+				consumer_goods_factor = 2
+			}
+		}
+
+		BRA_idea_pure_birdynomcis = {
+			modifier = {
+				consumer_goods_factor = -0.50
+				economy_cost_factor = -0.50
+				production_factory_max_efficiency_factor = 0.50
+				line_change_production_efficiency_factor = 0.50
+			}
+		}
+
+		BRA_idea_little_birdies = {
+			modifier = {
+				operative_slot = 3
+			}
+		}
+
+		BRA_idea_birdrecovery = {
+			modifier = { 
+				stability_weekly = 0.01
+			}
+		}
+
+		BRA_idea_brazilian_savior = {
+			modifier = {
+				trade_opinion_factor = 0.50
+			}
+		}
+
+		BRA_idea_birdynomics_rabbi = {
+			modifier = {
+				send_volunteers_tension = -0.50
+				send_volunteer_divisions_required = -0.50
+				send_volunteer_size = 4
+			}
+		}
+
+		BRA_idea_brazilian_spynetwork = {
+			modifier = {
+				intel_network_gain_factor = 0.5
+				intelligence_agency_defense = 1
+				intel_from_operatives_factor = 0.50
+				own_operative_detection_chance_factor = -0.50
+			}
+		}
+	}
 }

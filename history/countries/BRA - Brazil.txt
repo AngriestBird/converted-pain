@@ -218,6 +218,7 @@ add_ideas = {
 	civilian_economy
 	export_focus
 	culture_germanic_south_america_superregion_culture
+	V66_new_sicilian_economic_depression
 }
 set_stability = 0.60
 set_war_support = 0.60

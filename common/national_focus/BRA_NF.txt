@@ -16,13 +16,13 @@ focus_tree = {
 	shared_focus = aviation_effort
 	shared_focus = naval_effort
 	shared_focus = industrial_effort
-	shared_focus = political_effort
+	#shared_focus = political_effort
 
 	focus = {
 		id = WarPropBRA
 		icon = GFX_goal_generic_propaganda
 		text = WarProp
-		x = 30
+		x = 20
 		y = 0
 		cost = 10
 		available = {
@@ -404,6 +404,281 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 10
+		}
+	}
+
+	focus = {
+		id = BRA_radicalization
+		#icon = 
+		cost = 10
+		x = -4
+		y = 1
+		prerequisite = { focus = LimBRA }
+		relative_position_id = LimBRA
+		completion_reward = {
+			add_ideas = radicalism
+			
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = BRA_a_birdy_in_every_country
+		#icon = 
+		cost = 10
+		x = 0
+		y = 1
+		prerequisite = { focus = BRA_radicalization }
+		relative_position_id = BRA_radicalization
+		completion_reward = {
+			every_country = {
+				add_opinion_modifier = {
+					target = ROOT modifier = private_channels_trade
+				}
+				add_popularity = {
+					ideology = radical
+					popularity = 0.10
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = { 
+		id = BRA_embrace_the_revolution
+		#icon = 
+		cost = 10
+		x = 0
+		y = 1
+		prerequisite = { focus = BRA_a_birdy_in_every_country }
+		relative_position_id = BRA_a_birdy_in_every_country
+		completion_reward = {
+			add_popularity = { 
+				ideology = radical
+				popularity = 0.50
+			}
+			set_politics = { ruling_party = radical }
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = BRA_birdynomics
+		cost = 10
+		x = 4
+		y = 1
+		prerequisite = { focus = LimBRA }
+		relative_position_id = LimBRA
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = V66_new_sicilian_economic_depression
+    			add_idea = BRA_idea_birdynomics
+			}
+			add_stability = -0.30
+		}
+	}
+
+	focus = {
+		id = BRA_debt_is_just_a_number
+		cost = 10
+		x = 0
+		y = 1
+		prerequisite = { focus = BRA_birdynomics }
+		relative_position_id = BRA_birdynomics
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = BRA_idea_birdynomics
+    			add_idea = BRA_idea_maximum_birdynomcis
+			}
+		}
+		add_stability = -0.30
+	}
+
+	focus = {
+		id = BRA_pure_birdynomcis
+		cost = 10
+		x = 0
+		y = 1
+		prerequisite = { focus = BRA_debt_is_just_a_number }
+		relative_position_id = BRA_debt_is_just_a_number
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = BRA_idea_maximum_birdynomcis
+    			add_idea = BRA_idea_pure_birdynomcis
+			}
+		}
+	}
+
+	focus = {
+		id = BRA_a_little_birdy_told_me
+		cost = 10
+		x = 0
+		y = 2
+		prerequisite = { focus = BRA_embrace_the_revolution }
+		relative_position_id = BRA_embrace_the_revolution
+		completion_reward = {
+			add_ideas = BRA_idea_little_birdies
+		}
+	}
+
+	focus = {
+		id = BRA_spread_the_revolution
+		cost = 10
+		x = 2
+		y = 1
+		prerequisite = { focus = BRA_embrace_the_revolution }
+		relative_position_id = BRA_embrace_the_revolution
+		completion_reward = {
+			VEN = { add_ideas = radicalism }
+			BOL = { add_ideas = radicalism }
+			PRU = { add_ideas = radicalism }
+			ARG = { add_ideas = radicalism }
+		}
+	}
+
+	focus = {
+		id = BRA_recover_from_the_depression
+		cost = 10
+		x = 0
+		y = 1
+		prerequisite = { focus = BRA_pure_birdynomcis }
+		relative_position_id = BRA_pure_birdynomcis
+		completion_reward = {
+			add_ideas = BRA_idea_birdrecovery
+		}
+	}
+
+	focus = {
+		id = BRA_show_the_world_the_power_of_birdynomics
+		cost = 10
+		x = -2
+		y = 1
+		prerequisite = { focus = BRA_pure_birdynomcis }
+		relative_position_id = BRA_pure_birdynomcis
+		completion_reward = {
+			VEN = { add_ideas = V66_new_sicilian_economic_depression }
+			BOL = { add_ideas = V66_new_sicilian_economic_depression }
+			PRU = { add_ideas = V66_new_sicilian_economic_depression }
+			W58 = { add_ideas = V66_new_sicilian_economic_depression }
+			ARG = { add_ideas = V66_new_sicilian_economic_depression }
+		}
+	}
+
+	focus = {
+		id = BRA_operation_save_south_america
+		cost = 10
+		x = -2
+		y = 1
+		prerequisite = { focus = BRA_show_the_world_the_power_of_birdynomics }
+		prerequisite = { focus = BRA_spread_the_revolution }
+		relative_position_id = BRA_show_the_world_the_power_of_birdynomics
+		completion_reward = {
+			add_ideas = BRA_idea_brazilian_savior
+			VEN = { add_ideas = BRA_idea_maximum_birdynomcis }
+			BOL = { add_ideas = BRA_idea_maximum_birdynomcis }
+			PRU = { add_ideas = BRA_idea_maximum_birdynomcis }
+			W58 = { add_ideas = BRA_idea_maximum_birdynomcis }
+			ARG = { add_ideas = BRA_idea_maximum_birdynomcis }
+		}
+	}
+
+	focus = {
+		id = BRA_strongarm_pommerania
+		cost = 10
+		x = -2
+		y = 1
+		prerequisite = { focus = BRA_operation_save_south_america }
+		prerequisite = { focus = BRA_a_little_birdy_told_me }
+		relative_position_id = BRA_operation_save_south_america
+		completion_reward = {
+			W58 = { remove_ideas = V66_new_sicilian_economic_depression remove_ideas = BRA_idea_maximum_birdynomcis }
+			BOL = { transfer_state = 502 }
+		}
+	}
+
+	focus = {
+		id = BRA_save_peru
+		cost = 10
+		x = 2
+		y = 1
+		prerequisite = { focus = BRA_operation_save_south_america }
+		relative_position_id = BRA_operation_save_south_america
+		completion_reward = {
+			PRU = { remove_ideas = V66_new_sicilian_economic_depression remove_ideas = BRA_idea_maximum_birdynomcis }
+			add_to_faction = PRU
+		}
+	}
+
+	focus = {
+		id = BRA_aid_bolivia
+		cost = 10
+		x = 2
+		y = 1
+		prerequisite = { focus = BRA_strongarm_pommerania }
+		prerequisite = { focus = BRA_save_peru }
+		relative_position_id = BRA_strongarm_pommerania
+		completion_reward = {
+			BOL = { remove_ideas = V66_new_sicilian_economic_depression remove_ideas = BRA_idea_maximum_birdynomcis }
+			PRU = {
+				transfer_state = 43
+				transfer_state = 44
+				transfer_state = 502
+			}
+			transfer_state = 51
+			transfer_state = 52
+		}
+	}
+
+	focus = {
+		id = BRA_speed_up_the_process
+		cost = 10
+		x = 0
+		y = 1
+		prerequisite = { focus = BRA_aid_bolivia }
+		relative_position_id = BRA_aid_bolivia
+		completion_reward = {
+			BOL = {
+				start_civil_war = {
+					ruling_party = absolutist
+					ideology = radical
+				}
+			}
+			ARG = {
+				start_civil_war = {
+					ruling_party = absolutist
+					ideology = radical
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BRA_birdynomic_revolutionary_rabbi
+		cost = 10
+		x = 0
+		y = 1
+		prerequisite = { focus = BRA_recover_from_the_depression }
+		relative_position_id = BRA_recover_from_the_depression
+		completion_reward = {
+			add_ideas = BRA_idea_birdynomics_rabbi
+		}
+	}
+
+	focus = {
+		id = BRA_greatest_intelligence_network
+		cost = 10
+		x = 0
+		y = 2
+		prerequisite = { focus = BRA_a_little_birdy_told_me }
+		relative_position_id = BRA_a_little_birdy_told_me
+		completion_reward = {
+			add_ideas = BRA_idea_brazilian_spynetwork
 		}
 	}
 

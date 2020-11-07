@@ -66,9 +66,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = PrepInterV37
 		cost = 10
-		available = {
-			threat > 0.000250
-		}
 		completion_reward = {
 			add_ideas = limited_interventionism
 		}

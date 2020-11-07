@@ -89,6 +89,9 @@ focus_tree = {
 			}
 			add_political_power = 150
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -104,6 +107,9 @@ focus_tree = {
 				target = V29
 				transfer_troops = yes
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -137,6 +143,9 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -158,6 +167,9 @@ focus_tree = {
 				transfer_troops = yes
 			}
 			set_cosmetic_tag = RUS
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -393,6 +405,9 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = foreign_expeditions_focus
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 	focus = {
 		id = V37_technology_sharing
@@ -446,6 +461,9 @@ focus_tree = {
 				}				
 			}			
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -466,6 +484,9 @@ focus_tree = {
 				type = puppet_wargoal_focus
 				target = V43
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -499,6 +520,9 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -511,6 +535,9 @@ focus_tree = {
 		prerequisite = { focus = V37_technology_sharing }
 		completion_reward = {
 			add_ideas = V37_idea_voidspeak
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -525,6 +552,9 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = V37_idea_mazovian_hussars
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -537,6 +567,9 @@ focus_tree = {
 		prerequisite = { focus = V37_intergrate_mazovian_hussars focus = V37_around_the_timur }
 		completion_reward = { 
 			add_ideas = V37_idea_oiled_horses
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -551,6 +584,9 @@ focus_tree = {
 		completion_reward = { 
 			add_manpower = 200000
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -563,6 +599,9 @@ focus_tree = {
 		prerequisite = { focus = V37_we_stan_democracy focus = V37_voidspeak }
 		completion_reward = { 
 			add_ideas = V37_idea_democratic_presents
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -578,6 +617,9 @@ focus_tree = {
 		completion_reward = { 
 			add_ideas = V37_idea_oil_and_opium
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -591,6 +633,9 @@ focus_tree = {
 		prerequisite = { focus = V37_russian_manpower }
 		completion_reward = { 
 			add_ideas = V37_idea_russian_winter
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 }

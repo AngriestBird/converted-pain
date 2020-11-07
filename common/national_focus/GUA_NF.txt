@@ -29,6 +29,9 @@ focus_tree = {
 			add_political_power = 150
 			add_ideas = GUA_rise_of_the_banana_bois
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -42,6 +45,9 @@ focus_tree = {
 		
 		completion_reward = {
 			add_ideas = GUA_magyar_heritage
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -72,6 +78,9 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -94,6 +103,9 @@ focus_tree = {
 			}
 			add_ideas = GUA_banana_weaponry
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -110,6 +122,9 @@ focus_tree = {
 				remove_idea = GUA_rise_of_the_banana_bois
 				add_idea = GUA_rise_of_the_banana_bois_2
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -128,6 +143,9 @@ focus_tree = {
 			add_stability = -0.03
 			annex_country = { target = V72 transfer_troops = yes }
 			annex_country = { target = V09 transfer_troops = yes }
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -148,6 +166,9 @@ focus_tree = {
 				add_idea = GUA_guatamelan_magyar_company
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -162,6 +183,9 @@ focus_tree = {
 		completion_reward = {
 			add_war_support = 0.05
 			army_experience = 50
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -188,6 +212,9 @@ focus_tree = {
 				name = infantry_equipment
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -209,6 +236,9 @@ focus_tree = {
 				add_stability = -0.05
 			}
 			add_popularity = { ideology = radical popularity = -0.05 }
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -232,6 +262,9 @@ focus_tree = {
 			}
 			add_popularity = { ideology = fascism popularity = -0.05 }
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -249,6 +282,9 @@ focus_tree = {
 			264 = { add_core_of = GUA }
 			265 = { add_core_of = GUA }
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -265,6 +301,9 @@ focus_tree = {
 				type = annex_everything
 				target = HON
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -294,6 +333,9 @@ focus_tree = {
 			}
 			set_cosmetic_tag = GUA_united_magyar_states 
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -313,9 +355,12 @@ focus_tree = {
 				add_core_of = GUA
 			}
 			create_wargoal = {
-				target = annex_everything
-				target = BAS
+				target =  BAS
+				type = annex_everything
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -338,6 +383,9 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -354,6 +402,9 @@ focus_tree = {
 				add_ideas = GUA_opium_spliced_bananas
 			}
 			add_ideas = GUA_opium_spliced_bananas
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -378,6 +429,9 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 

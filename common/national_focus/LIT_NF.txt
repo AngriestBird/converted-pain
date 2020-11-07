@@ -28,6 +28,9 @@ focus_tree = {
 			add_stability = 0.05
 			add_political_power = 150
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -40,6 +43,9 @@ focus_tree = {
 		cost = 10
 		completion_reward = {
 			add_ideas = LIT_militarized_democracy
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -54,6 +60,9 @@ focus_tree = {
 		completion_reward = {
 			add_war_support = 0.05
 			add_political_power = 100
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -79,6 +88,9 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -99,6 +111,9 @@ focus_tree = {
 			}
 			add_ideas = LIT_irish_defense_fund
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -118,6 +133,9 @@ focus_tree = {
 				add_popularity = { ideology = democratic popularity = 0.05 }
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -132,6 +150,9 @@ focus_tree = {
 			GER =  {
 				add_popularity = { ideology = democratic popularity = 0.05 }
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 	focus = {
@@ -148,6 +169,9 @@ focus_tree = {
 				target = GER 
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -160,6 +184,9 @@ focus_tree = {
 		cost = 10
 		completion_reward = {
 			add_ideas = LIT_mobilized_lotharingii
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -186,6 +213,9 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 
@@ -211,6 +241,9 @@ focus_tree = {
 				target = W45
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -230,6 +263,9 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -254,6 +290,9 @@ focus_tree = {
 				add_core_of = LIT
 			}
 			remove_ideas = LIT_over_extended_adminstration
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -291,6 +330,9 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -311,6 +353,9 @@ focus_tree = {
 				type = annex_everything
 				target = X40
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -339,6 +384,9 @@ focus_tree = {
 				type = annex_everything
 				target = V51
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -389,6 +437,9 @@ focus_tree = {
 				target = W87
 				type = annex_everything
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 

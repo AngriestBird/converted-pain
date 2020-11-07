@@ -639,6 +639,10 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = U73_iam_the_senate
 		}
+
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -814,6 +818,9 @@ focus_tree = {
 				annex_country = { target = PREV transfer_troops = yes }
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -833,6 +840,9 @@ focus_tree = {
 				add_idea = U73_sun_never_sets_on_albion
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -848,6 +858,9 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = U73_victorian_capitalism
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -865,6 +878,9 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = U73_her_majesties_military
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -880,6 +896,9 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = U73_redcoat_1
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -899,6 +918,10 @@ focus_tree = {
 				remove_idea = U73_redcoat_1
 				add_idea = U73_redcoat_2
 			}
+		}
+
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -972,6 +995,9 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -987,6 +1013,9 @@ focus_tree = {
 
 		completion_reward = {
 			add_stability = 0.05
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -1006,6 +1035,9 @@ focus_tree = {
 				type = annex_everything
 				target = IRE
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -1028,6 +1060,9 @@ focus_tree = {
 				add_core_of = ENG
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -1043,8 +1078,8 @@ focus_tree = {
 
 		completion_reward = {
 			create_wargoal = {
-				target = annex_everything
-				type = FLA
+				target = FLA
+				type = annex_everything
 			}
 			every_state = {
 				limit = {
@@ -1052,6 +1087,9 @@ focus_tree = {
 				}
 				add_claim_by = ENG
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -1074,6 +1112,9 @@ focus_tree = {
 				}
 			}
 			add_political_power = 100
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -1098,6 +1139,9 @@ focus_tree = {
 				idea = U73_targeted_modifier_attack_lit
 				days = 120
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 }

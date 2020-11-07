@@ -2,11 +2,6 @@
 set_research_slots = 4
 add_named_threat = { threat = 0.1065 name = infamy }
 
-declare_war_on = {
-	target = W64
-	type = annex_everything
-}
-
 oob = "MAN_OOB"
 if = {
 	limit = { has_dlc = "Man the Guns" }
@@ -228,12 +223,12 @@ if = {
 add_ideas = {
 	great_power
 	limited_conscription
-	low_economic_mobilisation
+	undisturbed_isolation
 	export_focus
 	culture_manchu
 }
-set_stability = 0.60
-set_war_support = 0.62
+set_stability = 0.30
+set_war_support = 0.30
 create_country_leader = {
     name = "Oboi Shangzhi"
     desc = "POLITICS_OBOI_SHANGZHI_DESC"

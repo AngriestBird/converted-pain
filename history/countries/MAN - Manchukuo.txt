@@ -215,6 +215,7 @@ give_guarantee = W65
 give_guarantee = W79
 give_guarantee = W97
 give_guarantee = X23
+give_guarantee = V49
 
 create_faction = "Heavenly Mandate"
 add_to_faction = MAN

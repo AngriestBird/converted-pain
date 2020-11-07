@@ -1733,3 +1733,167 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = NFEvents.50
+	title = "Cholas demands Ceylon"
+	desc = "Cholas demands Ceylon from us"
+	picture = GFX_report_event_hitler_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = "yes"
+		ai_chance = {
+			base = 30
+			modifier = {
+				add = -15
+				V49 = { has_army_size = { size < 40 } }
+			}
+			modifier = {
+				add = 45
+				V49 = { has_army_size = { size > 39 } }
+			}
+		}
+		V49 = {
+			country_event = { hours = 2 id = NFEvents.51 }
+		}
+	}
+	option = {
+		name = "no"
+		ai_chance  = {
+			base = 10
+			modifier = {
+				factor = 0
+				V49 = { has_army_size = { size > 39 } }
+			}
+			modifier = {
+				add = 20
+				V49 = { has_army_size = { size < 30 } }
+			}
+		}
+		V49 = {
+			country_event = { hours = 2 id = NFEvents.52 }
+			if = {
+				limit = { is_in_faction_with = V49 }
+				remove_from_faction = V49
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.51
+	title = "Madurai Accepts!"
+	desc = " Madurai accepted our proposed demands, the added lands will push us to greatness!"
+	picture = GFX_report_event_hitler_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = "A stronger Union!"
+		annex_country = {
+			target = W20
+			transfer_troops = yes
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.52
+	title = "Madurai Refuses!"
+	desc = "Madurai Refused our proposed proposition! This is an insult to us that cannot go unanswered!"
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = "It's time for war"
+		create_wargoal = {
+			type = annex_everything
+			target = W20
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.53
+	title = "Cholas demands Vengi Chalukya and Aurangabad"
+	desc = "Cholas demands Vengi Chalukya and Aurangabad from us"
+	picture = GFX_report_event_hitler_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = "yes"
+		ai_chance = {
+			base = 30
+			modifier = {
+				add = -15
+				V49 = { has_army_size = { size < 40 } }
+			}
+			modifier = {
+				add = 45
+				V49 = { has_army_size = { size > 39 } }
+			}
+		}
+		V49 = {
+			country_event = { hours = 2 id = NFEvents.54 }
+		}
+	}
+	option = {
+		name = "no"
+		ai_chance  = {
+			base = 10
+			modifier = {
+				factor = 0
+				V49 = { has_army_size = { size > 39 } }
+			}
+			modifier = {
+				add = 20
+				V49 = { has_army_size = { size < 30 } }
+			}
+		}
+		V49 = {
+			country_event = { hours = 2 id = NFEvents.55 }
+			if = {
+				limit = { is_in_faction_with = V49 }
+				remove_from_faction = V49
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.54
+	title = "Madurai Accepts!"
+	desc = " Madurai accepted our proposed demands, the added lands will push us to greatness!"
+	picture = GFX_report_event_hitler_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = "A stronger Union!"
+		V49 = { 
+			transfer_state = 703
+			transfer_state = 704
+		}
+	}
+}
+
+country_event = {
+	id = NFEvents.55
+	title = "Madurai Refuses!"
+	desc = "Madurai Refused our proposed proposition! This is an insult to us that cannot go unanswered!"
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	option = {
+		name = "It's time for war"
+		create_wargoal = {
+			type = annex_everything
+			target = V48
+		}
+	}
+}

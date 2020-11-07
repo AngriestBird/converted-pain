@@ -171,6 +171,7 @@ add_ideas = {
 	civilian_economy
 	export_focus
 	culture_tamil
+	V49_racial_divides
 }
 set_stability = 0.60
 set_war_support = 0.60

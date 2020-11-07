@@ -4247,4 +4247,13 @@ leader_traits = {
 			factor = 1
 		}
 	}
+
+	visionary = {
+		random = no
+		production_speed_infrastructure_factor = 0.20
+		production_factory_max_efficiency_factor = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }

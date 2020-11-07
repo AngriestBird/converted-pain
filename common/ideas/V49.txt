@@ -284,4 +284,129 @@ ideas = {
 			traits = { artillery_manufacturer }
 		}
 	}
+
+	country = {
+		V49_racial_divides = {
+			modifier = {
+				conscription_factor = -0.15
+			}
+		}
+
+		V49_religious_hiphop = { 
+			modifier = { 
+				political_advisor_cost_factor = -0.10
+			}
+		}
+
+		V49_yes_greatest_album = {
+			modifier = { 
+				radical_drift = 0.40
+				war_support_weekly = 0.02
+			}	
+		}
+
+		V49_idea_industry_boom = {
+			modifier = {
+				production_speed_arms_factory_factor = 0.10
+				production_speed_industrial_complex_factor = 0.10
+				consumer_goods_factor = -0.05
+				political_advisor_cost_factor = 0.50
+			}
+		}
+
+		V49_idea_industry_boom2 = {
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+				production_speed_infrastructure_factor = 0.10
+				production_speed_industrial_complex_factor = 0.10
+				consumer_goods_factor = -0.05
+				political_advisor_cost_factor = 0.50
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		V49_idea_new_worker_motivation = { 
+			modifier = { 
+				army_attack_factor = 0.05
+				max_planning = 0.10
+     		}
+		}
+
+		V49_idea_music_industrial_complex_realized = { 
+			modifier = { 
+				production_speed_arms_factory_factor = 0.17
+				production_speed_industrial_complex_factor = 0.17
+				production_speed_industrial_complex_factor = 0.10
+				production_factory_max_efficiency_factor = 0.07
+     		}
+		}
+		
+		V49_methed_up_workers = { 
+			modifier = { 
+				production_factory_max_efficiency_factor = 0.05
+				supply_consumption_factor = 0.03
+     		}
+		}
+
+		V49_idea_body_disposal = {
+			modifier = {
+				production_factory_max_efficiency_factor = 0.02
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		V49_idea_speeches_to_plow = {
+			modifier = {
+				radical_drift = 0.2
+				political_advisor_cost_factor = 0.05
+			}
+		}
+
+		V49_idea_opposition_angry_that_they_have_to_work = {
+			modifier = { 
+				political_advisor_cost_factor = -0.10
+				consumer_goods_factor = 0.05
+				army_attack_factor = -0.05
+				army_defence_factor = -0.05
+			}
+		}
+
+		V49_racial_divides2 = {
+			modifier = {
+				conscription_factor = -0.10
+			}
+		}
+
+		V49_racial_divides3 = {
+			modifier = {
+				conscription_factor = -0.05
+				non_core_manpower = 0.05
+			}
+		}
+
+		V49_racial_divides4 = {
+			modifier = {
+				industrial_capacity_factory = 0.02
+			}
+		}
+
+		V49_idea_minority_scholarships = {
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+
+		V49_idea_violent_music = {
+			modifier = {
+				army_attack_factor = 0.10
+				army_org_factor = -0.05
+			}
+		}
+
+		V49_idea_war_plan_vengi = { 
+			modifier = { 
+				planning_speed = 0.10
+			}
+		}
+	}
 }

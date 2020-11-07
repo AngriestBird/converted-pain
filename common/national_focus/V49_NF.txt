@@ -16,483 +16,511 @@ focus_tree = {
 	shared_focus = aviation_effort
 	shared_focus = naval_effort
 	shared_focus = industrial_effort
-	shared_focus = political_effort
+	#shared_focus = political_effort
 
 	focus = {
-		id = border_disputesV49RAJ
+		id = V49_summon_indian_kanye
 		icon = GFX_goal_generic_more_territorial_claims
-		text = border_disputesRAJ
-		x = 28
+		x = 21
 		y = 0
 		cost = 10
-		available = {
-			has_war = no
-			not_in_border_conflict = yes
-			has_opinion = { target = RAJ value < 0 }
-			RAJ = {
-				exists = yes
-				not_allies_or_subjects = yes
-				in_weak_faction = yes
-				OR = {
-					potential_take_core_target = yes
-					if = {
-						limit = { ROOT = { has_government = communism } }
-						potential_communist_puppet_target = yes
-					}
-					if = {
-						limit = { ROOT = { has_government = fascism } }
-						potential_fascist_annex_target = yes
-					}
-					potential_take_state_target = yes
-					potential_border_war_target = yes
-				}
-			}
-		}
 
 		completion_reward = {
-			add_manpower = 10000
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				date < 1938.8.1
-			}
-			modifier = {
-				factor = 0
-				threat > 0.25
-				date > 1938.8.1
-			}
-			modifier = {
-				factor = 0
-				threat > 0.4
-				date > 1939.4.1
-			}
-			modifier = {
-				factor = 0
-				threat > 0.5
-				date > 1939.8.1
+			add_stability = -0.10
+			create_country_leader = {
+				name = "Kanye East"
+				desc = "Kanye but Indian"
+				picture = "kanye_east.dds"
+				expire = "1965.1.1"
+				ideology = absolute_monarchy
+				traits = {
+					visionary
+				}
 			}
 		}
 	}
 
 	focus = {
-		id = prepare_for_warV49RAJ
-		icon = GFX_goal_generic_position_armies
-		text = prepare_for_warRAJ
-		prerequisite = { focus = border_disputesV49RAJ }
-		bypass = {
-			has_war_with = RAJ
-		}
+		id = V49_develop_religious_hiphop
+		#icon = GFX_goal_generic_more_territorial_claims
 		x = 0
 		y = 1
-		relative_position_id = border_disputesV49RAJ
-		cost = 4
-		available = {
-			has_war = no
-			not_in_border_conflict = yes
-			has_opinion = { target = RAJ value < 0 }
-			RAJ = {
-				exists = yes
-				not_in_border_conflict = yes
-			}
-		}
-		continue_if_invalid = yes
-		select_effect = {
-			random_owned_controlled_state = {
-				limit = { any_neighbor_state = { is_fully_controlled_by = RAJ } }
-				set_variable = { ROOT.attacker_state = THIS.id }
-				set_state_flag = border_incident_active
-			}
-			var:attacker_state = {
-				random_neighbor_state = {
-					limit = { is_fully_controlled_by = RAJ }
-					set_variable = { ROOT.defender_state = THIS.id }
-					set_state_flag = border_incident_active
-				}
-				if = {
-					limit = { var:ROOT.defender_state = { NOT = { is_fully_controlled_by = RAJ } } }
-					random_state = {
-						limit = {
-							is_fully_controlled_by = RAJ
-							is_coastal = yes
-						}
-						set_variable = { ROOT.defender_state = THIS.id }
-						set_state_flag = border_incident_active
-					}
-				}
-				if = {
-					limit = { var:ROOT.defender_state = { NOT = { is_fully_controlled_by = RAJ } } }
-					random_state = {
-						limit = { is_fully_controlled_by = RAJ }
-						set_variable = { ROOT.defender_state = THIS.id }
-						set_state_flag = border_incident_active
-					}
-				}
-			}
-		}
-		completion_reward = {
-			RAJ = {
-				add_ai_strategy = { type = prepare_for_war id = ROOT value = 1000 }
-				ROOT = { add_ai_strategy = { type = prepare_for_war id = PREV value = 1000 } }
-			}
-			add_manpower = 10000
-		}
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				date < 1938.8.1
-			}
-			modifier = {
-				factor = 0
-				threat > 0.25
-				date > 1938.8.1
-			}
-			modifier = {
-				factor = 0
-				threat > 0.4
-				date > 1939.4.1
-			}
-			modifier = {
-				factor = 0
-				threat > 0.5
-				date > 1939.8.1
-			}
-		}
-	}
-
-	focus = {
-		id = neighbor_warV49RAJ
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-		text = neighbor_warRAJ
-		prerequisite = { focus = prepare_for_warV49RAJ }
-		bypass = {
-			has_war_with = RAJ
-		}
-		x = 0
-		y = 1
-		relative_position_id = prepare_for_warV49RAJ
-		cost = 3
-		available = {
-			has_war = no
-			hidden_trigger = {
-				NOT = { any_owned_state = { has_border_war = yes } }
-				RAJ = { NOT = { any_owned_state = { has_border_war = yes } } }
-			}
-			if = {
-				limit = { RAJ = { potential_border_war_target = yes } }
-				var:attacker_state = { is_fully_controlled_by = ROOT }
-				var:defender_state = { is_fully_controlled_by = RAJ }
-				divisions_in_border_state = { state = var:attacker_state border_state = var:defender_state size > 0 }
-			}
-		}
-		completion_reward = {
-			if = {
-				limit = { RAJ = { potential_take_core_target = yes } }
-				declare_war_on = {
-					target = RAJ
-					type = take_core_state
-					generator = core_states
-				}
-				add_named_threat = { threat = 3 name = neighbor_war_NF_threat }
-			}
-			else_if = {
-				limit = { RAJ = { potential_communist_puppet_target = yes } }
-				declare_war_on = {
-					target = RAJ
-					type = puppet_wargoal_focus
-				}
-				add_named_threat = { threat = 3 name = neighbor_war_NF_threat }
-			}
-			else_if = {
-				limit = { RAJ = { potential_fascist_annex_target = yes } }
-				declare_war_on = {
-					target = RAJ
-					type = annex_everything
-				}
-				add_named_threat = { threat = 3 name = neighbor_war_NF_threat }
-			}
-			else_if = {
-				limit = { RAJ = { potential_take_state_target = yes } }
-				add_state_claim = var:defender_state
-				declare_war_on = {
-					target = RAJ
-					type = take_state_focus
-					generator = claimed_states
-				}
-				add_named_threat = { threat = 3 name = neighbor_war_NF_threat }
-			}
-			else_if = {
-				limit = { RAJ = { potential_border_war_target = yes } }
-				start_border_war = {
-					change_state_after_war = no
-					attacker = {
-						state = var:attacker_state
-						num_provinces = 6
-						on_win = neighbor_war.1
-						on_lose = neighbor_war.2
-						on_cancel = neighbor_war.3
-					}
-					defender = {
-						state = var:defender_state
-						num_provinces = 6
-						on_win = neighbor_war.2
-						on_lose = neighbor_war.1
-						on_cancel = neighbor_war.3
-					}
-					minimum_duration_in_days = 14
-				}
-				add_named_threat = { threat = 1 name = neighbor_war_NF_threat }
-			}
-			RAJ = {
-				add_ai_strategy = { type = prepare_for_war id = ROOT value = -1000 }
-				ROOT = { add_ai_strategy = { type = prepare_for_war id = PREV value = -1000 } }
-			}
-			var:attacker_state = { clr_state_flag = border_incident_active }
-			var:defender_state = { clr_state_flag = border_incident_active }
-		}
-		ai_will_do = {
-			factor = 10
-		}
-	}
-
-	focus = {
-		id = border_disputesV49SIA
-		icon = GFX_goal_generic_more_territorial_claims
-		text = border_disputesSIA
-		x = 30
-		y = 0
 		cost = 10
-		available = {
-			has_war = no
-			not_in_border_conflict = yes
-			has_opinion = { target = SIA value < 0 }
-			SIA = {
-				exists = yes
-				not_allies_or_subjects = yes
-				in_weak_faction = yes
-				OR = {
-					potential_take_core_target = yes
-					if = {
-						limit = { ROOT = { has_government = communism } }
-						potential_communist_puppet_target = yes
-					}
-					if = {
-						limit = { ROOT = { has_government = fascism } }
-						potential_fascist_annex_target = yes
-					}
-					potential_take_state_target = yes
-					potential_border_war_target = yes
+		relative_position_id = V49_summon_indian_kanye
+		prerequisite = { focus = V49_summon_indian_kanye }
+		completion_reward = {
+			add_political_power	= 150
+			add_ideas = V49_religious_hiphop
+		}
+	}
+
+	focus = { 
+		id = V49_release_first_album
+		#icon = GFX_goal_generic_more_territorial_claims
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = V49_develop_religious_hiphop
+		prerequisite = { focus = V49_develop_religious_hiphop }
+		completion_reward = { 
+			add_timed_idea = { 
+				idea = V49_yes_greatest_album
+				days = 200
+			}
+			add_stability = -0.05
+			add_war_support = 0.10
+		}
+	}
+
+	focus = { 
+		id = V49_birth_of_the_music_industrial_complex
+		#icon = GFX_goal_generic_more_territorial_claims
+		x = -4
+		y = 1
+		cost = 10
+		relative_position_id = V49_release_first_album
+		prerequisite = { focus = V49_release_first_album }
+		completion_reward = {
+			add_ideas = V49_idea_industry_boom
+			if = {
+				limit = { has_idea = civilian_economy }
+				swap_ideas = {
+					remove_idea = civilian_economy
+					add_idea = low_economic_mobilisation
 				}
 			}
 		}
+	}
 
-		completion_reward = {
-			add_manpower = 10000
+	focus = { 
+		id = V49_delete_workers_rights
+		#icon = GFX_goal_generic_more_territorial_claims
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = V49_birth_of_the_music_industrial_complex
+		prerequisite = { focus = V49_birth_of_the_music_industrial_complex }
+		completion_reward = { 
+			swap_ideas = { 
+				remove_idea = V49_idea_industry_boom
+				add_idea = V49_idea_industry_boom2
+			}
+			add_stability = 0.05
+			add_manpower = -15000
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				date < 1938.8.1
+	}
+
+	focus = { 
+		id = V49_birth_of_curry_co
+		#icon = GFX_goal_generic_more_territorial_claims
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = V49_birth_of_the_music_industrial_complex
+		prerequisite = { focus = V49_birth_of_the_music_industrial_complex }
+		completion_reward = { 
+			add_ideas = V49_idea_new_worker_motivation
+			add_manpower = -5000
+		}
+	}
+
+	focus = { 
+		id = V49_ye_endorses_curry_co
+		#icon = GFX_goal_generic_more_territorial_claims
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = V49_birth_of_curry_co
+		prerequisite = { focus = V49_birth_of_curry_co }
+		prerequisite = { focus = V49_delete_workers_rights }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = V49_idea_industry_boom2
+				add_idea = V49_idea_music_industrial_complex_realized
 			}
-			modifier = {
-				factor = 0
-				threat > 0.25
-				date > 1938.8.1
+			add_stability = 0.08
+		}
+	}
+
+	focus = {
+		id = V49_spike_the_curry
+		#icon = 
+		cost = 10
+		x = -2
+		y = 1
+		relative_position_id = V49_ye_endorses_curry_co
+		prerequisite = { focus = V49_ye_endorses_curry_co }
+		completion_reward = { 
+			add_ideas = V49_methed_up_workers
+			add_stability = -0.05
+			add_manpower = -15000
+		}
+	}
+
+	focus = {
+		id = V49_construct_additional_sweatshops
+		#icon = 
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = V49_ye_endorses_curry_co
+		prerequisite = { focus = V49_ye_endorses_curry_co }
+		completion_reward = {
+			715 = { 
+				add_building_construction = { 
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
 			}
-			modifier = {
-				factor = 0
-				threat > 0.4
-				date > 1939.4.1
+			717 = { 
+				add_building_construction = { 
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = { 
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
 			}
-			modifier = {
-				factor = 0
-				threat > 0.5
-				date > 1939.8.1
+			add_manpower = -15000
+		}
+	}
+
+	focus = { 
+		id = V49_innovations_in_body_disposal
+		#icon = 
+		cost = 10
+		x = 2
+		y = 1
+		relative_position_id = V49_ye_endorses_curry_co
+		prerequisite = { focus = V49_ye_endorses_curry_co }
+		completion_reward = { 
+			add_stability = 0.05
+			add_ideas = V49_idea_body_disposal
+		}
+	}
+
+	focus = { 
+		id = V49_curry_co_meth_production
+		#icon = 
+		cost = 10
+		x = 0
+		y = 2
+		relative_position_id = V49_construct_additional_sweatshops
+		prerequisite = { focus = V49_spike_the_curry }
+		prerequisite = { focus = V49_innovations_in_body_disposal }
+		prerequisite = { focus = V49_construct_additional_sweatshops }
+		completion_reward = { 
+			army_experience = 20
+			add_stability = -0.05
+			add_popularity = { 
+				ideology = radical
+				popularity = -0.05
+			}
+		}
+	}
+
+	focus = { 
+		id = V49_speeches_to_plow
+		#icon = 
+		cost = 10
+		x = 4
+		y = 1
+		relative_position_id = V49_birth_of_the_music_industrial_complex
+		prerequisite = { focus = V49_birth_of_the_music_industrial_complex }
+		mutually_exclusive = { focus = V49_endorese_the_good_politicians }
+		completion_reward = { 
+			add_popularity = { 
+				ideology = radical
+				popularity = 0.10
+			}
+			add_stability = 0.10
+		}
+	}
+
+	focus = { 
+		id = V49_endorese_the_good_politicians
+		#icon = 
+		cost = 10
+		x = 6
+		y = 1
+		relative_position_id = V49_birth_of_the_music_industrial_complex
+		prerequisite = { focus = V49_birth_of_the_music_industrial_complex }
+		mutually_exclusive = { focus = V49_speeches_to_plow }
+		completion_reward = { 
+			add_popularity = { 
+				ideology = radical
+				popularity = 0.10
+			}
+			add_stability = 0.5
+			add_manpower = 5000
+			add_ideas = V49_idea_opposition_angry_that_they_have_to_work
+		}
+	}
+
+	focus = { 
+		id = V49_appoint_ceo_of_racism
+		#icon = 
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = V49_speeches_to_plow
+		prerequisite = { focus = V49_speeches_to_plow focus = V49_endorese_the_good_politicians }
+		completion_reward = { 
+			swap_ideas = {
+				remove_idea = V49_racial_divides
+				add_idea = V49_racial_divides2
+			}
+		}
+	}
+
+	focus = { 
+		id = V49_summit_on_racism
+		#icon = 
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = V49_appoint_ceo_of_racism
+		prerequisite = { focus = V49_appoint_ceo_of_racism }
+		completion_reward = { 
+			swap_ideas = {
+				remove_idea = V49_racial_divides2
+				add_idea = V49_racial_divides3
+			}
+			add_political_power = -200
+		}
+	}
+
+	focus = { 
+		id = V49_race_card_buyback
+		#icon = 
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = V49_summit_on_racism
+		prerequisite = { focus = V49_summit_on_racism }
+		completion_reward = { 
+			swap_ideas = {
+				remove_idea = V49_racial_divides3
+				add_idea = V49_racial_divides4
+			}
+			add_stability = 0.07
+		}
+	}
+
+	focus = { 
+		id = V49_demand_madhrai
+		#icon = 
+		cost = 10
+		x = -2
+		y = 1
+		relative_position_id = V49_race_card_buyback
+		prerequisite = { focus = V49_race_card_buyback }
+		completion_reward = { 
+			449 = { 
+				add_core_of = V49
+			}
+			W20 = { 
+				country_event = { 
+					id = NFEvents.50
+					hours = 2
+				}
+			}
+		}
+	}
+
+	focus = { 
+		id = V49_delete_scientific_racism
+		#icon = 
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = V49_race_card_buyback
+		prerequisite = { focus = V49_race_card_buyback }
+		completion_reward = { 
+			add_research_slot = 1
+			add_stability = -0.05
+		}
+	}
+
+	focus = { 
+		id = V49_minority_scholarships
+		#icon = 
+		cost = 10
+		x = 2
+		y = 1
+		relative_position_id = V49_race_card_buyback
+		prerequisite = { focus = V49_race_card_buyback }
+		completion_reward = { 
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 0.50
+				uses = 2
+				category = infantry_weapons
+				category = artillery
+			}
+			add_ideas = V49_idea_minority_scholarships
+			add_manpower = -10000
+			add_stability = -0.05
+		}
+	}
+
+	focus = { 
+		id = V49_declare_india_superpower
+		#icon = 
+		cost = 20
+		x = -2
+		y = 2
+		relative_position_id = V49_delete_scientific_racism
+		prerequisite = { focus = V49_delete_scientific_racism }
+		prerequisite = { focus = V49_curry_co_meth_production }
+		completion_reward = {
+			add_stability = 0.10
+			add_war_support = 0.10
+			add_popularity = {
+				ideology = radical
+				popularity = 0.15
+			}
+			add_political_power = 100 
+		}
+	}
+
+	focus = {
+		id = V49_spread_violence_through_music
+		#icon = 
+		cost = 10
+		x = 6
+		y = 1
+		relative_position_id = V49_release_first_album
+		prerequisite = { focus = V49_release_first_album }
+		completion_reward = { 
+			add_war_support = 0.10
+			add_ideas = V49_idea_violent_music
+		}
+	}
+
+	focus = {
+		id = V49_war_plan_vengi
+		#icon = 
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = V49_spread_violence_through_music
+		prerequisite = { focus = V49_spread_violence_through_music }
+		completion_reward = { 
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
+			}
+			army_experience = 20
+			add_timed_idea = { 
+				idea = V49_idea_war_plan_vengi
+				days = 180
 			}
 		}
 	}
 
 	focus = {
-		id = prepare_for_warV49SIA
-		icon = GFX_goal_generic_position_armies
-		text = prepare_for_warSIA
-		prerequisite = { focus = border_disputesV49SIA }
-		bypass = {
-			has_war_with = SIA
-		}
+		id = V49_demand_chalukyas
+		#icon = 
+		cost = 10
 		x = 0
 		y = 1
-		relative_position_id = border_disputesV49SIA
-		cost = 4
-		available = {
-			has_war = no
-			not_in_border_conflict = yes
-			has_opinion = { target = SIA value < 0 }
-			SIA = {
-				exists = yes
-				not_in_border_conflict = yes
-			}
-		}
-		continue_if_invalid = yes
-		select_effect = {
-			random_owned_controlled_state = {
-				limit = { any_neighbor_state = { is_fully_controlled_by = SIA } }
-				set_variable = { ROOT.attacker_state = THIS.id }
-				set_state_flag = border_incident_active
-			}
-			var:attacker_state = {
-				random_neighbor_state = {
-					limit = { is_fully_controlled_by = SIA }
-					set_variable = { ROOT.defender_state = THIS.id }
-					set_state_flag = border_incident_active
+		relative_position_id = V49_war_plan_vengi
+		prerequisite = { focus = V49_war_plan_vengi }
+		completion_reward = { 
+			V48 = { 
+				country_event = { 
+					id = NFEvents.53
+					hours = 2
 				}
-				if = {
-					limit = { var:ROOT.defender_state = { NOT = { is_fully_controlled_by = SIA } } }
-					random_state = {
-						limit = {
-							is_fully_controlled_by = SIA
-							is_coastal = yes
-						}
-						set_variable = { ROOT.defender_state = THIS.id }
-						set_state_flag = border_incident_active
-					}
-				}
-				if = {
-					limit = { var:ROOT.defender_state = { NOT = { is_fully_controlled_by = SIA } } }
-					random_state = {
-						limit = { is_fully_controlled_by = SIA }
-						set_variable = { ROOT.defender_state = THIS.id }
-						set_state_flag = border_incident_active
-					}
-				}
-			}
-		}
-		completion_reward = {
-			SIA = {
-				add_ai_strategy = { type = prepare_for_war id = ROOT value = 1000 }
-				ROOT = { add_ai_strategy = { type = prepare_for_war id = PREV value = 1000 } }
-			}
-			add_manpower = 10000
-		}
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				date < 1938.8.1
-			}
-			modifier = {
-				factor = 0
-				threat > 0.25
-				date > 1938.8.1
-			}
-			modifier = {
-				factor = 0
-				threat > 0.4
-				date > 1939.4.1
-			}
-			modifier = {
-				factor = 0
-				threat > 0.5
-				date > 1939.8.1
 			}
 		}
 	}
 
 	focus = {
-		id = neighbor_warV49SIA
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-		text = neighbor_warSIA
-		prerequisite = { focus = prepare_for_warV49SIA }
-		bypass = {
-			has_war_with = SIA
-		}
+		id = V49_integrate_vengi_colonies
+		#icon = 
+		cost = 20
 		x = 0
 		y = 1
-		relative_position_id = prepare_for_warV49SIA
-		cost = 3
-		available = {
-			has_war = no
-			hidden_trigger = {
-				NOT = { any_owned_state = { has_border_war = yes } }
-				SIA = { NOT = { any_owned_state = { has_border_war = yes } } }
+		relative_position_id = V49_demand_chalukyas
+		prerequisite = { focus = V49_demand_chalukyas }
+		completion_reward = { 
+			704 = { add_core_of = V49 }
+			703 = { add_core_of = V49 }
+		}
+	}
+
+	focus = {
+		id = V49_move_into_china
+		#icon = 
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = V49_spread_violence_through_music
+		prerequisite = { focus = V49_spread_violence_through_music }
+		completion_reward = { 
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
 			}
-			if = {
-				limit = { SIA = { potential_border_war_target = yes } }
-				var:attacker_state = { is_fully_controlled_by = ROOT }
-				var:defender_state = { is_fully_controlled_by = SIA }
-				divisions_in_border_state = { state = var:attacker_state border_state = var:defender_state size > 0 }
+			army_experience = 20
+			add_timed_idea = { 
+				idea = V49_idea_war_plan_vengi
+				days = 180
 			}
 		}
-		completion_reward = {
-			if = {
-				limit = { SIA = { potential_take_core_target = yes } }
-				declare_war_on = {
-					target = SIA
-					type = take_core_state
-					generator = core_states
-				}
-				add_named_threat = { threat = 3 name = neighbor_war_NF_threat }
+	}
+
+	focus = { 
+		id = V49_open_gateway_to_china
+		#icon = 
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = V49_move_into_china
+		prerequisite = { focus = V49_move_into_china }
+		completion_reward = { 
+			create_wargoal = { 
+				type = annex_everything
+				target = RAJ
 			}
-			else_if = {
-				limit = { SIA = { potential_communist_puppet_target = yes } }
-				declare_war_on = {
-					target = SIA
-					type = puppet_wargoal_focus
-				}
-				add_named_threat = { threat = 3 name = neighbor_war_NF_threat }
+			create_wargoal = { 
+				type = annex_everything
+				target = W70
 			}
-			else_if = {
-				limit = { SIA = { potential_fascist_annex_target = yes } }
-				declare_war_on = {
-					target = SIA
-					type = annex_everything
-				}
-				add_named_threat = { threat = 3 name = neighbor_war_NF_threat }
+			create_wargoal = { 
+				type = annex_everything
+				target = W79
 			}
-			else_if = {
-				limit = { SIA = { potential_take_state_target = yes } }
-				add_state_claim = var:defender_state
-				declare_war_on = {
-					target = SIA
-					type = take_state_focus
-					generator = claimed_states
-				}
-				add_named_threat = { threat = 3 name = neighbor_war_NF_threat }
-			}
-			else_if = {
-				limit = { SIA = { potential_border_war_target = yes } }
-				start_border_war = {
-					change_state_after_war = no
-					attacker = {
-						state = var:attacker_state
-						num_provinces = 6
-						on_win = neighbor_war.1
-						on_lose = neighbor_war.2
-						on_cancel = neighbor_war.3
-					}
-					defender = {
-						state = var:defender_state
-						num_provinces = 6
-						on_win = neighbor_war.2
-						on_lose = neighbor_war.1
-						on_cancel = neighbor_war.3
-					}
-					minimum_duration_in_days = 14
-				}
-				add_named_threat = { threat = 1 name = neighbor_war_NF_threat }
-			}
-			SIA = {
-				add_ai_strategy = { type = prepare_for_war id = ROOT value = -1000 }
-				ROOT = { add_ai_strategy = { type = prepare_for_war id = PREV value = -1000 } }
-			}
-			var:attacker_state = { clr_state_flag = border_incident_active }
-			var:defender_state = { clr_state_flag = border_incident_active }
 		}
-		ai_will_do = {
-			factor = 10
+	}
+
+	focus = {
+		id = V49_integrate_free_india
+		#icon = 
+		cost = 20
+		x = 0
+		y = 1
+		relative_position_id = V49_open_gateway_to_china
+		prerequisite = { focus = V49_open_gateway_to_china }
+		completion_reward = { 
+			260 = { add_core_of = V49 }
+			259 = { add_core_of = V49 }
 		}
 	}
 

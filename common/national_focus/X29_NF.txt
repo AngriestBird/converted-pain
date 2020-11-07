@@ -506,6 +506,20 @@ focus_tree = {
 	}
 
 	focus = {
+		id = V66_military_reorganization
+		icon = GFX_goal_generic_position_armies
+		x = 0
+		y = 1
+		relative_position_id = X29_the_internal
+		prerequisite = { focus = X29_the_internal }
+		cost = 10 
+		completion_reward = {
+			add_ideas = V66_military_reorganization_idea
+		}
+
+	}
+
+	focus = {
 		id = X29_nationalism
 		icon = GFX_goal_support_fascism
 		prerequisite = { focus = expand_the_reichX29 }

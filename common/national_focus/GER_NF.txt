@@ -29,6 +29,9 @@ focus_tree = {
 			add_war_support = 0.10
 			add_stability = 0.05
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -46,6 +49,9 @@ focus_tree = {
 				modifier = negative_25
 			}
 			add_ideas = GER_idea_the_homies_hate_britanny
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -88,6 +94,9 @@ focus_tree = {
 			}
 			add_ideas = GER_idea_zandarian_tactics
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -126,6 +135,9 @@ focus_tree = {
 				producer = GER
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -141,6 +153,9 @@ focus_tree = {
 				idea = GER_idea_all_my_homies_hate_england
 				days = 120
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -204,6 +219,9 @@ focus_tree = {
 			}
 			add_ideas = GER_idea_five_second_planning
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -221,6 +239,9 @@ focus_tree = {
 					hours = 2
 				}
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -256,6 +277,9 @@ focus_tree = {
 			}
 			add_ideas = GER_idea_lessons_from_aoe
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -274,6 +298,9 @@ focus_tree = {
 					hours = 2
 				}
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -302,6 +329,9 @@ focus_tree = {
 			}
 			add_ideas = GER_idea_get_to_know_the_boys
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -319,6 +349,9 @@ focus_tree = {
 					hours = 2
 				}
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -338,6 +371,9 @@ focus_tree = {
 			}
 			add_ideas = GER_idea_the_homies_hate_lithuania
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -355,6 +391,9 @@ focus_tree = {
 					hours = 2
 				}
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -374,6 +413,9 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -391,6 +433,9 @@ focus_tree = {
 					hours = 2
 				}
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -410,6 +455,9 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -428,6 +476,9 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -443,6 +494,9 @@ focus_tree = {
 				type = annex_everything
 				target = SAX
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -460,6 +514,9 @@ focus_tree = {
 				target = W45
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -476,6 +533,9 @@ focus_tree = {
 				target = V51
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -491,6 +551,9 @@ focus_tree = {
 				type = annex_everything
 				target = HRE
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -509,6 +572,9 @@ focus_tree = {
 		completion_reward = { 
 			add_stability = 0.10
 			add_ideas = GER_idea_big_boy_germany
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 

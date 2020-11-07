@@ -27,6 +27,9 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = V66_bastion_of_western_democracy
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -48,7 +51,9 @@ focus_tree = {
 				}
 			}
 		}
-
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -64,6 +69,9 @@ focus_tree = {
 			add_war_support = 0.05
 			remove_country_leader_trait = the_don
 			add_country_leader_trait = the_don_2
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -93,7 +101,9 @@ focus_tree = {
 				}
 			}
 		}
-
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -110,7 +120,9 @@ focus_tree = {
 				days = 400
 			}
 		}
-
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -127,7 +139,9 @@ focus_tree = {
 				days = 400
 			}
 		}
-
+		ai_will_do = {
+			factor = 10
+		}
 	}
 	
 	focus = {
@@ -153,7 +167,9 @@ focus_tree = {
 				}
 			}
 		}
-
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -173,6 +189,10 @@ focus_tree = {
 				type = annex_everything
 				target = MEX
 			}
+		
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -194,7 +214,9 @@ focus_tree = {
 			}
 			add_ideas = V66_the_illinois_far_right
 		}
-
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -215,7 +237,9 @@ focus_tree = {
 			}
 			add_ideas = V66_the_colonies_radicals
 		}
-
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -233,7 +257,9 @@ focus_tree = {
 				type = annex_everything
 			}
 		}
-
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -251,7 +277,9 @@ focus_tree = {
 				type = annex_everything
 			}
 		}	
-
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -269,7 +297,9 @@ focus_tree = {
 				type = annex_everything
 			}
 		}
-
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -296,7 +326,9 @@ focus_tree = {
 				type = annex_everything
 			}
 		}
-
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -331,7 +363,9 @@ focus_tree = {
 			add_ideas = V66_the_oil_barons
 			set_cosmetic_tag = V66_usos
 		}
-
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 
@@ -346,7 +380,9 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = V66_day_of_my_daughters_wedding_idea
 		} 
-
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -361,7 +397,9 @@ focus_tree = {
 			add_stability = 0.05
 			add_political_power = 150
 		}
-
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -375,7 +413,9 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = V66_the_bulls_of_new_york
 		}
-
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -412,7 +452,9 @@ focus_tree = {
 				}
 			}
 		}
-
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -426,7 +468,9 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = V66_efficient_taxation
 		}
-
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -440,7 +484,9 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = scientific_advances2
 		}
-
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -454,7 +500,9 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = V66_military_reorganization_idea
 		}
-
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	#War Propganda

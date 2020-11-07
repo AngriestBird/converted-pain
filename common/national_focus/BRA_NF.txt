@@ -447,6 +447,17 @@ focus_tree = {
 				popularity = 0.50
 			}
 			set_politics = { ruling_party = radical }
+			create_country_leader = {
+				name = "Sir Bird the Anarchist"
+				desc = "POLITICS_NOMEN_NESCIO_DESC"
+				picture = "birdwithtea.dds"
+				expire = "1965.1.1"
+				ideology = anarchist_communism
+				traits = {
+					god_of_birds
+					many_avians
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 10
@@ -467,6 +478,9 @@ focus_tree = {
     			add_idea = BRA_idea_birdynomics
 			}
 			add_stability = -0.30
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -501,6 +515,9 @@ focus_tree = {
     			add_idea = BRA_idea_pure_birdynomcis
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -513,6 +530,9 @@ focus_tree = {
 		relative_position_id = BRA_embrace_the_revolution
 		completion_reward = {
 			add_ideas = BRA_idea_little_birdies
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -531,6 +551,9 @@ focus_tree = {
 			PRU = { add_ideas = radicalism }
 			ARG = { add_ideas = radicalism }
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -543,6 +566,9 @@ focus_tree = {
 		relative_position_id = BRA_pure_birdynomcis
 		completion_reward = {
 			add_ideas = BRA_idea_birdrecovery
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -560,6 +586,9 @@ focus_tree = {
 			PRU = { add_ideas = V66_new_sicilian_economic_depression }
 			W58 = { add_ideas = V66_new_sicilian_economic_depression }
 			ARG = { add_ideas = V66_new_sicilian_economic_depression }
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -580,6 +609,9 @@ focus_tree = {
 			W58 = { add_ideas = BRA_idea_maximum_birdynomcis }
 			ARG = { add_ideas = BRA_idea_maximum_birdynomcis }
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -594,6 +626,9 @@ focus_tree = {
 		completion_reward = {
 			W58 = { remove_ideas = V66_new_sicilian_economic_depression remove_ideas = BRA_idea_maximum_birdynomcis }
 			BOL = { transfer_state = 502 }
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -621,6 +656,9 @@ focus_tree = {
 			}
 			annex_country = { target = VEN transfer_troops = yes }
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -634,6 +672,9 @@ focus_tree = {
 		completion_reward = {
 			PRU = { remove_ideas = V66_new_sicilian_economic_depression remove_ideas = BRA_idea_maximum_birdynomcis }
 			add_to_faction = PRU
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -655,6 +696,9 @@ focus_tree = {
 			}
 			transfer_state = 51
 			transfer_state = 52
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -680,6 +724,9 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -692,6 +739,9 @@ focus_tree = {
 		relative_position_id = BRA_recover_from_the_depression
 		completion_reward = {
 			add_ideas = BRA_idea_birdynomics_rabbi
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -706,6 +756,9 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = BRA_idea_brazilian_spynetwork
 		}
+	}
+	ai_will_do = {
+		factor = 10
 	}
 
 }

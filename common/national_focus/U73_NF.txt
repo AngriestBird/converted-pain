@@ -29,6 +29,9 @@ focus_tree = {
 			add_stability = 0.05
 			add_political_power = 100
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -52,6 +55,9 @@ focus_tree = {
 					localization = U73_our_dominions
 				}
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -77,6 +83,9 @@ focus_tree = {
 					localization = U73_our_dominions
 				}
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -133,6 +142,9 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -176,6 +188,9 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -229,6 +244,9 @@ focus_tree = {
 				target = CMR
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -248,6 +266,9 @@ focus_tree = {
 				type = annex_everything
 				target = ZIM
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -275,6 +296,9 @@ focus_tree = {
 				target = ITA
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -293,6 +317,9 @@ focus_tree = {
 				type = puppet_wargoal_focus
 				target = MOR
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -314,6 +341,9 @@ focus_tree = {
 				target = YEM
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -332,6 +362,9 @@ focus_tree = {
 				type = puppet_wargoal_focus
 				target = V30
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -362,6 +395,9 @@ focus_tree = {
 					}
 				}
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -415,6 +451,9 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -430,6 +469,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = U73_metallic_ship_wall
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -475,6 +517,9 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -495,6 +540,9 @@ focus_tree = {
 				target = GER
 				type = annex_everything
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -520,6 +568,9 @@ focus_tree = {
 				add_core_of = ENG
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -541,6 +592,9 @@ focus_tree = {
 				}
 				add_ideas = U73_english_pressure
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -565,6 +619,9 @@ focus_tree = {
 					add_idea = U73_english_pressure_2
 				}
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 

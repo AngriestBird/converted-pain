@@ -1,4 +1,126 @@
 ideas = {
+	country = {
+		U73_english_pressure = {
+			removal_cost = -1
+			allowed = { always = no }
+			modifier = {
+				autonomy_gain = -0.5
+				political_power_factor = -0.25
+				absolutist_drift = 0.05
+			}
+		}
+		U73_english_pressure_2 = {
+			removal_cost = -1
+			allowed = { always = no }
+			modifier = {
+				autonomy_gain = -1
+				political_power_factor = -0.25
+				absolutist_drift = 0.10
+			}
+		}
+		U73_metallic_ship_wall = {
+			removal_cost = -1
+			allowed = { always = no }
+			picture = eng_the_sun_never_sets
+			modifier = {
+				industrial_capacity_dockyard = 0.25
+			}
+			equipment_bonus = {
+				screen_ship = {
+					naval_speed = 0.1 armor_value = 0.1 build_cost_ic = -0.1 instant = yes
+				}
+				carrier = {
+					naval_speed = 0.1 armor_value = 0.1 build_cost_ic = -0.1 instant = yes
+				}
+				capital_ship = {
+					naval_speed = 0.1 armor_value = 0.1 build_cost_ic = -0.1 instant = yes
+				}
+				submarine = {
+					naval_speed = 0.1 armor_value = 0.1 build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		U73_iam_the_senate = {
+			removal_cost = -1
+			allowed = { always = no }
+			picture = eng_imperial_conscription
+			modifier = {
+				non_core_manpower = 0.1
+				political_power_factor = 0.25
+				stability_factor = -0.20
+			}
+		}
+		U73_sun_never_sets_on_albion = {
+			removal_cost = -1
+			allowed = { always = no }
+			picture = eng_imperial_conscription
+			modifier = {
+				non_core_manpower = 0.15
+				political_power_factor = 0.25
+				stability_factor = -0.10
+			}
+		}
+		U73_victorian_capitalism = {
+			removal_cost = -1
+			allowed = { always = no }
+			picture = generic_goods_red_bonus
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.10
+				absolutist_drift = -0.02
+			}	
+		}
+		U73_her_majesties_military = {
+			removal_cost = -1
+			allowed = { always = no }
+			picture = generic_infantry_bonus
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				experience_gain_army = 0.10
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = -0.1
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		U73_redcoat_1 = {
+			removal_cost = -1
+			allowed = { always = no }
+			picture = generic_infantry_bonus
+			modifier = {
+				conscription = 0.01
+				supply_consumption_factor = -0.10
+				training_time_factor = 0.25
+				army_attack_factor = 0.10
+			}
+		}
+		U73_redcoat_2 = {
+			removal_cost = -1
+			allowed = { always = no }
+			picture = generic_infantry_bonus
+			modifier = {
+				conscription = 0.01
+				resistance_damage_to_garrison = -0.10
+				foreign_subversive_activites = -0.15
+				supply_consumption_factor = -0.10
+				training_time_factor = 0.50
+				army_attack_factor = 0.15
+			}
+		}
+		U73_targeted_modifier_attack_lit = {
+			removal_cost = -1
+			allowed = { always = no }
+			picture = generic_infantry_bonus
+			targeted_modifier = {
+				tag = LIT
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.05
+			}
+		}
+	}
 	political_advisor = {
 		U73_absolutist_advisor = {
 			allowed = {

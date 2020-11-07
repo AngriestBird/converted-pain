@@ -16,245 +16,1031 @@ focus_tree = {
 	shared_focus = aviation_effort
 	shared_focus = naval_effort
 	shared_focus = industrial_effort
-	shared_focus = political_effort
+	#shared_focus = political_effort
 
 	focus = {
-		id = border_disputesU73ITA
-		icon = GFX_goal_generic_more_territorial_claims
-		text = border_disputesITA
-		x = 28
+		id = U73_the_based_monarchy
+		icon = GFX_goal_generic_propaganda
+		x = 25
 		y = 0
+		cost = 5
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = U73_our_dominions
+		icon = GFX_goal_generic_propaganda
+		x = -5
+		y = 1
 		cost = 10
-		available = {
-			has_war = no
-			not_in_border_conflict = yes
-			has_opinion = { target = ITA value < 0 }
-			ITA = {
-				exists = yes
-				not_allies_or_subjects = yes
-				in_weak_faction = yes
-				OR = {
-					potential_take_core_target = yes
-					if = {
-						limit = { ROOT = { has_government = communism } }
-						potential_communist_puppet_target = yes
-					}
-					if = {
-						limit = { ROOT = { has_government = fascism } }
-						potential_fascist_annex_target = yes
-					}
-					potential_take_state_target = yes
-					potential_border_war_target = yes
-				}
-			}
+		relative_position_id = U73_the_based_monarchy
+		prerequisite = {
+			focus = U73_the_based_monarchy
 		}
 
 		completion_reward = {
-			add_manpower = 10000
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				date < 1938.8.1
-			}
-			modifier = {
-				factor = 0
-				threat > 0.25
-				date > 1938.8.1
-			}
-			modifier = {
-				factor = 0
-				threat > 0.4
-				date > 1939.4.1
-			}
-			modifier = {
-				factor = 0
-				threat > 0.5
-				date > 1939.8.1
+			every_country = {
+				limit = {
+					is_subject_of = U73
+				}
+				add_autonomy_ratio = {
+					value = -1
+					localization = U73_our_dominions
+				}
 			}
 		}
 	}
 
 	focus = {
-		id = prepare_for_warU73ITA
-		icon = GFX_goal_generic_position_armies
-		text = prepare_for_warITA
-		prerequisite = { focus = border_disputesU73ITA }
-		bypass = {
-			has_war_with = ITA
+		id = U73_a_new_world_order
+		icon = GFX_goal_generic_propaganda
+		x = -6
+		y = 2
+		cost = 10
+		relative_position_id = U73_the_based_monarchy
+		prerequisite = {
+			focus = U73_our_dominions
 		}
+
+		completion_reward = {
+			add_war_support = 0.05
+			every_country = {
+				limit = {
+					is_subject_of = U73
+				}
+				add_autonomy_ratio = {
+					value = -1
+					localization = U73_our_dominions
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = U73_ambitions_in_africa
+		icon = GFX_goal_generic_propaganda
+		x = -2
+		y = 2
+		cost = 10
+		relative_position_id = U73_the_based_monarchy
+		prerequisite = {
+			focus = U73_our_dominions
+		}
+
+		completion_reward = {
+			180 = {
+				add_building_construction = {
+					type = bunker
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+					}
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+					}
+					level = 2
+					instant_build = yes
+				}
+			}
+			181 = {
+				add_building_construction = {
+					type = bunker
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+					}
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+					}
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = U73_reinforce_cape_verde
+		icon = GFX_goal_generic_propaganda
+		x = -2
+		y = 3
+		cost = 10
+		relative_position_id = U73_the_based_monarchy
+		prerequisite = {
+			focus = U73_ambitions_in_africa
+		}
+
+		completion_reward = {
+			179 = {
+				add_building_construction = {
+					type = bunker
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+					}
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+					}
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+					}
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = U73_annihilate_the_free_congo_states
+		icon = GFX_goal_generic_propaganda
+		x = -2
+		y = 4
+		cost = 10
+		relative_position_id = U73_the_based_monarchy
+		prerequisite = {
+			focus = U73_reinforce_cape_verde
+		}
+
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						is_owned_by = COG
+						is_owned_by = MLW
+						is_owned_by = X52
+						is_owned_by = RCG
+						is_owned_by = CAR
+						is_owned_by = CMR
+					}
+				}
+				add_claim_by = U73
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = COG
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = MLW
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = X52
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = RCG
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = CAR
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = CMR
+			}
+		}
+	}
+
+	focus = {
+		id = U73_reclaim_rhodesia
+		icon = GFX_goal_generic_propaganda
 		x = 0
-		y = 1
-		relative_position_id = border_disputesU73ITA
-		cost = 4
-		available = {
-			has_war = no
-			not_in_border_conflict = yes
-			has_opinion = { target = ITA value < 0 }
-			ITA = {
-				exists = yes
-				not_in_border_conflict = yes
+		y = 4
+		cost = 10
+		relative_position_id = U73_the_based_monarchy
+		prerequisite = {
+			focus = U73_reinforce_cape_verde
+		}
+
+		completion_reward = {
+			521 = { add_claim_by = U73 }
+			create_wargoal = {
+				type = annex_everything
+				target = ZIM
 			}
 		}
-		continue_if_invalid = yes
-		select_effect = {
-			random_owned_controlled_state = {
-				limit = { any_neighbor_state = { is_fully_controlled_by = ITA } }
-				set_variable = { ROOT.attacker_state = THIS.id }
-				set_state_flag = border_incident_active
+	}
+
+	focus = {
+		id = U73_seize_the_italian_colonies
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 5
+		cost = 10
+		relative_position_id = U73_the_based_monarchy
+		prerequisite = {
+			focus = U73_reclaim_rhodesia
+		}
+
+		completion_reward = {
+			288 = { add_claim_by = U73 }
+			290 = { add_claim_by = U73 }
+			128 = { add_claim_by = U73 }
+			297 = { add_claim_by = U73 }
+			296 = { add_claim_by = U73 }
+			295 = { add_claim_by = U73 }
+			298 = { add_claim_by = U73 }
+			create_wargoal = {
+				type = annex_everything
+				target = ITA
 			}
-			var:attacker_state = {
-				random_neighbor_state = {
-					limit = { is_fully_controlled_by = ITA }
-					set_variable = { ROOT.defender_state = THIS.id }
-					set_state_flag = border_incident_active
+		}
+	}
+
+	focus = {
+		id = U73_dominate_morocco
+		icon = GFX_goal_generic_propaganda
+		x = -2
+		y = 5
+		cost = 10
+		relative_position_id = U73_the_based_monarchy
+		prerequisite = {
+			focus = U73_annihilate_the_free_congo_states
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = MOR
+			}
+		}
+	}
+
+	focus = {
+		id = U73_bring_yemen_to_heel
+		icon = GFX_goal_generic_propaganda
+		x = -1
+		y = 6
+		cost = 10
+		relative_position_id = U73_the_based_monarchy
+		prerequisite = {
+			focus = U73_dominate_morocco
+			focus = U73_seize_the_italian_colonies
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = YEM
+			}
+		}
+	}
+
+	focus = {
+		id = U73_defeat_the_leonese
+		icon = GFX_goal_generic_propaganda
+		x = -1
+		y = 7
+		cost = 10
+		relative_position_id = U73_the_based_monarchy
+		prerequisite = {
+			focus = U73_bring_yemen_to_heel
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = V30
+			}
+		}
+	}
+
+	focus = {
+		id = U73_abandon_the_western_colonies
+		icon = GFX_goal_generic_propaganda
+		x = -7
+		y = 3
+		cost = 10
+		relative_position_id = U73_the_based_monarchy
+		prerequisite = {
+			focus = U73_a_new_world_order
+		}
+		mutually_exclusive = { focus = U73_crush_independence }
+
+		completion_reward = {
+			every_country = { 
+				limit = {
+					is_subject_of = U73
 				}
 				if = {
-					limit = { var:ROOT.defender_state = { NOT = { is_fully_controlled_by = ITA } } }
-					random_state = {
-						limit = {
-							is_fully_controlled_by = ITA
-							is_coastal = yes
+					limit = { has_dlc = "Together for Victory" }
+					ROOT = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_free
 						}
-						set_variable = { ROOT.defender_state = THIS.id }
-						set_state_flag = border_incident_active
 					}
 				}
-				if = {
-					limit = { var:ROOT.defender_state = { NOT = { is_fully_controlled_by = ITA } } }
-					random_state = {
-						limit = { is_fully_controlled_by = ITA }
-						set_variable = { ROOT.defender_state = THIS.id }
-						set_state_flag = border_incident_active
-					}
-				}
-			}
-		}
-		completion_reward = {
-			ITA = {
-				add_ai_strategy = { type = prepare_for_war id = ROOT value = 1000 }
-				ROOT = { add_ai_strategy = { type = prepare_for_war id = PREV value = 1000 } }
-			}
-			add_manpower = 10000
-		}
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				date < 1938.8.1
-			}
-			modifier = {
-				factor = 0
-				threat > 0.25
-				date > 1938.8.1
-			}
-			modifier = {
-				factor = 0
-				threat > 0.4
-				date > 1939.4.1
-			}
-			modifier = {
-				factor = 0
-				threat > 0.5
-				date > 1939.8.1
 			}
 		}
 	}
 
 	focus = {
-		id = neighbor_warU73ITA
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-		text = neighbor_warITA
-		prerequisite = { focus = prepare_for_warU73ITA }
-		bypass = {
-			has_war_with = ITA
-		}
-		x = 0
-		y = 1
-		relative_position_id = prepare_for_warU73ITA
-		cost = 3
-		available = {
-			has_war = no
-			hidden_trigger = {
-				NOT = { any_owned_state = { has_border_war = yes } }
-				ITA = { NOT = { any_owned_state = { has_border_war = yes } } }
-			}
-			if = {
-				limit = { ITA = { potential_border_war_target = yes } }
-				var:attacker_state = { is_fully_controlled_by = ROOT }
-				var:defender_state = { is_fully_controlled_by = ITA }
-				divisions_in_border_state = { state = var:attacker_state border_state = var:defender_state size > 0 }
-			}
+		id = U73_a_new_alignment_in_europe
+		icon = GFX_goal_generic_propaganda
+		x = -7
+		y = 4
+		cost = 10
+		relative_position_id = U73_the_based_monarchy
+		prerequisite = {
+			focus = U73_abandon_the_western_colonies
 		}
 		completion_reward = {
-			if = {
-				limit = { ITA = { potential_take_core_target = yes } }
-				declare_war_on = {
-					target = ITA
-					type = take_core_state
-					generator = core_states
-				}
-				add_named_threat = { threat = 3 name = neighbor_war_NF_threat }
-			}
-			else_if = {
-				limit = { ITA = { potential_communist_puppet_target = yes } }
-				declare_war_on = {
-					target = ITA
-					type = puppet_wargoal_focus
-				}
-				add_named_threat = { threat = 3 name = neighbor_war_NF_threat }
-			}
-			else_if = {
-				limit = { ITA = { potential_fascist_annex_target = yes } }
-				declare_war_on = {
-					target = ITA
-					type = annex_everything
-				}
-				add_named_threat = { threat = 3 name = neighbor_war_NF_threat }
-			}
-			else_if = {
-				limit = { ITA = { potential_take_state_target = yes } }
-				add_state_claim = var:defender_state
-				declare_war_on = {
-					target = ITA
-					type = take_state_focus
-					generator = claimed_states
-				}
-				add_named_threat = { threat = 3 name = neighbor_war_NF_threat }
-			}
-			else_if = {
-				limit = { ITA = { potential_border_war_target = yes } }
-				start_border_war = {
-					change_state_after_war = no
-					attacker = {
-						state = var:attacker_state
-						num_provinces = 6
-						on_win = neighbor_war.1
-						on_lose = neighbor_war.2
-						on_cancel = neighbor_war.3
+			random_owned_state = {
+				limit = {
+					OR = {	
+						state = 175
+						state = 176
+						state = 174
+						state = 170
+						state = 171
+						state = 172
+						state = 173
 					}
-					defender = {
-						state = var:defender_state
-						num_provinces = 6
-						on_win = neighbor_war.2
-						on_lose = neighbor_war.1
-						on_cancel = neighbor_war.3
-					}
-					minimum_duration_in_days = 14
 				}
-				add_named_threat = { threat = 1 name = neighbor_war_NF_threat }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
 			}
-			ITA = {
-				add_ai_strategy = { type = prepare_for_war id = ROOT value = -1000 }
-				ROOT = { add_ai_strategy = { type = prepare_for_war id = PREV value = -1000 } }
+			random_owned_state = {
+				limit = {
+					OR = {	
+						state = 175
+						state = 176
+						state = 174
+						state = 170
+						state = 171
+						state = 172
+						state = 173
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
 			}
-			var:attacker_state = { clr_state_flag = border_incident_active }
-			var:defender_state = { clr_state_flag = border_incident_active }
-		}
-		ai_will_do = {
-			factor = 10
 		}
 	}
 
+	focus = {
+		id = U73_metallic_wall
+		icon = GFX_goal_generic_propaganda
+		x = -6
+		y = 5
+		cost = 10
+		relative_position_id = U73_the_based_monarchy
+		prerequisite = {
+			focus = U73_begin_the_federation_of_anglo_saxons
+			focus = U73_a_new_alignment_in_europe
+		}
+		completion_reward = {
+			add_ideas = U73_metallic_ship_wall
+		}
+	}
+
+
+	focus = {
+		id = U73_reinforce_gibraltar
+		icon = GFX_goal_generic_propaganda
+		x = -8
+		y = 5
+		cost = 10
+		relative_position_id = U73_the_based_monarchy
+		prerequisite = {
+			focus = U73_a_new_alignment_in_europe
+		}
+		completion_reward = {
+			187 = {
+				add_building_construction = {
+					type = bunker
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+					}
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+					}
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+					}
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = U73_undermine_the_germans
+		icon = GFX_goal_generic_propaganda
+		x = -7
+		y = 6
+		cost = 10
+		relative_position_id = U73_the_based_monarchy
+		prerequisite = {
+			focus = U73_reinforce_gibraltar
+		}
+		completion_reward = {
+			every_neighbor_country = {
+				add_popularity = { ideology = communism  popularity = -0.05 }
+			}
+			create_wargoal = {
+				target = GER
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = U73_topple_the_eiffel_tower
+		icon = GFX_goal_generic_propaganda
+		x = -7
+		y = 7
+		cost = 10
+		relative_position_id = U73_the_based_monarchy
+		prerequisite = {
+			focus = U73_reinforce_gibraltar
+		}
+		available = {
+			210 = { is_controlled_by = ENG }
+		}
+		completion_reward = {
+			210 = {
+				add_resource = {
+					type = steel
+					amount = 50
+				}
+				add_core_of = ENG
+			}
+		}
+	}
+
+	focus = {
+		id = U73_crush_independence
+		icon = GFX_goal_generic_propaganda
+		x = -5
+		y = 3
+		cost = 10
+		relative_position_id = U73_the_based_monarchy
+		prerequisite = {
+			focus = U73_a_new_world_order
+		}
+		mutually_exclusive = { focus = U73_abandon_the_western_colonies }
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_subject_of = U73
+				}
+				add_ideas = U73_english_pressure
+			}
+		}
+	}
+
+	focus = {
+		id = U73_begin_the_federation_of_anglo_saxons
+		icon = GFX_goal_generic_propaganda
+		x = -5
+		y = 4
+		cost = 10
+		relative_position_id = U73_the_based_monarchy
+		prerequisite = {
+			focus = U73_crush_independence
+		}
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_subject_of = U73
+				}
+				swap_ideas = {
+					remove_idea = U73_english_pressure
+					add_idea = U73_english_pressure_2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = U73_i_am_the_parliament
+		icon = GFX_goal_generic_propaganda
+		x = -4
+		y = 5
+		cost = 10
+		relative_position_id = U73_the_based_monarchy
+		prerequisite = {
+			focus = U73_begin_the_federation_of_anglo_saxons
+		}
+
+		completion_reward = {
+			add_ideas = U73_iam_the_senate
+		}
+	}
+
+	focus = {
+		id = U73_unite_the_colonies_anew
+		icon = GFX_goal_generic_propaganda
+		x = -5
+		y = 6
+		cost = 10
+		relative_position_id = U73_the_based_monarchy
+		prerequisite = { focus = U73_i_am_the_parliament }
+		available = {
+			ARG = {
+				OR = {
+					AND = {
+						is_subject_of = U73
+						has_government = ROOT
+						OR = {
+							has_autonomy_state = autonomy_integrated_puppet
+						}
+					}
+					exists = no
+				}
+			}
+			BOL = {
+				OR = {
+					AND = {
+						is_subject_of = U73
+						has_government = ROOT
+						OR = {
+							has_autonomy_state = autonomy_integrated_puppet
+						}
+					}
+					exists = no
+				}
+			}
+			BRD = {
+				OR = {
+					AND = {
+						is_subject_of = U73
+						has_government = ROOT
+						OR = {
+							has_autonomy_state = autonomy_integrated_puppet
+						}
+					}
+					exists = no
+				}
+			}
+			MLW = {
+				OR = {
+					AND = {
+						is_subject_of = U73
+						has_government = ROOT
+						OR = {
+							has_autonomy_state = autonomy_integrated_puppet
+						}
+					}
+					exists = no
+				}
+			}
+			V67 = {
+				OR = {
+					AND = {
+						is_subject_of = U73
+						has_government = ROOT
+						OR = {
+							has_autonomy_state = autonomy_integrated_puppet
+						}
+					}
+					exists = no
+				}
+			}
+			V68 = {
+				OR = {
+					AND = {
+						is_subject_of = U73
+						has_government = ROOT
+						OR = {
+							has_autonomy_state = autonomy_integrated_puppet
+						}
+					}
+					exists = no
+				}
+			}
+			V70 = {
+				OR = {
+					AND = {
+						is_subject_of = U73
+						has_government = ROOT
+						OR = {
+							has_autonomy_state = autonomy_integrated_puppet
+						}
+					}
+					exists = no
+				}
+			}
+			W10 = {
+				OR = {
+					AND = {
+						is_subject_of = U73
+						has_government = ROOT
+						OR = {
+							has_autonomy_state = autonomy_integrated_puppet
+						}
+					}
+					exists = no
+				}
+			}
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			every_country = {
+				limit = {
+					OR = {
+						AND = {
+							is_subject_of = ENG
+							tag = ARG
+							OR = {
+								has_autonomy_state = autonomy_integrated_puppet
+							}
+						}
+						AND = {
+							is_subject_of = ENG
+							tag = BOL
+							OR = {
+								has_autonomy_state = autonomy_integrated_puppet
+							}
+						}
+						AND = {
+							is_subject_of = ENG
+							tag = BRD
+							OR = {
+								has_autonomy_state = autonomy_integrated_puppet
+							}
+						}
+						AND = {
+							is_subject_of = ENG
+							tag = MLW
+							OR = {
+								has_autonomy_state = autonomy_integrated_puppet
+							}
+						}
+						AND = {
+							is_subject_of = ENG
+							tag = V67
+							OR = {
+								has_autonomy_state = autonomy_integrated_puppet
+							}
+						}
+						AND = {
+							is_subject_of = ENG
+							tag = V68
+							OR = {
+								has_autonomy_state = autonomy_integrated_puppet
+							}
+						}
+						AND = {
+							is_subject_of = ENG
+							tag = V70
+							OR = {
+								has_autonomy_state = autonomy_integrated_puppet
+							}
+						}
+						AND = {
+							is_subject_of = ENG
+							tag = W10
+							OR = {
+								has_autonomy_state = autonomy_integrated_puppet
+							}
+						}
+					}
+				}
+				annex_country = { target = PREV transfer_troops = yes }
+			}
+		}
+	}
+
+	focus = {
+		id = U73_the_sun_never_sets_on_albion
+		icon = GFX_goal_generic_propaganda
+		x = -5
+		y = 7
+		cost = 10
+		relative_position_id = U73_the_based_monarchy
+		prerequisite = {
+			focus = U73_unite_the_colonies_anew
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = U73_iam_the_senate
+				add_idea = U73_sun_never_sets_on_albion
+			}
+		}
+	}
+
+	focus = {
+		id = U73_victorian_capitalism
+		icon = GFX_goal_generic_propaganda
+		x = -2
+		y = 1
+		cost = 10
+		relative_position_id = U73_the_based_monarchy
+		prerequisite = {
+			focus = U73_the_based_monarchy
+		}
+
+		completion_reward = {
+			add_ideas = U73_victorian_capitalism
+		}
+	}
+
+	focus = {
+		id = U73_her_majesties_military
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = U73_the_based_monarchy
+		prerequisite = {
+			focus = U73_the_based_monarchy
+		}
+
+		completion_reward = {
+			add_ideas = U73_her_majesties_military
+		}
+	}
+
+	focus = {
+		id = U73_the_new_redcoats
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 2
+		cost = 10
+		relative_position_id = U73_the_based_monarchy
+		prerequisite = {
+			focus = U73_her_majesties_military
+		}
+
+		completion_reward = {
+			add_ideas = U73_redcoat_1
+		}
+	}
+
+	focus = {
+		id = U73_redcoat_gestapo
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 3
+		cost = 10
+		relative_position_id = U73_the_based_monarchy
+		prerequisite = {
+			focus = U73_the_new_redcoats
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = U73_redcoat_1
+				add_idea = U73_redcoat_2
+			}
+		}
+	}
+
+	focus = {
+		id = U73_reinforce_the_industrial_base
+		icon = GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		cost = 10
+		relative_position_id = U73_the_based_monarchy
+		prerequisite = {
+			focus = U73_the_based_monarchy
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					OR = {	
+						state = 175
+						state = 176
+						state = 174
+						state = 170
+						state = 171
+						state = 172
+						state = 173
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					OR = {	
+						state = 175
+						state = 176
+						state = 174
+						state = 170
+						state = 171
+						state = 172
+						state = 173
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					OR = {	
+						state = 175
+						state = 176
+						state = 174
+						state = 170
+						state = 171
+						state = 172
+						state = 173
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = U73_the_lands_of_dover
+		icon = GFX_goal_generic_propaganda
+		x = 4
+		y = 1
+		cost = 10
+		relative_position_id = U73_the_based_monarchy
+		prerequisite = {
+			focus = U73_the_based_monarchy
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = U73_land_of_potatoes
+		icon = GFX_goal_generic_propaganda
+		x = 3
+		y = 2
+		cost = 10
+		relative_position_id = U73_the_based_monarchy
+		prerequisite = {
+			focus = U73_the_lands_of_dover
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = IRE
+			}
+		}
+	}
+
+	focus = {
+		id = U73_integrate_ireland
+		icon = GFX_goal_generic_propaganda
+		x = 3
+		y = 3
+		cost = 10
+		relative_position_id = U73_the_based_monarchy
+		prerequisite = {
+			focus = U73_land_of_potatoes
+		}
+
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					is_core_of = IRE
+				}
+				add_core_of = ENG
+			}
+		}
+	}
+
+	focus = {
+		id = U73_blitz_flanders 
+		icon = GFX_goal_generic_propaganda
+		x = 5
+		y = 2
+		cost = 10
+		relative_position_id = U73_the_based_monarchy
+		prerequisite = {
+			focus = U73_the_lands_of_dover
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				target = annex_everything
+				type = FLA
+			}
+			every_state = {
+				limit = {
+					is_owned_by = FLA
+				}
+				add_claim_by = ENG
+			}
+		}
+	}
+
+	focus = {
+		id = U73_our_greatest_rivals
+		icon = GFX_goal_generic_propaganda
+		x = 5
+		y = 3
+		cost = 10
+		relative_position_id = U73_the_based_monarchy
+		prerequisite = {
+			focus = U73_blitz_flanders
+		}
+
+		completion_reward = {
+			every_neighbor_country = {
+				add_popularity = {
+					ideology = absolutist
+					popularity = 0.05
+				}
+			}
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = U73_preemptive_lithuanian_strike
+		icon = GFX_goal_generic_propaganda
+		x = 4
+		y = 4
+		cost = 10
+		relative_position_id = U73_the_based_monarchy
+		prerequisite = {
+			focus = U73_our_greatest_rivals
+			focus = U73_integrate_ireland
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = LIT
+			}
+			add_timed_idea = {
+				idea = U73_targeted_modifier_attack_lit
+				days = 120
+			}
+		}
+	}
 }

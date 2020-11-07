@@ -81,11 +81,11 @@ if = {
         autonomous_state = autonomy_dominion
         freedom_level = 0.4
     }
-    set_autonomy = {
-        target = LIB
-        autonomous_state = autonomy_dominion
-        freedom_level = 0.4
-    }
+    #set_autonomy = {
+    #    target = LIB
+    #    autonomous_state = autonomy_dominion
+    #    freedom_level = 0.4
+    #}
     set_autonomy = {
         target = MLW
         autonomous_state = autonomy_dominion
@@ -242,12 +242,15 @@ add_ideas = {
 set_stability = 0.60
 set_war_support = 0.60
 create_country_leader = {
-    name = "Amédée Canrobert"
+    name = "Emperor Amédée"
     desc = "POLITICS_AMéDéE_CANROBERT_DESC"
     picture = "gfx/leaders/FRA/Portrait_France_Charles_De_Gaulle.dds"
     expire = "1965.1.1"
     ideology = absolute_monarchy
     traits = {
+		the_emperor
+		the_house_of_bourbon
+		prince_of_terror
     }
 }
 create_corps_commander = {

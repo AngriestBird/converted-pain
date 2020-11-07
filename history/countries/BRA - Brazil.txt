@@ -223,12 +223,14 @@ add_ideas = {
 set_stability = 0.60
 set_war_support = 0.60
 create_country_leader = {
-    name = "Nomen Nescio"
+    name = "Sir Bird the Fourth"
     desc = "POLITICS_NOMEN_NESCIO_DESC"
-    picture = "gfx/leaders/ENG/portrait_eng_fallen_government.dds"
+    picture = "birdwithtea.dds"
     expire = "1965.1.1"
     ideology = socialism
     traits = {
+		god_of_birds
+		many_avians
     }
 }
 create_corps_commander = {

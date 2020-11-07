@@ -19,21 +19,397 @@ focus_tree = {
 	shared_focus = political_effort
 
 	focus = {
+		id = LIT_bastion_of_europeanism
+		icon = GFX_goal_generic_propaganda
+		x = 34
+		y = 0
+		cost = 10
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = LIT_militarized_democracy
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = LIT_bastion_of_europeanism
+		prerequisite = { focus = LIT_bastion_of_europeanism }
+		cost = 10
+		completion_reward = {
+			add_ideas = LIT_militarized_democracy
+		}
+	}
+
+	focus = {
+		id = LIT_question_of_ireland
+		icon = GFX_goal_generic_propaganda
+		x = -5
+		y = 2
+		relative_position_id = LIT_bastion_of_europeanism
+		prerequisite = { focus = LIT_militarized_democracy }
+		cost = 10
+		completion_reward = {
+			add_war_support = 0.05
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = LIT_end_the_sphereling
+		icon = GFX_goal_generic_propaganda
+		x = -6
+		y = 3
+		relative_position_id = LIT_bastion_of_europeanism
+		prerequisite = { focus = LIT_question_of_ireland }
+		mutually_exclusive = { focus = LIT_declare_ireland_the_priority }
+		cost = 10
+		completion_reward = {
+			IRE = {
+				if = {
+					limit = { has_dlc = "Together for Victory" }
+					ROOT = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_free
+						}
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LIT_declare_ireland_the_priority
+		icon = GFX_goal_generic_propaganda
+		x = -4
+		y = 3
+		relative_position_id = LIT_bastion_of_europeanism
+		prerequisite = { focus = LIT_question_of_ireland }
+		mutually_exclusive = { focus = LIT_end_the_sphereling }
+		cost = 10
+		available = {
+			IRE = { is_subject_of = LIT }
+		}
+		completion_reward = {
+			IRE = {
+				add_ideas = LIT_irish_defense_fund
+			}
+			add_ideas = LIT_irish_defense_fund
+		}
+	}
+
+	focus = {
+		id = LIT_democratic_spread
+		icon = GFX_goal_generic_propaganda
+		x = -2
+		y = 2
+		relative_position_id = LIT_bastion_of_europeanism
+		prerequisite = { focus = LIT_militarized_democracy }
+		cost = 10
+		completion_reward = {
+			every_neighbor_country = {
+				if = {
+					limit = { NOT = { has_idea = democratic_influence } }
+					add_ideas = democratic_influence
+				}
+				add_popularity = { ideology = democratic popularity = 0.05 }
+			}
+		}
+	}
+
+	focus = {
+		id = LIT_spread_the_true_ideology
+		icon = GFX_goal_generic_propaganda
+		x = -2
+		y = 3
+		relative_position_id = LIT_bastion_of_europeanism
+		prerequisite = { focus = LIT_democratic_spread }
+		cost = 10
+		completion_reward = {
+			GER =  {
+				add_popularity = { ideology = democratic popularity = 0.05 }
+			}
+		}
+	}
+	focus = {
+		id = LIT_flex_on_skylar
+		icon = GFX_goal_generic_propaganda
+		x = -2
+		y = 4
+		relative_position_id = LIT_bastion_of_europeanism
+		prerequisite = { focus = LIT_spread_the_true_ideology }
+		cost = 10
+		completion_reward = {
+			create_wargoal = { 
+				type = puppet_wargoal_focus
+				target = GER 
+			}
+		}
+	}
+
+	focus = {
+		id = LIT_mobilize_the_loathringii
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 2
+		relative_position_id = LIT_bastion_of_europeanism
+		prerequisite = { focus = LIT_militarized_democracy }
+		cost = 10
+		completion_reward = {
+			add_ideas = LIT_mobilized_lotharingii
+		}
+	}
+
+	focus = {
+		id = LIT_burgundian_military_factories
+		icon = GFX_goal_generic_propaganda
+		x = 2
+		y = 2
+		relative_position_id = LIT_bastion_of_europeanism
+		prerequisite = { focus = LIT_militarized_democracy }
+		cost = 10
+		completion_reward = {
+			306 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+
+	focus = {
+		id = LIT_settle_the_german_states
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 3
+		relative_position_id = LIT_bastion_of_europeanism
+		prerequisite = { focus = LIT_mobilize_the_loathringii }
+		cost = 10
+		completion_reward = {
+			declare_war_on = {
+				target = W34
+			}
+			declare_war_on = {
+				target = W15
+			}
+			declare_war_on = {
+				target = X09
+			}
+			declare_war_on = {
+				target = W45
+			}
+		}
+	}
+
+	focus = {
+		id = LIT_dutch_dockyards
+		icon = GFX_goal_generic_propaganda
+		x = 2
+		y = 3
+		relative_position_id = LIT_bastion_of_europeanism
+		prerequisite = { focus = LIT_burgundian_military_factories }
+		cost = 10
+		completion_reward = {
+			301 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LIT_integrate_the_rhineland
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 4
+		relative_position_id = LIT_bastion_of_europeanism
+		prerequisite = { focus = LIT_settle_the_german_states }
+		cost = 10
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_core_of = W34
+						is_core_of = W15
+						is_core_of = X09
+						is_core_of = W45
+					}
+				}
+				add_core_of = LIT
+			}
+			remove_ideas = LIT_over_extended_adminstration
+		}
+	}
+
+	focus = {
+		id = LIT_lithuanian_railroads
+		icon = GFX_goal_generic_propaganda
+		x = 2
+		y = 4
+		relative_position_id = LIT_bastion_of_europeanism
+		prerequisite = { focus = LIT_dutch_dockyards }
+		cost = 10
+		completion_reward = {
+			306 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+				}
+			}
+			307 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+				}
+			} 
+			305 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+				}
+			}
+			308 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LIT_crush_the_saxons
+		icon = GFX_goal_generic_propaganda
+		x = 1
+		y = 5
+		relative_position_id = LIT_bastion_of_europeanism
+		prerequisite = { focus = LIT_integrate_the_rhineland }
+		prerequisite = { focus = LIT_lithuanian_railroads }
+		cost = 10
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = SAX
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = X40
+			}
+		}
+	}
+
+	focus = {
+		id = LIT_destroy_the_remaining_germans
+		icon = GFX_goal_generic_propaganda
+		x = 1
+		y = 6
+		relative_position_id = LIT_bastion_of_europeanism
+		prerequisite = { focus = LIT_crush_the_saxons }
+		cost = 10
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = HAN
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = X25
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = W58
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = V51
+			}
+		}
+	}
+
+	focus = {
+		id = LIT_declare_the_holy_lithuanian_empire
+		icon = GFX_goal_generic_propaganda
+		x = 1
+		y = 7
+		relative_position_id = LIT_bastion_of_europeanism
+		prerequisite = { focus = LIT_destroy_the_remaining_germans }
+		cost = 10
+		completion_reward = {
+			set_cosmetic_tag = LIT_holy_lithuanian_empire
+			every_owned_state = {
+				limit = { 
+					OR = {
+						is_core_of = SAX
+						is_core_of = X40
+						is_core_of = HAN
+						is_core_of = W58
+						is_core_of = V51
+					}
+					NOT = { is_core_of = LIT }
+				}
+				add_core_of = LIT
+			}
+			every_state = {
+				limit = { 
+					OR = {
+						is_owned_by = V32
+						is_owned_by = AUS
+						is_owned_by = HRE
+						is_owned_by = W87
+					}
+					NOT = { is_core_of = LIT }
+				}
+				add_claim_by = LIT 
+			}
+			create_wargoal = {
+				target = HRE
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = V32
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = W87
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
 		id = WarPropLIT
 		icon = GFX_goal_generic_propaganda
 		text = WarProp
-		x = 28
-		y = 0
+		x = 4
+		y = 1
+		prerequisite = { focus = LIT_militarized_democracy }
+		relative_position_id = LIT_militarized_democracy
 		cost = 10
 		available = {
 			threat > 0.000100
 		}
 		completion_reward = {
-		add_stability = 0.05
-	}
+			add_stability = 0.05
+		}
 		ai_will_do = {
-		factor = 10
-	}
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -75,116 +451,6 @@ focus_tree = {
 		ai_will_do = {
 		factor = 10
 	}
-	}
-
-	focus = {
-		id = WarPlanLITMEX
-		icon = GFX_goal_generic_position_armies
-		text = WarPlanMEX
-		prerequisite = { focus = LimLIT }
-		bypass = {
-			has_war_with = MEX
-		}
-		x = 0
-		y = 1
-		relative_position_id = LimLIT
-		cost = 10
-		available = {
-			any_other_country = {
-				original_tag = MEX
-				exists = yes
-				NOT = { has_government = democratic } 
-				NOT = { is_in_faction_with = LIT }
-				OR = {
-					has_offensive_war = yes
-					has_added_tension_amount > 30
-				}
-			}
-		}
-		completion_reward = {
-		army_experience = 20
-		add_tech_bonus = {
-			name = land_doc_bonus
-			bonus = 0.5
-			uses = 1
-			category = land_doctrine
-		}
-	}
-		ai_will_do = {
-		factor = 10
-	}
-	}
-
-	focus = {
-		id = EmbargoLITMEX
-		icon = GFX_goal_generic_trade
-		text = EmbargoMEX
-		prerequisite = { focus =  WarPlanLITMEX }
-		bypass = {
-			has_war_with = MEX
-		}
-		x = 0
-		y = 1
-		relative_position_id = WarPlanLITMEX
-		cost = 10
-		available = {
-			any_other_country = {
-				original_tag = MEX
-				exists = yes
-				NOT = { has_government = democratic } 
-				NOT = { is_in_faction_with = LIT }
-				OR = {
-					has_offensive_war = yes
-					has_added_tension_amount > 30
-					threat > 0.6
-				}
-			}
-		}
-		completion_reward = {
-			MEX = {
-				add_opinion_modifier = { target = LIT modifier = embargo }
-			}
-		}
-		ai_will_do = {
-		factor = 10
-	}
-	}
-
-	focus = {
-		id = WARLITMEX
-		icon = GFX_goal_support_democracy
-		text = WARMEX
-		prerequisite = { focus =  EmbargoLITMEX }
-		bypass = {
-			has_war_with = MEX
-		}
-		x = 0
-		y = 1
-		relative_position_id = EmbargoLITMEX
-		cost = 10
-		available = {
-			has_war = no
-			any_other_country = {
-				original_tag = MEX
-				exists = yes
-				NOT = { has_government = democratic } 
-				NOT = { is_in_faction_with = LIT }
-				OR = {
-					has_offensive_war = yes
-					has_added_tension_amount > 30
-					threat > 0.6
-				}
-			}
-		}
-		completion_reward = {
-			declare_war_on = {
-				type = puppet_wargoal_focus
-				target = MEX
-			}
-		}
-		ai_will_do = {
-			factor = 10
-		}
 	}
 
 }

@@ -3,12 +3,13 @@ ideas = {
 		X29_shadow_of_beuracracy = {
 			allowed = { original_tag = X29 }
 			allowed_civil_war = { always = no }
-			picture = generic_manpower_bonus
+			picture = generic_pp_unity_bonus
 			modifier = {
 				mobilization_laws_cost_factor = 0.25
 				political_power_factor = -0.25
 				army_org_factor = -0.25
 				military_leader_cost_factor = 1.0
+				industrial_capacity_factory = -0.25
 			}
 		}
 		X29_rise_of_the_byzantines = {
@@ -17,7 +18,7 @@ ideas = {
 				always = no
 			}
 
-			picture = generic_manpower_bonus
+			picture = eng_imperial_conscription
 			modifier = {
 				army_org_regain = 0.15
 				planning_speed = 0.15
@@ -29,21 +30,23 @@ ideas = {
 		X29_revitalized_beuracracy = {
 			allowed = { original_tag = X29 }
 			allowed_civil_war = { always = no }
-			picture = generic_manpower_bonus
+			picture = generic_infantry_bonus
 			modifier = {
 				mobilization_laws_cost_factor = 0.15
 				political_power_factor = -0.15
 				army_org_factor = -0.15
 				military_leader_cost_factor = 0.50
+				industrial_capacity_factory = -0.125
 			}
 		}
 		X29_revitalized_beuracracy_1 = {
 			allowed = { original_tag = X29 }
 			allowed_civil_war = { always = no }
-			picture = generic_manpower_bonus
+			picture = generic_infantry_bonus
 			modifier = {
 				political_power_factor = 0.20
 				army_org_factor = 0.10
+				industrial_capacity_factory = 0.10
 			}
 		}
 		X29_greek_militarism = {

@@ -195,7 +195,7 @@ focus_tree = {
 		bypass = {
 			has_war_with = X29
 		}
-		x = 0
+		x = 2
 		y = 1
 		relative_position_id = LimBRA
 		cost = 10
@@ -298,108 +298,70 @@ focus_tree = {
 	}
 
 	focus = {
-		id = WarPlanBRAMAN
-		icon = GFX_goal_generic_position_armies
-		text = WarPlanMAN
+		id = BRA_industralize_the_country
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		x = 0
+		y = 1
 		prerequisite = { focus = LimBRA }
-		bypass = {
-			has_war_with = MAN
-		}
-		x = 2
-		y = 1
 		relative_position_id = LimBRA
-		cost = 10
-		available = {
-			any_other_country = {
-				original_tag = MAN
-				exists = yes
-				NOT = { has_government = democratic } 
-				NOT = { is_in_faction_with = BRA }
-				OR = {
-					has_offensive_war = yes
-					has_added_tension_amount > 30
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
 				}
 			}
-		}
-		completion_reward = {
-		army_experience = 20
-		add_tech_bonus = {
-			name = land_doc_bonus
-			bonus = 0.5
-			uses = 1
-			category = land_doctrine
-		}
-	}
-		ai_will_do = {
-		factor = 10
-	}
-	}
-
-	focus = {
-		id = EmbargoBRAMAN
-		icon = GFX_goal_generic_trade
-		text = EmbargoMAN
-		prerequisite = { focus =  WarPlanBRAMAN }
-		bypass = {
-			has_war_with = MAN
-		}
-		x = 0
-		y = 1
-		relative_position_id = WarPlanBRAMAN
-		cost = 10
-		available = {
-			any_other_country = {
-				original_tag = MAN
-				exists = yes
-				NOT = { has_government = democratic } 
-				NOT = { is_in_faction_with = BRA }
-				OR = {
-					has_offensive_war = yes
-					has_added_tension_amount > 30
-					threat > 0.6
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
 				}
 			}
-		}
-		completion_reward = {
-			MAN = {
-				add_opinion_modifier = { target = BRA modifier = embargo }
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
 			}
 		}
 		ai_will_do = {
-		factor = 10
-	}
+			factor = 10
+		}
 	}
 
+
 	focus = {
-		id = WARBRAMAN
-		icon = GFX_goal_support_democracy
-		text = WARMAN
-		prerequisite = { focus =  EmbargoBRAMAN }
-		bypass = {
-			has_war_with = MAN
-		}
-		x = 0
-		y = 1
-		relative_position_id = EmbargoBRAMAN
+		id = BRA_dockyards
+		icon = GFX_goal_generic_propaganda
 		cost = 10
-		available = {
-			has_war = no
-			any_other_country = {
-				original_tag = MAN
-				exists = yes
-				NOT = { has_government = democratic } 
-				NOT = { is_in_faction_with = BRA }
-				OR = {
-					has_offensive_war = yes
-					has_added_tension_amount > 30
-					threat > 0.6
+		x = 0
+		y = 2
+		prerequisite = { focus = BRA_industralize_the_country }
+		relative_position_id = LimBRA
+		completion_reward = {
+			random_owned_state = {
+				limit = { is_coastal = yes }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
 				}
 			}
-		}
-		completion_reward = {
-			declare_war_on = {
-				type = puppet_wargoal_focus
-				target = MAN
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
 			}
 		}
 		ai_will_do = {
@@ -408,14 +370,37 @@ focus_tree = {
 	}
 
 	focus = {
+		id = BRA_rio_gun_smiths
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		x = 0
+		y = 3
+		prerequisite = { focus = BRA_dockyards }
+		relative_position_id = LimBRA
+		completion_reward = {
+			72 = {
+				add_extra_state_shared_building_slots = 2 
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	focus = {
 		id = BRA_radicalization
-		#icon = 
+		icon = GFX_goal_generic_propaganda
 		cost = 10
 		x = -4
 		y = 1
 		prerequisite = { focus = LimBRA }
 		relative_position_id = LimBRA
 		completion_reward = {
+			add_political_power = 150
 			add_ideas = radicalism
 			
 		}
@@ -426,7 +411,7 @@ focus_tree = {
 
 	focus = {
 		id = BRA_a_birdy_in_every_country
-		#icon = 
+		icon = GFX_goal_generic_propaganda
 		cost = 10
 		x = 0
 		y = 1
@@ -450,7 +435,7 @@ focus_tree = {
 
 	focus = { 
 		id = BRA_embrace_the_revolution
-		#icon = 
+		icon = GFX_goal_generic_propaganda
 		cost = 10
 		x = 0
 		y = 1
@@ -470,6 +455,7 @@ focus_tree = {
 
 	focus = {
 		id = BRA_birdynomics
+		icon = GFX_goal_generic_propaganda
 		cost = 10
 		x = 4
 		y = 1
@@ -486,6 +472,7 @@ focus_tree = {
 
 	focus = {
 		id = BRA_debt_is_just_a_number
+		icon = GFX_goal_generic_propaganda
 		cost = 10
 		x = 0
 		y = 1
@@ -496,12 +483,13 @@ focus_tree = {
 				remove_idea = BRA_idea_birdynomics
     			add_idea = BRA_idea_maximum_birdynomcis
 			}
+			add_stability = -0.20
 		}
-		add_stability = -0.30
 	}
 
 	focus = {
 		id = BRA_pure_birdynomcis
+		icon = GFX_goal_generic_propaganda
 		cost = 10
 		x = 0
 		y = 1
@@ -517,6 +505,7 @@ focus_tree = {
 
 	focus = {
 		id = BRA_a_little_birdy_told_me
+		icon = GFX_goal_generic_propaganda
 		cost = 10
 		x = 0
 		y = 2
@@ -529,12 +518,14 @@ focus_tree = {
 
 	focus = {
 		id = BRA_spread_the_revolution
+		icon = GFX_goal_generic_propaganda
 		cost = 10
 		x = 2
 		y = 1
 		prerequisite = { focus = BRA_embrace_the_revolution }
 		relative_position_id = BRA_embrace_the_revolution
 		completion_reward = {
+			add_country_leader_trait = silent_workhorse
 			VEN = { add_ideas = radicalism }
 			BOL = { add_ideas = radicalism }
 			PRU = { add_ideas = radicalism }
@@ -544,6 +535,7 @@ focus_tree = {
 
 	focus = {
 		id = BRA_recover_from_the_depression
+		icon = GFX_goal_generic_propaganda
 		cost = 10
 		x = 0
 		y = 1
@@ -556,6 +548,7 @@ focus_tree = {
 
 	focus = {
 		id = BRA_show_the_world_the_power_of_birdynomics
+		icon = GFX_goal_generic_propaganda
 		cost = 10
 		x = -2
 		y = 1
@@ -572,6 +565,7 @@ focus_tree = {
 
 	focus = {
 		id = BRA_operation_save_south_america
+		icon = GFX_goal_generic_propaganda
 		cost = 10
 		x = -2
 		y = 1
@@ -590,6 +584,7 @@ focus_tree = {
 
 	focus = {
 		id = BRA_strongarm_pommerania
+		icon = GFX_goal_generic_propaganda
 		cost = 10
 		x = -2
 		y = 1
@@ -603,7 +598,34 @@ focus_tree = {
 	}
 
 	focus = {
+		id = BRA_integrate_ven
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		x = 0
+		y = 1
+		prerequisite = { focus = BRA_operation_save_south_america }
+
+		relative_position_id = BRA_operation_save_south_america
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_owned_by = BRA
+					NOT = { is_core_of = BRA }
+				}
+				add_core_of = BRA 
+			}
+			VEN = {
+				every_unit_leader = {
+					set_nationality = BRA 
+				}
+			}
+			annex_country = { target = VEN transfer_troops = yes }
+		}
+	}
+
+	focus = {
 		id = BRA_save_peru
+		icon = GFX_goal_generic_propaganda
 		cost = 10
 		x = 2
 		y = 1
@@ -617,6 +639,7 @@ focus_tree = {
 
 	focus = {
 		id = BRA_aid_bolivia
+		icon = GFX_goal_generic_propaganda
 		cost = 10
 		x = 2
 		y = 1
@@ -637,6 +660,7 @@ focus_tree = {
 
 	focus = {
 		id = BRA_speed_up_the_process
+		icon = GFX_goal_generic_propaganda
 		cost = 10
 		x = 0
 		y = 1
@@ -660,10 +684,11 @@ focus_tree = {
 
 	focus = {
 		id = BRA_birdynomic_revolutionary_rabbi
+		icon = GFX_goal_generic_propaganda
 		cost = 10
 		x = 0
-		y = 1
-		prerequisite = { focus = BRA_recover_from_the_depression }
+		y = 1 
+		prerequisite = { focus  = BRA_recover_from_the_depression }
 		relative_position_id = BRA_recover_from_the_depression
 		completion_reward = {
 			add_ideas = BRA_idea_birdynomics_rabbi
@@ -672,6 +697,7 @@ focus_tree = {
 
 	focus = {
 		id = BRA_greatest_intelligence_network
+		icon = GFX_goal_generic_propaganda
 		cost = 10
 		x = 0
 		y = 2
